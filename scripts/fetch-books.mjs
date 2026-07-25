@@ -13,6 +13,7 @@ const queries = ['無職転生 異世界行ったら本気だす', '転生した
 const slugify = (value) => value.toString().trim().toLowerCase().replace(/[^\p{Letter}\p{Number}]+/gu, '-').replace(/^-|-$/g, '').slice(0, 90)
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 const normalizeTitle = (value) => String(value || '').replace(/[\s　「」『』（）()！？!?・:：～〜]/g, '').toLowerCase()
+const buildAffiliateUrl = (itemUrl, affiliateId) => `https://hb.afl.rakuten.co.jp/hgc/${affiliateId}/?pc=${encodeURIComponent(itemUrl)}&m=${encodeURIComponent(itemUrl)}`
 const releaseDateOf = (value) => {
   const match = String(value || '').match(/(\d{4})年(\d{1,2})月(\d{1,2})日/)
   return match ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3])) : null
@@ -25,7 +26,7 @@ const isWithinReservationWindow = (item) => {
   oneMonthLater.setDate(now.getDate() + 31)
   return date <= oneMonthLater
 }
-const isRakutenItem = (item) => Boolean(item?.itemUrl && item?.affiliateUrl && item?.affiliateUrl.startsWith('https://hb.afl.rakuten.co.jp/') && (item.largeImageUrl || item.mediumImageUrl) && isWithinReservationWindow(item))
+const isRakutenItem = (item) => Boolean(item?.itemUrl && process.env.RAKUTEN_AFFILIATE_ID && (item.largeImageUrl || item.mediumImageUrl) && isWithinReservationWindow(item))
 const isPublishableBook = (book) => Boolean(book?.source === 'rakuten-kobo' && book.slug && book.cover?.includes('rakuten') && book.affiliateUrl?.startsWith('https://hb.afl.rakuten.co.jp/'))
 
 async function rakutenSearch(keyword, page = 1) {
@@ -69,7 +70,7 @@ function toBook(item, article) {
     author: item.author || '作者情報なし', seriesName: item.seriesName || '', genre: '異世界・ファンタジー', tags: article.tags,
     badge: releaseDateOf(item.salesDate) > new Date() ? 'まもなく発売' : '新着', color: 'gold', cover: item.largeImageUrl || item.mediumImageUrl || '',
     description: article.description, aiIntro: article.aiIntro, readerTypes: article.readerTypes,
-    price: item.itemPrice || 0, salesDate: item.salesDate || '', salesType: item.salesType || '0', affiliateUrl: item.affiliateUrl,
+    price: item.itemPrice || 0, salesDate: item.salesDate || '', salesType: item.salesType || '0', affiliateUrl: buildAffiliateUrl(item.itemUrl, process.env.RAKUTEN_AFFILIATE_ID),
     sourceUrl: item.itemUrl, source: 'rakuten-kobo', publishedAt: new Date().toISOString()
   }
 }
@@ -180,11 +181,18 @@ async function main() {
   const state = JSON.parse(await fs.readFile(statePath, 'utf8').catch(() => '{"queryIndex":0,"page":1}'))
   const keyword = queries[state.queryIndex % queries.length]
   const items = await rakutenSearch(keyword, state.page)
+  let affiliateLinksChanged = false
+  for (const existingBook of seedBooks) {
+    if (existingBook.source === 'rakuten-kobo' && existingBook.sourceUrl && process.env.RAKUTEN_AFFILIATE_ID) {
+      const nextAffiliateUrl = buildAffiliateUrl(existingBook.sourceUrl, process.env.RAKUTEN_AFFILIATE_ID)
+      if (existingBook.affiliateUrl !== nextAffiliateUrl) { existingBook.affiliateUrl = nextAffiliateUrl; affiliateLinksChanged = true }
+    }
+  }
   const existing = new Set(seedBooks.filter(book => book.source === 'rakuten-kobo').map(book => book.id))
   const pending = seedBooks.filter(book => book.source === 'pending-rakuten-sync')
   const pendingCandidate = items.find(item => isRakutenItem(item) && pending.some(book => normalizeTitle(item.title).includes(normalizeTitle(book.title)) || normalizeTitle(book.title).includes(normalizeTitle(item.title))))
   const candidate = pendingCandidate || items.find(item => isRakutenItem(item) && !existing.has(String(item.itemNumber || item.isbn || slugify(item.title || item.itemName))))
-  if (!candidate) { state.queryIndex = (state.queryIndex + 1) % queries.length; state.page = state.page >= 100 ? 1 : state.page + 1; await fs.writeFile(statePath, JSON.stringify(state, null, 2) + '\n'); console.log('No new candidate. Cursor advanced.'); return }
+  if (!candidate) { state.queryIndex = (state.queryIndex + 1) % queries.length; state.page = state.page >= 100 ? 1 : state.page + 1; if (affiliateLinksChanged) await fs.writeFile(dataPath, JSON.stringify(seedBooks, null, 2) + '\n'); await fs.writeFile(statePath, JSON.stringify(state, null, 2) + '\n'); console.log(affiliateLinksChanged ? 'Affiliate links refreshed. Cursor advanced.' : 'No new candidate. Cursor advanced.'); return }
   const article = await generateArticle(candidate)
   const book = toBook(candidate, article)
   const pendingIndex = seedBooks.findIndex(existingBook => existingBook.source === 'pending-rakuten-sync' && (normalizeTitle(existingBook.title).includes(normalizeTitle(book.title)) || normalizeTitle(book.title).includes(normalizeTitle(existingBook.title))))

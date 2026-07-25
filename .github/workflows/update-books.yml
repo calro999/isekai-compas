@@ -1,6 +1,10 @@
 name: Update Isekai books
 
 on:
+  push:
+    paths:
+      - 'scripts/fetch-books.mjs'
+      - '.github/workflows/update-books.yml'
   schedule:
     - cron: '17 */2 * * *'
   workflow_dispatch:
