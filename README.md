@@ -23,3 +23,5 @@ npm run build
 API接続テストは、`.env` にSecretsと同じ名前の環境変数を設定して `npm run sync:books` を実行します。`--seed` はAPIを呼ばず、初期3作品のデータとsitemap/RSSを生成します。
 
 楽天Kobo APIの書誌情報・画像・affiliate URLを取得し、同一作品をIDで重複登録しないようにしています。Geminiが失敗した場合は、楽天の公式説明文を使ったフォールバック文に切り替えます。
+
+公開対象は、楽天Kobo APIが返した楽天公式画像・`affiliateUrl`・商品URLを持つ作品だけです。発売日が現在から31日を超える予約商品は取り込みません。初期データなどAPI未同期の作品は公開画面から除外し、次回以降のActionsで楽天APIデータに置き換えます。

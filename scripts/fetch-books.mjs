@@ -8,16 +8,31 @@ const statePath = path.join(root, 'public/data/sync-state.json')
 const siteUrl = process.env.SITE_URL || 'https://isekai-compas.vercel.app'
 const seedBooks = JSON.parse(await fs.readFile(dataPath, 'utf8'))
 
-const queries = ['異世界 転生 小説', '異世界 ファンタジー ライトノベル', '悪役令嬢 異世界 小説', 'スローライフ 異世界 小説']
+const queries = ['無職転生 異世界行ったら本気だす', '転生したらスライムだった件', 'とんでもスキルで異世界放浪メシ', '異世界 転生 小説', '異世界 ファンタジー ライトノベル', '悪役令嬢 異世界 小説', 'スローライフ 異世界 小説']
 
 const slugify = (value) => value.toString().trim().toLowerCase().replace(/[^\p{Letter}\p{Number}]+/gu, '-').replace(/^-|-$/g, '').slice(0, 90)
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+const normalizeTitle = (value) => String(value || '').replace(/[\s　「」『』（）()！？!?・:：～〜]/g, '').toLowerCase()
+const releaseDateOf = (value) => {
+  const match = String(value || '').match(/(\d{4})年(\d{1,2})月(\d{1,2})日/)
+  return match ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3])) : null
+}
+const isWithinReservationWindow = (item) => {
+  const date = releaseDateOf(item.salesDate)
+  if (!date) return item.salesType !== '1'
+  const now = new Date()
+  const oneMonthLater = new Date(now)
+  oneMonthLater.setDate(now.getDate() + 31)
+  return date <= oneMonthLater
+}
+const isRakutenItem = (item) => Boolean(item?.itemUrl && item?.affiliateUrl && item?.affiliateUrl.startsWith('https://hb.afl.rakuten.co.jp/') && (item.largeImageUrl || item.mediumImageUrl) && isWithinReservationWindow(item))
+const isPublishableBook = (book) => Boolean(book?.source === 'rakuten-kobo' && book.slug && book.cover?.includes('rakuten') && book.affiliateUrl?.startsWith('https://hb.afl.rakuten.co.jp/'))
 
 async function rakutenSearch(keyword, page = 1) {
   const params = new URLSearchParams({
     applicationId: process.env.RAKUTEN_APPLICATION_ID,
     accessKey: process.env.RAKUTEN_ACCESS_KEY,
-    affiliateId: process.env.RAKUTEN_AFFILIATE_ID || '',
+    affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
     format: 'json', formatVersion: '2', keyword, koboGenreId: '101',
     hits: '30', page: String(page), sort: '-releaseDate', orFlag: '1'
   })
@@ -47,18 +62,20 @@ async function generateArticle(item) {
 }
 
 function toBook(item, article) {
+  if (!isRakutenItem(item)) throw new Error(`Not publishable Rakuten item: ${item.title || item.itemName}`)
   const title = item.title || item.itemName || '作品名未取得'
   return {
     id: String(item.itemNumber || item.isbn || slugify(title)), slug: slugify(title), title,
     author: item.author || '作者情報なし', seriesName: item.seriesName || '', genre: '異世界・ファンタジー', tags: article.tags,
-    badge: '新着', color: 'gold', cover: item.largeImageUrl || item.mediumImageUrl || '',
+    badge: releaseDateOf(item.salesDate) > new Date() ? 'まもなく発売' : '新着', color: 'gold', cover: item.largeImageUrl || item.mediumImageUrl || '',
     description: article.description, aiIntro: article.aiIntro, readerTypes: article.readerTypes,
-    price: item.itemPrice || 0, salesDate: item.salesDate || '', affiliateUrl: item.affiliateUrl || item.itemUrl,
+    price: item.itemPrice || 0, salesDate: item.salesDate || '', salesType: item.salesType || '0', affiliateUrl: item.affiliateUrl,
     sourceUrl: item.itemUrl, source: 'rakuten-kobo', publishedAt: new Date().toISOString()
   }
 }
 
 async function writeIndex(books) {
+  await clearGeneratedPages()
   const tagEntries = [...new Set(books.flatMap(book => book.tags || []))]
   const authorEntries = [...new Set(books.map(book => book.author).filter(Boolean))]
   const seriesEntries = [...new Set(books.map(book => book.seriesName).filter(Boolean))]
@@ -86,6 +103,12 @@ async function writeIndex(books) {
   await fs.writeFile(path.join(root, 'public/llms.txt'), `# 異世界コンパス\n\n> 異世界作品に特化した作品発見・比較サイト。楽天Koboの書誌情報をもとに、作品紹介、タグ、読者タイプを整理しています。\n\n## 主要ページ\n- [トップ](${siteUrl}/): 異世界作品のおすすめ\n- [全作品](${siteUrl}/works/): 作品詳細を一覧で検索\n- [新刊](${siteUrl}/new/): 新しく追加された作品\n- [タグ一覧](${siteUrl}/tags/): 作品をテーマ別に検索\n- [作者一覧](${siteUrl}/authors/): 作者から検索\n- [シリーズ一覧](${siteUrl}/series/): シリーズから検索\n- [比較・関連作品](${siteUrl}/compare/): 似ている作品を比較\n\n## 作品ページ\n${llmEntries}\n\n## データ方針\n- 作品データは楽天Kobo APIから定期更新します。\n- 紹介文・タグ・読者タイプはGeminiで生成し、作品データの範囲で編集します。\n- 価格と配信状況は各販売ページで確認してください。\n`)
 }
 const escapeXml = value => String(value).replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[c]))
+
+async function clearGeneratedPages() {
+  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new']) {
+    await fs.rm(path.join(root, 'public', dir), { recursive: true, force: true })
+  }
+}
 
 function getPairs(books) {
   const pairs = []
@@ -152,21 +175,25 @@ async function writeComparePages(books, pairs) {
 }
 
 async function main() {
-  if (process.argv.includes('--seed')) { console.log(`Seed data already contains ${seedBooks.length} works.`); await writeIndex(seedBooks); return }
-  for (const name of ['RAKUTEN_APPLICATION_ID', 'RAKUTEN_ACCESS_KEY']) if (!process.env[name]) throw new Error(`${name} is not set`)
+  if (process.argv.includes('--seed')) { console.log(`Seed data contains ${seedBooks.filter(isPublishableBook).length} publishable Rakuten works.`); await writeIndex(seedBooks.filter(isPublishableBook)); return }
+  for (const name of ['RAKUTEN_APPLICATION_ID', 'RAKUTEN_ACCESS_KEY', 'RAKUTEN_AFFILIATE_ID']) if (!process.env[name]) throw new Error(`${name} is not set`)
   const state = JSON.parse(await fs.readFile(statePath, 'utf8').catch(() => '{"queryIndex":0,"page":1}'))
   const keyword = queries[state.queryIndex % queries.length]
   const items = await rakutenSearch(keyword, state.page)
-  const existing = new Set(seedBooks.map(book => book.id))
-  const candidate = items.find(item => !existing.has(String(item.itemNumber || item.isbn || slugify(item.title || item.itemName))))
+  const existing = new Set(seedBooks.filter(book => book.source === 'rakuten-kobo').map(book => book.id))
+  const pending = seedBooks.filter(book => book.source === 'pending-rakuten-sync')
+  const pendingCandidate = items.find(item => isRakutenItem(item) && pending.some(book => normalizeTitle(item.title).includes(normalizeTitle(book.title)) || normalizeTitle(book.title).includes(normalizeTitle(item.title))))
+  const candidate = pendingCandidate || items.find(item => isRakutenItem(item) && !existing.has(String(item.itemNumber || item.isbn || slugify(item.title || item.itemName))))
   if (!candidate) { state.queryIndex = (state.queryIndex + 1) % queries.length; state.page = state.page >= 100 ? 1 : state.page + 1; await fs.writeFile(statePath, JSON.stringify(state, null, 2) + '\n'); console.log('No new candidate. Cursor advanced.'); return }
   const article = await generateArticle(candidate)
   const book = toBook(candidate, article)
-  seedBooks.push(book)
+  const pendingIndex = seedBooks.findIndex(existingBook => existingBook.source === 'pending-rakuten-sync' && (normalizeTitle(existingBook.title).includes(normalizeTitle(book.title)) || normalizeTitle(book.title).includes(normalizeTitle(existingBook.title))))
+  if (pendingIndex >= 0) seedBooks[pendingIndex] = book
+  else seedBooks.push(book)
   await fs.writeFile(dataPath, JSON.stringify(seedBooks, null, 2) + '\n')
   await fs.writeFile(statePath, JSON.stringify({ queryIndex: state.queryIndex, page: state.page, lastAdded: book.id, updatedAt: new Date().toISOString() }, null, 2) + '\n')
-  await writeIndex(seedBooks)
-  console.log(`Added: ${book.title} (${book.id})`)
+  await writeIndex(seedBooks.filter(isPublishableBook))
+  console.log(`${pendingIndex >= 0 ? 'Updated' : 'Added'}: ${book.title} (${book.id})`)
 }
 
 await main()

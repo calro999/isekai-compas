@@ -2,24 +2,25 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 
-const fallbackBooks = [
-  { title: '転生したら第七王子だったので', author: '謙虚なサークル', genre: '無双・成長', tags: ['転生', '最強主人公'], badge: '話題作', cover: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=600&q=80', color: 'gold', desc: '魔術を極めたい少年が、異世界で自由に生きる王道ファンタジー。' },
-  { title: 'とんでもスキルで異世界放浪メシ', author: '江口連', genre: 'スローライフ', tags: ['スローライフ', 'もふもふ'], badge: 'ほっこり', cover: 'https://images.unsplash.com/photo-1513001900722-370f803f498d?auto=format&fit=crop&w=600&q=80', color: 'sage', desc: 'ネットスーパーのスキルで、旅とごはんを楽しむ異世界生活。' },
-  { title: '追放された令嬢の華麗なる生活', author: '柚木深つばさ', genre: '悪役令嬢・恋愛', tags: ['追放', '悪役令嬢', 'ざまぁ'], badge: '新刊', cover: 'https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=600&q=80', color: 'rose', desc: '追放された先で、本当の自分と運命の人に出会う再起の物語。' },
-  { title: 'ダンジョン飯はじめました', author: '九井諒子', genre: 'ダンジョン・冒険', tags: ['ダンジョン', '冒険'], badge: '定番', cover: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=600&q=80', color: 'blue', desc: '迷宮を知り尽くす仲間たちの、食と冒険の異世界グルメ。' },
-]
-
 const tags = ['追放', '悪役令嬢', 'スローライフ', 'ダンジョン', '最強主人公', 'ざまぁ', '転生', '内政', 'もふもふ', '恋愛']
+const isWithinReleaseWindow = (salesDate) => {
+  const match = String(salesDate || '').match(/(\d{4})年(\d{1,2})月(\d{1,2})日/)
+  if (!match) return true
+  const release = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]))
+  const limit = new Date()
+  limit.setDate(limit.getDate() + 31)
+  return release <= limit
+}
 
 function Icon({ children }) { return <span className="icon" aria-hidden="true">{children}</span> }
 
 function App() {
-  const [books, setBooks] = useState(fallbackBooks)
+  const [books, setBooks] = useState([])
   const [query, setQuery] = useState('')
   const [active, setActive] = useState('すべて')
   const [saved, setSaved] = useState([])
   useEffect(() => {
-    fetch('/data/books.json').then(response => response.ok ? response.json() : Promise.reject(new Error('book data unavailable'))).then(setBooks).catch(() => {})
+    fetch('/data/books.json').then(response => response.ok ? response.json() : Promise.reject(new Error('book data unavailable'))).then(items => setBooks(items.filter(book => book.source === 'rakuten-kobo' && book.slug && book.cover?.includes('rakuten') && book.affiliateUrl?.startsWith('https://hb.afl.rakuten.co.jp/') && isWithinReleaseWindow(book.salesDate)))).catch(() => {})
   }, [])
   const filtered = useMemo(() => books.filter(b => (active === 'すべて' || b.genre.includes(active) || b.tags?.includes(active)) && (b.title + b.author).includes(query)), [active, query])
   const toggleSave = (title) => setSaved(s => s.includes(title) ? s.filter(t => t !== title) : [...s, title])
@@ -40,7 +41,7 @@ function App() {
         <div className="hero-art"><div className="moon"></div><div className="mountain back"></div><div className="mountain front"></div><div className="castle"><span>♜</span></div><div className="hero-card"><span className="mini-label">TODAY'S PICK</span><strong>物語の余韻に、<br />浸れる一冊。</strong><span className="card-arrow">↗</span></div><div className="orb orb-one"></div><div className="orb orb-two"></div></div>
       </section>
 
-      <section className="section wrap" id="discover"><div className="section-heading"><div><span className="eyebrow dark">DISCOVER</span><h2>今日のおすすめ</h2><p>今、読者から注目されている異世界作品</p></div><a className="text-link" href="/works/">すべて見る <span>→</span></a></div><div className="book-grid">{filtered.slice(0, 3).map(book => <BookCard key={book.title} book={book} saved={saved.includes(book.title)} onSave={() => toggleSave(book.title)} />)}</div></section>
+      <section className="section wrap" id="discover"><div className="section-heading"><div><span className="eyebrow dark">DISCOVER</span><h2>今日のおすすめ</h2><p>今、読者から注目されている異世界作品</p></div><a className="text-link" href="/works/">すべて見る <span>→</span></a></div><div className="book-grid">{filtered.slice(0, 3).map(book => <BookCard key={book.title} book={book} saved={saved.includes(book.title)} onSave={() => toggleSave(book.title)} />)}{books.length === 0 && <p className="data-note">楽天Koboの商品データを読み込んでいます。</p>}</div></section>
 
       <section className="quote-band"><div className="quote-inner wrap"><span className="quote-mark">“</span><div><p>ランキングだけじゃ見つからない、<br /><strong>あなたのための異世界</strong>を案内します。</p></div><span className="quote-note">READ YOUR<br />OWN STORY</span></div></section>
 
