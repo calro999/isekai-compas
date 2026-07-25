@@ -12,10 +12,7 @@
 - [比較・関連作品](https://isekai-compas.vercel.app/compare/): 似ている作品を比較
 
 ## 作品ページ
-- [転生したけどステータス「魅力」に全振り！？(114)](https://isekai-compas.vercel.app/works/転生したけどステータス-魅力-に全振り-114/): 恋愛ゲームを極めた主人公・秦行遠は、オンラインゲーム「万界遊」の全キャラクター攻略に成功。しかし、その攻略方法が原因でゲーム世界へ転生してしまいます。現実世界への帰還を目指し、彼は「魅力」に全振りされたステータスで、再び多種多様な五つ星キャラクターたちとの攻略の旅を始めることに。異世界での新たなゲーム攻略が今、幕を開けます。
-- [とんでもスキルで異世界放浪メシ](https://isekai-compas.vercel.app/works/tondemo-skill-de-isekai-houro-meshi/): 異世界に召喚された会社員が、現代の商品を取り寄せられる固有スキルで旅をする。おいしい料理と頼れる仲間に癒やされる異世界生活。
-- [転生したらスライムだった件](https://isekai-compas.vercel.app/works/that-time-i-got-reincarnated-as-a-slime/): スライムに転生したリムルが、仲間たちと魔物の国を築いていく。爽快な無双と国づくりを楽しめる人気シリーズ。
-- [無職転生 ～異世界行ったら本気だす～](https://isekai-compas.vercel.app/works/mushoku-tensei-isekai-ittara-honki-dasu/): 34歳無職の男が異世界で少年ルーデウスに生まれ変わり、今度こそ本気で生きる。魔術と仲間、家族との出会いを描く異世界転生の金字塔。
+
 
 ## データ方針
 - 作品データは楽天Kobo APIから定期更新します。
