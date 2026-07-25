@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://isekai-compass.jp/sitemap.xml
