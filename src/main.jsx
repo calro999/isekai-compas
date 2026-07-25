@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 
-const books = [
+const fallbackBooks = [
   { title: '転生したら第七王子だったので', author: '謙虚なサークル', genre: '無双・成長', tags: ['転生', '最強主人公'], badge: '話題作', cover: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=600&q=80', color: 'gold', desc: '魔術を極めたい少年が、異世界で自由に生きる王道ファンタジー。' },
   { title: 'とんでもスキルで異世界放浪メシ', author: '江口連', genre: 'スローライフ', tags: ['スローライフ', 'もふもふ'], badge: 'ほっこり', cover: 'https://images.unsplash.com/photo-1513001900722-370f803f498d?auto=format&fit=crop&w=600&q=80', color: 'sage', desc: 'ネットスーパーのスキルで、旅とごはんを楽しむ異世界生活。' },
   { title: '追放された令嬢の華麗なる生活', author: '柚木深つばさ', genre: '悪役令嬢・恋愛', tags: ['追放', '悪役令嬢', 'ざまぁ'], badge: '新刊', cover: 'https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=600&q=80', color: 'rose', desc: '追放された先で、本当の自分と運命の人に出会う再起の物語。' },
@@ -14,9 +14,13 @@ const tags = ['追放', '悪役令嬢', 'スローライフ', 'ダンジョン',
 function Icon({ children }) { return <span className="icon" aria-hidden="true">{children}</span> }
 
 function App() {
+  const [books, setBooks] = useState(fallbackBooks)
   const [query, setQuery] = useState('')
   const [active, setActive] = useState('すべて')
   const [saved, setSaved] = useState([])
+  useEffect(() => {
+    fetch('/data/books.json').then(response => response.ok ? response.json() : Promise.reject(new Error('book data unavailable'))).then(setBooks).catch(() => {})
+  }, [])
   const filtered = useMemo(() => books.filter(b => (active === 'すべて' || b.genre.includes(active) || b.tags?.includes(active)) && (b.title + b.author).includes(query)), [active, query])
   const toggleSave = (title) => setSaved(s => s.includes(title) ? s.filter(t => t !== title) : [...s, title])
 
