@@ -1,14 +1,23 @@
 # 異世界コンパス
 
-> 異世界漫画に特化した作品発見・比較サイト。作品の世界観、タグ、読者タイプ、シリーズ情報を整理しています。
+> 異世界作品に特化した作品発見・比較サイト。楽天Koboの書誌情報をもとに、作品紹介、タグ、読者タイプを整理しています。
 
 ## 主要ページ
-- [トップ](https://isekai-compass.jp/): 異世界漫画の特集と作品発見
-- [作品一覧](https://isekai-compass.jp/manga): タグ・読者タイプから絞り込み
-- [新刊](https://isekai-compass.jp/new): 異世界漫画の新刊情報
-- [タグ一覧](https://isekai-compass.jp/tags): 追放、悪役令嬢、スローライフなど
+- [トップ](https://isekai-compas.vercel.app/): 異世界作品のおすすめ
+- [全作品](https://isekai-compas.vercel.app/works/): 作品詳細を一覧で検索
+- [新刊](https://isekai-compas.vercel.app/new/): 新しく追加された作品
+- [タグ一覧](https://isekai-compas.vercel.app/tags/): 作品をテーマ別に検索
+- [作者一覧](https://isekai-compas.vercel.app/authors/): 作者から検索
+- [シリーズ一覧](https://isekai-compas.vercel.app/series/): シリーズから検索
+- [比較・関連作品](https://isekai-compas.vercel.app/compare/): 似ている作品を比較
 
-## コンテンツ方針
-- 作品データは楽天Kobo APIの書誌情報を元に更新します。
-- 紹介文・比較・読者タイプは編集ポリシーに沿って生成・確認します。
-- 価格と配信状況は各販売ページでご確認ください。
+## 作品ページ
+- [転生したけどステータス「魅力」に全振り！？(114)](https://isekai-compas.vercel.app/works/転生したけどステータス-魅力-に全振り-114/): 恋愛ゲームを極めた主人公・秦行遠は、オンラインゲーム「万界遊」の全キャラクター攻略に成功。しかし、その攻略方法が原因でゲーム世界へ転生してしまいます。現実世界への帰還を目指し、彼は「魅力」に全振りされたステータスで、再び多種多様な五つ星キャラクターたちとの攻略の旅を始めることに。異世界での新たなゲーム攻略が今、幕を開けます。
+- [とんでもスキルで異世界放浪メシ](https://isekai-compas.vercel.app/works/tondemo-skill-de-isekai-houro-meshi/): 異世界に召喚された会社員が、現代の商品を取り寄せられる固有スキルで旅をする。おいしい料理と頼れる仲間に癒やされる異世界生活。
+- [転生したらスライムだった件](https://isekai-compas.vercel.app/works/that-time-i-got-reincarnated-as-a-slime/): スライムに転生したリムルが、仲間たちと魔物の国を築いていく。爽快な無双と国づくりを楽しめる人気シリーズ。
+- [無職転生 ～異世界行ったら本気だす～](https://isekai-compas.vercel.app/works/mushoku-tensei-isekai-ittara-honki-dasu/): 34歳無職の男が異世界で少年ルーデウスに生まれ変わり、今度こそ本気で生きる。魔術と仲間、家族との出会いを描く異世界転生の金字塔。
+
+## データ方針
+- 作品データは楽天Kobo APIから定期更新します。
+- 紹介文・タグ・読者タイプはGeminiで生成し、作品データの範囲で編集します。
+- 価格と配信状況は各販売ページで確認してください。

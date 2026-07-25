@@ -11,7 +11,7 @@
 - `RAKUTEN_AFFILIATE_ID`: 楽天アフィリエイトID
 - `GEMINI_API_KEY`: Google AI StudioのGemini APIキー
 
-`SITE_URL` は Repository variable に登録できます。未登録時は `https://isekai-compass.jp` を使います。
+`SITE_URL` は Repository variable に登録できます。未登録時は `https://isekai-compas.vercel.app` を使います。
 
 ## ローカルテスト
 
