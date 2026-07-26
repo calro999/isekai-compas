@@ -1346,5 +1346,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/4cf85bca53de35c19c5dfbf8fed9b27b/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T09:13:46.499Z"
+  },
+  {
+    "id": "4330996900310",
+    "slug": "4330996900310",
+    "title": "デスマーチからはじまる異世界狂想曲　コミックアンソロジー",
+    "author": "愛七　ひろ/ｓｈｒｉ/ドラゴンエイジ編集部",
+    "seriesName": "デスマーチからはじまる異世界狂想曲　コミックアンソロジー",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "アンソロジー",
+      "デスマーチ",
+      "コメディ",
+      "ファン向け",
+      "キャラクター",
+      "豪華執筆陣",
+      "ファンタジー"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/3269/2000010803269.jpg?_ex=200x200",
+    "description": "人気作「デスマーチからはじまる異世界狂想曲」の世界を豪華執筆陣が彩る、待望のコミックアンソロジーが登場！主人公サトゥーと個性豊かなヒロインたちが織りなす、可愛く、楽しく、元気いっぱいの異世界観光を体験できます。ファンにはたまらない、デスマの世界を様々な視点から楽しめる一冊です。",
+    "aiIntro": "「デスマーチからはじまる異世界狂想曲」の魅力を、新たな視点から深掘りしたいあなたへ。このコミックアンソロジーは、豪華な執筆陣が描く「デスマ」の世界を、可愛く、楽しく、そして元気いっぱいに再発見できる特別な一冊です。お気に入りのキャラクターたちの新たな一面に出会えること間違いなし！ぜひ、この異世界観光にご参加ください。",
+    "readerTypes": [
+      "「デスマーチ」シリーズの熱心なファン",
+      "複数の作家の視点で作品を楽しみたい読者",
+      "可愛らしい異世界キャラクターに癒されたい読者"
+    ],
+    "price": 726,
+    "salesDate": "2022年02月09日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F8556d098379632f2a569a245b130ba23%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F8556d098379632f2a569a245b130ba23%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/8556d098379632f2a569a245b130ba23/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T23:52:28.860Z"
   }
 ]
