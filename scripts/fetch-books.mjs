@@ -74,6 +74,20 @@ async function rakutenSearch(keyword, page = 1) {
   return json.Items || json.items || []
 }
 
+async function rakutenSeriesSearch(keyword, page = 1) {
+  const params = new URLSearchParams({
+    applicationId: process.env.RAKUTEN_APPLICATION_ID,
+    accessKey: process.env.RAKUTEN_ACCESS_KEY,
+    affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
+    format: 'json', formatVersion: '2', keyword, koboGenreId: '101',
+    hits: '30', page: String(page)
+  })
+  const response = await fetch(`https://openapi.rakuten.co.jp/services/api/Kobo/EbookSearch/20170426?${params}`)
+  if (!response.ok) throw new Error(`Rakuten API ${response.status}: ${await response.text()}`)
+  const json = await response.json()
+  return json.Items || json.items || []
+}
+
 // 無料LLM呼び出し（モデル自動フォールバック機能付き）
 async function callFreeLLM(prompt) {
   if (!process.env.GEMINI_API_KEY) return null
@@ -436,7 +450,7 @@ async function fetchSeriesVolumes(book) {
     let allItems = []
     let page = 1
     while (page <= 10) { // 最大10ページ(300件)まで取得して長編シリーズもカバー
-      const items = await rakutenSearch(baseTitle, page)
+      const items = await rakutenSeriesSearch(baseTitle, page)
       if (!items || items.length === 0) break
       allItems.push(...items)
       if (items.length < 30) break
