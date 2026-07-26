@@ -7,6 +7,23 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataPath = path.join(root, 'public/data/books.json')
 const statePath = path.join(root, 'public/data/sync-state.json')
 const siteUrl = process.env.SITE_URL || 'https://isekai-compas.vercel.app'
+
+async function loadEnv() {
+  try {
+    const envPath = path.join(root, '.env')
+    const content = await fs.readFile(envPath, 'utf8')
+    for (const line of content.split('\n')) {
+      const trimmed = line.trim()
+      if (trimmed && !trimmed.startsWith('#') && trimmed.includes('=')) {
+        const [key, ...vals] = trimmed.split('=')
+        const val = vals.join('=').trim()
+        if (key.trim() && val) process.env[key.trim()] = val
+      }
+    }
+  } catch (e) {}
+}
+await loadEnv()
+
 async function loadBooks() {
   return JSON.parse(await fs.readFile(dataPath, 'utf8'))
 }
