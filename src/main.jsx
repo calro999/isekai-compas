@@ -13,10 +13,23 @@ function App() {
   const [saved, setSaved] = useState([])
 
   useEffect(() => {
-    fetch('/data/books.json')
-      .then(response => response.ok ? response.json() : Promise.reject(new Error('book data unavailable')))
-      .then(items => setBooks(items.filter(book => book.slug && book.title)))
-      .catch(() => {})
+    const loadData = async () => {
+      if (window.__INITIAL_DATA__ && Array.isArray(window.__INITIAL_DATA__)) {
+        setBooks(window.__INITIAL_DATA__)
+        return
+      }
+      try {
+        let res = await fetch('/data/books.json')
+        if (!res.ok) res = await fetch('./data/books.json')
+        if (res.ok) {
+          const items = await res.json()
+          setBooks(items.filter(book => book.slug && book.title))
+        }
+      } catch (e) {
+        console.warn('Failed to load books.json:', e)
+      }
+    }
+    loadData()
   }, [])
 
   const filtered = useMemo(() => {

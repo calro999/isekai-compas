@@ -620,7 +620,17 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
   // 9. おすすめ特集（ハブ）ページ (/features/)
   await writeFeaturePages(books)
 
-  // 10. sitemap.xml生成
+  // 10. index.html への初期データ埋め込み＆dist同期
+  const initialScript = `<script>window.__INITIAL_DATA__ = ${JSON.stringify(books)};</script>`
+  let rootIndexHtml = await fs.readFile(path.join(root, 'index.html'), 'utf8').catch(() => '')
+  if (rootIndexHtml) {
+    if (!rootIndexHtml.includes('window.__INITIAL_DATA__')) {
+      rootIndexHtml = rootIndexHtml.replace('</head>', `${initialScript}</head>`)
+      await fs.writeFile(path.join(root, 'index.html'), rootIndexHtml)
+    }
+  }
+
+  // 11. sitemap.xml生成
   await writeSitemap(books, getPairs(books), tagEntries, authorEntries, seriesEntries)
 }
 
