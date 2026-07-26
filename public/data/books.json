@@ -28,7 +28,7 @@
     "price": 836,
     "salesDate": "2026年02月24日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2ccf2d0621bb3d72a8966c55d8c1c886/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T23:31:57.148Z"
@@ -61,7 +61,7 @@
     "price": 759,
     "salesDate": "2025年09月08日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000018500010%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000018500010%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000018500010%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000018500010/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T00:00:00.000Z"
@@ -94,7 +94,7 @@
     "price": 715,
     "salesDate": "2025年11月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019500055%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019500055%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019500055%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000019500055/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T00:00:00.000Z"
@@ -128,7 +128,7 @@
     "price": 62,
     "salesDate": "2027年07月24日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021304690%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021304690%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021304690%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000021304690/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T22:52:49.728Z"
@@ -162,7 +162,7 @@
     "price": 80,
     "salesDate": "2026年04月28日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2037c60d54ef34bfbb2626a5b3e41547/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T23:33:20.497Z"
@@ -542,5 +542,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/eea2f63ea0d73f98a2b185969839eca0/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:04:24.051Z"
+  },
+  {
+    "id": "4390000014620",
+    "slug": "4390000014620",
+    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(96)",
+    "author": "心音ゆるり/伊咲ウタ",
+    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "VRMMO",
+      "最強主人公",
+      "レベル1から",
+      "ダンジョン攻略",
+      "レアアイテム",
+      "ソロプレイヤー",
+      "ファンタジー"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1187/2000020421187.jpg?_ex=200x200",
+    "description": "VRMMOゲーム『テンペスト』で頂点に君臨したソロプレイヤーSRが、転生しレベル1の無職から再スタート。世界の創造主ノアと出会い、高難易度ダンジョン攻略のためBランクダンジョンを効率的に周回する。一方、セラはAランクダンジョンに挑み、師匠SRから助言代わりにニンニクソードを受け取る。レアアイテムを求め、MMOならではのダンジョン周回が繰り広げられる、心音ゆるり/伊咲ウタの異世界ファンタジー。単行本10巻の分冊版。",
+    "aiIntro": "かつてVRMMOの頂点に君臨したソロプレイヤーが、異世界でレベル1の無職から再出発！『俺、勇者じゃないですから。』は、効率的なダンジョン周回でレアアイテムを狙い、高難易度クエストに挑む本格MMOファンタジーです。創造主との出会いや仲間との冒険、そして師匠からのユニークな助言が物語を彩ります。最強主人公の異世界攻略譚を、ぜひこの分冊版でお楽しみください。",
+    "readerTypes": [
+      "VRMMOやゲームの世界観が好きな方",
+      "最強主人公の活躍を楽しみたい方",
+      "効率的なダンジョン攻略やレアアイテム収集に魅力を感じる方"
+    ],
+    "price": 80,
+    "salesDate": "2026年04月28日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd2e11f81621e3b428c5313556741bd49%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd2e11f81621e3b428c5313556741bd49%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/d2e11f81621e3b428c5313556741bd49/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T01:07:57.195Z"
   }
 ]
