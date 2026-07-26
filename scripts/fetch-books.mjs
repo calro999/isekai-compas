@@ -246,7 +246,10 @@ async function writeIndex(books) {
   await fs.writeFile(path.join(root, 'public/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${siteUrl}/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>\n  <url><loc>${siteUrl}/new</loc><priority>0.9</priority><changefreq>daily</changefreq></url>\n${urls}\n</urlset>\n`)
   const latest = books.slice(-20).reverse().map(book => `    <item><title>${escapeXml(book.title)}</title><link>${siteUrl}/works/${book.slug}/</link><description>${escapeXml(book.description)}</description><pubDate>${new Date(book.publishedAt).toUTCString()}</pubDate></item>`).join('\n')
   await fs.writeFile(path.join(root, 'public/rss.xml'), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>異世界コンパス｜新刊情報</title><link>${siteUrl}/new</link><description>異世界漫画・小説の新刊情報</description>\n${latest}\n</channel></rss>\n`)
-  await Promise.all(books.map(book => writeWorkPage(book, books)))
+  for (const book of books) {
+    await writeWorkPage(book, books)
+    await sleep(1000)
+  }
   await writeCategoryPages(books, tagEntries, authorEntries, seriesEntries)
   await writeComparePages(books, pairEntries)
   const llmEntries = books.slice(-30).reverse().map(book => `- [${book.title}](${siteUrl}/works/${book.slug}/): ${book.description}`).join('\n')
@@ -455,7 +458,7 @@ async function fetchSeriesVolumes(book) {
       allItems.push(...items)
       if (items.length < 30) break
       page++
-      await sleep(200) // APIレートリミット対策
+      await sleep(1000) // APIレートリミット対策 (Rakuten is strict 1req/sec)
     }
     
     if (allItems.length === 0) throw new Error('No items found')
@@ -499,7 +502,7 @@ async function fetchSeriesVolumes(book) {
 
   } catch (e) {
     // API呼び出し失敗時は元の本1冊だけを返す
-    return [{
+    console.error("fetchSeriesVolumes error:", e); return [{
       volNum: 1,
       volTitle: book.title,
       cover: book.cover,
