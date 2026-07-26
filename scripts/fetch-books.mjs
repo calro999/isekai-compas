@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import crypto from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -10,7 +11,18 @@ const seedBooks = JSON.parse(await fs.readFile(dataPath, 'utf8'))
 
 const queries = ['無職転生 異世界行ったら本気だす', '転生したらスライムだった件', 'とんでもスキルで異世界放浪メシ', '異世界 転生 小説', '異世界 ファンタジー ライトノベル', '悪役令嬢 異世界 小説', 'スローライフ 異世界 小説']
 
-const slugify = (value) => value.toString().trim().toLowerCase().replace(/[^\p{Letter}\p{Number}]+/gu, '-').replace(/^-|-$/g, '').slice(0, 90)
+const hashString = (value) => crypto.createHash('md5').update(String(value)).digest('hex').slice(0, 10)
+
+const slugify = (value) => {
+  const ascii = String(value || '')
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')
+    .trim()
+    .replace(/[\s_-]+/g, '-')
+  if (ascii.length >= 3) return ascii.slice(0, 40)
+  return `ref-${hashString(value)}`
+}
+
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 const normalizeTitle = (value) => String(value || '').replace(/[\s　「」『』（）()！？!?・:：～〜]/g, '').toLowerCase()
 const buildAffiliateUrl = (itemUrl, affiliateId) => `https://hb.afl.rakuten.co.jp/hgc/${affiliateId}/?pc=${encodeURIComponent(itemUrl)}&m=${encodeURIComponent(itemUrl)}`
@@ -65,8 +77,10 @@ async function generateArticle(item) {
 function toBook(item, article) {
   if (!isRakutenItem(item)) throw new Error(`Not publishable Rakuten item: ${item.title || item.itemName}`)
   const title = item.title || item.itemName || '作品名未取得'
+  const rawId = String(item.itemNumber || item.isbn || '')
+  const bookSlug = rawId ? rawId : `work-${hashString(title)}`
   return {
-    id: String(item.itemNumber || item.isbn || slugify(title)), slug: slugify(title), title,
+    id: rawId || bookSlug, slug: bookSlug, title,
     author: item.author || '作者情報なし', seriesName: item.seriesName || '', genre: '異世界・ファンタジー', tags: article.tags,
     badge: releaseDateOf(item.salesDate) > new Date() ? 'まもなく発売' : '新着', color: 'gold', cover: item.largeImageUrl || item.mediumImageUrl || '',
     description: article.description, aiIntro: article.aiIntro, readerTypes: article.readerTypes,
