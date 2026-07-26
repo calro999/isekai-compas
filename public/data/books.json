@@ -29,7 +29,7 @@
     "price": 836,
     "salesDate": "2026年02月24日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2ccf2d0621bb3d72a8966c55d8c1c886/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T23:31:57.148Z"
@@ -155,9 +155,44 @@
     "price": 80,
     "salesDate": "2026年04月28日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2037c60d54ef34bfbb2626a5b3e41547/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T23:33:20.497Z"
+  },
+  {
+    "id": "4390000014618",
+    "slug": "4390000014618",
+    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(94)",
+    "author": "心音ゆるり/伊咲ウタ",
+    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "VRMMO",
+      "最強主人公",
+      "ダンジョン攻略",
+      "レベルアップ",
+      "効率プレイ",
+      "ファンタジー",
+      "ソロプレイ"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1192/2000020421192.jpg?_ex=200x200",
+    "description": "VRMMOゲーム「テンペスト」の頂点に君臨したソロプレイヤーSRが、レベル1の無職から異世界で再スタートを切る物語。高難易度ダンジョンを効率的に攻略するため、Bランクダンジョンを周回するSR。一方、セラはAランクダンジョンに挑む。師匠SRからの助言とニンニクソードを手に、彼らはこのVR世界の謎に迫る。これは人気シリーズの分冊版です。",
+    "aiIntro": "かつてVR世界の頂点に立った男が、レベル1の無職として新たな冒険に挑む！『俺、勇者じゃないですから。』は、効率的なダンジョン攻略と、個性豊かなキャラクターたちの活躍が魅力の異世界ファンタジーです。世界一のソロプレイヤーSRの知識と経験が、どのように新たな世界を切り開くのか。MMOの醍醐味が詰まった本作をぜひお楽しみください。",
+    "readerTypes": [
+      "異世界転生ファン",
+      "VRMMO好き",
+      "最強主人公の物語を求める人"
+    ],
+    "price": 80,
+    "salesDate": "2026年04月28日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Feea2f63ea0d73f98a2b185969839eca0%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Feea2f63ea0d73f98a2b185969839eca0%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/eea2f63ea0d73f98a2b185969839eca0/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T00:43:47.610Z"
   }
 ]
