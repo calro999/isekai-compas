@@ -431,17 +431,28 @@ function renderBookCard(book) {
 }
 
 async function fetchSeriesVolumes(book) {
-  const baseTitle = book.seriesName || book.title.split('〜')[0].split('（')[0].split('(')[0].replace(/第?\d+巻?/, '').trim()
+  const baseTitle = book.seriesName || book.title.split('〜')[0].split('（')[0].split('(')[0].replace(/第?\\d+巻?/, '').trim()
   try {
-    const items = await rakutenSearch(baseTitle, 1)
-    if (!items || items.length === 0) throw new Error('No items found')
+    let allItems = []
+    let page = 1
+    while (page <= 10) { // 最大10ページ(300件)まで取得して長編シリーズもカバー
+      const items = await rakutenSearch(baseTitle, page)
+      if (!items || items.length === 0) break
+      allItems.push(...items)
+      if (items.length < 30) break
+      page++
+      await sleep(200) // APIレートリミット対策
+    }
+    
+    if (allItems.length === 0) throw new Error('No items found')
     
     // 分冊版を除外
-    let filtered = items.filter(item => !item.title.includes('【分冊版】') && (item.seriesName === book.seriesName || item.title.includes(baseTitle)))
-    if (filtered.length === 0) filtered = items.filter(item => item.seriesName === book.seriesName || item.title.includes(baseTitle))
+    let filtered = allItems.filter(item => !item.title.includes('【分冊版】') && (item.seriesName === book.seriesName || item.title.includes(baseTitle)))
+    if (filtered.length === 0) filtered = allItems.filter(item => item.seriesName === book.seriesName || item.title.includes(baseTitle))
     
-    // タイトルでソートして巻順にする
-    filtered.sort((a, b) => a.title.localeCompare(b.title))
+    // 自然順ソートで「第10巻」が「第2巻」の前に来ないように正しく並び替える
+    const collator = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' })
+    filtered.sort((a, b) => collator.compare(a.title, b.title))
     
     // 同じタイトル（特装版と通常版など）を除外してユニークにする
     const unique = []
