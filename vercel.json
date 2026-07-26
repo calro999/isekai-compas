@@ -1,4 +1,5 @@
 {
+  "buildCommand": false,
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/works/:path*/", "destination": "/works/:path*/index.html" },
