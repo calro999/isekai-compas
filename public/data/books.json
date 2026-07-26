@@ -1148,5 +1148,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/88327a510fb93a3686cd688fadb517fe/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T05:44:19.261Z"
+  },
+  {
+    "id": "6671298194020",
+    "slug": "6671298194020",
+    "title": "クラス転生譚〜最弱無職の成り上がり〜【合冊版】 / 6",
+    "author": "美夜尾maru/瑛吉/うみへび/夕霧",
+    "seriesName": "クラス転生譚〜最弱無職の成り上がり〜【合冊版】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "成り上がり",
+      "ファンタジー",
+      "ライトノベル",
+      "Web小説",
+      "逆境克服",
+      "無職主人公",
+      "冒険"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1534/2000018981534.jpg?_ex=200x200",
+    "description": "現世でのいじめ、そして転生先で告げられたのは「無職」という残酷な宣告。二度目の絶望の淵に立たされた少年ユウは、たった一人、村を飛び出すことを決意する。これは、最底辺から始まる、一人の少年が理不尽な運命を切り拓き、最強へと成り上がる異世界転生ファンタジーである。",
+    "aiIntro": "いじめられっ子、そして無職――。二度の絶望を乗り越え、少年は最強の道を駆け上がる！ 最底辺から始まる、痛快無比の異世界成り上がりファンタジー、開幕！",
+    "readerTypes": [
+      "絶望的な状況から這い上がるカタルシスを求める方",
+      "理不尽な運命に抗い、道を切り開く少年の姿に胸を熱くしたい方",
+      "無職という最底辺から始まる、痛快な成り上がりを体験したい方"
+    ],
+    "price": 440,
+    "salesDate": "2025年11月01日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5e72af97153236f6b690d068fe67b460%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5e72af97153236f6b690d068fe67b460%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/5e72af97153236f6b690d068fe67b460/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T06:47:29.016Z"
   }
 ]
