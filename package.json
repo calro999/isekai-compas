@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/fetch-books.mjs --seed && vite build",
     "preview": "vite preview",
     "seed:books": "node scripts/fetch-books.mjs --seed",
     "sync:books": "node scripts/fetch-books.mjs"
