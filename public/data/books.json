@@ -451,51 +451,6 @@
     "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
-    "id": "4091435210014",
-    "slug": "4091435210014",
-    "title": "説得のいらない異世界無双",
-    "author": "小栗カズマ / 高橋伸昌",
-    "seriesName": "説得のいらない異世界無双",
-    "genre": "爽快・無双・問答無用・アクションファンタジー",
-    "oneLineCatch": "無駄な議論や説得は一切不要！理不尽な悪党を己の拳と圧倒的武力で一瞬で粉砕する超爽快アクション",
-    "protagonistGender": "男性（圧倒的強者主人公）",
-    "emotionType": "スカッとする・爽快・ストレスゼロ・無双",
-    "illustStyle": "ダイナミックなアクション作画・迫力満点の戦闘描写",
-    "animeAdaptation": "Web連載で圧倒的人気・コミックス絶賛発売中",
-    "tags": [
-      "説得無用",
-      "無双",
-      "冒険",
-      "爽快",
-      "小学館",
-      "ファンタジー",
-      "異世界"
-    ],
-    "badge": "ストレスゼロ無双",
-    "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/2441/2000009852441.jpg?_ex=400x400",
-    "description": "不条理な邪悪や敵に対して、説得や交渉の話し合いを一切挟まず、己の圧倒的拳と能力で即座に打ち砕く！ストレス要素を極限まで排除した超爽快異世界アクションファンタジー！",
-    "firstVolumeStory": "不条理な邪悪や敵に対して、無駄な話し合いや説得を一切挟まず、己の圧倒的拳と武力で一瞬にして粉砕する異世界無双ファンタジー。ストレス要素を極限まで排除し、主人公が持つ理不尽なまでの強さでテンポよく問題を解決していく爽快アクション。",
-    "highlights": [
-      "敵の命ごいや言い訳をバッサリ斬り捨てる説得無用のスピード解決",
-      "ストレスのかかるジメジメした展開が一切ないテンポ抜群の無双劇",
-      "主人公の圧勝ぶりがもたらす最高の爽快感とカタルシス"
-    ],
-    "review": "説得や引き延ばしを排除し、圧倒的な力で一瞬にして敵を粉砕する快感重視の無双作品。ストレス社会でスカッとしたい気分の時に最高の爽快感を与えてくれます。",
-    "readerTypes": [
-      "テンポよく悪党を叩きのめす無双が見たい方",
-      "ストレスフリーでスカッとしたい方",
-      "アクション重視のファンタジーが好きな方"
-    ],
-    "price": 715,
-    "salesDate": "2026年01月12日",
-    "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F2000009852441%2F&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F2000009852441%2F",
-    "sourceUrl": "https://item.rakuten.co.jp/rakutenkobo-ebooks/2000009852441/",
-    "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z"
-  },
-  {
     "id": "4040645010045",
     "slug": "4040645010045",
     "title": "治癒魔法の間違った使い方〜戦場をかける回復要員〜",
@@ -1118,5 +1073,49 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/c2048d7956cd3bb4a85fcb35d018ac16/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T13:05:00.000Z"
+  },
+  {
+    "id": "seirei-gensouki-1",
+    "slug": "seirei-gensouki-1",
+    "title": "精霊幻想記",
+    "author": "北山結莉 / Riv / みなづきふたご",
+    "seriesName": "精霊幻想記",
+    "genre": "異世界転生・精霊・成り上がり・王道ファンタジー",
+    "oneLineCatch": "前世の記憶に覚醒したスラム街の少年リオ！前世と現世の運命が交錯する王道異世界サクセスファンタジー",
+    "protagonistGender": "男性（リオ / 天川春人）",
+    "emotionType": "感動・熱血・爽快・王道",
+    "illustStyle": "Riv先生による透明感あふれる超美しいキャラクター美術",
+    "animeAdaptation": "TVアニメ第1期・第2期大ヒット放送",
+    "tags": [
+      "精霊幻想記",
+      "リオ",
+      "春人",
+      "HJ文庫",
+      "ホビージャパン",
+      "王道"
+    ],
+    "badge": "王道大ヒット",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/9021/2000018349021.jpg?_ex=400x400",
+    "description": "スラム街で生きる孤児の少年リオ。7歳の時、前世の記憶と強大な魔力が突如覚醒！王立学院に入学したリオは、身分差別や陰謀に立ち向かいながら世界の運命に巻き込まれていく！",
+    "firstVolumeStory": "スラム街で母を殺され復讐を誓う孤児の少年リオ。7歳の誕生日、かつて日本の大学生「天川春人」であった前世の記憶と、体内に眠る膨大な魔力が目覚める。王女誘拐事件を解決した功績で貴族の通う王立学院へ特待生入学を果たすが、待っていたのは身分差別と冷遇だった。自らの実力と魔術で運命を切り拓く王道サクセスストーリー！",
+    "highlights": [
+      "前世の記憶「天川春人」と過酷な現世「リオ」の宿命が交錯するドラマ性の高さ",
+      "スラム街の孤児から王立学院の英雄へと成り上がる圧倒的なカタルシス",
+      "美しく魅力的なヒロインたちとの切なくも温かい信頼関係"
+    ],
+    "review": "王道異世界ファンタジーの最高峰。孤児として差別を受けながらも、前世の記憶と気高き心で自らを磨き上げ、多くの人々を惹きつけていくリオの成長が感動的です。",
+    "readerTypes": [
+      "王道の成長・成り上がりストーリーが好きな方",
+      "切なくも温かい人間ドラマを楽しみたい方",
+      "美しい作画と精霊ファンタジーが好きな方"
+    ],
+    "price": 748,
+    "salesDate": "2025年11月10日",
+    "salesType": "0",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/8240a3cebe9f30b6b44ffa5e3ba16a35/",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F8240a3cebe9f30b6b44ffa5e3ba16a35%2F",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T13:00:00.000Z"
   }
 ]
