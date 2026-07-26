@@ -1536,5 +1536,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/9b0a1d2adc903e3ba11756d34a7b5ded/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T10:11:45.985Z"
+  },
+  {
+    "id": "6474865543104",
+    "slug": "6474865543104",
+    "title": "とんでもスキルで異世界放浪メシ 5 ミックスフライ×海洋の魔物",
+    "author": "江口連",
+    "seriesName": "「とんでもスキルで異世界放浪メシ」シリーズ",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界グルメ",
+      "飯テロ",
+      "もふもふ従魔",
+      "まったり冒険",
+      "チートスキル",
+      "なろう系",
+      "ファンタジー",
+      "料理"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4735/2000006244735.jpg?_ex=200x200",
+    "description": "Aランク冒険者となったムコーダ一行は、まったり旅を続け海辺の街ベルレアンへ。念願の海の幸を求め、クラーケンを狩り、新鮮な魚介を焼き魚やフライ、バーベキューで堪能！朝市での食べ歩きも楽しみ、海を満喫する。しかし、魚介だけでは物足りず肉を欲したフェルたちが、またもや規格外の獲物を持ち帰り…!? 大人気「とんでもスキル」シリーズ第5巻は、海の幸と肉の饗宴！",
+    "aiIntro": "異世界で美味しいものを追求するムコーダと、最強の従魔たちの旅を描く大人気シリーズ第5巻！今回は海辺の街ベルレアンが舞台。新鮮な海の幸を求めてクラーケン狩りから絶品料理まで、読者の食欲を刺激すること間違いなし！まったりとした日常の中に、ちょっぴり規格外の冒険も楽しめる、心温まる異世界グルメファンタジー。疲れた心に癒しと飯テロを求めるあなたに贈る一冊です！",
+    "readerTypes": [
+      "異世界グルメ漫画で飯テロを味わいたい読者",
+      "最強の従魔たちとのほのぼの日常に癒されたい読者",
+      "肩の力を抜いて楽しめる異世界ファンタジーを求める読者"
+    ],
+    "price": 1430,
+    "salesDate": "2018年04月25日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2c38e37fc93c322d896810d1c9bb4812%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2c38e37fc93c322d896810d1c9bb4812%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/2c38e37fc93c322d896810d1c9bb4812/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T11:36:03.013Z"
   }
 ]
