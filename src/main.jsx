@@ -94,6 +94,8 @@ function App() {
         </div>
       </section>
 
+      <DiagnosisWidget books={books} />
+
       <section className="quote-band">
         <div className="quote-inner wrap">
           <span className="quote-mark">“</span>
@@ -184,5 +186,62 @@ function BookCard({ book, saved, onSave }) {
   )
 }
 
+function DiagnosisWidget({ books }) {
+  const [mood, setMood] = useState('無双')
+  const [heroType, setHeroType] = useState('最強')
+
+  const matched = useMemo(() => {
+    if (!books.length) return []
+    return books.filter(b => {
+      const text = (b.title + b.genre + b.description + (b.tags || []).join(''))
+      const matchMood = mood === '無双' ? text.includes('無双') || text.includes('最強') || text.includes('チート')
+                      : mood === '癒やし' ? text.includes('スローライフ') || text.includes('食堂') || text.includes('メシ') || text.includes('下剋上')
+                      : mood === '頭脳戦' ? text.includes('薬屋') || text.includes('ゼロから') || text.includes('破滅') || text.includes('ノーゲーム') || text.includes('王国')
+                      : text.includes('勇者') || text.includes('盾') || text.includes('治癒') || text.includes('魅力')
+      return matchMood
+    }).slice(0, 3)
+  }, [books, mood, heroType])
+
+  return (
+    <section className="section wrap" style={{ background: '#ffffff', padding: '32px', borderRadius: '12px', border: '1px solid #d6a24a', margin: '40px auto' }}>
+      <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+        <span className="eyebrow dark" style={{ color: '#d6a24a' }}>INTERACTIVE DIAGNOSIS</span>
+        <h2 style="font-family:serif;font-size:24px;margin:8px 0;">🎯 あなたにぴったりの異世界作品 1秒診断</h2>
+        <p style="color:#5f6c62;font-size:14px;margin:0;">今の気分を選ぶだけで、原点1巻から楽しめる最高の一着をコンパス案内します。</p>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: '28px' }}>
+        <div>
+          <label style={{ display: 'block', fontSize: '13px', fontWeight: 'bold', color: '#17221f', marginBottom: '8px' }}>① 今どんな気分で読みたい？</label>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {['無双', '癒やし', '頭脳戦', '逆転'].map(m => (
+              <button key={m} onClick={() => setMood(m)} style={{ padding: '8px 14px', borderRadius: '20px', border: mood === m ? '2px solid #8b672d' : '1px solid #e2e8de', background: mood === m ? '#17221f' : '#fff', color: mood === m ? '#fff' : '#17221f', fontWeight: 'bold', cursor: 'pointer', fontSize: '13px' }}>
+                {m === '無双' ? '⚔️ 圧倒的無双' : m === '癒やし' ? '☕ 癒やし・グルメ' : m === '頭脳戦' ? '🧠 考察・頭脳戦' : '🔥 逆転・成り上がり'}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div style={{ borderTop: '1px solid #e2e8de', paddingTop: '20px' }}>
+        <h3 style={{ fontSize: '16px', margin: '0 0 16px', color: '#17221f' }}>✨ 診断結果：あなたにおすすめの『1巻からハマる作品』</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '16px' }}>
+          {matched.map(b => (
+            <div key={b.id || b.title} style={{ background: '#f8f9f7', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8de', display: 'flex', gap: '12px', alignItems: 'center' }}>
+              <img src={b.cover} alt={b.title} style={{ width: '60px', height: '84px', objectFit: 'cover', borderRadius: '4px' }} />
+              <div>
+                <h4 style={{ fontSize: '14px', margin: '0 0 4px', lineHeight: '1.4' }}><a href={`/works/${b.slug}/`} style={{ color: '#17221f' }}>{b.title}</a></h4>
+                <p style={{ fontSize: '11px', color: '#5f6c62', margin: '0 0 8px' }}>{b.author}</p>
+                <a href={`/works/${b.slug}/`} style={{ fontSize: '12px', color: '#8b672d', fontWeight: 'bold' }}>1巻詳細を見る →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 createRoot(document.getElementById('root')).render(<App />)
+
 

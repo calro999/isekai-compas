@@ -139,7 +139,7 @@ async function writeIndex(books) {
 const escapeXml = value => String(value).replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[c]))
 
 async function clearGeneratedPages() {
-  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new']) {
+  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new', 'features']) {
     await fs.rm(path.join(root, 'public', dir), { recursive: true, force: true })
   }
 }
@@ -197,6 +197,8 @@ function renderHeader(activePath = '') {
       <div class="header-inner">
         <a class="brand" href="/"><span class="brand-mark">✦</span><span><strong>異世界</strong>コンパス<small>ISEKAI COMPASS</small></span></a>
         <nav class="main-nav">
+          <a href="/" class="${activePath === '/' ? 'active' : ''}">トップ</a>
+          <a href="/features/" class="${activePath === '/features/' ? 'active' : ''}">特集<em>HOT</em></a>
           <a href="/works/" class="${activePath === '/works/' ? 'active' : ''}">作品を探す</a>
           <a href="/new/" class="${activePath === '/new/' ? 'active' : ''}">新刊<em>NEW</em></a>
           <a href="/tags/" class="${activePath === '/tags/' ? 'active' : ''}">タグ</a>
@@ -215,6 +217,7 @@ function renderFooter() {
       <div class="footer-inner">
         <a class="brand light" href="/"><span class="brand-mark">✦</span><span><strong>異世界</strong>コンパス<small>ISEKAI COMPASS</small></span></a>
         <div class="footer-links">
+          <a href="/features/">おすすめ特集</a>
           <a href="/works/">全作品</a>
           <a href="/new/">新刊一覧</a>
           <a href="/tags/">タグ一覧</a>
@@ -448,8 +451,63 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
     await write(`series/${slugify(series)}`, html)
   }
 
-  // 9. sitemap.xml生成
+  // 9. おすすめ特集（ハブ）ページ (/features/)
+  await writeFeaturePages(books)
+
+  // 10. sitemap.xml生成
   await writeSitemap(books, getPairs(books), tagEntries, authorEntries, seriesEntries)
+}
+
+async function writeFeaturePages(books) {
+  const features = [
+    {
+      slug: 'musou',
+      title: '【圧倒的無双・爽快感】強すぎる主人公が気持ちいいおすすめ異世界作品 7選',
+      description: 'ストレスゼロで圧倒的なカタルシスを味わえる！チート能力や規格外の実力で敵をなぎ倒す無双系名作アニメ・漫画・ラノベを徹底厳選。',
+      matchKeys: ['無職転生', '転生したらスライム', '陰の実力者', 'オーバーロード', 'ありふれた職業', 'ゴブリンスレイヤー', '精霊幻想記']
+    },
+    {
+      slug: 'slowlife',
+      title: '【癒やし・スローライフ】異世界グルメとまったり日常を楽しむおすすめ作品 5選',
+      description: '殺伐としたバトルはひと休み。絶品異世界飯やのんびりスローライフで癒やされたい人向けの心温まる名作まとめ。',
+      matchKeys: ['とんでもスキル', '本好きの下剋上', '異世界おじさん', '異世界食堂', '八男って']
+    },
+    {
+      slug: 'brain',
+      title: '【頭脳戦・深み】世界観と伏線が緻密なおすすめ異世界作品 6選',
+      description: '単なる無双にとどまらない！考察が止まらない重厚な世界観と緻密な頭脳戦・心理戦が展開される傑作ラノベ・コミック。',
+      matchKeys: ['薬屋のひとりごと', 'Re：ゼロから始める', '乙女ゲームの破滅フラグ', 'ノーゲーム・ノーライフ', '蜘蛛ですが', '現実主義勇者']
+    },
+    {
+      slug: 'climb',
+      title: '【成り上がり・逆転】どん底・最弱から世界の頂点へ挑む作品 6選',
+      description: 'レベル1、職不遇、追放、どん底の境遇から、己の努力とアイデアで世界の頂点へ上り詰める熱血・逆転劇！',
+      matchKeys: ['俺、勇者じゃないですから', '盾の勇者', '治癒魔法の間違った使い方', 'デスマーチから', '異世界魔王', '魅力']
+    }
+  ]
+
+  const featureCards = features.map(f => `
+    <div class="cat-card" style="padding:24px;">
+      <span class="badge-tag" style="background:#d6a24a;color:#17221f;font-weight:bold;">SPECIAL FEATURE</span>
+      <h3 style="margin:12px 0;"><a href="/features/${f.slug}/">${escapeXml(f.title)}</a></h3>
+      <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">${escapeXml(f.description)}</p>
+      <a class="card-btn" href="/features/${f.slug}/" style="display:inline-block;margin-top:12px;">特集を読む →</a>
+    </div>
+  `).join('')
+
+  const indexHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界アニメ・漫画・ラノベおすすめ特集一覧｜異世界コンパス</title><meta name="description" content="爽快無双、スローライフ、頭脳戦、成り上がりなど気分に合わせた特化テーマ別おすすめ異世界作品まとめ。"><link rel="canonical" href="${siteUrl}/features/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style></head><body>${renderHeader('/features/')}<main><div class="crumb"><a href="/">トップ</a>　/　特集一覧</div><div class="eyebrow">CURATED FEATURES</div><h1>異世界作品 おすすめ特化テーマ特集</h1><p class="lead">今の気分にぴったりな作品がすぐ見つかる！テーマ・属性別の厳選まとめ特集です。</p><div class="category-grid" style="grid-template-columns:1fr;gap:24px;">${featureCards}</div></main>${renderFooter()}</body></html>`
+  
+  await fs.mkdir(path.join(root, 'public/features'), { recursive: true })
+  await fs.writeFile(path.join(root, 'public/features/index.html'), indexHtml)
+
+  for (const f of features) {
+    const fBooks = books.filter(b => f.matchKeys.some(k => b.title.includes(k)))
+    const bookCards = fBooks.map(renderBookCard).join('')
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(f.title)}｜異世界コンパス</title><meta name="description" content="${escapeXml(f.description)}"><link rel="canonical" href="${siteUrl}/features/${f.slug}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style></head><body>${renderHeader('/features/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/features/">特集一覧</a>　/　特集詳細</div><div class="eyebrow">RECOMMENDED SELECTION</div><h1>${escapeXml(f.title)}</h1><p class="lead" style="font-size:16px;background:#fff;padding:20px;border-left:4px solid #d6a24a;border-radius:4px;color:#233028;">${escapeXml(f.description)}</p><div class="book-cards-grid">${bookCards}</div></main>${renderFooter()}</body></html>`
+    const dir = path.join(root, 'public/features', f.slug)
+    await fs.mkdir(dir, { recursive: true })
+    await fs.writeFile(path.join(dir, 'index.html'), html)
+  }
 }
 
 async function writeSitemap(books, pairs, tagEntries, authorEntries, seriesEntries) {
@@ -460,7 +518,12 @@ async function writeSitemap(books, pairs, tagEntries, authorEntries, seriesEntri
     '/tags/',
     '/authors/',
     '/series/',
-    '/compare/'
+    '/compare/',
+    '/features/',
+    '/features/musou/',
+    '/features/slowlife/',
+    '/features/brain/',
+    '/features/climb/'
   ]
 
   for (const b of books) urls.push(`/works/${b.slug}/`)
