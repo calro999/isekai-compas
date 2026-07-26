@@ -125,9 +125,24 @@ async function clearGeneratedPages() {
   }
 }
 
+function isSameSeries(a, b) {
+  if (a.id === b.id) return true
+  if (a.seriesName && b.seriesName && a.seriesName === b.seriesName) return true
+  const normA = (a.seriesName || a.title).replace(/[\s\d〜～「」『』（）()【】分冊版]/g, '').toLowerCase()
+  const normB = (b.seriesName || b.title).replace(/[\s\d〜～「」『』（）()【】分冊版]/g, '').toLowerCase()
+  if (normA && normB && (normA.includes(normB) || normB.includes(normA))) return true
+  return false
+}
+
 function getPairs(books) {
   const pairs = []
-  for (let i = 0; i < books.length; i += 1) for (let j = i + 1; j < books.length; j += 1) pairs.push([books[i], books[j]])
+  for (let i = 0; i < books.length; i += 1) {
+    for (let j = i + 1; j < books.length; j += 1) {
+      if (!isSameSeries(books[i], books[j])) {
+        pairs.push([books[i], books[j]])
+      }
+    }
+  }
   return pairs
 }
 
@@ -139,15 +154,14 @@ function relatedBooks(book, books) {
   const currentTags = book.tags || []
   const currentGenreKeywords = (book.genre || '').split(/[・\s/]/).filter(Boolean)
 
-  const scored = books.filter(other => other.id !== book.id).map(other => {
+  const scored = books.filter(other => !isSameSeries(book, other)).map(other => {
     const otherTags = other.tags || []
     const otherGenreKeywords = (other.genre || '').split(/[・\s/]/).filter(Boolean)
     
     let score = 0
     score += otherTags.filter(t => currentTags.includes(t)).length * 2
     score += otherGenreKeywords.filter(g => currentGenreKeywords.includes(g)).length * 3
-    if (other.author === book.author) score += 5
-    if (other.seriesName && other.seriesName === book.seriesName) score += 10
+    if (other.author === book.author) score += 4
 
     return { book: other, score }
   })
