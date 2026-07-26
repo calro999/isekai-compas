@@ -219,8 +219,8 @@ function DiagnosisWidget({ books }) {
     <section className="section wrap" style={{ background: '#ffffff', padding: '32px', borderRadius: '12px', border: '1px solid #d6a24a', margin: '40px auto' }}>
       <div style={{ textAlign: 'center', marginBottom: '24px' }}>
         <span className="eyebrow dark" style={{ color: '#d6a24a' }}>INTERACTIVE DIAGNOSIS</span>
-        <h2 style="font-family:serif;font-size:24px;margin:8px 0;">🎯 あなたにぴったりの異世界作品 1秒診断</h2>
-        <p style="color:#5f6c62;font-size:14px;margin:0;">今の気分を選ぶだけで、原点1巻から楽しめる最高の一着をコンパス案内します。</p>
+        <h2 style={{ fontFamily: 'serif', fontSize: '24px', margin: '8px 0' }}>🎯 あなたにぴったりの異世界作品 1秒診断</h2>
+        <p style={{ color: '#5f6c62', fontSize: '14px', margin: 0 }}>今の気分を選ぶだけで、原点1巻から楽しめる最高の一着をコンパス案内します。</p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px', marginBottom: '28px' }}>
