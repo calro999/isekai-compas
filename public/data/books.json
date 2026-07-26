@@ -791,5 +791,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/1c2c10755f9d339a8123f5f34ecac30c/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:47:57.487Z"
+  },
+  {
+    "id": "4390000014621",
+    "slug": "4390000014621",
+    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(97)",
+    "author": "心音ゆるり/伊咲ウタ",
+    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "VRMMO",
+      "異世界転生",
+      "最強主人公",
+      "ダンジョン攻略",
+      "レアアイテム",
+      "効率プレイ",
+      "ソロプレイヤー",
+      "分冊版"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1185/2000020421185.jpg?_ex=200x200",
+    "description": "VRMMOの頂点に君臨したソロプレイヤーが、レベル1の無職として異世界転生。かつて活躍したVR世界「テンペスト」で、創造主ノアと出会い現状を理解した彼は、効率的な高難易度ダンジョン周回を開始する。一方、セラは師匠SRから渡されたニンニクソードを手に、Aランクダンジョンへ挑む。これは『俺、勇者じゃないですから。10』の分冊版です。",
+    "aiIntro": "かつてVRMMOの頂点に立った最強ソロプレイヤーが、レベル1の無職として異世界に転生！馴染み深いVR世界で、効率的なダンジョン攻略とレアアイテム収集に挑む姿は、MMOファン必見。師匠と弟子の関係性も描かれ、新たな冒険が展開します。VRMMOと異世界転生が織りなす物語をぜひお楽しみください。",
+    "readerTypes": [
+      "VRMMOファン",
+      "異世界転生ものが好きな方",
+      "効率的なゲームプレイに魅力を感じる方"
+    ],
+    "price": 80,
+    "salesDate": "2026年04月28日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F62236d80237c391cb3e3d21a3e0f5cf9%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F62236d80237c391cb3e3d21a3e0f5cf9%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/62236d80237c391cb3e3d21a3e0f5cf9/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-26T01:59:38.702Z"
   }
 ]
