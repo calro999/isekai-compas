@@ -28,7 +28,7 @@ async function loadBooks() {
   return JSON.parse(await fs.readFile(dataPath, 'utf8'))
 }
 
-const queries = ['無職転生 異世界行ったら本気だす', '転生したらスライムだった件', 'とんでもスキルで異世界放浪メシ', '異世界 転生 小説', '異世界 ファンタジー ライトノベル', '悪役令嬢 異世界 小説', 'スローライフ 異世界 小説']
+const queries = ['Re:ゼロから始める異世界生活', '陰の実力者になりたくて！', '月が導く異世界道中', 'デスマーチからはじまる異世界狂想曲', '精霊幻想記', '無職転生 異世界行ったら本気だす', '転生したらスライムだった件', 'とんでもスキルで異世界放浪メシ', '異世界 転生 小説', '異世界 ファンタジー ライトノベル', '悪役令嬢 異世界 小説', 'スローライフ 異世界 小説']
 
 const hashString = (value) => crypto.createHash('md5').update(String(value)).digest('hex').slice(0, 10)
 
@@ -61,6 +61,7 @@ const isRakutenItem = (item) => Boolean(item?.itemUrl && process.env.RAKUTEN_AFF
 const isPublishableBook = (book) => Boolean(book?.slug && book?.title && (book.cover || book.sourceUrl))
 
 async function rakutenSearch(keyword, page = 1) {
+  await sleep(1050)
   const params = new URLSearchParams({
     applicationId: process.env.RAKUTEN_APPLICATION_ID,
     accessKey: process.env.RAKUTEN_ACCESS_KEY,
@@ -75,6 +76,7 @@ async function rakutenSearch(keyword, page = 1) {
 }
 
 async function rakutenSeriesSearch(keyword, page = 1) {
+  await sleep(1050)
   const params = new URLSearchParams({
     applicationId: process.env.RAKUTEN_APPLICATION_ID,
     accessKey: process.env.RAKUTEN_ACCESS_KEY,
