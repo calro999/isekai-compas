@@ -19,7 +19,13 @@
     "color": "gold",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/6227/9784046856227_1_8.jpg?_ex=300x300",
     "description": "KADOKAWAより発売される『無職転生 〜異世界行ったら本気だす〜 24』は、人気異世界ファンタジーシリーズの最新刊です。無力感に苛まれるルーデウスの姿を見たロキシーが、ある一大決心をする展開が描かれます。",
-    "aiIntro": "大人気異世界ファンタジー『無職転生』の第24巻！無力感に苛まれるルーデウスと、彼のために一大決心をするロキシー。その胸中に秘められた想いとは？",
+    "firstVolumeStory": "部屋に引きこもり34歳で人生を終えた無職の男が、剣と魔法の異世界で赤ん坊「ルーデウス」として生まれ変わる。前世の不甲斐ない自分を後悔し「今度こそ本気で生きていく」と決意。幼少期から魔術の才能を開花させ、家庭教師のロキシーやお嬢様エリスらとの出会い、フィットア領転移事件を経て、数々の苦難と成長を重ねてきた人生やり直し壮大ストーリー。",
+    "highlights": [
+      "無力感に直面したルーデウスが見せる人間的弱さと成長のドラマ",
+      "ロキシーの覚悟と秘められた深い愛情が描かれる屈指のエピソード",
+      "スペルド族や周囲の人物たちの思惑が交錯する緻密な世界観構築"
+    ],
+    "review": "転生モノの金字塔として名高い『無職転生』の第24巻では、完璧に見える主人公ルーデウスが抱える葛藤と挫折が色濃く描かれます。師であり妻でもあるロキシーの決意が物語を大きく動かし、単なる異世界無双にとどまらない濃厚な人間ドラマが展開されます。",
     "readerTypes": [
       "無職転生シリーズのファン",
       "異世界転生ものが好きな方",
@@ -28,17 +34,10 @@
     "price": 836,
     "salesDate": "2026年02月24日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18484498%2F%3FvariantId%3D18484498%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18484498%2F%3FvariantId%3D18484498%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18484498%2F%3FvariantId%3D18484498%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/18484498/?variantId=18484498&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-25T23:31:57.148Z",
-    "highlights": [
-      "無力感に直面したルーデウスが見せる人間的弱さと成長のドラマ",
-      "ロキシーの覚悟と秘められた深い愛情が描かれる屈指のエピソード",
-      "スペルド族や周囲の人物たちの思惑が交錯する緻密な世界観構築"
-    ],
-    "review": "転生モノの金字塔として名高い『無職転生』の第24巻では、完璧に見える主人公ルーデウスが抱える葛藤と挫折が色濃く描かれます。師であり妻でもあるロキシーの決意が物語を大きく動かし、単なる異世界無双にとどまらない濃厚な人間ドラマが展開されます。",
-    "firstVolumeStory": "部屋に引きこもり34歳で人生を終えた無職の男が、剣と魔法の異世界で赤ん坊「ルーデウス」として生まれ変わる。前世の不甲斐ない自分を後悔し「今度こそ本気で生きていく」と決意。幼少期から魔術の才能を開花させ、家庭教師のロキシーや幼馴染のシルフィ、お嬢様エリスらとの出会い、そして世界を巻き込む歴史的大災害「フィットア領転移事件」を経て、数々の苦難と成長を重ねてきた人生やり直し壮大ストーリー。"
+    "publishedAt": "2026-07-25T23:31:57.148Z"
   },
   {
     "id": "seed-tensura",
@@ -59,7 +58,13 @@
     "color": "sage",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8613/9784065328613_1_2.jpg?_ex=300x300",
     "description": "スライムに転生したリムルが、仲間たちと魔物の国を築いていく。爽快な無双と国づくりを楽しめる超人気シリーズ！",
-    "aiIntro": "強さを手に入れた主人公が、誰かを支配するのではなく、仲間と暮らせる場所をつくっていく。爽快さと内政の楽しさが同居する大傑作。",
+    "firstVolumeStory": "通り魔に刺されて死んだサラリーマン・三上悟が、異世界の洞窟でスライムとして転生。天導のスキル「大賢者」と「捕食者」を得て、爆炎の支配者シズや暴風竜ヴェルドラと出会う。個性的で強力な魔物たちを配下に迎え入れ、人種や魔物の種族を超えて誰もが笑顔で暮らせる理想郷「魔国連邦（テンペスト）」を築き上げていく内政＆無双ファンタジー。",
+    "highlights": [
+      "テンペスト（魔国連邦）の発展と仲間たちの躍進を描く圧倒的スケール",
+      "リムルを取り巻く魔王たちや帝国とのハイレベルな外交・頭脳戦",
+      "個性的すぎる魔物たちがそれぞれの能力を生かして国を支える群像劇"
+    ],
+    "review": "スライムから始まり、いまや世界を揺るがす魔王の一角となったリムルの国づくりファンタジー。戦いの爽快感はもちろん、町づくりや経済・文化の発展を丁寧に描く内政パートの面白さが本作最大の魅力です。",
     "readerTypes": [
       "無双の爽快感が好きな人",
       "国づくり・内政が好きな人",
@@ -68,17 +73,10 @@
     "price": 759,
     "salesDate": "2025年09月08日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17570442%2F%3FvariantId%3D17570442%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17570442%2F%3FvariantId%3D17570442%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17570442%2F%3FvariantId%3D17570442%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/17570442/?variantId=17570442&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T00:00:00.000Z",
-    "highlights": [
-      "テンペスト（魔国連邦）の発展と仲間たちの躍進を描く圧倒的スケール",
-      "リムルを取り巻く魔王たちや帝国とのハイレベルな外交・頭脳戦",
-      "個性的すぎる魔物たちがそれぞれの能力を生かして国を支える群像劇"
-    ],
-    "review": "スライムから始まり、いまや世界を揺るがす魔王の一角となったリムルの国づくりファンタジー。戦いの爽快感はもちろん、町づくりや経済・文化の発展を丁寧に描く内政パートの面白さが本作最大の魅力です。",
-    "firstVolumeStory": "通り魔に刺されて死んだサラリーマン・三上悟が、異世界の洞窟でスライムとして転生。天導のスキル「大賢者」と「捕食者」を得て、爆炎の支配者シズや暴風竜ヴェルドラと出会う。個性的で強力な魔物たちを配下に迎え入れ、人種や魔物の種族を超えて誰もが笑顔で暮らせる理想郷「魔国連邦（テンペスト）」を築き上げていく内政＆無双ファンタジー。"
+    "publishedAt": "2026-07-26T00:00:00.000Z"
   },
   {
     "id": "seed-houro-meshi",
@@ -99,7 +97,13 @@
     "color": "rose",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7476/9784824007476_1_4.jpg?_ex=300x300",
     "description": "異世界に召喚された会社員が、現代の商品を取り寄せられる固有スキルで旅をする。おいしい料理と頼れる従魔フェンリルに癒やされる異世界生活！",
-    "aiIntro": "戦うだけが異世界じゃない。ネットスーパーのスキルと食卓を中心に、旅先での出会いをゆるやかに楽しむ大人気スローライフ作品。",
+    "firstVolumeStory": "ある日突然、王国の「勇者召喚」に巻き込まれて異世界にやってきた普通のサラリーマン・ムコーダ。彼が得たのは戦闘能力ではなく、現代日本のネットスーパーから食材を取り寄せられる固有スキル「ネットスーパー」。自身で作る絶品料理の匂いに引き寄せられた伝説の超魔獣フェンリルやスライムのスイと従魔契約を結び、世界中のおいしいものを巡るのんびり異世界放浪記。",
+    "highlights": [
+      "ネットスーパーのスキルで取り寄せた現代食材で作る絶品料理の数々",
+      "伝説の魔獣フェンリルやスイたちの圧倒的な強さと可愛すぎるギャップ",
+      "世界を巡りながら各地の美味しい食べ物を巡る至高のスローライフ"
+    ],
+    "review": "異世界召喚の巻き添えを食らった平凡なサラリーマン・ムコーダが、ネットスーパーの固有スキルと料理の腕前だけで生き抜く異色の日常系作品。食欲をそそる具体的な料理描写ともふもふ従魔たちの愛らしさに心癒やされます。",
     "readerTypes": [
       "癒やされる物語を読みたい人",
       "料理・グルメ描写が好きな人",
@@ -108,58 +112,10 @@
     "price": 715,
     "salesDate": "2025年11月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17771375%2F%3FvariantId%3D17771375%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17771375%2F%3FvariantId%3D17771375%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17771375%2F%3FvariantId%3D17771375%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/17771375/?variantId=17771375&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T00:00:00.000Z",
-    "highlights": [
-      "ネットスーパーのスキルで取り寄せた現代食材で作る絶品料理の数々",
-      "伝説の魔獣フェンリルやスイたちの圧倒的な強さと可愛すぎるギャップ",
-      "世界を巡りながら各地の美味しい食べ物を巡る至高のスローライフ"
-    ],
-    "review": "異世界召喚の巻き添えを食らった平凡なサラリーマン・ムコーダが、ネットスーパーの固有スキルと料理の腕前だけで生き抜く異色の日常系作品。食欲をそそる具体的な料理描写ともふもふ従魔たちの愛らしさに心癒やされます。",
-    "firstVolumeStory": "ある日突然、王国の「勇者召喚」に巻き込まれて異世界にやってきた普通のサラリーマン・ムコーダ。彼が得たのは戦闘能力ではなく、現代日本のネットスーパーから食材や商品を取り寄せられる固有スキル「ネットスーパー」。自身で作る絶品料理の匂いに引き寄せられた伝説の超魔獣フェンリルやスライムのスイと従魔契約を結び、世界中のおいしいものを巡るのんびり異世界放浪記。"
-  },
-  {
-    "id": "6671308504690",
-    "slug": "6671308504690",
-    "title": "転生したけどステータス「魅力」に全振り！？ (114)",
-    "author": "知音動漫",
-    "seriesName": "転生したけどステータス「魅力」に全振り！？",
-    "genre": "異世界・ファンタジー・ステータス",
-    "tags": [
-      "転生",
-      "異世界",
-      "恋愛ゲーム",
-      "ステータス",
-      "魅力スキル",
-      "キャラクター攻略",
-      "ファンタジー"
-    ],
-    "badge": "新着",
-    "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/2854/2000020512854.jpg?_ex=300x300",
-    "description": "恋愛ゲームを極めた主人公・秦行遠が「魅力」に全振りされたステータスで、再び多種多様なキャラクターたちとの攻略の旅を始める異世界ゲーム攻略ファンタジー！",
-    "aiIntro": "恋愛ゲームの達人がまさかのゲーム世界へ転生！魅力スキルを駆使して個性豊かなキャラクターを攻略する話題のファンタジー。",
-    "readerTypes": [
-      "異世界転生ものが好きな読者",
-      "ゲーム攻略要素に惹かれる読者",
-      "キャラクターの魅力を楽しみたい読者"
-    ],
-    "price": 62,
-    "salesDate": "2027年07月24日",
-    "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F8b19ff1be77a376abc9c5cab52da1e9e%2F%3FvariantId%3D8b19ff1be77a376abc9c5cab52da1e9e%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F8b19ff1be77a376abc9c5cab52da1e9e%2F%3FvariantId%3D8b19ff1be77a376abc9c5cab52da1e9e%26scid%3Dseo-carousel-search",
-    "sourceUrl": "https://item.rakuten.co.jp/rakutenkobo-ebooks/8b19ff1be77a376abc9c5cab52da1e9e/?variantId=8b19ff1be77a376abc9c5cab52da1e9e&scid=seo-carousel-search",
-    "source": "rakuten-kobo",
-    "publishedAt": "2026-07-25T22:52:49.728Z",
-    "highlights": [
-      "能力値「魅力」全振りという常識外れのステータス配分による爆笑展開",
-      "恋愛ゲームの知識を駆使して強敵やヒロインを攻略していくユニークな攻略術",
-      "戦闘力ではなく圧倒的な好感度と惹きつける力で乗り越える新感覚バトル"
-    ],
-    "review": "武力や魔法ではなく「魅力」のパラメータのみを究めた主人公が繰り広げるコミカルな攻略記。ゲーム知識と人たらしな魅力で幾多の困難を解決していくスピード感あふれる展開が特徴です。",
-    "firstVolumeStory": "乙女向け恋愛ゲームを遊び尽くしたゲーマー少年が、ゲームの世界へとまさかの異世界転生。転生時に割り振られたステータスは、なんと戦闘能力ゼロで「魅力（カリスマ）」だけに特化した極端すぎる数値！攻撃力も防御力も皆無ながら、持ち前のゲーム攻略知識と常人を遥かに超えた人間的魅力で、強力な味方や攻略対象キャラクターたちを味方につけて異世界の試練を乗り越えていく新感覚ファンタジー。"
+    "publishedAt": "2026-07-26T00:00:00.000Z"
   },
   {
     "id": "4390000014619",
@@ -181,7 +137,13 @@
     "color": "gold",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1181/2000020421181.jpg?_ex=300x300",
     "description": "VRMMOゲーム「テンペスト」の世界に転生した元世界一のソロプレイヤー「SR」。レベル1の無職から再スタートし、高難易度ダンジョンを効率的に攻略していく！",
-    "aiIntro": "かつてVRMMOの頂点に君臨した最強ソロプレイヤーが、異世界でレベル1の無職から再出発！効率的なダンジョン周回と圧倒的知識で無双する爽快ファンタジー。",
+    "firstVolumeStory": "VRMMOゲーム「テンペスト」で世界第一位のソロプレイヤーとして君臨していた男・SRが、目覚めるとゲームと酷似した未知の異世界に転生していた。手に入れたステータスは「レベル1の無職」。しかし、かつて極め抜いたゲームの隠し仕様、ダンジョンの攻略ルート、効率的な経験値稼ぎのテクニックは全て頭の中に。勇者を名乗ることもなく、ソロプレイヤーとして理にかなった圧倒的プレイヤースキルで爆速レベルアップしていく本格リアル攻略譚。",
+    "highlights": [
+      "元・VRMMO世界第一位プレイヤー「SR」による知識とテクニックの無双",
+      "レベル1の無職状態からスタートする、圧倒的に効率的なレベリング・ダンジョン周回",
+      "勇者を名乗らず、影からゲームシステムを攻略し尽くす圧倒的なプレイング"
+    ],
+    "review": "MMORPGの知識と経験をそのまま異世界で発揮するリアル攻略系ファンタジー。チート能力に頼るのではなく、ゲームの仕様や隠し要素を突き詰めるソロプレイヤーの生き様がゲーム好きの心をくすぐります。",
     "readerTypes": [
       "異世界転生×VRMMOが好きな方",
       "レベル1からの成り上がりが好きな方",
@@ -190,57 +152,10 @@
     "price": 80,
     "salesDate": "2026年04月28日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F2037c60d54ef34bfbb2626a5b3e41547%2F%3FvariantId%3D2037c60d54ef34bfbb2626a5b3e41547%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F2037c60d54ef34bfbb2626a5b3e41547%2F%3FvariantId%3D2037c60d54ef34bfbb2626a5b3e41547%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F2037c60d54ef34bfbb2626a5b3e41547%2F%3FvariantId%3D2037c60d54ef34bfbb2626a5b3e41547%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/rakutenkobo-ebooks/2037c60d54ef34bfbb2626a5b3e41547/?variantId=2037c60d54ef34bfbb2626a5b3e41547&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-25T23:33:20.497Z",
-    "highlights": [
-      "元・VRMMO世界第一位プレイヤー「SR」による知識とテクニックの無双",
-      "レベル1の無職状態からスタートする、圧倒的に効率的なレベリング・ダンジョン周回",
-      "勇者を名乗らず、影からゲームシステムを攻略し尽くす圧倒的なプレイング"
-    ],
-    "review": "MMORPGの知識と経験をそのまま異世界で発揮するリアル攻略系ファンタジー。チート能力に頼るのではなく、ゲームの仕様や隠し要素を突き詰めるソロプレイヤーの生き様がゲーム好きの心をくすぐります。",
-    "firstVolumeStory": "VRMMOゲーム「テンペスト」で世界第一位のソロプレイヤーとして君臨していた男・SRが、目覚めるとゲームと酷似した未知の異世界に転生していた。手に入れたステータスは「レベル1の無職」。しかし、かつて極め抜いたゲームの隠し仕様、ダンジョンの攻略ルート、効率的な経験値稼ぎのテクニックは全て頭の中に。勇者を名乗ることもなく、ソロプレイヤーとして理にかなった圧倒的プレイヤースキルで爆速レベルアップしていく本格リアル攻略譚。"
-  },
-  {
-    "id": "4390000014618",
-    "slug": "4390000014618",
-    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜 (94)",
-    "author": "心音ゆるり/伊咲ウタ",
-    "seriesName": "俺、勇者じゃないですから。",
-    "genre": "異世界・VRMMO・ダンジョン",
-    "tags": [
-      "異世界転生",
-      "VRMMO",
-      "ゲームファンタジー",
-      "ダンジョン攻略",
-      "ソロプレイヤー",
-      "レベルアップ",
-      "無双"
-    ],
-    "badge": "人気",
-    "color": "sage",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1192/2000020421192.jpg?_ex=300x300",
-    "description": "前巻に続く大人気エピソード！VRMMO世界での戦いと成長を描く本格ファンタジー！",
-    "aiIntro": "無職レベル1から這い上がる最強プレイヤーの軌跡！",
-    "readerTypes": [
-      "VRMMOファン",
-      "異世界転生好き"
-    ],
-    "price": 80,
-    "salesDate": "2026年03月28日",
-    "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Feea2f63ea0d73f98a2b185969839eca0%2F%3FvariantId%3Deea2f63ea0d73f98a2b185969839eca0%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Feea2f63ea0d73f98a2b185969839eca0%2F%3FvariantId%3Deea2f63ea0d73f98a2b185969839eca0%26scid%3Dseo-carousel-search",
-    "sourceUrl": "https://item.rakuten.co.jp/rakutenkobo-ebooks/eea2f63ea0d73f98a2b185969839eca0/?variantId=eea2f63ea0d73f98a2b185969839eca0&scid=seo-carousel-search",
-    "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T00:00:00.000Z",
-    "highlights": [
-      "パーティー攻略とダンジョンギミックの解明が光る怒涛の展開",
-      "ソロプレイヤーとしてのプライドと、周囲に与える影響のギャップ",
-      "敵の行動パターンを見切り最小限の動きで倒す緻密なアクション描写"
-    ],
-    "review": "第94話ではダンジョン内部の危険なトラップと強力なボスの攻略が本格化。圧倒的なプレイヤースキルで敵を往なす爽快感と、理にかなった立ち回りの美しさが際立ちます。",
-    "firstVolumeStory": "VRMMOゲーム「テンペスト」で世界第一位のソロプレイヤーとして君臨していた男・SRが、目覚めるとゲームと酷似した未知の異世界に転生していた。手に入れたステータスは「レベル1の無職」。しかし、かつて極め抜いたゲームの隠し仕様、ダンジョンの攻略ルート、効率的な経験値稼ぎのテクニックは全て頭の中に。勇者を名乗ることもなく、ソロプレイヤーとして理にかなった圧倒的プレイヤースキルで爆速レベルアップしていく本格リアル攻略譚。"
+    "publishedAt": "2026-07-25T23:33:20.497Z"
   },
   {
     "id": "4390000021594",
@@ -263,7 +178,13 @@
     "color": "gold",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/renet20/cabinet/item_photo/001329/8/0013298433.jpg?_ex=300x300",
     "description": "『陰の実力者』に憧れ、モブとして潜伏しながら陰の組織『シャドウガーデン』を率いるシド。彼の何気ない言動が、世界を揺るがす教団との戦いへと発展していく。圧倒的勘違いシリアスコメディ！",
-    "aiIntro": "普段は冴えないモブ、裏では世界を統べ直す陰の支配者シャドウ！主人公の妄想と勘違いが現実の陰謀と重なり合い、最強の配下たちと共に爽快に敵を薙ぎ払う大人気ファンタジー。",
+    "firstVolumeStory": "「物語の裏で暗躍するカッコいい陰の実力者」に強く憧れていた少年シド・カゲノー。事故死した彼は魔法が存在する異世界へ転生し、普段は冴えないモブキャラクターとして過ごしながら、夜な夜な陰の組織「シャドウガーデン」ごっこを楽しんでいた。しかし、彼が即興で語った妄想の敵「闇の教団」は実在しており、シドの何気ない行動が本物の邪悪を打倒していく勘違いシリアスコメディ。",
+    "highlights": [
+      "シド（シャドウ）の妄想と現実の陰謀が偶然一致する最高の勘違い劇",
+      "スタイリッシュな暗躍と、シャドウガーデンの配下たちが寄せる絶対的信頼",
+      "本人はモブに徹しているつもりが世界を救ってしまう唯一無二のコメディ感"
+    ],
+    "review": "『陰の実力者になりたくて！』は、主人公の「陰の実力者ごっこ」が偶然にも本物の悪の組織の陰謀と噛み合ってしまう勘違いコメディの傑作。かっこよすぎるバトルと可笑しすぎる勘違いの落差が病みつきになります。",
     "readerTypes": [
       "勘違いコメディが好きな人",
       "最強主人公の無双が見たい人",
@@ -272,17 +193,10 @@
     "price": 792,
     "salesDate": "2025年10月26日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013298433%2F%3FvariantId%3Dr0013298433%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013298433%2F%3FvariantId%3Dr0013298433%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013298433%2F%3FvariantId%3Dr0013298433%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/renet20/r0013298433/?variantId=r0013298433&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.748Z",
-    "highlights": [
-      "シド（シャドウ）の妄想と現実の陰謀が偶然一致する最高の勘違い劇",
-      "スタイリッシュな暗躍と、シャドウガーデンの配下たちが寄せる絶対的信頼",
-      "本人はモブに徹しているつもりが世界を救ってしまう唯一無二のコメディ感"
-    ],
-    "review": "『陰の実力者になりたくて！』は、主人公の「陰の実力者ごっこ」が偶然にも本物の悪の組織の陰謀と噛み合ってしまう勘違いコメディの傑作。かっこよすぎるバトルと可笑しすぎる勘違いの落差が病みつきになります。",
-    "firstVolumeStory": "「物語の裏で暗躍するカッコいい陰の実力者」に強く憧れていた少年シド・カゲノー。事故死した彼は魔法が存在する異世界へ転生し、普段は冴えないモブキャラクターとして過ごしながら、夜な夜な陰の組織「シャドウガーデン」ごっこを楽しんでいた。しかし、彼が即興で語った妄想の敵「闇の教団」は実在しており、シドの何気ない行動が本物の邪悪を打倒していく勘違いシリアスコメディ。"
+    "publishedAt": "2026-07-26T01:00:54.748Z"
   },
   {
     "id": "4988601550993",
@@ -304,7 +218,13 @@
     "color": "sage",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0274/9784757590274_1_3.jpg?_ex=300x300",
     "description": "後宮で毒見役を務める元薬師の少女・猫猫（マオマオ）が、豊富な薬草の知識と鋭い観察眼で宮中の難事件や陰謀を次々と解き明かしていく。超人気宮廷ミステリー第13巻！",
-    "aiIntro": "毒と薬に異常な執着を持つ猫猫が、美形宦官・壬氏とともに後宮を揺るがす事件の謎に挑む。リアリティ溢れる薬学の知見と人間ドラマが織りなす極上のミステリー。",
+    "firstVolumeStory": "花街で薬師として働いていた少女・猫猫（マオマオ）は、人さらいに遭い後宮の下級宮女として売られてしまう。目立たず年期が明けるのを待つつもりだったが、帝の御子の連続不審死の謎を薬草の知識で解き明かしたことで、美形宦官・壬氏の目に留まり毒見役に抜擢。持ち前の好奇心と薬学知識で、宮中に渦巻く陰謀や難事件を次々と解き明かす後宮推理ファンタジー。",
+    "highlights": [
+      "毒と薬のオタク・猫猫（マオマオ）によるロジカルなミステリー解決",
+      "美形宦官・壬氏との付かず離れずのもどかしくも味わい深い人間関係",
+      "中華風後宮の華やかさと、裏に潜む毒殺・陰謀のリアリティあふれるサスペンス"
+    ],
+    "review": "後宮を舞台に薬師の少女・猫猫が事件を解き明かす宮廷ミステリー。薬学の知識に基づいたロジカルな推理と、後宮特有の人間模様・権力闘争が緻密に織りなされる大人気作です。",
     "readerTypes": [
       "ミステリーや伏線回収が好きな人",
       "知識系ヒロインの活躍が見たい人",
@@ -313,17 +233,10 @@
     "price": 730,
     "salesDate": "2025年03月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17742801%2F%3FvariantId%3D17742801%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17742801%2F%3FvariantId%3D17742801%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17742801%2F%3FvariantId%3D17742801%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/17742801/?variantId=17742801&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "毒と薬草のオタク・猫猫（マオマオ）によるロジカルなミステリー解決",
-      "美形宦官・壬氏との付かず離れずのもどかしくも味わい深い人間関係",
-      "中華風後宮の華やかさと、裏に潜む毒殺・陰謀のリアリティあふれるサスペンス"
-    ],
-    "review": "後宮を舞台に薬師の少女・猫猫が事件を解き明かす宮廷ミステリー。薬学の知識に基づいたロジカルな推理と、後宮特有の人間模様・権力闘争が緻密に織りなされる大人気作です。",
-    "firstVolumeStory": "花街で薬師として働いていた少女・猫猫（マオマオ）は、人さらいに遭い後宮の下級宮女として売られてしまう。目立たず年期が明けるのを待つつもりだったが、帝の御子の連続不審死の謎を薬草の知識で解き明かしたことで、美形宦官・壬氏の目に留まり毒見役に抜擢。持ち前の好奇心と薬学知識で、宮中に渦巻く陰謀や難事件を次々と解き明かす後宮推理ファンタジー。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4333912911220",
@@ -346,7 +259,13 @@
     "color": "rose",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/5568/9784047365568_1_6.jpg?_ex=300x300",
     "description": "死の支配者アインズ・ウール・ゴウン率いるナザリック地下大墳墓。アルフヘイムを舞台に、スレイン法国との決戦へとなだれ込む。ダークファンタジーの金字塔、緊迫の第16巻。",
-    "aiIntro": "圧倒的な武力と絶対の権力を持つ骸骨の魔王アインズ。絶望的な世界観の中で描かれる配下たちの忠誠と、敵対組織の徹底的な圧倒。圧巻のスケールで贈る極上ダークファンタジー。",
+    "firstVolumeStory": "大人気VRMMO「ユグドラシル」のサービス終了の夜、一人ギルド城でたたずんでいたプレイヤー・モモンガは、NPCたちが感情を持ち、城ごと異世界へ転移したことに気づく。骸骨の姿をした大魔法使いアインズ・ウール・ゴウンとして、圧倒的武力を持つ絶対の支配者として降臨。絶対の忠誠を誓う配下たちとともに、未知の異世界を掌握していくダークファンタジーの金字塔。",
+    "highlights": [
+      "アインズ・ウール・ゴウン率いるナザリック地下大墳墓の絶対的圧倒感",
+      "絶対の忠誠を誓う守護者たちの個性と、人間側から見た絶望的な恐怖",
+      "世界征服の裏で繰り広げられる高度な情報戦と政治的駆け引き"
+    ],
+    "review": "圧倒的な力を持つ魔王視点で描かれる至高のダークファンタジー。人間側の必死の抗いと、それを容赦なく踏みつぶすナザリックの圧倒的武力。綿密に組み上げられた世界観と重厚なストーリーテリングが秀逸です。",
     "readerTypes": [
       "ダークファンタジーが好きな人",
       "魔王視点の国盗りが見たい人",
@@ -355,17 +274,10 @@
     "price": 1320,
     "salesDate": "2025年07月30日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17119075%2F%3FvariantId%3D17119075%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17119075%2F%3FvariantId%3D17119075%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17119075%2F%3FvariantId%3D17119075%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/17119075/?variantId=17119075&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "アインズ・ウール・ゴウン率いるナザリック地下大墳墓の絶対的圧倒感",
-      "絶対の忠誠を誓う守護者たちの個性と、人間側から見た絶望的な恐怖",
-      "世界征服の裏で繰り広げられる高度な情報戦と政治的駆け引き"
-    ],
-    "review": "圧倒的な力を持つ魔王視点で描かれる至高のダークファンタジー。人間側の必死の抗いと、それを容赦なく踏みつぶすナザリックの圧倒的武力。綿密に組み上げられた世界観と重厚なストーリーテリングが秀逸です。",
-    "firstVolumeStory": "大人気VRMMO「ユグドラシル」のサービス終了の夜、一人ギルド城でたたずんでいたプレイヤー・モモンガは、NPCたちが感情を持ち、城ごと異世界へ転移したことに気づく。骸骨の姿をした大魔法使いアインズ・ウール・ゴウンとして、圧倒的武力を持つ絶対の支配者として降臨。絶対の忠誠を誓う配下たちとともに、未知の異世界を掌握していくダークファンタジーの金字塔。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4333912954310",
@@ -387,7 +299,13 @@
     "color": "gold",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/renet20/cabinet/zisya12/0013882443.jpg?_ex=300x300",
     "description": "無力な少年ナツキ・スバルが得た唯一の能力は、命を落とすことで時間を巻き戻す『死に戻り』。幾多の悲劇と絶望を乗り越え、運命を切り拓く重厚な異世界ループファンタジー！",
-    "aiIntro": "何度死んでも諦めない。命を賭して愛する人々を救うために戦い続けるスバルの熱い執念と成長を描く傑作。緻密に張り巡らされた謎とドラマチックな逆転劇が心を揺さぶります。",
+    "firstVolumeStory": "コンビニからの帰り道、突如として異世界に召喚された普通の高校生・ナツキ・スバル。特別な武器も魔法も持たない彼が得た唯一の力は、自らの死によって時間を巻き戻す「死に戻り」の能力だった。絶望的な死と悲劇の未来を回避するため、何度も命を落としながらも愛するハーフエルフの少女エミリアや仲間たちを救うため戦い続ける重厚なループファンタジー。",
+    "highlights": [
+      "何度命を落としても運命を変えるために挑み続ける「死に戻り」の執念",
+      "スバルを取り巻くエミリアやレム、仲間たちとの熱い絆と成長",
+      "伏線が複雑に絡み合う怒涛のストーリー展開と衝撃の真実"
+    ],
+    "review": "無力な主人公が「死に戻り」の能力だけを頼りに絶望的な未来を切り拓く絶望と希望のストーリー。幾度もの失敗と死を乗り越えて繋ぐ一手と、仲間との絆に胸が熱くなる異世界ループファンタジーの金字塔です。",
     "readerTypes": [
       "激動のストーリー展開が好きな人",
       "熱い友情と愛のドラマを読みたい人",
@@ -396,17 +314,10 @@
     "price": 748,
     "salesDate": "2025年03月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013882443%2F%3FvariantId%3Dr0013882443%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013882443%2F%3FvariantId%3Dr0013882443%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013882443%2F%3FvariantId%3Dr0013882443%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/renet20/r0013882443/?variantId=r0013882443&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "何度命を落としても運命を変えるために挑み続ける「死に戻り」の執念",
-      "スバルを取り巻くエミリアやレム、仲間たちとの熱い絆と成長",
-      "伏線が複雑に絡み合う怒涛のストーリー展開と衝撃の真実"
-    ],
-    "review": "無力な主人公が「死に戻り」の能力だけを頼りに絶望的な未来を切り拓く絶望と希望のストーリー。幾度もの失敗と死を乗り越えて繋ぐ一手と、仲間との絆に胸が熱くなる異世界ループファンタジーの金字塔です。",
-    "firstVolumeStory": "コンビニからの帰り道、突如として異世界に召喚された普通の高校生・ナツキ・スバル。特別な武器も魔法も持たない彼が得た唯一の力は、自らの死によって時間を巻き戻す「死に戻り」の能力だった。絶望的な死と悲劇の未来を回避するため、何度も命を落としながらも愛するハーフエルフの少女エミリアや仲間たちを救うため戦い続ける重厚なループファンタジー。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4864724890012",
@@ -428,7 +339,13 @@
     "color": "sage",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0228/9784867940228_1_3.jpg?_ex=300x300",
     "description": "本を愛する女子大生が病弱な兵士の娘マインとして異世界に転生。本が存在しない世界で紙から本を作り出し、やがて国をも揺るがす存在へと上り詰める壮大なビブリア・ファンタジー！",
-    "aiIntro": "驚異的な設定の細かさと壮大なスケールでファンを魅了し続ける大傑作。本への情熱一つで兵士の娘から領主の養女、そして貴族社会の頂点へと駆け上がるマインの感動の物語。",
+    "firstVolumeStory": "本を何より愛する女子大生・本須麗乃が地震で本の下敷きになって命を落とし、異世界の病弱な兵士の娘・マインとして転生。しかし、その世界では本は貴族しか持てない超高級品だった。「本がないなら作ればいい！」と決意したマインは、現代の知識を生かして粘土板や和紙づくりから始め、やがて異世界の印刷・出版文化と魔法社会を塗り替えていく壮大な物語。",
+    "highlights": [
+      "本への異常な情熱で異世界の印刷・製紙・文化を改革していく成長記",
+      "病弱な兵士の娘から領主の養女、そして国を揺るがす存在への成り上がり",
+      "魔法体系や貴族社会の礼節・外交まで徹底的に作り込まれたビブリア世界"
+    ],
+    "review": "本好きの女子大生が知識と熱意だけで異世界の文化構造そのものを変革していく超大作。家族の愛、貴族社会での生き残り、そして膨大な読書への情熱が織りなす感動のビブリアファンタジーです。",
     "readerTypes": [
       "生活文化や魔法体系の緻密な世界観が好きな人",
       "本やクラフトがテーマの物語が好きな人",
@@ -437,17 +354,10 @@
     "price": 1320,
     "salesDate": "2024年12月10日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17649929%2F%3FvariantId%3D17649929%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17649929%2F%3FvariantId%3D17649929%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F17649929%2F%3FvariantId%3D17649929%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/17649929/?variantId=17649929&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "本への異常な情熱で異世界の印刷・製紙・文化を改革していく成長記",
-      "病弱な兵士の娘から領主の養女、そして国を揺るがす存在への成り上がり",
-      "魔法体系や貴族社会の礼節・外交まで徹底的に作り込まれたビブリア世界"
-    ],
-    "review": "本好きの女子大生が知識と熱意だけで異世界の文化構造そのものを変革していく超大作。家族の愛、貴族社会での生き残り、そして膨大な読書への情熱が織りなす感動のビブリアファンタジーです。",
-    "firstVolumeStory": "本を何より愛する女子大生・本須麗乃が地震で本の下敷きになって命を落とし、異世界の病弱な兵士の娘・マインとして転生。しかし、その世界では本は貴族しか持てない超高級品だった。「本がないなら作ればいい！」と決意したマインは、現代の知識を生かして粘土板や和紙づくりから始め、やがて異世界の印刷・出版文化と魔法社会を塗り替えていく壮大な物語。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4758032110023",
@@ -469,7 +379,13 @@
     "color": "rose",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/9134/9784758099134_1_3.jpg?_ex=300x300",
     "description": "前世の記憶を取り戻した前世オタク女子のカタリナ。自分が乙女ゲームの悪役令嬢であり、ハッピーエンドでもバッドエンドでも破滅が待っていることに気づき、フラグ回避に奮闘する！",
-    "aiIntro": "元祖・悪役令嬢ラブコメの金字塔！破滅を回避しようと畑を耕し抜刀術を磨くカタリナの無自覚な人たらしぶりが、周囲の王子や令嬢たちを次々と虜にしていく超爽快ほのぼのコメディ。",
+    "firstVolumeStory": "頭を強く打った衝撃で、前世がオタク女子高生だった記憶を取り戻した男爵令嬢カタリナ・クラエス。自分が前世で遊んでいた乙女ゲーム『FORTUNE LOVER』の悪役令嬢であり、主人公のハッピーエンドでもバッドエンドでも国外追放か死亡という「破滅フラグ」が待っていることに気づく。破滅を回避するため、剣の特訓や畑仕事に奮闘する中で、周囲の人々を惹きつけていくラブコメディ。",
+    "highlights": [
+      "破滅フラグを回避するために畑を耕し抜刀術を学ぶカタリナの珍行動",
+      "男女問わずあらゆる登場人物を無自覚に魅了してしまう天然の人たらしぶり",
+      "ギスギスした乙女ゲームの世界を平和で温かい空間に変えていく癒やし展開"
+    ],
+    "review": "悪役令嬢モノのブームを巻き起こした元祖コメディ。破滅エンドを回避しようと必死になるカタリナのズボラで真っ直ぐなキャラクターが、周囲の心を救い虜にしていく爽快で平和な物語です。",
     "readerTypes": [
       "ほのぼの笑えるコメディが好き",
       "悪役令嬢ジャンルの原点を読みたい",
@@ -478,17 +394,10 @@
     "price": 792,
     "salesDate": "2025年09月20日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18566485%2F%3FvariantId%3D18566485%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18566485%2F%3FvariantId%3D18566485%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F18566485%2F%3FvariantId%3D18566485%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/book/18566485/?variantId=18566485&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "破滅フラグを回避するために畑を耕し抜刀術を学ぶカタリナの珍行動",
-      "男女問わずあらゆる登場人物を無自覚に魅了してしまう天然の人たらしぶり",
-      "ギスギスした乙女ゲームの世界を平和で温かい空間に変えていく癒やし展開"
-    ],
-    "review": "悪役令嬢モノのブームを巻き起こした元祖コメディ。破滅エンドを回避しようと必死になるカタリナのズボラで真っ直ぐなキャラクターが、周囲の心を救い虜にしていく爽快で平和な物語です。",
-    "firstVolumeStory": "頭を強く打った衝撃で、前世がオタク女子高生だった記憶を取り戻した男爵令嬢カタリナ・クラエス。自分が前世で遊んでいた乙女ゲーム『FORTUNE LOVER』の悪役令嬢であり、主人公のハッピーエンドでもバッドエンドでも国外追放か死亡という「破滅フラグ」が待っていることに気づく。破滅を回避するため、剣の特訓や畑仕事に奮闘する中で、周囲の人々を惹きつけていくラブコメディ。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4091435210014",
@@ -510,7 +419,13 @@
     "color": "gold",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/booksupply/cabinet/04216212/57/9784074241774.jpg?_ex=300x300",
     "description": "問答無用で敵を圧倒する圧倒的武力！面倒な議論や説得を一切挟まず、己の拳と能力で不条理な邪悪を叩き潰す超爽快ファンタジーアクション開幕！",
-    "aiIntro": "ストレスフリーを究めた圧倒的痛快作！話し合いの余地を与えず邪悪な敵を一瞬で打倒するスピード感と力強さがクセになる、新時代の無双アクション。",
+    "firstVolumeStory": "不条理な邪悪や敵に対して、無駄な話し合いや説得を一切挟まず、己の圧倒的拳と武力で一瞬にして粉砕する異世界無双ファンタジー。ストレス要素を極限まで排除し、主人公が持つ理不尽なまでの強さでテンポよく問題を解決していく爽快アクション。",
+    "highlights": [
+      "面倒な議論や説得を一切排し、圧倒的武力で敵を粉砕するスピード感",
+      "ストレス要素ゼロで悪党を一瞬で打ち倒す快感重視の無双アクション",
+      "理不尽な世界に対する最も分かりやすく爽快な解法を見せるストーリー"
+    ],
+    "review": "説得や交渉に時間を費やさず、圧倒的な強さで即座に問題を解決する痛快アクションファンタジー。むしゃくしゃした気分を吹き飛ばしたい時にぴったりのストレスフリーな作品です。",
     "readerTypes": [
       "テンポよく敵を倒す無双作品が好き",
       "ストレスなく爽快に読みたい",
@@ -519,17 +434,10 @@
     "price": 715,
     "salesDate": "2026年01月12日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbooksupply%2Fp94-2606-016829%2F%3FvariantId%3Dp94-2606-016829%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fbooksupply%2Fp94-2606-016829%2F%3FvariantId%3Dp94-2606-016829%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbooksupply%2Fp94-2606-016829%2F%3FvariantId%3Dp94-2606-016829%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/booksupply/p94-2606-016829/?variantId=p94-2606-016829&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "面倒な議論や説得を一切排し、圧倒的武力で敵を粉砕するスピード感",
-      "ストレス要素ゼロで悪党を一瞬で打ち倒す快感重視の無双アクション",
-      "理不尽な世界に対する最も分かりやすく爽快な解法を見せるストーリー"
-    ],
-    "review": "説得や交渉に時間を費やさず、圧倒的な強さで即座に問題を解決する痛快アクションファンタジー。むしゃくしゃした気分を吹き飛ばしたい時にぴったりのストレスフリーな作品です。",
-    "firstVolumeStory": "不条理な邪悪や敵に対して、無駄な話し合いや説得を一切挟まず、己の圧倒的拳と武力で一瞬にして粉砕する異世界無双ファンタジー。ストレス要素を極限まで排除し、主人公が持つ理不尽なまでの強さでテンポよく問題を解決していく爽快アクション。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4040645010045",
@@ -551,7 +459,13 @@
     "color": "sage",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7403/9784041167403_1_8.jpg?_ex=300x300",
     "description": "平凡な高校生ウサトが異世界で目覚めさせたのは希少な治癒魔法。だが救命団長ローズの過酷な地獄の特訓により『治癒魔法で怪我を治しながら筋トレする』超超人へと鍛え上げられていく！",
-    "aiIntro": "回復魔法を『自分自身の極限鍛錬』に使う発想の勝利！戦場で負傷者を抱えて爆走する熱きヒーラー・ウサトの努力と友情のバトルファンタジー。",
+    "firstVolumeStory": "平凡な高校生ウサトは、生徒会長と美男子のクラスメイトの勇者召喚に巻き込まれて異世界へ。彼が発現させたのは希少な「治癒魔法」。しかし、その才能を見込んだ救命団長ローズによって地獄の肉体トレーニングへ引きずり込まれる。「治癒魔法で自分の筋繊維を修復しながら筋トレする」という常識外れの鍛錬により、負傷者を抱えて戦場を爆走する最強の回復要員へ成長する熱血バトル。",
+    "highlights": [
+      "治癒魔法で自分の傷を治しながら極限まで筋肉を追い込む超人修行",
+      "戦場で負傷者を抱えて爆走し救出する、救命団としての新しいヒーラー像",
+      "団長ローズのスパルタ指導と、それに食らいつくウサトの熱血師弟関係"
+    ],
+    "review": "治癒魔法を肉体改造と超人的なタフネスのために使う変則ヒーラーの物語。本来サポート職である回復要員が、誰よりも頑丈で足が速い戦場の救世主として駆け巡る熱い王道バトル作品です。",
     "readerTypes": [
       "努力と筋肉で勝利を掴む王道展開が好き",
       "ヒーラー主人公の新しい活躍を見たい",
@@ -560,17 +474,10 @@
     "price": 704,
     "salesDate": "2025年06月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013807035%2F%3FvariantId%3Dr0013807035%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013807035%2F%3FvariantId%3Dr0013807035%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013807035%2F%3FvariantId%3Dr0013807035%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/renet20/r0013807035/?variantId=r0013807035&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "治癒魔法で自分の傷を治しながら極限まで筋肉を追い込む超人修行",
-      "戦場で負傷者を抱えて爆走し救出する、救命団としての新しいヒーラー像",
-      "団長ローズのスパルタ指導と、それに食らいつくウサトの熱血師弟関係"
-    ],
-    "review": "治癒魔法を肉体改造と超人的なタフネスのために使う変則ヒーラーの物語。本来サポート職である回復要員が、誰よりも頑丈で足が速い戦場の救世主として駆け巡る熱い王道バトル作品です。",
-    "firstVolumeStory": "平凡な高校生ウサトは、生徒会長と美男子のクラスメイトの勇者召喚に巻き込まれて異世界へ。彼が発現させたのは希少な「治癒魔法」。しかし、その才能を見込んだ救命団長ローズによって地獄の肉体トレーニングへ引きずり込まれる。「治癒魔法で自分の筋繊維を修復しながら筋トレする」という常識外れの鍛錬により、負傷者を抱えて戦場を爆走する最強の回復要員へ成長する熱血バトル。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4046834110067",
@@ -592,7 +499,13 @@
     "color": "rose",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/comicset/cabinet/12958352/bkqnzxj4c6ecvfcx.jpg?_ex=300x300",
     "description": "17年間の昏睡状態から目覚めたおじさんは、実は異世界『グランバハマル』から帰還した本物の魔法使いだった！甥のたかふみと同居し、YouTubeで魔法を披露しながら語られる凄惨すぎる異世界回想コメディ！",
-    "aiIntro": "異世界帰りのセガ狂いおじさんが語る、過酷でシュールな冒険譚。エルフやツンデレヒロインの好意に一切気づかない鈍感ぶりと、現代日本のネット文化の融合が生み出す爆笑必至の傑作ギャグ！",
+    "firstVolumeStory": "17年間の昏睡状態から目覚めた実の叔父は、なんと異世界「グランバハマル」で魔法使いとして過ごしてきた本物の異世界帰還者だった！甥のたかふみと同居し、YouTubeで魔法を見せて生活費を稼ぎながら、セガのゲーム文化と異世界での凄惨かつシュールな冒険回想を語る異色コメディ。",
+    "highlights": [
+      "17年間の昏睡から覚めた叔父が語る、過酷すぎる異世界での実体験",
+      "エルフやツンデレヒロインの好意に一切気づかない不器用でおぞましい鈍感さ",
+      "90年代SEGAゲーム愛と現代日本のYouTube文化が交錯するシュールな爆笑ギャグ"
+    ],
+    "review": "異世界から現実に帰還したおじさんと甥の日常生活を描く変幻自在のコメディ。異世界での過酷な体験と、現実でのセガゲーマーとしての生活ギャップが唯一無二の笑いを生み出します。",
     "readerTypes": [
       "シュールでレトロなギャグコメディが好き",
       "異世界帰還モノという変則設定を楽しみたい",
@@ -601,17 +514,10 @@
     "price": 748,
     "salesDate": "2025年08月23日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomicset%2F4046834927%2F%3FvariantId%3D4046834927_2%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomicset%2F4046834927%2F%3FvariantId%3D4046834927_2%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomicset%2F4046834927%2F%3FvariantId%3D4046834927_2%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/comicset/4046834927/?variantId=4046834927_2&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
-    "highlights": [
-      "17年間の昏睡から覚めた叔父が語る、過酷すぎる異世界での実体験",
-      "エルフやツンデレヒロインの好意に一切気づかない不器用でおぞましい鈍感さ",
-      "90年代SEGAゲーム愛と現代日本のYouTube文化が交錯するシュールな爆笑ギャグ"
-    ],
-    "review": "異世界から現実に帰還したおじさんと甥の日常生活を描く変幻自在のコメディ。異世界での過酷な体験と、現実でのセガゲーマーとしての生活ギャップが唯一無二の笑いを生み出します。",
-    "firstVolumeStory": "17年間の昏睡状態から目覚めた実の叔父は、なんと異世界「グランバハマル」で魔法使いとして過ごしてきた本物の異世界帰還者だった！甥のたかふみと同居し、YouTubeで魔法を見せて生活費を稼ぎながら、セガのゲーム文化と異世界での凄惨かつシュールな冒険回想を語る異色コメディ。"
+    "publishedAt": "2026-07-26T01:00:54.750Z"
   },
   {
     "id": "4824001110078",
@@ -632,7 +538,13 @@
     "color": "gold",
     "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/renet20/cabinet/zisya12/0013889103.jpg?_ex=300x300",
     "description": "クラスごと異世界に召喚され、最弱の錬金術師となった南雲ハジメ。クラスメイトの裏切りで奈落に突き落とされた彼は、生肉を喰らい奈落の底から最強へと成り上がる！",
-    "aiIntro": "奈落の暗闇で狂気と執念を経て覚醒した最弱少年！吸血鬼のユエをはじめとする最強の仲間たちと共に、神をも喰らう圧倒的火力を誇る最強ファンタジー。",
+    "firstVolumeStory": "クラスごと異世界へ召喚された高校生・南雲ハジメは、錬金術という最弱の地味な能力しか持たず、クラスメイトの悪意によって大迷宮の奈落の底へ突き落とされる。絶望の淵で魔物の肉を喰らい、死線を越えて狂気とともに覚醒。現代兵器と錬金術を融合させた圧倒的火力と強固な意思で、世界を敵に回しても突き進む最強ファンタジー。",
+    "highlights": [
+      "奈落の底で生肉を喰らい狂気とともに覚醒した最弱錬金術師の成り上がり",
+      "現代兵器の知識と錬金術を融合させた圧倒的火力と重武装アクション",
+      "吸血鬼ユエをはじめとする最強のヒロインたちとの固い絆と旅路"
+    ],
+    "review": "クラスメイトの裏切りによって地獄へ突き落とされた主人公が、絶望を力に変えて最強へと昇り詰める爽快バトルファンタジー。圧倒的な銃撃戦と容赦ない無双ぶりが魅力です。",
     "readerTypes": [
       "最弱からの絶望的な成り上がりが好き",
       "近代兵器×魔法のド派手なバトルが好き",
@@ -641,155 +553,49 @@
     "price": 825,
     "salesDate": "2025年05月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013889103%2F%3FvariantId%3Dr0013889103%26scid%3Dseo-carousel-search&m=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013889103%2F%3FvariantId%3Dr0013889103%26scid%3Dseo-carousel-search",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frenet20%2Fr0013889103%2F%3FvariantId%3Dr0013889103%26scid%3Dseo-carousel-search",
     "sourceUrl": "https://item.rakuten.co.jp/renet20/r0013889103/?variantId=r0013889103&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:00:54.750Z",
+    "publishedAt": "2026-07-26T01:00:54.750Z"
+  },
+  {
+    "id": "6671308504690",
+    "slug": "6671308504690",
+    "title": "転生したけどステータス「魅力」に全振り！？ (114)",
+    "author": "知音動漫",
+    "seriesName": "転生したけどステータス「魅力」に全振り！？",
+    "genre": "異世界・ファンタジー・ステータス",
+    "tags": [
+      "転生",
+      "異世界",
+      "恋愛ゲーム",
+      "ステータス",
+      "魅力スキル",
+      "キャラクター攻略",
+      "ファンタジー"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/2854/2000020512854.jpg?_ex=300x300",
+    "description": "恋愛ゲームを極めた主人公・秦行遠が「魅力」に全振りされたステータスで、再び多種多様なキャラクターたちとの攻略の旅を始める異世界ゲーム攻略ファンタジー！",
+    "firstVolumeStory": "乙女向け恋愛ゲームを遊び尽くしたゲーマー少年が、ゲームの世界へとまさかの異世界転生。転生時に割り振られたステータスは、なんと戦闘能力ゼロで「魅力（カリスマ）」だけに特化した極端すぎる数値！攻撃力も防御力も皆無ながら、持ち前のゲーム攻略知識と常人を遥かに超えた人間的魅力で、強力な味方や攻略対象キャラクターたちを味方につけて異世界の試練を乗り越えていく新感覚ファンタジー。",
     "highlights": [
-      "奈落の底で生肉を喰らい狂気とともに覚醒した最弱錬金術師の成り上がり",
-      "現代兵器の知識と錬金術を融合させた圧倒的火力と重武装アクション",
-      "吸血鬼ユエをはじめとする最強のヒロインたちとの固い絆と旅路"
+      "能力値「魅力」全振りという常識外れのステータス配分による爆笑展開",
+      "恋愛ゲームの知識を駆使して強敵やヒロインを攻略していくユニークな攻略術",
+      "戦闘力ではなく圧倒的な好感度と惹きつける力で乗り越える新感覚バトル"
     ],
-    "review": "クラスメイトの裏切りによって地獄へ突き落とされた主人公が、絶望を力に変えて最強へと昇り詰める爽快バトルファンタジー。圧倒的な銃撃戦と容赦ない無双ぶりが魅力です。",
-    "firstVolumeStory": "クラスごと異世界へ召喚された高校生・南雲ハジメは、錬金術という最弱の地味な能力しか持たず、クラスメイトの悪意によって大迷宮の奈落の底へ突き落とされる。絶望の淵で魔物の肉を喰らい、死線を越えて狂気とともに覚醒。現代兵器と錬金術を融合させた圧倒的火力と強固な意思で、世界を敵に回しても突き進む最強ファンタジー。"
-  },
-  {
-    "id": "4390000014620",
-    "slug": "4390000014620",
-    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(96)",
-    "author": "心音ゆるり/伊咲ウタ",
-    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
-    "genre": "異世界・ファンタジー",
-    "tags": [
-      "VRMMO",
-      "異世界転生",
-      "レベルアップ",
-      "ソロプレイ",
-      "ダンジョン攻略",
-      "ファンタジー",
-      "最強主人公",
-      "レアアイテム"
-    ],
-    "badge": "新着",
-    "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1187/2000020421187.jpg?_ex=200x200",
-    "description": "VRMMOの頂点に君臨したソロプレイヤーSRが、レベル1の無職として異世界転生！かつての知識と経験を活かし、高難易度ダンジョンを効率的に攻略。レアアイテムを求め、Bランクダンジョンを周回するSRと、師匠の助言を胸にAランクダンジョンに挑むセラ。VR世界を舞台にした異世界ファンタジーの最新分冊版です。",
-    "aiIntro": "かつてVRMMOの頂点に立った男が、レベル1の無職として新たな世界でリスタート！その知識と経験で、高難易度ダンジョンを効率的に攻略していく爽快感が魅力。レアアイテムを巡る熱い冒険と、師匠SRのユニークな助言にも注目。VR世界を舞台に繰り広げられる、異世界ファンタジーの最新章をお見逃しなく！",
+    "review": "武力や魔法ではなく「魅力」のパラメータのみを究めた主人公が繰り広げるコミカルな攻略記。ゲーム知識と人たらしな魅力で幾多の困難を解決していくスピード感あふれる展開が特徴です。",
     "readerTypes": [
-      "VRMMOの世界観に没頭したい方",
-      "最強主人公の活躍に胸を躍らせたい方",
-      "異世界での成り上がりを楽しみたい方"
+      "異世界転生ものが好きな読者",
+      "ゲーム攻略要素に惹かれる読者",
+      "キャラクターの魅力を楽しみたい読者"
     ],
-    "price": 80,
-    "salesDate": "2026年04月28日",
+    "price": 62,
+    "salesDate": "2027年07月24日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd2e11f81621e3b428c5313556741bd49%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd2e11f81621e3b428c5313556741bd49%2F",
-    "sourceUrl": "https://books.rakuten.co.jp/rk/d2e11f81621e3b428c5313556741bd49/",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F8b19ff1be77a376abc9c5cab52da1e9e%2F%3FvariantId%3D8b19ff1be77a376abc9c5cab52da1e9e%26scid%3Dseo-carousel-search",
+    "sourceUrl": "https://item.rakuten.co.jp/rakutenkobo-ebooks/8b19ff1be77a376abc9c5cab52da1e9e/?variantId=8b19ff1be77a376abc9c5cab52da1e9e&scid=seo-carousel-search",
     "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:30:41.522Z"
-  },
-  {
-    "id": "4390000014617",
-    "slug": "4390000014617",
-    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(93)",
-    "author": "心音ゆるり/伊咲ウタ",
-    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
-    "genre": "異世界・ファンタジー",
-    "tags": [
-      "異世界転生",
-      "VRMMO",
-      "最強主人公",
-      "レベル1からの成り上がり",
-      "ダンジョン攻略",
-      "戦略的バトル",
-      "分冊版"
-    ],
-    "badge": "新着",
-    "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1186/2000020421186.jpg?_ex=200x200",
-    "description": "VRMMOの頂点プレイヤーが、レベル1無職としてVR世界「テンペスト」に転生！創造主ノアと出会い、世界の現状を理解したSRは、高難易度ダンジョンを効率的に攻略すべくBランクダンジョンを周回する。一方、セラはAランクダンジョンに挑み、師匠SRからニンニクソードを渡される。MMOの醍醐味と戦略が光る異世界冒険譚の分冊版。",
-    "aiIntro": "VRMMOの頂点プレイヤーが、レベル1無職として異世界転生！「テンペスト」で創造主と出会い、効率的なダンジョン攻略に挑むSR。一方、高難易度ダンジョンへ挑むセラには、師匠からの意外な助言が！？MMOの醍醐味と戦略が光る異世界ファンタジーの最新分冊版。最強からのリスタート物語をぜひご堪能ください！",
-    "readerTypes": [
-      "VRMMOゲームが好きな読者",
-      "最強主人公の異世界転生物語を求める読者",
-      "効率的なダンジョン攻略や戦略に魅力を感じる読者"
-    ],
-    "price": 80,
-    "salesDate": "2026年04月28日",
-    "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fce80c5594a733302b48dc48301bfc524%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fce80c5594a733302b48dc48301bfc524%2F",
-    "sourceUrl": "https://books.rakuten.co.jp/rk/ce80c5594a733302b48dc48301bfc524/",
-    "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:38:51.448Z"
-  },
-  {
-    "id": "4390000014616",
-    "slug": "4390000014616",
-    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(92)",
-    "author": "心音ゆるり/伊咲ウタ",
-    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
-    "genre": "異世界・ファンタジー",
-    "tags": [
-      "異世界転生",
-      "VRMMO",
-      "ソロプレイヤー",
-      "ダンジョン攻略",
-      "レベルアップ",
-      "効率プレイ",
-      "ファンタジー",
-      "分冊版"
-    ],
-    "badge": "新着",
-    "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1191/2000020421191.jpg?_ex=200x200",
-    "description": "VR世界の頂点に君臨したソロプレイヤーSRが、自身が活躍したMMOゲームの世界へ転生し、レベル1の無職から再出発する異世界ファンタジー「俺、勇者じゃないですから。」。創造主ノアと出会い、効率的なダンジョン攻略を目指すSRの冒険を描きます。レアアイテムを求め、高難易度ダンジョンを周回する本格MMO要素が魅力の分冊版第92弾です。",
-    "aiIntro": "VRMMOの頂点に立った男が、そのゲーム世界に転生したらどうなると思いますか？『俺、勇者じゃないですから。』は、世界一のソロプレイヤーSRがレベル1の無職として異世界を再スタートする物語。効率的なダンジョン周回やレアアイテム収集といったMMOの醍醐味が満載です。壮大な冒険と戦略的な攻略に心躍る一冊をお楽しみください。",
-    "readerTypes": [
-      "VRMMOゲームが好きな方",
-      "異世界転生もので最強主人公の活躍を見たい方",
-      "効率的なダンジョン攻略やレアアイテム収集に魅力を感じる方"
-    ],
-    "price": 80,
-    "salesDate": "2026年04月28日",
-    "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F0b3b49b4fe41371aae2967edcf22f74a%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F0b3b49b4fe41371aae2967edcf22f74a%2F",
-    "sourceUrl": "https://books.rakuten.co.jp/rk/0b3b49b4fe41371aae2967edcf22f74a/",
-    "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:43:37.698Z"
-  },
-  {
-    "id": "4390000014622",
-    "slug": "4390000014622",
-    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(98)",
-    "author": "心音ゆるり/伊咲ウタ",
-    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
-    "genre": "異世界・ファンタジー",
-    "tags": [
-      "異世界転生",
-      "VRMMO",
-      "レベル1からのリスタート",
-      "最強主人公",
-      "ダンジョン攻略",
-      "レアアイテム",
-      "効率的周回",
-      "分冊版"
-    ],
-    "badge": "新着",
-    "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1190/2000020421190.jpg?_ex=200x200",
-    "description": "VRMMOの頂点に君臨したソロプレイヤーSRが、かつて活躍したVRMMOゲーム「テンペスト」の世界に転生。レベル1の無職から再スタートを切る物語の分冊版第98弾です。創造主ノアと出会い世界の現状を理解したSRは、高難易度ダンジョンを効率的に攻略するためBランクダンジョンを周回。一方、セラは師匠SRからニンニクソードを手に、リンデールのAランクダンジョンに挑みます。レアアイテムを求め、ひたすらダンジョンを周回するMMOの醍醐味が詰まった一冊です。",
-    "aiIntro": "かつてVRMMOの頂点に立った男が、レベル1の無職として異世界に転生！『俺、勇者じゃないですから。』分冊版第98弾では、世界一のソロプレイヤーSRが、効率的なダンジョン攻略とレアアイテム獲得を目指し、ひたすら周回するMMOの熱狂が描かれます。師匠SRから託されたニンニクソードを手に、セラが挑むAランクダンジョンも見どころ。心音ゆるり先生と伊咲ウタ先生が贈る、最強からのリスタート物語をぜひ体験してください！",
-    "readerTypes": [
-      "VRMMOの世界観が好きな方",
-      "最強主人公がレベル1から成り上がる物語を楽しみたい方",
-      "効率的なダンジョン攻略やレアアイテム収集に魅力を感じる方"
-    ],
-    "price": 80,
-    "salesDate": "2026年04月28日",
-    "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F1c2c10755f9d339a8123f5f34ecac30c%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F1c2c10755f9d339a8123f5f34ecac30c%2F",
-    "sourceUrl": "https://books.rakuten.co.jp/rk/1c2c10755f9d339a8123f5f34ecac30c/",
-    "source": "rakuten-kobo",
-    "publishedAt": "2026-07-26T01:47:57.487Z"
+    "publishedAt": "2026-07-25T22:52:49.728Z"
   }
 ]
