@@ -39,7 +39,7 @@ const isWithinReservationWindow = (item) => {
   return date <= oneMonthLater
 }
 const isRakutenItem = (item) => Boolean(item?.itemUrl && process.env.RAKUTEN_AFFILIATE_ID && (item.largeImageUrl || item.mediumImageUrl) && isWithinReservationWindow(item))
-const isPublishableBook = (book) => Boolean(book?.source === 'rakuten-kobo' && book.slug && book.cover?.includes('rakuten') && book.affiliateUrl?.startsWith('https://hb.afl.rakuten.co.jp/'))
+const isPublishableBook = (book) => Boolean(book?.slug && book?.title && (book.cover || book.sourceUrl))
 
 async function rakutenSearch(keyword, page = 1) {
   const params = new URLSearchParams({
@@ -136,10 +136,24 @@ function pairSlug(a, b) {
 }
 
 function relatedBooks(book, books) {
-  return books.filter(other => other.id !== book.id).map(other => ({
-    book: other,
-    score: (other.tags || []).filter(tag => (book.tags || []).includes(tag)).length + (other.genre === book.genre ? 2 : 0)
-  })).filter(entry => entry.score > 0).sort((a, b) => b.score - a.score).slice(0, 6).map(entry => entry.book)
+  const currentTags = book.tags || []
+  const currentGenreKeywords = (book.genre || '').split(/[・\s/]/).filter(Boolean)
+
+  const scored = books.filter(other => other.id !== book.id).map(other => {
+    const otherTags = other.tags || []
+    const otherGenreKeywords = (other.genre || '').split(/[・\s/]/).filter(Boolean)
+    
+    let score = 0
+    score += otherTags.filter(t => currentTags.includes(t)).length * 2
+    score += otherGenreKeywords.filter(g => currentGenreKeywords.includes(g)).length * 3
+    if (other.author === book.author) score += 5
+    if (other.seriesName && other.seriesName === book.seriesName) score += 10
+
+    return { book: other, score }
+  })
+
+  scored.sort((a, b) => b.score - a.score)
+  return scored.slice(0, 6).map(entry => entry.book)
 }
 
 function renderHeader(activePath = '') {

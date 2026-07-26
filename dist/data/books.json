@@ -12,15 +12,14 @@
       "ルーデウス",
       "ロキシー",
       "感情の機微",
-      "シリーズ最新刊",
-      "KADOKAWA",
-      "転生もの"
+      "転生",
+      "KADOKAWA"
     ],
     "badge": "新着",
     "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6100/2000019696100.jpg?_ex=200x200",
-    "description": "KADOKAWAより発売される『無職転生 〜異世界行ったら本気だす〜 24』は、人気異世界ファンタジーシリーズの最新刊です。飲まず食わず、歩くこともできない無力感に苛まれるルーデウスの姿を見たロキシーが、ある一大決心をする展開が描かれます。いつものローブを脱ぎ捨て、ルーデウスの部屋の前に立つロキシーの胸中とは一体……。フジカワ ユカ、理不尽な孫の手、シロタカが贈る、物語の新たな局面をお見見逃しなく。2026年2月24日発売。",
-    "aiIntro": "大人気異世界ファンタジー『無職転生 〜異世界行ったら本気だす〜』の最新刊、第24巻が登場！ 無力感に苛まれるルーデウスと、彼のために一大決心をするロキシー。その胸中に秘められた想いとは？ 読者の心を揺さぶる新たな展開が幕を開けます。フジカワ ユカ、理不尽な孫の手、シロタカが紡ぐ壮大な物語の続きを、ぜひその目でお確かめください。2026年2月24日発売。",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6100/2000019696100.jpg?_ex=300x300",
+    "description": "KADOKAWAより発売される『無職転生 〜異世界行ったら本気だす〜 24』は、人気異世界ファンタジーシリーズの最新刊です。無力感に苛まれるルーデウスの姿を見たロキシーが、ある一大決心をする展開が描かれます。",
+    "aiIntro": "大人気異世界ファンタジー『無職転生』の第24巻！無力感に苛まれるルーデウスと、彼のために一大決心をするロキシー。その胸中に秘められた想いとは？",
     "readerTypes": [
       "無職転生シリーズのファン",
       "異世界転生ものが好きな方",
@@ -29,75 +28,84 @@
     "price": 836,
     "salesDate": "2026年02月24日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2ccf2d0621bb3d72a8966c55d8c1c886%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2ccf2d0621bb3d72a8966c55d8c1c886/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T23:31:57.148Z"
   },
   {
     "id": "seed-tensura",
-    "slug": "that-time-i-got-reincarnated-as-a-slime",
-    "title": "転生したらスライムだった件",
-    "author": "伏瀬",
-    "genre": "転生・内政",
+    "slug": "seed-tensura",
+    "title": "転生したらスライムだった件 (24)",
+    "author": "伏瀬/川上泰樹",
+    "seriesName": "転生したらスライムだった件",
+    "genre": "転生・最強主人公・内政",
     "tags": [
       "転生",
       "最強主人公",
       "内政",
-      "仲間"
+      "仲間",
+      "魔王",
+      "講談社"
     ],
     "badge": "話題作",
     "color": "sage",
-    "cover": "",
-    "description": "スライムに転生したリムルが、仲間たちと魔物の国を築いていく。爽快な無双と国づくりを楽しめる人気シリーズ。",
-    "aiIntro": "強さを手に入れた主人公が、誰かを支配するのではなく、仲間と暮らせる場所をつくっていく。爽快さと内政の楽しさが同居する一作です。",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/0010/2000018500010.jpg?_ex=300x300",
+    "description": "スライムに転生したリムルが、仲間たちと魔物の国を築いていく。爽快な無双と国づくりを楽しめる超人気シリーズ！",
+    "aiIntro": "強さを手に入れた主人公が、誰かを支配するのではなく、仲間と暮らせる場所をつくっていく。爽快さと内政の楽しさが同居する大傑作。",
     "readerTypes": [
       "無双の爽快感が好きな人",
       "国づくり・内政が好きな人",
       "個性的な仲間に囲まれたい人"
     ],
-    "price": 0,
-    "salesDate": "2014年05月",
-    "affiliateUrl": "",
-    "sourceUrl": "",
-    "source": "pending-rakuten-sync",
+    "price": 759,
+    "salesDate": "2025年09月08日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000018500010%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/2000018500010/",
+    "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T00:00:00.000Z"
   },
   {
     "id": "seed-houro-meshi",
-    "slug": "tondemo-skill-de-isekai-houro-meshi",
-    "title": "とんでもスキルで異世界放浪メシ",
-    "author": "江口連",
-    "genre": "スローライフ・グルメ",
+    "slug": "seed-houro-meshi",
+    "title": "とんでもスキルで異世界放浪メシ (10)",
+    "author": "江口連/赤岸K",
+    "seriesName": "とんでもスキルで異世界放浪メシ",
+    "genre": "スローライフ・グルメ・異世界",
     "tags": [
       "スローライフ",
       "もふもふ",
       "グルメ",
-      "旅"
+      "旅",
+      "オーバーラップ",
+      "転生"
     ],
     "badge": "ほっこり",
     "color": "rose",
-    "cover": "",
-    "description": "異世界に召喚された会社員が、現代の商品を取り寄せられる固有スキルで旅をする。おいしい料理と頼れる仲間に癒やされる異世界生活。",
-    "aiIntro": "戦うだけが異世界じゃない。ネットスーパーのスキルと食卓を中心に、旅先での出会いをゆるやかに楽しむスローライフ作品です。",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/0055/2000019500055.jpg?_ex=300x300",
+    "description": "異世界に召喚された会社員が、現代の商品を取り寄せられる固有スキルで旅をする。おいしい料理と頼れる従魔フェンリルに癒やされる異世界生活！",
+    "aiIntro": "戦うだけが異世界じゃない。ネットスーパーのスキルと食卓を中心に、旅先での出会いをゆるやかに楽しむ大人気スローライフ作品。",
     "readerTypes": [
       "癒やされる物語を読みたい人",
       "料理・グルメ描写が好きな人",
       "もふもふと旅が好きな人"
     ],
-    "price": 0,
-    "salesDate": "2016年12月",
-    "affiliateUrl": "",
-    "sourceUrl": "",
-    "source": "pending-rakuten-sync",
+    "price": 715,
+    "salesDate": "2025年11月25日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019500055%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/2000019500055/",
+    "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T00:00:00.000Z"
   },
   {
     "id": "6671308504690",
     "slug": "6671308504690",
-    "title": "転生したけどステータス「魅力」に全振り！？(114)",
+    "title": "転生したけどステータス「魅力」に全振り！？ (114)",
     "author": "知音動漫",
-    "genre": "異世界・ファンタジー",
+    "seriesName": "転生したけどステータス「魅力」に全振り！？",
+    "genre": "異世界・ファンタジー・ステータス",
     "tags": [
       "転生",
       "異世界",
@@ -105,33 +113,33 @@
       "ステータス",
       "魅力スキル",
       "キャラクター攻略",
-      "フルカラーコミック",
       "ファンタジー"
     ],
     "badge": "新着",
     "color": "gold",
-    "cover": "",
-    "description": "恋愛ゲームを極めた主人公・秦行遠は、オンラインゲーム「万界遊」の全キャラクター攻略に成功。しかし、その攻略方法が原因でゲーム世界へ転生してしまいます。現実世界への帰還を目指し、彼は「魅力」に全振りされたステータスで、再び多種多様な五つ星キャラクターたちとの攻略の旅を始めることに。異世界での新たなゲーム攻略が今、幕を開けます。",
-    "aiIntro": "恋愛ゲームの達人が、まさかのゲーム世界へ転生！『転生したけどステータス「魅力」に全振り！？』は、主人公・秦行遠が「魅力」スキルを駆使し、個性豊かなキャラクターたちを攻略していく異世界ファンタジーです。ゲームクリアと現実世界への帰還を目指す彼の、波乱に満ちた冒険をぜひお楽しみください。",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4690/2000021304690.jpg?_ex=300x300",
+    "description": "恋愛ゲームを極めた主人公・秦行遠が「魅力」に全振りされたステータスで、再び多種多様なキャラクターたちとの攻略の旅を始める異世界ゲーム攻略ファンタジー！",
+    "aiIntro": "恋愛ゲームの達人がまさかのゲーム世界へ転生！魅力スキルを駆使して個性豊かなキャラクターを攻略する話題のファンタジー。",
     "readerTypes": [
       "異世界転生ものが好きな読者",
-      "恋愛ゲームや攻略要素に惹かれる読者",
-      "個性豊かなキャラクターとの交流を楽しみたい読者"
+      "ゲーム攻略要素に惹かれる読者",
+      "キャラクターの魅力を楽しみたい読者"
     ],
     "price": 62,
     "salesDate": "2027年07月24日",
-    "affiliateUrl": "",
-    "sourceUrl": "",
-    "source": "pending-rakuten-sync",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021304690%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/2000021304690/",
+    "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T22:52:49.728Z"
   },
   {
     "id": "4390000014619",
     "slug": "4390000014619",
-    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜(95)",
+    "title": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜 (95)",
     "author": "心音ゆるり/伊咲ウタ",
-    "seriesName": "【分冊版】俺、勇者じゃないですから。〜VR世界の頂点に君臨せし男。転生し、レベル１の無職からリスタートする〜",
-    "genre": "異世界・ファンタジー",
+    "seriesName": "俺、勇者じゃないですから。",
+    "genre": "異世界・VRMMO・ダンジョン",
     "tags": [
       "異世界転生",
       "VRMMO",
@@ -139,23 +147,22 @@
       "ダンジョン攻略",
       "ソロプレイヤー",
       "レベルアップ",
-      "効率的周回",
-      "レアアイテム"
+      "無双"
     ],
     "badge": "新着",
     "color": "gold",
-    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1181/2000020421181.jpg?_ex=200x200",
-    "description": "VRMMOゲーム「テンペスト」の世界に転生した元世界一のソロプレイヤー「SR」。レベル1の無職から再スタートし、創造主ノアと出会い世界の現状を把握する。高難易度ダンジョンを効率的に攻略するためBランクダンジョンを周回するSR。一方、セラは師匠SRから渡されたニンニクソードを手にAランクダンジョンへ挑む。レアアイテムを求め、ひたすらダンジョンを周回するMMOの醍醐味を描く異世界ファンタジー。",
-    "aiIntro": "かつてVRMMOの頂点に君臨した最強ソロプレイヤーが、異世界でレベル1の無職から再出発！「テンペスト」の世界で、創造主ノアとの出会いを経て、効率的なダンジョン攻略に挑むSRの冒険が描かれます。ドロップ率0.2%のレアアイテムを求め、ひたすら周回するMMOの熱気を体験しませんか？師匠SRのユニークな助言「ニンニクソード」を手に、セラが挑むAランクダンジョンも見どころ。異世界ファンタジー好き必読の一冊です！",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1181/2000020421181.jpg?_ex=300x300",
+    "description": "VRMMOゲーム「テンペスト」の世界に転生した元世界一のソロプレイヤー「SR」。レベル1の無職から再スタートし、高難易度ダンジョンを効率的に攻略していく！",
+    "aiIntro": "かつてVRMMOの頂点に君臨した最強ソロプレイヤーが、異世界でレベル1の無職から再出発！効率的なダンジョン周回と圧倒的知識で無双する爽快ファンタジー。",
     "readerTypes": [
-      "異世界転生×VRMMOの組み合わせが好きな方",
-      "最強主人公がレベル1から成り上がっていく物語を楽しみたい方",
-      "ダンジョン攻略やレアアイテム収集に熱中するゲーム体験を追体験したい方"
+      "異世界転生×VRMMOが好きな方",
+      "レベル1からの成り上がりが好きな方",
+      "ダンジョン攻略を楽しみたい方"
     ],
     "price": 80,
     "salesDate": "2026年04月28日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2037c60d54ef34bfbb2626a5b3e41547%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2037c60d54ef34bfbb2626a5b3e41547/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-25T23:33:20.497Z"
@@ -166,7 +173,7 @@
     "title": "陰の実力者になりたくて！ (6)",
     "author": "逢沢大介/東西",
     "seriesName": "陰の実力者になりたくて！",
-    "genre": "勘違い・最強主人公",
+    "genre": "勘違い・最強主人公・異世界",
     "tags": [
       "暗躍",
       "最強主人公",
@@ -174,7 +181,8 @@
       "学園",
       "陰の組織",
       "KADOKAWA",
-      "コメディ"
+      "コメディ",
+      "転生"
     ],
     "badge": "大人気",
     "color": "gold",
@@ -189,7 +197,7 @@
     "price": 792,
     "salesDate": "2025年10月26日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021594000%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021594000%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000021594000/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.748Z"
@@ -207,7 +215,8 @@
       "推理",
       "毒見役",
       "後宮サスペンス",
-      "スクウェア・エニックス"
+      "スクウェア・エニックス",
+      "異世界"
     ],
     "badge": "話題作",
     "color": "sage",
@@ -222,7 +231,7 @@
     "price": 730,
     "salesDate": "2025年03月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000022099300%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000022099300%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000022099300/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -233,14 +242,16 @@
     "title": "オーバーロード (16) 半森妖精の神人 [下]",
     "author": "丸山くがね/so-bin",
     "seriesName": "オーバーロード",
-    "genre": "ダークファンタジー・支配者",
+    "genre": "ダークファンタジー・支配者・異世界",
     "tags": [
       "魔王",
       "支配者",
       "ダークファンタジー",
       "アンデッド",
       "ナザリック",
-      "KADOKAWA"
+      "KADOKAWA",
+      "転生",
+      "最強主人公"
     ],
     "badge": "殿堂入り",
     "color": "rose",
@@ -255,7 +266,7 @@
     "price": 1320,
     "salesDate": "2025年07月30日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019112200%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019112200%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000019112200/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -266,14 +277,15 @@
     "title": "Re：ゼロから始める異世界生活 (37)",
     "author": "長月達平/大塚真一郎",
     "seriesName": "Re：ゼロから始める異世界生活",
-    "genre": "死に戻り・ループ・絶望と希望",
+    "genre": "死に戻り・ループ・異世界",
     "tags": [
       "死に戻り",
       "ループ",
       "絶望からの逆転",
       "エミリア",
       "スバル",
-      "KADOKAWA"
+      "KADOKAWA",
+      "転生"
     ],
     "badge": "話題作",
     "color": "gold",
@@ -288,7 +300,7 @@
     "price": 748,
     "salesDate": "2025年03月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019543100%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019543100%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000019543100/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -299,14 +311,15 @@
     "title": "本好きの下剋上〜司書になるためには手段を選んでいられません〜 第五部「女神の化身12」",
     "author": "香月美夜/椎名優",
     "seriesName": "本好きの下剋上",
-    "genre": "本好き・魔術・貴族社会",
+    "genre": "本好き・魔術・異世界",
     "tags": [
       "本好き",
       "魔術",
       "ビブリアファンタジー",
       "下剋上",
       "TOブックス",
-      "貴族社会"
+      "貴族社会",
+      "転生"
     ],
     "badge": "完結記念",
     "color": "sage",
@@ -321,7 +334,7 @@
     "price": 1320,
     "salesDate": "2024年12月10日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000018490012%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000018490012%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000018490012/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -332,14 +345,15 @@
     "title": "乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった… (13)",
     "author": "山口悟/ひだかなみ",
     "seriesName": "乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…",
-    "genre": "悪役令嬢・ラブコメ・人徳無双",
+    "genre": "悪役令嬢・ラブコメ・異世界",
     "tags": [
       "悪役令嬢",
       "破滅フラグ",
       "ラブコメ",
       "人徳無双",
       "天然人たらし",
-      "一迅社"
+      "一迅社",
+      "転生"
     ],
     "badge": "人徳無双",
     "color": "rose",
@@ -354,7 +368,7 @@
     "price": 792,
     "salesDate": "2025年09月20日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000020310023%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000020310023%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000020310023/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -365,14 +379,15 @@
     "title": "説得のいらない異世界無双 (1)",
     "author": "小栗カズマ/高橋伸昌",
     "seriesName": "説得のいらない異世界無双",
-    "genre": "爽快・無双・冒険ファンタジー",
+    "genre": "爽快・無双・異世界ファンタジー",
     "tags": [
       "説得無用",
       "無双",
       "冒険",
       "爽快",
       "小学館",
-      "ファンタジー"
+      "ファンタジー",
+      "異世界"
     ],
     "badge": "新着",
     "color": "gold",
@@ -387,7 +402,7 @@
     "price": 715,
     "salesDate": "2026年01月12日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021435210%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000021435210%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000021435210/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -398,14 +413,15 @@
     "title": "治癒魔法の間違った使い方〜戦場をかける回復要員〜 (13)",
     "author": "くろかね/治癒魔法制作委員会",
     "seriesName": "治癒魔法の間違った使い方",
-    "genre": "鍛錬・回復要員・熱血ファンタジー",
+    "genre": "鍛錬・回復要員・異世界ファンタジー",
     "tags": [
       "治癒魔法",
       "肉体言語",
       "救命ドック",
       "熱血",
       "戦車",
-      "KADOKAWA"
+      "KADOKAWA",
+      "異世界"
     ],
     "badge": "熱血",
     "color": "sage",
@@ -420,7 +436,7 @@
     "price": 704,
     "salesDate": "2025年06月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019450100%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019450100%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000019450100/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -431,14 +447,15 @@
     "title": "異世界おじさん (11)",
     "author": "殆ど死んでいる",
     "seriesName": "異世界おじさん",
-    "genre": "帰還・コメディ・ゲーマー",
+    "genre": "帰還・コメディ・異世界",
     "tags": [
       "帰還",
       "SEGA",
       "ゲーマー",
       "おじさん",
       "勘違いギャグ",
-      "KADOKAWA"
+      "KADOKAWA",
+      "異世界"
     ],
     "badge": "ギャグ大賞",
     "color": "rose",
@@ -453,7 +470,7 @@
     "price": 748,
     "salesDate": "2025年08月23日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000020834110%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000020834110%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000020834110/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
@@ -464,13 +481,14 @@
     "title": "ありふれた職業で世界最強 (13)",
     "author": "白米良/たかやKi",
     "seriesName": "ありふれた職業で世界最強",
-    "genre": "錬金術・最強主人公・復讐",
+    "genre": "錬金術・最強主人公・異世界",
     "tags": [
       "錬金術師",
       "オルクス大迷宮",
       "ハーレム",
       "最強主人公",
-      "オーバーラップ"
+      "オーバーラップ",
+      "転生"
     ],
     "badge": "最強無双",
     "color": "gold",
@@ -485,7 +503,7 @@
     "price": 825,
     "salesDate": "2025年05月25日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019400110%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F2000019400110%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/2000019400110/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-26T01:00:54.750Z"
