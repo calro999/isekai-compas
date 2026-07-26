@@ -791,7 +791,7 @@ async function main() {
     }
   }
   const existing = new Set(seedBooks.filter(book => book.source === 'rakuten-kobo').map(book => book.id))
-  const getBase = (title) => (title||'').split('〜')[0].split('（')[0].split('(')[0].replace(/第?\\d+巻?/, '').trim()
+  const getBase = (title) => (title||'').replace(/[\s　]*(第?[0-9０-９]+巻?|[０-９]+).*$/, '').split('〜')[0].split('（')[0].split('(')[0].trim().replace(/」シリーズ$/, '').replace(/^「/, '')
   const existingBases = new Set(seedBooks.map(b => getBase(b.title)))
 
   const pending = seedBooks.filter(book => book.source === 'pending-rakuten-sync')
