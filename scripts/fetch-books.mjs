@@ -431,52 +431,59 @@ function renderBookCard(book) {
 }
 
 async function fetchSeriesVolumes(book) {
-  // 代表的な超人気25作品の第1巻〜最新刊・外伝のダミー＆実在データリスト
-  const envContent = await fs.readFile(path.join(root, '.env'), 'utf8').catch(() => '')
-  const env = {}
-  for (const line of envContent.split('\n')) {
-    const trimmed = line.trim()
-    if (trimmed && !trimmed.startsWith('#') && trimmed.includes('=')) {
-      const [k, ...v] = trimmed.split('=')
-      env[k.trim()] = v.join('=').trim()
+  const baseTitle = book.seriesName || book.title.split('〜')[0].split('（')[0].split('(')[0].replace(/第?\d+巻?/, '').trim()
+  try {
+    const items = await rakutenSearch(baseTitle, 1)
+    if (!items || items.length === 0) throw new Error('No items found')
+    
+    // 分冊版を除外
+    let filtered = items.filter(item => !item.title.includes('【分冊版】') && (item.seriesName === book.seriesName || item.title.includes(baseTitle)))
+    if (filtered.length === 0) filtered = items.filter(item => item.seriesName === book.seriesName || item.title.includes(baseTitle))
+    
+    // タイトルでソートして巻順にする
+    filtered.sort((a, b) => a.title.localeCompare(b.title))
+    
+    // 同じタイトル（特装版と通常版など）を除外してユニークにする
+    const unique = []
+    const seenTitles = new Set()
+    for (const item of filtered) {
+      const simplifiedTitle = normalizeTitle(item.title)
+      if (!seenTitles.has(simplifiedTitle)) {
+        seenTitles.add(simplifiedTitle)
+        unique.push(item)
+      }
     }
-  }
-  const affId = env.RAKUTEN_AFFILIATE_ID || "54d2a438.4bc4abc2.54d2a439.aa1be583"
 
-  // 1作品あたり1巻〜8巻（および外伝）の完璧な表紙コレクションを生成
-  const baseTitle = book.seriesName || book.title.split('〜')[0].split('（')[0].split('(')[0]
-  const volumes = []
-  const maxVols = 8
-  
-  for (let v = 1; v <= maxVols; v++) {
-    const volTitle = `${baseTitle} 第${v}巻`
-    // 表紙画像は公式100% 200 OK
-    const coverUrl = book.cover
-    const itemUrl = book.sourceUrl || `https://books.rakuten.co.jp/search?sitem=${encodeURIComponent(volTitle)}`
-    const affiliateUrl = `https://hb.afl.rakuten.co.jp/hgc/${affId}/?pc=${encodeURIComponent(itemUrl)}&m=${encodeURIComponent(itemUrl)}`
-    volumes.push({
-      volNum: v,
-      volTitle: `${baseTitle} (${v})`,
-      cover: coverUrl,
-      itemUrl: itemUrl,
-      affiliateUrl: affiliateUrl,
-      price: book.price || 748,
-      salesDate: v === maxVols ? '2026年7月最新刊' : `2024年-${v}月`
+    const volumes = unique.map((item, i) => {
+      const cover = item.largeImageUrl || item.mediumImageUrl || book.cover
+      const itemUrl = item.itemUrl || book.sourceUrl
+      return {
+        volNum: i + 1,
+        volTitle: item.title,
+        cover: cover,
+        itemUrl: itemUrl,
+        affiliateUrl: buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || "54d2a438.4bc4abc2.54d2a439.aa1be583"),
+        price: item.itemPrice || book.price,
+        salesDate: item.salesDate || ''
+      }
     })
+    
+    // もし1件もなければフォールバック
+    if (volumes.length === 0) throw new Error('No unique volumes')
+    return volumes
+
+  } catch (e) {
+    // API呼び出し失敗時は元の本1冊だけを返す
+    return [{
+      volNum: 1,
+      volTitle: book.title,
+      cover: book.cover,
+      itemUrl: book.sourceUrl,
+      affiliateUrl: book.affiliateUrl,
+      price: book.price,
+      salesDate: book.salesDate
+    }]
   }
-
-  // マニアック外伝
-  volumes.push({
-    volNum: '外伝',
-    volTitle: `${baseTitle} 公式外伝・短編集`,
-    cover: book.cover,
-    itemUrl: book.sourceUrl,
-    affiliateUrl: `https://hb.afl.rakuten.co.jp/hgc/${affId}/?pc=${encodeURIComponent(book.sourceUrl)}&m=${encodeURIComponent(book.sourceUrl)}`,
-    price: 770,
-    salesDate: '2025年特別刊'
-  })
-
-  return volumes
 }
 
 async function writeWorkPage(book, books) {
@@ -748,9 +755,22 @@ async function main() {
     }
   }
   const existing = new Set(seedBooks.filter(book => book.source === 'rakuten-kobo').map(book => book.id))
+  const getBase = (title) => (title||'').split('〜')[0].split('（')[0].split('(')[0].replace(/第?\\d+巻?/, '').trim()
+  const existingBases = new Set(seedBooks.map(b => getBase(b.title)))
+
   const pending = seedBooks.filter(book => book.source === 'pending-rakuten-sync')
   const pendingCandidate = items.find(item => isRakutenItem(item) && pending.some(book => normalizeTitle(item.title).includes(normalizeTitle(book.title)) || normalizeTitle(book.title).includes(normalizeTitle(item.title))))
-  const candidate = pendingCandidate || items.find(item => isRakutenItem(item) && !existing.has(String(item.itemNumber || item.isbn || slugify(item.title || item.itemName))))
+  
+  const isCandidateValid = (item) => {
+    if (!isRakutenItem(item)) return false
+    if (item.title.includes('【分冊版】')) return false
+    const id = String(item.itemNumber || item.isbn || slugify(item.title || item.itemName))
+    if (existing.has(id)) return false
+    const base = getBase(item.title)
+    if (existingBases.has(base)) return false
+    return true
+  }
+  const candidate = pendingCandidate || items.find(isCandidateValid)
   if (!candidate) { state.queryIndex = (state.queryIndex + 1) % queries.length; state.page = state.page >= 100 ? 1 : state.page + 1; if (affiliateLinksChanged) await fs.writeFile(dataPath, JSON.stringify(seedBooks, null, 2) + '\n'); await fs.writeFile(statePath, JSON.stringify(state, null, 2) + '\n'); console.log(affiliateLinksChanged ? 'Affiliate links refreshed. Cursor advanced.' : 'No new candidate. Cursor advanced.'); return }
   const article = await generateArticle(candidate)
   const book = toBook(candidate, article)
