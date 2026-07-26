@@ -620,14 +620,32 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
   // 9. おすすめ特集（ハブ）ページ (/features/)
   await writeFeaturePages(books)
 
-  // 10. index.html への初期データ埋め込み＆dist同期
+  // 10. index.html への初期データ埋め込み＆静的HTMLプリレンダリング注入
   const initialScript = `<script>window.__INITIAL_DATA__ = ${JSON.stringify(books)};</script>`
+  const preRenderedHtml = `
+    ${renderHeader('/')}
+    <main>
+      <section style="text-align:center;padding:40px 20px;background:#fff;border-radius:12px;margin:20px 0;border:1px solid #d6a24a;">
+        <span class="eyebrow" style="color:#d6a24a;">異世界漫画・ライトノベル専門ナビ</span>
+        <h1 style="font-family:serif;font-size:32px;margin:12px 0;">次に読む異世界を、原点1巻から選ぼう。</h1>
+        <p style="color:#5f6c62;font-size:15px;">全${books.length}作品の1巻あらすじ、見どころ、全巻表紙棚、類似作品比較を完全網羅！</p>
+      </section>
+
+      <h2>🔥 全作品ディレクトリ（全${books.length}作品）</h2>
+      <div class="book-cards-grid">
+        ${books.map(renderBookCard).join('')}
+      </div>
+    </main>
+    ${renderFooter()}
+  `
+
   let rootIndexHtml = await fs.readFile(path.join(root, 'index.html'), 'utf8').catch(() => '')
   if (rootIndexHtml) {
     if (!rootIndexHtml.includes('window.__INITIAL_DATA__')) {
       rootIndexHtml = rootIndexHtml.replace('</head>', `${initialScript}</head>`)
-      await fs.writeFile(path.join(root, 'index.html'), rootIndexHtml)
     }
+    rootIndexHtml = rootIndexHtml.replace('<div id="root"></div>', `<div id="root">${preRenderedHtml}</div>`)
+    await fs.writeFile(path.join(root, 'index.html'), rootIndexHtml)
   }
 
   // 11. sitemap.xml生成
