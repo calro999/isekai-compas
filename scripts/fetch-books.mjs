@@ -7,7 +7,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataPath = path.join(root, 'public/data/books.json')
 const statePath = path.join(root, 'public/data/sync-state.json')
 const siteUrl = process.env.SITE_URL || 'https://isekai-compas.vercel.app'
-const seedBooks = JSON.parse(await fs.readFile(dataPath, 'utf8'))
+async function loadBooks() {
+  return JSON.parse(await fs.readFile(dataPath, 'utf8'))
+}
 
 const queries = ['無職転生 異世界行ったら本気だす', '転生したらスライムだった件', 'とんでもスキルで異世界放浪メシ', '異世界 転生 小説', '異世界 ファンタジー ライトノベル', '悪役令嬢 異世界 小説', 'スローライフ 異世界 小説']
 
@@ -455,6 +457,7 @@ async function writeComparePages(books, pairs) {
 }
 
 async function main() {
+  const seedBooks = await loadBooks()
   if (process.argv.includes('--seed')) { console.log(`Seed data contains ${seedBooks.filter(isPublishableBook).length} publishable Rakuten works.`); await writeIndex(seedBooks.filter(isPublishableBook)); return }
   for (const name of ['RAKUTEN_APPLICATION_ID', 'RAKUTEN_ACCESS_KEY', 'RAKUTEN_AFFILIATE_ID']) if (!process.env[name]) throw new Error(`${name} is not set`)
   const state = JSON.parse(await fs.readFile(statePath, 'utf8').catch(() => '{"queryIndex":0,"page":1}'))
