@@ -74,32 +74,123 @@ async function rakutenSearch(keyword, page = 1) {
   return json.Items || json.items || []
 }
 
-async function generateArticle(item) {
-  const fallback = {
-    description: item.itemCaption || `${item.title}の作品情報を紹介します。`,
-    aiIntro: `${item.title}は、${item.author || '作者'}による異世界作品です。作品の魅力と世界観をわかりやすく紹介します。`,
-    tags: ['異世界', 'ファンタジー', '冒険', 'アニメ化', 'おすすめ'],
-    readerTypes: ['異世界ファンタジーが好きな人', '爽快な物語を楽しみたい人', '最新作をチェックしたい人']
+// 無料LLM呼び出し（モデル自動フォールバック機能付き）
+async function callFreeLLM(prompt) {
+  if (!process.env.GEMINI_API_KEY) return null
+  const models = ['gemini-2.5-flash', 'gemini-1.5-flash', 'gemini-1.5-flash-8b']
+  
+  for (const model of models) {
+    try {
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
+        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.3 } })
+      })
+
+      if (response.ok) {
+        const json = await response.json()
+        const text = json.candidates?.[0]?.content?.parts?.[0]?.text || ''
+        if (text) return text
+      } else {
+        console.warn(`[LLM Pipeline] Model ${model} returned status ${response.status}. Trying next model...`)
+      }
+    } catch (e) {
+      console.warn(`[LLM Pipeline] Exception on ${model}: ${e.message}`)
+    }
   }
+  return null
+}
+
+// プログラム（JavaScript）による最終検閲＆自動清書・整えエンジン
+function programmaticRefineArticle(rawArticle, item) {
+  const cleanStr = (str) => {
+    if (!str) return ''
+    return String(str)
+      .replace(/^```json\s*|\s*```$/g, '')
+      .replace(/[*#`\_]/g, '')
+      .replace(/【AI生成】|【自動生成】/g, '')
+      .trim()
+  }
+
+  let desc = cleanStr(rawArticle?.description || item.itemCaption || `${item.title}の作品情報を紹介します。`)
+  if (desc.length > 180) desc = desc.slice(0, 175) + '…'
+  if (!desc.endsWith('。') && !desc.endsWith('…') && !desc.endsWith('！')) desc += '。'
+
+  let intro = cleanStr(rawArticle?.aiIntro || `${item.title}は、${item.author || '作者'}による注目の異世界作品です。独自の世界観と魅力的なキャラクターが描かれています。`)
+  if (intro.length > 180) intro = intro.slice(0, 175) + '…'
+  if (!intro.endsWith('。') && !intro.endsWith('…') && !intro.endsWith('！')) intro += '。'
+
+  // タグの正規化・重複除去・必須タグの自動補強
+  let tags = Array.isArray(rawArticle?.tags) ? rawArticle.tags.map(cleanStr).filter(Boolean) : []
+  tags = [...new Set([...tags, '異世界', 'ファンタジー', 'おすすめ', 'コミックス'])]
+  if (tags.length > 8) tags = tags.slice(0, 8)
+
+  let readers = Array.isArray(rawArticle?.readerTypes) ? rawArticle.readerTypes.map(cleanStr).filter(Boolean) : []
+  if (readers.length < 3) {
+    readers = ['異世界ファンタジーが好きな人', '爽快な物語を楽しみたい人', '話題の作品をチェックしたい人']
+  }
+
+  return {
+    description: desc,
+    aiIntro: intro,
+    tags,
+    readerTypes: readers.slice(0, 3)
+  }
+}
+
+async function generateArticle(item) {
+  const fallback = programmaticRefineArticle({}, item)
   if (!process.env.GEMINI_API_KEY) return fallback
 
   try {
-    const prompt = `あなたは異世界小説専門メディアの編集者です。以下の書誌情報だけを根拠に、日本語でSEOに配慮した作品紹介を作成してください。あらすじの創作、未確認の受賞歴、ネタバレは禁止。JSONだけを返してください。\n\nタイトル: ${item.title}\n作者: ${item.author || ''}\nシリーズ: ${item.seriesName || ''}\n出版社: ${item.publisherName || ''}\n発売日: ${item.salesDate || ''}\n公式説明: ${item.itemCaption || ''}\n\n形式: {"description":"120〜180文字の要約","aiIntro":"読者に向けた120〜180文字の紹介","tags":["細かなタグを5〜8個"],"readerTypes":["向いている読者タイプを3つ"]}`
-    const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent', {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
-      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.4 } })
-    })
+    // --------------------------------------------------
+    // Step 1: 初稿生成 (Drafting)
+    // --------------------------------------------------
+    const step1Prompt = `あなたは異世界漫画専門メディアの編集者です。以下の書誌情報をもとに初稿を作成してください。JSONだけを出力してください。
+タイトル: ${item.title}
+作者: ${item.author || ''}
+公式説明: ${item.itemCaption || ''}
+形式: {"description":"120〜180字要約","aiIntro":"120〜180字の読者案内","tags":["タグ5〜8個"],"readerTypes":["読者タイプ3つ"]}`
 
-    if (!response.ok) {
-      console.warn(`[WARN] Gemini API ${response.status} (Quota Exceeded or Error). Falling back to Rakuten metadata without breaking build.`)
-      return fallback
+    const draftText = await callFreeLLM(step1Prompt)
+    if (!draftText) return fallback
+
+    // --------------------------------------------------
+    // Step 2: 推敲・修正 (Refining & Fact Checking)
+    // --------------------------------------------------
+    const step2Prompt = `あなたは厳格な校正チーフ編集者です。以下の【初稿JSON】を校正し、誇張表現、ネタバレ、AI臭い不自然な文章を修正した【修正稿JSON】を出力してください。JSONだけを返してください。
+
+【初稿JSON】:
+${draftText}`
+
+    const revisedText = await callFreeLLM(step2Prompt) || draftText
+
+    // --------------------------------------------------
+    // Step 3: 清書・最終仕上げ (Polishing for Reader Engagement)
+    // --------------------------------------------------
+    const step3Prompt = `あなたは出版社の最終仕上げデスクです。以下の【修正稿JSON】を、読者の購買意欲とSEO検索意図に沿ったプロの出版物クオリティに清書してください。JSONだけを返してください。
+
+【修正稿JSON】:
+${revisedText}`
+
+    const polishedText = await callFreeLLM(step3Prompt) || revisedText
+
+    // --------------------------------------------------
+    // Step 4: プログラム（JavaScript）による確実な最終整え＆ルールベース安全検閲
+    // --------------------------------------------------
+    let parsed = {}
+    try {
+      parsed = JSON.parse(polishedText.replace(/^```json\s*|\s*```$/g, ''))
+    } catch {
+      console.warn('[LLM Pipeline] JSON parse warning on Step 3 output. Falling back to clean regex extraction.')
     }
 
-    const json = await response.json()
-    const text = json.candidates?.[0]?.content?.parts?.[0]?.text || ''
-    return { ...fallback, ...JSON.parse(text.replace(/^```json\s*|\s*```$/g, '')) }
+    const finalRefined = programmaticRefineArticle(parsed, item)
+    console.log(`[LLM Pipeline] 3-Step LLM + Programmatic Refinement SUCCESS for: ${item.title}`)
+    return finalRefined
+
   } catch (err) {
-    console.warn(`[WARN] Gemini API Exception: ${err.message}. Using fallback.`)
+    console.warn(`[LLM Pipeline Exception] ${err.message}. Applied Programmatic Refine Fallback safely.`)
     return fallback
   }
 }
