@@ -142,6 +142,140 @@ function relatedBooks(book, books) {
   })).filter(entry => entry.score > 0).sort((a, b) => b.score - a.score).slice(0, 6).map(entry => entry.book)
 }
 
+function renderHeader(activePath = '') {
+  return `
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/"><span class="brand-mark">✦</span><span><strong>異世界</strong>コンパス<small>ISEKAI COMPASS</small></span></a>
+        <nav class="main-nav">
+          <a href="/works/" class="${activePath === '/works/' ? 'active' : ''}">作品を探す</a>
+          <a href="/new/" class="${activePath === '/new/' ? 'active' : ''}">新刊<em>NEW</em></a>
+          <a href="/tags/" class="${activePath === '/tags/' ? 'active' : ''}">タグ</a>
+          <a href="/authors/" class="${activePath === '/authors/' ? 'active' : ''}">作者</a>
+          <a href="/series/" class="${activePath === '/series/' ? 'active' : ''}">シリーズ</a>
+          <a href="/compare/" class="${activePath === '/compare/' ? 'active' : ''}">比較</a>
+        </nav>
+      </div>
+    </header>
+  `
+}
+
+function renderFooter() {
+  return `
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand light" href="/"><span class="brand-mark">✦</span><span><strong>異世界</strong>コンパス<small>ISEKAI COMPASS</small></span></a>
+        <div class="footer-links">
+          <a href="/works/">全作品</a>
+          <a href="/new/">新刊一覧</a>
+          <a href="/tags/">タグ一覧</a>
+          <a href="/series/">シリーズ</a>
+          <a href="/authors/">作者一覧</a>
+          <a href="/compare/">比較</a>
+        </div>
+        <span class="copyright">© ISEKAI COMPASS</span>
+      </div>
+    </footer>
+  `
+}
+
+const commonStyle = `
+  :root {
+    --bg-dark: #121b19;
+    --bg-main: #f4f1e9;
+    --card-bg: #ffffff;
+    --text-primary: #17221f;
+    --text-muted: #5f6c62;
+    --accent: #8b672d;
+    --accent-light: #d6a24a;
+    --border-color: #e2e8de;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--text-primary); background: var(--bg-main); font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  
+  .site-header { background: #17221f; color: #fff; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+  .header-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .brand { display: flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; font-size: 18px; }
+  .brand-mark { color: #d6a24a; font-size: 20px; }
+  .brand small { display: block; font-size: 9px; letter-spacing: 0.15em; color: #a37a32; }
+  .main-nav { display: flex; gap: 18px; align-items: center; }
+  .main-nav a { color: #cfd8d3; font-size: 14px; position: relative; font-weight: 500; }
+  .main-nav a:hover, .main-nav a.active { color: #fff; text-decoration: none; }
+  .main-nav a em { font-style: normal; font-size: 9px; background: #d6a24a; color: #17221f; padding: 1px 4px; border-radius: 3px; font-weight: bold; margin-left: 3px; }
+
+  main { padding: 40px 20px 80px; max-width: 1080px; margin: 0 auto; }
+  .crumb { font-size: 13px; margin-bottom: 24px; color: var(--text-muted); }
+  .eyebrow { font-size: 11px; letter-spacing: 0.18em; color: #a37a32; font-weight: bold; }
+  h1 { font-family: serif; font-size: 32px; margin: 8px 0 16px; line-height: 1.4; }
+  .lead { font-size: 15px; color: var(--text-muted); max-width: 720px; margin-bottom: 36px; line-height: 1.8; }
+
+  /* Book Grid */
+  .book-cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; margin-top: 24px; }
+  .book-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .book-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+  .cover-container { width: 100%; height: 260px; background: #e8ece7; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+  .cover-container img { width: 100%; height: 100%; object-fit: cover; }
+  .badge-tag { position: absolute; top: 10px; left: 10px; background: #17221f; color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+  .card-body { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
+  .card-genre { font-size: 11px; color: var(--accent); font-weight: bold; margin-bottom: 4px; }
+  .card-title { font-size: 15px; font-weight: bold; line-height: 1.4; margin: 0 0 8px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-title a { color: var(--text-primary); }
+  .card-author { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
+  .pill { font-size: 11px; background: #f0f3ee; color: #4a574f; padding: 2px 7px; border-radius: 3px; }
+  .card-bottom { margin-top: auto; pt: 10px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .card-btn { background: #17221f; color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+  .card-btn:hover { background: #d6a24a; color: #17221f; text-decoration: none; }
+
+  /* Tag & Author Cards Grid */
+  .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 24px; }
+  .cat-card { background: #fff; padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); transition: border-color 0.2s, box-shadow 0.2s; }
+  .cat-card:hover { border-color: var(--accent-light); box-shadow: 0 6px 15px rgba(0,0,0,0.06); }
+  .cat-card h3 { font-size: 18px; margin: 0 0 8px; display: flex; justify-content: space-between; align-items: center; }
+  .cat-card h3 a { color: var(--text-primary); }
+  .cat-count { font-size: 12px; background: #e2e8de; color: #4a574f; padding: 2px 8px; border-radius: 10px; font-weight: normal; }
+  .cat-books { font-size: 12px; color: var(--text-muted); margin-top: 10px; list-style: none; padding: 0; }
+  .cat-books li { padding: 3px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .site-footer { background: #17221f; color: #a3b0a8; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+  .footer-inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: #cfd8d3; }
+
+  @media (max-width: 650px) {
+    .header-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .main-nav { flex-wrap: wrap; gap: 10px; font-size: 13px; }
+    .book-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .cover-container { height: 180px; }
+    .card-title { font-size: 13px; }
+  }
+`
+
+function renderBookCard(book) {
+  const tagsHtml = (book.tags || []).slice(0, 3).map(tag => `<span class="pill">#${escapeXml(tag)}</span>`).join(' ')
+  return `
+    <article class="book-card">
+      <a class="cover-container" href="/works/${book.slug}/">
+        <img src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙" loading="lazy" />
+        <span class="badge-tag">${escapeXml(book.badge || '異世界')}</span>
+      </a>
+      <div class="card-body">
+        <span class="card-genre">${escapeXml(book.genre || 'ファンタジー')}</span>
+        <h3 class="card-title"><a href="/works/${book.slug}/">${escapeXml(book.title)}</a></h3>
+        <div class="card-author">${escapeXml(book.author)}</div>
+        <div class="card-tags">${tagsHtml}</div>
+        <div class="card-bottom">
+          <span>発売: ${escapeXml(book.salesDate || '')}</span>
+          <a class="card-btn" href="/works/${book.slug}/">詳細を見る ↗</a>
+        </div>
+      </div>
+    </article>
+  `
+}
+
 async function writeWorkPage(book, books) {
   const workDir = path.join(root, 'public/works', book.slug)
   await fs.mkdir(workDir, { recursive: true })
@@ -152,37 +286,112 @@ async function writeWorkPage(book, books) {
   const related = relatedBooks(book, books)
   const relatedLinks = related.map(other => `<li><a href="/works/${other.slug}/">${escapeXml(other.title)}</a><span>${escapeXml(other.genre)}｜${escapeXml(other.author)}</span></li>`).join('')
   const compareLinks = related.slice(0, 3).map(other => `<a href="/compare/${pairSlug(book, other)}/">${escapeXml(book.title)}と${escapeXml(other.title)}を比較</a>`).join(' ・ ')
-  await fs.writeFile(path.join(workDir, 'index.html'), `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}</title><meta name="description" content="${escapeXml(book.description)}"><link rel="canonical" href="${siteUrl}/works/${book.slug}/"><meta property="og:title" content="${escapeXml(title)}"><meta property="og:description" content="${escapeXml(book.description)}"><meta property="og:image" content="${escapeXml(book.cover)}"><script type="application/ld+json">${jsonLd}</script><style>body{margin:0;color:#17221f;background:#f4f1e9;font-family:system-ui,-apple-system,sans-serif}main{max-width:780px;margin:0 auto;padding:48px 22px 80px}a{color:#8b672d}.crumb{font-size:12px;margin-bottom:35px}.eyebrow{font-size:11px;letter-spacing:.18em;color:#a37a32}.cover{width:170px;height:240px;object-fit:cover;float:right;margin:0 0 24px 36px}h1{font-family:serif;font-size:34px;line-height:1.5}h2{font-family:serif;margin-top:46px;border-left:3px solid #d6a24a;padding-left:12px}p{line-height:2;color:#5f6c62}.tags a{display:inline-block;background:#e2e8de;padding:7px 10px;margin:4px;font-size:12px;text-decoration:none}.cta{display:inline-block;background:#17221f;color:white;padding:14px 22px;margin-top:12px;text-decoration:none}.related{list-style:none;padding:0;border-top:1px solid #d9ddd3}.related li{padding:14px 4px;border-bottom:1px solid #d9ddd3;display:flex;justify-content:space-between;gap:15px}.related span{font-size:12px;color:#7d8580}.note{font-size:11px;color:#8a9389}@media(max-width:600px){.cover{width:120px;height:170px;margin-left:18px}h1{font-size:27px}.related li{display:block}.related span{display:block;margin-top:6px}}</style></head><body><main><div class="crumb"><a href="/">異世界コンパス</a>　/　<a href="/works/">全作品</a>　/　作品紹介</div><img class="cover" src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙"><div class="eyebrow">WORK GUIDE</div><h1>${escapeXml(book.title)}</h1><p>作者：<a href="/authors/${slugify(book.author)}/">${escapeXml(book.author)}</a>　｜　${escapeXml(book.genre)}　｜　発売日：${escapeXml(book.salesDate)}</p><p>${escapeXml(book.aiIntro || book.description)}</p><a class="cta" href="${escapeXml(book.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">楽天Koboで作品を見る ↗</a><h2>作品概要</h2><p>${escapeXml(book.description)}</p><h2>こんな読者におすすめ</h2><ul>${readers}</ul><h2>関連タグ</h2><div class="tags">${tags}</div><h2>似ている作品・関連作品</h2><ul class="related">${relatedLinks || '<li>関連作品を準備中です。</li>'}</ul><h2>比較ページ</h2><p>${compareLinks || '<a href="/compare/">比較ページ一覧を見る</a>'}</p><p class="note">※価格・配信状況はリンク先の楽天Koboでご確認ください。紹介文は作品データをもとに生成・編集しています。</p></main></body></html>`)
+
+  const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}</title><meta name="description" content="${escapeXml(book.description)}"><link rel="canonical" href="${siteUrl}/works/${book.slug}/"><meta property="og:title" content="${escapeXml(title)}"><meta property="og:description" content="${escapeXml(book.description)}"><meta property="og:image" content="${escapeXml(book.cover)}"><script type="application/ld+json">${jsonLd}</script><style>${commonStyle}.cover-main{width:200px;height:280px;object-fit:cover;float:right;margin:0 0 24px 36px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}h2{font-family:serif;margin-top:46px;border-left:4px solid #d6a24a;padding-left:12px;font-size:22px}.cta{display:inline-block;background:#17221f;color:#fff;padding:14px 26px;border-radius:6px;font-weight:bold;margin-top:16px;text-decoration:none}.cta:hover{background:#d6a24a;color:#17221f;text-decoration:none}.related{list-style:none;padding:0;border-top:1px solid #d9ddd3}.related li{padding:14px 4px;border-bottom:1px solid #d9ddd3;display:flex;justify-content:space-between;gap:15px}.tags a{display:inline-block;background:#e2e8de;padding:6px 12px;margin:4px 4px 4px 0;border-radius:4px;font-size:13px;text-decoration:none}@media(max-width:600px){.cover-main{width:130px;height:180px;margin-left:16px}}</style></head><body>${renderHeader('/works/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/works/">作品一覧</a>　/　作品詳細</div><img class="cover-main" src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙"><div class="eyebrow">WORK GUIDE</div><h1>${escapeXml(book.title)}</h1><p>作者：<a href="/authors/${slugify(book.author)}/">${escapeXml(book.author)}</a>　｜　${escapeXml(book.genre)}　｜　発売日：${escapeXml(book.salesDate)}</p><p style="font-size:16px;line-height:1.9;color:#3d4841;">${escapeXml(book.aiIntro || book.description)}</p><a class="cta" href="${escapeXml(book.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">楽天Koboで作品を見る ↗</a><h2>作品概要</h2><p style="line-height:1.9;">${escapeXml(book.description)}</p><h2>こんな読者におすすめ</h2><ul style="line-height:1.9;padding-left:20px;">${readers}</ul><h2>関連タグ</h2><div class="tags">${tags}</div><h2>似ている作品・関連作品</h2><ul class="related">${relatedLinks || '<li>関連作品を準備中です。</li>'}</ul><h2>比較ページ</h2><p>${compareLinks || '<a href="/compare/">比較ページ一覧を見る</a>'}</p></main>${renderFooter()}</body></html>`
+  await fs.writeFile(path.join(workDir, 'index.html'), html)
 }
 
 async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntries) {
-  const renderList = (title, description, items, canonical, type = 'CollectionPage') => {
-    const links = items.map(book => `<li><a href="/works/${book.slug}/">${escapeXml(book.title)}</a><span>${escapeXml(book.author)}　${escapeXml(book.genre)}</span></li>`).join('')
-    const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@type': type, name: title, description, url: `${siteUrl}${canonical}`, mainEntity: { '@type': 'ItemList', itemListElement: items.map((book, index) => ({ '@type': 'ListItem', position: index + 1, url: `${siteUrl}/works/${book.slug}/`, name: book.title })) } })
-    return `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}｜異世界コンパス</title><meta name="description" content="${escapeXml(description)}"><link rel="canonical" href="${siteUrl}${canonical}"><script type="application/ld+json">${jsonLd}</script><style>body{margin:0;color:#17221f;background:#f4f1e9;font-family:system-ui,-apple-system,sans-serif}main{max-width:860px;margin:0 auto;padding:52px 22px 80px}a{color:#8b672d}.crumb{font-size:12px;margin-bottom:40px}.eyebrow{font-size:11px;letter-spacing:.18em;color:#a37a32}h1{font-family:serif;font-size:34px;margin:12px 0}header p{line-height:1.9;color:#627066;max-width:650px}ul{list-style:none;padding:0;border-top:1px solid #d9ddd3;margin-top:35px}li{border-bottom:1px solid #d9ddd3;padding:20px 5px;display:flex;justify-content:space-between;gap:20px}li span{font-size:12px;color:#7d8580}@media(max-width:600px){li{display:block}li span{display:block;margin-top:7px}h1{font-size:28px}}</style></head><body><main><div class="crumb"><a href="/">異世界コンパス</a>　/　一覧</div><header><div class="eyebrow">ISEKAI COMPASS DIRECTORY</div><h1>${escapeXml(title)}</h1><p>${escapeXml(description)}</p></header><ul>${links || '<li>該当する作品はまだありません。</li>'}</ul></main></body></html>`
+  const write = async (dir, html) => {
+    await fs.mkdir(path.join(root, 'public', dir), { recursive: true })
+    await fs.writeFile(path.join(root, 'public', dir, 'index.html'), html)
   }
-  const write = async (dir, html) => { await fs.mkdir(path.join(root, 'public', dir), { recursive: true }); await fs.writeFile(path.join(root, 'public', dir, 'index.html'), html) }
-  await write('works', renderList('異世界作品をすべて見る', '異世界作品の作品詳細・作者・タグ・読者タイプを一覧で探せます。気になる作品から関連作品や比較ページへ移動できます。', books, '/works/'))
-  await write('new', renderList('異世界作品の新刊・更新一覧', '楽天Koboから取得した異世界作品の新着情報。発売日や作品紹介を一覧で確認できます。', [...books].reverse(), '/new/'))
-  await write('tags', renderList('異世界作品をタグから探す', '追放、悪役令嬢、スローライフ、転生など、異世界作品のテーマ別タグ一覧。', books, '/tags/'))
-  await write('authors', renderList('異世界作品の作者一覧', '異世界作品を手がける作者ごとに、関連作品を探せます。', books, '/authors/'))
-  await write('series', renderList('異世界作品のシリーズ一覧', '異世界作品をシリーズ単位で探せる一覧ページです。', books, '/series/'))
-  for (const tag of tagEntries) await write(`tags/${slugify(tag)}`, renderList(`#${tag}の異世界作品`, `${tag}タグが付いた異世界作品の一覧。関連する作品を比較して、次に読む一冊を探せます。`, books.filter(book => (book.tags || []).includes(tag)), `/tags/${slugify(tag)}/`))
-  for (const author of authorEntries) await write(`authors/${slugify(author)}`, renderList(`${author}の異世界作品`, `${author}が手がける異世界作品の一覧。作品紹介と関連タグをまとめています。`, books.filter(book => book.author === author), `/authors/${slugify(author)}/`))
-  for (const series of seriesEntries) await write(`series/${slugify(series)}`, renderList(`${series}の異世界作品`, `${series}に含まれる作品の一覧。シリーズの読む順番や関連作品を探せます。`, books.filter(book => book.seriesName === series), `/series/${slugify(series)}/`))
+
+  // 1. 作品を探す (/works/)
+  const worksCards = books.map(renderBookCard).join('')
+  const worksHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品を探す（全${books.length}作品）｜異世界コンパス</title><meta name="description" content="異世界作品の作品詳細・作者・タグ・読者タイプを一覧で探せます。"><link rel="canonical" href="${siteUrl}/works/"><style>${commonStyle}</style></head><body>${renderHeader('/works/')}<main><div class="crumb"><a href="/">トップ</a>　/　全作品一覧</div><div class="eyebrow">WORK DIRECTORY</div><h1>全異世界作品（${books.length}作品）</h1><p class="lead">楽天Koboで配信中の注目の異世界漫画・ライトノベル作品一覧です。気になる作品の表紙やタグから作品を探せます。</p><div class="book-cards-grid">${worksCards}</div></main>${renderFooter()}</body></html>`
+  await write('works', worksHtml)
+
+  // 2. 新刊一覧 (/new/)
+  const newCards = [...books].reverse().map(renderBookCard).join('')
+  const newHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品の新刊・最新ラインナップ｜異世界コンパス</title><meta name="description" content="楽天Koboから取得した異世界作品の新刊・最新発売情報。"><link rel="canonical" href="${siteUrl}/new/"><style>${commonStyle}</style></head><body>${renderHeader('/new/')}<main><div class="crumb"><a href="/">トップ</a>　/　新刊一覧</div><div class="eyebrow">NEW RELEASES</div><h1>新刊・最新追加作品</h1><p class="lead">新着・発売日順に並んだ異世界作品の一覧です。最新の巻数や新刊情報をいち早くチェックできます。</p><div class="book-cards-grid">${newCards}</div></main>${renderFooter()}</body></html>`
+  await write('new', newHtml)
+
+  // 3. タグ一覧インデックス (/tags/)
+  const tagCards = tagEntries.map(tag => {
+    const matching = books.filter(b => (b.tags || []).includes(tag))
+    const previewList = matching.slice(0, 3).map(b => `<li>・ ${escapeXml(b.title)}</li>`).join('')
+    return `
+      <div class="cat-card">
+        <h3><a href="/tags/${slugify(tag)}/">#${escapeXml(tag)}</a><span class="cat-count">${matching.length}作品</span></h3>
+        <ul class="cat-books">${previewList}</ul>
+      </div>
+    `
+  }).join('')
+  const tagsHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>タグから異世界作品を探す（全${tagEntries.length}タグ）｜異世界コンパス</title><meta name="description" content="追放、悪役令嬢、スローライフ、転生などテーマ別タグ一覧。"><link rel="canonical" href="${siteUrl}/tags/"><style>${commonStyle}</style></head><body>${renderHeader('/tags/')}<main><div class="crumb"><a href="/">トップ</a>　/　タグ一覧</div><div class="eyebrow">TAG INDEX</div><h1>タグから作品を探す（${tagEntries.length}テーマ）</h1><p class="lead">テーマや設定、世界観のタグから作品を探せます。あなたの今の気分にぴったりのカテゴリーを選んでください。</p><div class="category-grid">${tagCards}</div></main>${renderFooter()}</body></html>`
+  await write('tags', tagsHtml)
+
+  // 4. 作者一覧インデックス (/authors/)
+  const authorCards = authorEntries.map(author => {
+    const matching = books.filter(b => b.author === author)
+    const previewList = matching.map(b => `<li>・ ${escapeXml(b.title)}</li>`).join('')
+    return `
+      <div class="cat-card">
+        <h3><a href="/authors/${slugify(author)}/">${escapeXml(author)}</a><span class="cat-count">${matching.length}作品</span></h3>
+        <ul class="cat-books">${previewList}</ul>
+      </div>
+    `
+  }).join('')
+  const authorsHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>作者一覧｜異世界コンパス</title><meta name="description" content="異世界作品を手がける作者ごとの作品一覧。"><link rel="canonical" href="${siteUrl}/authors/"><style>${commonStyle}</style></head><body>${renderHeader('/authors/')}<main><div class="crumb"><a href="/">トップ</a>　/　作者一覧</div><div class="eyebrow">AUTHOR DIRECTORY</div><h1>作者から作品を探す</h1><p class="lead">人気作家・イラストレーターごとに手掛ける作品をまとめて探せます。</p><div class="category-grid">${authorCards}</div></main>${renderFooter()}</body></html>`
+  await write('authors', authorsHtml)
+
+  // 5. シリーズ一覧インデックス (/series/)
+  const seriesCards = seriesEntries.map(series => {
+    const matching = books.filter(b => b.seriesName === series)
+    const previewList = matching.map(b => `<li>・ ${escapeXml(b.title)}</li>`).join('')
+    return `
+      <div class="cat-card">
+        <h3><a href="/series/${slugify(series)}/">${escapeXml(series)}</a><span class="cat-count">${matching.length}作品</span></h3>
+        <ul class="cat-books">${previewList}</ul>
+      </div>
+    `
+  }).join('')
+  const seriesHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>シリーズ一覧｜異世界コンパス</title><meta name="description" content="異世界作品をシリーズ単位で探せる一覧ページ。"><link rel="canonical" href="${siteUrl}/series/"><style>${commonStyle}</style></head><body>${renderHeader('/series/')}<main><div class="crumb"><a href="/">トップ</a>　/　シリーズ一覧</div><div class="eyebrow">SERIES DIRECTORY</div><h1>シリーズから作品を探す</h1><p class="lead">人気シリーズの最新刊や関連巻数をシリーズごとに確認できます。</p><div class="category-grid">${seriesCards}</div></main>${renderFooter()}</body></html>`
+  await write('series', seriesHtml)
+
+  // 6. 各タグ別個別ページ (/tags/[slug]/)
+  for (const tag of tagEntries) {
+    const filteredBooks = books.filter(book => (book.tags || []).includes(tag))
+    const cards = filteredBooks.map(renderBookCard).join('')
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>#${escapeXml(tag)}の異世界作品（${filteredBooks.length}件）｜異世界コンパス</title><meta name="description" content="${escapeXml(tag)}タグが付いた異世界作品一覧。"><link rel="canonical" href="${siteUrl}/tags/${slugify(tag)}/"><style>${commonStyle}</style></head><body>${renderHeader('/tags/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/tags/">タグ一覧</a>　/　#${escapeXml(tag)}</div><div class="eyebrow">TAG CATEGORY</div><h1>#${escapeXml(tag)} の作品一覧</h1><p class="lead">${escapeXml(tag)} テーマに関する異世界漫画・小説の検索結果です。</p><div class="book-cards-grid">${cards}</div></main>${renderFooter()}</body></html>`
+    await write(`tags/${slugify(tag)}`, html)
+  }
+
+  // 7. 各作者別個別ページ (/authors/[slug]/)
+  for (const author of authorEntries) {
+    const filteredBooks = books.filter(book => book.author === author)
+    const cards = filteredBooks.map(renderBookCard).join('')
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(author)}の作品一覧｜異世界コンパス</title><meta name="description" content="${escapeXml(author)}が手掛ける異世界作品一覧。"><link rel="canonical" href="${siteUrl}/authors/${slugify(author)}/"><style>${commonStyle}</style></head><body>${renderHeader('/authors/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/authors/">作者一覧</a>　/　${escapeXml(author)}</div><div class="eyebrow">AUTHOR WORKS</div><h1>${escapeXml(author)} の手掛ける作品</h1><p class="lead">${escapeXml(author)} による異世界作品一覧です。</p><div class="book-cards-grid">${cards}</div></main>${renderFooter()}</body></html>`
+    await write(`authors/${slugify(author)}`, html)
+  }
+
+  // 8. 各シリーズ別個別ページ (/series/[slug]/)
+  for (const series of seriesEntries) {
+    const filteredBooks = books.filter(book => book.seriesName === series)
+    const cards = filteredBooks.map(renderBookCard).join('')
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(series)}の作品一覧｜異世界コンパス</title><meta name="description" content="${escapeXml(series)}シリーズ作品一覧。"><link rel="canonical" href="${siteUrl}/series/${slugify(series)}/"><style>${commonStyle}</style></head><body>${renderHeader('/series/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/series/">シリーズ一覧</a>　/　${escapeXml(series)}</div><div class="eyebrow">SERIES WORKS</div><h1>${escapeXml(series)} シリーズ作品</h1><p class="lead">${escapeXml(series)} に含まれる作品一覧です。</p><div class="book-cards-grid">${cards}</div></main>${renderFooter()}</body></html>`
+    await write(`series/${slugify(series)}`, html)
+  }
 }
 
 async function writeComparePages(books, pairs) {
-  const links = pairs.map(([a, b]) => `<li><a href="/compare/${pairSlug(a, b)}/">${escapeXml(a.title)} と ${escapeXml(b.title)}を比較</a></li>`).join('')
-  const index = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品の比較・関連作品一覧｜異世界コンパス</title><meta name="description" content="異世界作品をタグ、世界観、読者タイプ、読みやすさから比較。次に読む作品を探せます。"><link rel="canonical" href="${siteUrl}/compare/"><script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: '異世界作品の比較・関連作品一覧', url: `${siteUrl}/compare/` })}</script></head><body><main style="max-width:780px;margin:0 auto;padding:48px 22px;font-family:system-ui;background:#f4f1e9;color:#17221f;line-height:1.9"><p><a href="/">異世界コンパス</a>　/　比較</p><h1>異世界作品の比較・関連作品</h1><p>似ている異世界作品を、ジャンル・タグ・読者タイプから比較できます。</p><ul>${links || '<li>作品が増えると比較ページが生成されます。</li>'}</ul></main></body></html>`
+  const links = pairs.map(([a, b]) => `
+    <div class="cat-card">
+      <h3><a href="/compare/${pairSlug(a, b)}/">${escapeXml(a.title)} vs ${escapeXml(b.title)}</a></h3>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:6px;">2作品のタグや世界観、ターゲット読者層を比較検討できます。</p>
+    </div>
+  `).join('')
+
+  const indexHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品の比較・関連作品一覧｜異世界コンパス</title><meta name="description" content="異世界作品をタグ、世界観、読者タイプ、読みやすさから比較。"><link rel="canonical" href="${siteUrl}/compare/"><style>${commonStyle}</style></head><body>${renderHeader('/compare/')}<main><div class="crumb"><a href="/">トップ</a>　/　比較一覧</div><div class="eyebrow">WORK COMPARISON</div><h1>異世界作品の比較・関連作品</h1><p class="lead">似ている異世界作品の要素・ジャンル・タグ・読者タイプを並べて徹底比較できます。</p><div class="category-grid">${links}</div></main>${renderFooter()}</body></html>`
   await fs.mkdir(path.join(root, 'public/compare'), { recursive: true })
-  await fs.writeFile(path.join(root, 'public/compare/index.html'), index)
+  await fs.writeFile(path.join(root, 'public/compare/index.html'), indexHtml)
+
   await Promise.all(pairs.map(async ([a, b]) => {
     const sharedTags = (a.tags || []).filter(tag => (b.tags || []).includes(tag))
     const pageTitle = `${a.title}と${b.title}を比較｜異世界コンパス`
     const description = `${a.title}と${b.title}を、ジャンル・タグ・読者タイプから比較。どちらが自分に合うかを確認できます。`
     const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description, url: `${siteUrl}/compare/${pairSlug(a, b)}/` })
-    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(pageTitle)}</title><meta name="description" content="${escapeXml(description)}"><link rel="canonical" href="${siteUrl}/compare/${pairSlug(a, b)}/"><script type="application/ld+json">${jsonLd}</script><style>body{margin:0;background:#f4f1e9;color:#17221f;font-family:system-ui,-apple-system,sans-serif}main{max-width:900px;margin:0 auto;padding:48px 22px 80px}a{color:#8b672d}.eyebrow{font-size:11px;color:#a37a32;letter-spacing:.18em}h1{font-family:serif;font-size:32px;line-height:1.5}h2{font-family:serif;margin-top:42px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#fff;padding:22px}.card h3{font-family:serif;font-size:19px}.card p{color:#657268;line-height:1.9}.pill{display:inline-block;background:#e2e8de;padding:5px 8px;margin:3px;font-size:12px}@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:27px}}</style></head><body><main><p><a href="/">異世界コンパス</a>　/　<a href="/compare/">比較</a></p><div class="eyebrow">WORK COMPARISON</div><h1>${escapeXml(a.title)} と ${escapeXml(b.title)}を比較</h1><p>${escapeXml(description)}</p><div class="grid"><section class="card"><h3>${escapeXml(a.title)}</h3><p>作者：${escapeXml(a.author)}<br>ジャンル：${escapeXml(a.genre)}</p><p>${escapeXml(a.description)}</p><a href="/works/${a.slug}/">作品詳細を見る →</a></section><section class="card"><h3>${escapeXml(b.title)}</h3><p>作者：${escapeXml(b.author)}<br>ジャンル：${escapeXml(b.genre)}</p><p>${escapeXml(b.description)}</p><a href="/works/${b.slug}/">作品詳細を見る →</a></section></div><h2>共通タグ</h2><p>${sharedTags.length ? sharedTags.map(tag => `<span class="pill">#${escapeXml(tag)}</span>`).join('') : '共通タグはありません。'}</p><h2>どちらを選ぶ？</h2><p>${escapeXml(a.readerTypes?.[0] || a.title)}なら${escapeXml(a.title)}、${escapeXml(b.readerTypes?.[0] || b.title)}なら${escapeXml(b.title)}がおすすめです。作品詳細で読者タイプも確認できます。</p></main></body></html>`
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(pageTitle)}</title><meta name="description" content="${escapeXml(description)}"><link rel="canonical" href="${siteUrl}/compare/${pairSlug(a, b)}/"><script type="application/ld+json">${jsonLd}</script><style>${commonStyle}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}.card-compare{background:#fff;padding:24px;border-radius:8px;border:1px solid var(--border-color)}.card-compare h3{font-family:serif;font-size:20px;margin-top:0}.card-compare img{width:140px;height:190px;object-fit:cover;border-radius:4px;float:right;margin-left:16px}@media(max-width:650px){.grid-2{grid-template-columns:1fr}}</style></head><body>${renderHeader('/compare/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/compare/">比較</a>　/　作品比較</div><div class="eyebrow">WORK COMPARISON</div><h1>${escapeXml(a.title)} と ${escapeXml(b.title)} を比較</h1><p class="lead">${escapeXml(description)}</p><div class="grid-2"><section class="card-compare"><img src="${escapeXml(a.cover)}" alt="${escapeXml(a.title)}の表紙"><h3>${escapeXml(a.title)}</h3><p style="font-size:13px;color:var(--text-muted)">作者：${escapeXml(a.author)}<br>ジャンル：${escapeXml(a.genre)}</p><p style="font-size:14px;line-height:1.7;">${escapeXml(a.description)}</p><a class="card-btn" href="/works/${a.slug}/">作品詳細を見る →</a></section><section class="card-compare"><img src="${escapeXml(b.cover)}" alt="${escapeXml(b.title)}の表紙"><h3>${escapeXml(b.title)}</h3><p style="font-size:13px;color:var(--text-muted)">作者：${escapeXml(b.author)}<br>ジャンル：${escapeXml(b.genre)}</p><p style="font-size:14px;line-height:1.7;">${escapeXml(b.description)}</p><a class="card-btn" href="/works/${b.slug}/">作品詳細を見る →</a></section></div><h2>共通タグ</h2><p>${sharedTags.length ? sharedTags.map(tag => `<span class="pill" style="font-size:13px;padding:4px 10px;">#${escapeXml(tag)}</span>`).join(' ') : '共通タグはありません。'}</p><h2>どちらを選ぶ？</h2><p style="font-size:15px;line-height:1.8;">${escapeXml(a.readerTypes?.[0] || a.title)}なら<b>${escapeXml(a.title)}</b>、${escapeXml(b.readerTypes?.[0] || b.title)}なら<b>${escapeXml(b.title)}</b>がおすすめです。</p></main>${renderFooter()}</body></html>`
     const dir = path.join(root, 'public/compare', pairSlug(a, b))
     await fs.mkdir(dir, { recursive: true })
     await fs.writeFile(path.join(dir, 'index.html'), html)
