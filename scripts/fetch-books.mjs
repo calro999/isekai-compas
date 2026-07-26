@@ -78,19 +78,30 @@ async function generateArticle(item) {
   const fallback = {
     description: item.itemCaption || `${item.title}の作品情報を紹介します。`,
     aiIntro: `${item.title}は、${item.author || '作者'}による異世界作品です。作品の魅力と世界観をわかりやすく紹介します。`,
-    tags: ['異世界', 'ファンタジー'],
-    readerTypes: ['異世界作品を探している人']
+    tags: ['異世界', 'ファンタジー', '冒険', 'アニメ化', 'おすすめ'],
+    readerTypes: ['異世界ファンタジーが好きな人', '爽快な物語を楽しみたい人', '最新作をチェックしたい人']
   }
   if (!process.env.GEMINI_API_KEY) return fallback
-  const prompt = `あなたは異世界小説専門メディアの編集者です。以下の書誌情報だけを根拠に、日本語でSEOに配慮した作品紹介を作成してください。あらすじの創作、未確認の受賞歴、ネタバレは禁止。JSONだけを返してください。\n\nタイトル: ${item.title}\n作者: ${item.author || ''}\nシリーズ: ${item.seriesName || ''}\n出版社: ${item.publisherName || ''}\n発売日: ${item.salesDate || ''}\n公式説明: ${item.itemCaption || ''}\n\n形式: {"description":"120〜180文字の要約","aiIntro":"読者に向けた120〜180文字の紹介","tags":["細かなタグを5〜8個"],"readerTypes":["向いている読者タイプを3つ"]}`
-  const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent', {
-    method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.4 } })
-  })
-  if (!response.ok) throw new Error(`Gemini API ${response.status}: ${await response.text()}`)
-  const json = await response.json()
-  const text = json.candidates?.[0]?.content?.parts?.[0]?.text || ''
-  try { return { ...fallback, ...JSON.parse(text.replace(/^```json\s*|\s*```$/g, '')) } } catch { return fallback }
+
+  try {
+    const prompt = `あなたは異世界小説専門メディアの編集者です。以下の書誌情報だけを根拠に、日本語でSEOに配慮した作品紹介を作成してください。あらすじの創作、未確認の受賞歴、ネタバレは禁止。JSONだけを返してください。\n\nタイトル: ${item.title}\n作者: ${item.author || ''}\nシリーズ: ${item.seriesName || ''}\n出版社: ${item.publisherName || ''}\n発売日: ${item.salesDate || ''}\n公式説明: ${item.itemCaption || ''}\n\n形式: {"description":"120〜180文字の要約","aiIntro":"読者に向けた120〜180文字の紹介","tags":["細かなタグを5〜8個"],"readerTypes":["向いている読者タイプを3つ"]}`
+    const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
+      body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.4 } })
+    })
+
+    if (!response.ok) {
+      console.warn(`[WARN] Gemini API ${response.status} (Quota Exceeded or Error). Falling back to Rakuten metadata without breaking build.`)
+      return fallback
+    }
+
+    const json = await response.json()
+    const text = json.candidates?.[0]?.content?.parts?.[0]?.text || ''
+    return { ...fallback, ...JSON.parse(text.replace(/^```json\s*|\s*```$/g, '')) }
+  } catch (err) {
+    console.warn(`[WARN] Gemini API Exception: ${err.message}. Using fallback.`)
+    return fallback
+  }
 }
 
 function toBook(item, article) {
