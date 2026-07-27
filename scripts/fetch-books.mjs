@@ -58,7 +58,16 @@ const isWithinReservationWindow = (item) => {
   return date <= oneMonthLater
 }
 const isRakutenItem = (item) => Boolean(item?.itemUrl && process.env.RAKUTEN_AFFILIATE_ID && (item.largeImageUrl || item.mediumImageUrl) && isWithinReservationWindow(item))
-const isPublishableBook = (book) => Boolean(book?.slug && book?.title && (book.cover || book.sourceUrl))
+const isPublishableBook = (book) => {
+  if (!book?.slug || !book?.title || (!book.cover && !book.sourceUrl)) return false
+  const date = releaseDateOf(book.salesDate)
+  if (date) {
+    const maxDate = new Date()
+    maxDate.setDate(maxDate.getDate() + 7)
+    if (date > maxDate) return false
+  }
+  return true
+}
 
 async function rakutenSearch(keyword, page = 1) {
   await sleep(1050)
@@ -716,12 +725,50 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
 
   // 2. 新刊一覧 (/new/)
   const now = new Date()
-  const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
-  const oneWeekLater = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
-  let newReleases = uniqueBooks.filter(b => b.salesDate >= thirtyDaysAgo && b.salesDate <= oneWeekLater)
-  if (newReleases.length === 0) newReleases = uniqueBooks.slice(-20)
-  const newCards = [...newReleases].sort((a, b) => b.salesDate.localeCompare(a.salesDate)).map(renderBookCard).join('')
-  const newHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品の新刊・最新ラインナップ｜異世界コンパス</title><meta name="description" content="楽天Koboから取得した異世界作品の新刊・最新発売情報。"><link rel="canonical" href="${siteUrl}/new/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/new/')}<main><div class="crumb"><a href="/">トップ</a>　/　新刊一覧</div><div class="eyebrow">NEW RELEASES</div><h1>新刊・最新追加作品</h1><p class="lead">新着・発売日順に並んだ異世界作品の一覧です。最新の巻数や新刊情報をいち早くチェックできます。</p><div class="book-cards-grid">${newCards}</div></main>${renderFooter()}</body></html>`
+  const thirtyDaysAgo = new Date(now)
+  thirtyDaysAgo.setDate(now.getDate() - 30)
+
+  const upcomingBooks = []
+  const recentBooks = []
+
+  for (const b of uniqueBooks) {
+    const date = releaseDateOf(b.salesDate)
+    if (date) {
+      if (date > now) {
+        upcomingBooks.push(b)
+      } else if (date >= thirtyDaysAgo) {
+        recentBooks.push(b)
+      }
+    }
+  }
+
+  upcomingBooks.sort((a, b) => releaseDateOf(a.salesDate) - releaseDateOf(b.salesDate))
+  recentBooks.sort((a, b) => releaseDateOf(b.salesDate) - releaseDateOf(a.salesDate))
+  if (recentBooks.length === 0) recentBooks = uniqueBooks.slice(-20)
+
+  const renderUpcomingCard = (book) => `
+    <div class="book-card" style="border-color:#d6a24a; box-shadow:0 4px 12px rgba(214,162,74,0.15);">
+      <a href="/works/${book.slug}/" style="display:block; text-decoration:none;">
+        <div class="cover-wrap">
+          <img src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙" loading="lazy">
+        </div>
+        <div class="info">
+          <div class="title">${escapeXml(book.title)}</div>
+          <div class="author">${escapeXml(book.author)}</div>
+          <div class="date" style="color:#d6a24a; font-weight:bold; margin-top:4px;">${escapeXml(book.salesDate)} 発売予定</div>
+          <p style="font-size:11px; margin-top:8px; line-height:1.5; color:#5f6c62;">「${escapeXml(book.seriesName || book.title)}」の最新刊は <b>${escapeXml(book.salesDate)}</b> に発売予定です。</p>
+        </div>
+      </a>
+    </div>
+  `
+
+  const upcomingHtml = upcomingBooks.length > 0 
+    ? `<h2 style="margin-top:0;">📢 新刊発売予定！最新巻の予約・発売日情報</h2><div class="book-cards-grid">${upcomingBooks.map(renderUpcomingCard).join('')}</div>`
+    : ''
+    
+  const recentHtml = `<h2 style="margin-top:32px;">📚 発売済み作品一覧</h2><div class="book-cards-grid">${recentBooks.map(renderBookCard).join('')}</div>`
+
+  const newHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品の新刊・最新ラインナップ｜異世界コンパス</title><meta name="description" content="楽天Koboから取得した異世界作品の新刊・最新発売情報。"><link rel="canonical" href="${siteUrl}/new/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/new/')}<main><div class="crumb"><a href="/">トップ</a>　/　新刊一覧</div><div class="eyebrow">NEW RELEASES</div><h1>新刊・最新追加作品</h1><p class="lead">新着・発売日順に並んだ異世界作品の一覧です。最新の巻数や新刊情報をいち早くチェックできます。</p>${upcomingHtml}${recentHtml}</main>${renderFooter()}</body></html>`
   await write('new', newHtml)
 
   // 3. タグ一覧インデックス (/tags/)
