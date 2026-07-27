@@ -327,9 +327,9 @@ ${renderHeader('/sitemap/')}
   <li><a href="/series/">シリーズ一覧</a></li>
 </ul>
 
-<h2>全作品一覧（${books.length}件）</h2>
+<h2>全作品一覧（${getUniqueSeriesBooks(books).length}件）</h2>
 <ul style="line-height:1.8;">
-${books.map(b => `  <li><a href="/works/${b.slug}/">${escapeXml(b.title)}</a></li>`).join('\n')}
+${getUniqueSeriesBooks(books).map(b => `  <li><a href="/works/${b.slug}/">${escapeXml(b.title)}</a></li>`).join('\n')}
 </ul>
 
 <h2>タグ一覧</h2>
@@ -354,8 +354,23 @@ function isSameSeries(a, b) {
   if (a.seriesName && b.seriesName && a.seriesName === b.seriesName) return true
   const normA = (a.seriesName || a.title).replace(/[\s\d〜～「」『』（）()【】分冊版]/g, '').toLowerCase()
   const normB = (b.seriesName || b.title).replace(/[\s\d〜～「」『』（）()【】分冊版]/g, '').toLowerCase()
-  if (normA && normB && (normA.includes(normB) || normB.includes(normA))) return true
+  if (normA && normB && normA === normB) return true
   return false
+}
+
+function getUniqueSeriesBooks(books) {
+  const uniqueBooks = []
+  for (const book of books) {
+    const idx = uniqueBooks.findIndex(u => isSameSeries(u, book))
+    if (idx === -1) {
+      uniqueBooks.push(book)
+    } else {
+      if (book.salesDate > uniqueBooks[idx].salesDate) {
+        uniqueBooks[idx] = book
+      }
+    }
+  }
+  return uniqueBooks
 }
 
 function getPairs(books) {
@@ -692,19 +707,26 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
     await fs.writeFile(path.join(root, 'public', dir, 'index.html'), html)
   }
 
+  const uniqueBooks = getUniqueSeriesBooks(books)
+
   // 1. 作品を探す (/works/)
-  const worksCards = books.map(renderBookCard).join('')
-  const worksHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品を探す（全${books.length}作品）｜異世界コンパス</title><meta name="description" content="異世界作品の作品詳細・作者・タグ・読者タイプを一覧で探せます。"><link rel="canonical" href="${siteUrl}/works/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/works/')}<main><div class="crumb"><a href="/">トップ</a>　/　全作品一覧</div><div class="eyebrow">WORK DIRECTORY</div><h1>全異世界作品（${books.length}作品）</h1><p class="lead">楽天Koboで配信中の注目の異世界漫画・ライトノベル作品一覧です。気になる作品の表紙やタグから作品を探せます。</p><div class="book-cards-grid">${worksCards}</div></main>${renderFooter()}</body></html>`
+  const worksCards = uniqueBooks.map(renderBookCard).join('')
+  const worksHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品を探す（全${uniqueBooks.length}作品）｜異世界コンパス</title><meta name="description" content="異世界作品の作品詳細・作者・タグ・読者タイプを一覧で探せます。"><link rel="canonical" href="${siteUrl}/works/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/works/')}<main><div class="crumb"><a href="/">トップ</a>　/　全作品一覧</div><div class="eyebrow">WORK DIRECTORY</div><h1>全異世界作品（${uniqueBooks.length}作品）</h1><p class="lead">楽天Koboで配信中の注目の異世界漫画・ライトノベル作品一覧です。気になる作品の表紙やタグから作品を探せます。</p><div class="book-cards-grid">${worksCards}</div></main>${renderFooter()}</body></html>`
   await write('works', worksHtml)
 
   // 2. 新刊一覧 (/new/)
-  const newCards = [...books].reverse().map(renderBookCard).join('')
+  const now = new Date()
+  const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
+  const oneWeekLater = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
+  let newReleases = uniqueBooks.filter(b => b.salesDate >= thirtyDaysAgo && b.salesDate <= oneWeekLater)
+  if (newReleases.length === 0) newReleases = uniqueBooks.slice(-20)
+  const newCards = [...newReleases].sort((a, b) => b.salesDate.localeCompare(a.salesDate)).map(renderBookCard).join('')
   const newHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界作品の新刊・最新ラインナップ｜異世界コンパス</title><meta name="description" content="楽天Koboから取得した異世界作品の新刊・最新発売情報。"><link rel="canonical" href="${siteUrl}/new/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/new/')}<main><div class="crumb"><a href="/">トップ</a>　/　新刊一覧</div><div class="eyebrow">NEW RELEASES</div><h1>新刊・最新追加作品</h1><p class="lead">新着・発売日順に並んだ異世界作品の一覧です。最新の巻数や新刊情報をいち早くチェックできます。</p><div class="book-cards-grid">${newCards}</div></main>${renderFooter()}</body></html>`
   await write('new', newHtml)
 
   // 3. タグ一覧インデックス (/tags/)
   const tagCards = tagEntries.map(tag => {
-    const matching = books.filter(b => (b.tags || []).includes(tag))
+    const matching = uniqueBooks.filter(b => (b.tags || []).includes(tag))
     const previewList = matching.slice(0, 3).map(b => `<li>・ ${escapeXml(b.title)}</li>`).join('')
     return `
       <div class="cat-card">
@@ -718,7 +740,7 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
 
   // 4. 作者一覧インデックス (/authors/)
   const authorCards = authorEntries.map(author => {
-    const matching = books.filter(b => b.author === author)
+    const matching = uniqueBooks.filter(b => b.author === author)
     const previewList = matching.map(b => `<li>・ ${escapeXml(b.title)}</li>`).join('')
     return `
       <div class="cat-card">
@@ -732,7 +754,7 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
 
   // 5. シリーズ一覧インデックス (/series/)
   const seriesCards = seriesEntries.map(series => {
-    const matching = books.filter(b => b.seriesName === series)
+    const matching = uniqueBooks.filter(b => b.seriesName === series)
     const previewList = matching.map(b => `<li>・ ${escapeXml(b.title)}</li>`).join('')
     return `
       <div class="cat-card">
