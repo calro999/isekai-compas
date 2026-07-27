@@ -254,6 +254,7 @@ async function writeIndex(books) {
   }
   await writeCategoryPages(books, tagEntries, authorEntries, seriesEntries)
   await writeComparePages(books, pairEntries)
+  await writeHtmlSitemap(books, tagEntries, authorEntries, seriesEntries)
   const llmsContent = `# 異世界コンパス (Isekai Compass) - AI Directory
 
 > 異世界作品（なろう系・ライトノベル・漫画）に特化した作品発見・比較特化型メディア。楽天Koboの書誌情報をもとに、全巻リストや作品紹介、タグを整理しています。
@@ -287,9 +288,65 @@ ${books.map(b => `| **${escapeXml(b.title)}** | ${escapeXml(b.author)} | ${escap
 const escapeXml = value => String(value).replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[c]))
 
 async function clearGeneratedPages() {
-  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new', 'features']) {
+  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new', 'features', 'sitemap']) {
     await fs.rm(path.join(root, 'public', dir), { recursive: true, force: true })
   }
+}
+
+async function writeHtmlSitemap(books, tags, authors, series) {
+  await fs.mkdir(path.join(root, 'public/sitemap'), { recursive: true })
+  const html = `<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>サイトマップ｜異世界コンパス</title>
+<meta name="description" content="異世界コンパスの全ページ一覧（サイトマップ）です。">
+<link rel="canonical" href="${siteUrl}/sitemap/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>${commonStyle}</style>
+${commonGaHead}
+</head>
+<body>
+${renderHeader('/sitemap/')}
+<main>
+<div class="crumb"><a href="/">トップ</a>　/　サイトマップ</div>
+<div class="eyebrow">SITEMAP</div>
+<h1>サイトマップ</h1>
+<p class="lead">当サイトの全ページへのリンク一覧です。</p>
+
+<h2>基本ページ</h2>
+<ul style="line-height:1.8;">
+  <li><a href="/">トップページ</a></li>
+  <li><a href="/works/">全作品一覧</a></li>
+  <li><a href="/new/">新着・最新発売</a></li>
+  <li><a href="/features/">おすすめ特集一覧</a></li>
+  <li><a href="/compare/">作品比較一覧</a></li>
+  <li><a href="/tags/">タグ一覧</a></li>
+  <li><a href="/authors/">作者一覧</a></li>
+  <li><a href="/series/">シリーズ一覧</a></li>
+</ul>
+
+<h2>全作品一覧（${books.length}件）</h2>
+<ul style="line-height:1.8;">
+${books.map(b => `  <li><a href="/works/${b.slug}/">${escapeXml(b.title)}</a></li>`).join('\n')}
+</ul>
+
+<h2>タグ一覧</h2>
+<ul style="line-height:1.8; display:flex; flex-wrap:wrap; gap:16px; list-style:none; padding:0;">
+${tags.map(t => `  <li><a href="/tags/${slugify(t)}/">#${escapeXml(t)}</a></li>`).join('\n')}
+</ul>
+
+<h2>作者一覧</h2>
+<ul style="line-height:1.8; display:flex; flex-wrap:wrap; gap:16px; list-style:none; padding:0;">
+${authors.map(a => `  <li><a href="/authors/${slugify(a)}/">${escapeXml(a)}</a></li>`).join('\n')}
+</ul>
+
+</main>
+${renderFooter()}
+</body>
+</html>`
+  await fs.writeFile(path.join(root, 'public/sitemap/index.html'), html)
 }
 
 function isSameSeries(a, b) {
@@ -372,6 +429,7 @@ function renderFooter() {
           <a href="/series/">シリーズ</a>
           <a href="/authors/">作者一覧</a>
           <a href="/compare/">比較</a>
+          <a href="/sitemap/">サイトマップ</a>
         </div>
         <span class="copyright">© ISEKAI COMPASS</span>
       </div>
