@@ -39,6 +39,12 @@
   <url><loc>https://isekai-compas.vercel.app/works/seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/works/4332245000320/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/works/6671298194020/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/works/4310000599171/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/works/4310000599458/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/works/4335706000320/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/works/4333958700320/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/works/4913603350008/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/works/4330996900310/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -64,6 +70,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4333912900320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4333912900320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912900320-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4333912900320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/seed-houro-meshi-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000021594-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -89,6 +101,10 @@
   <url><loc>https://isekai-compas.vercel.app/compare/seed-tensura-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-seed-tensura/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000021594-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4988601550993-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -113,6 +129,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/seed-houro-meshi-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-seed-houro-meshi/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -136,6 +158,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4390000014619-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4390000014619/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000021594-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -158,6 +186,11 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4390000021594-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4390000021594-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4390000021594-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4390000021594/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4864724890012-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -179,6 +212,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4988601550993-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4988601550993-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4988601550993/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4333912954310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -199,6 +238,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4333912911220/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4333912911220/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4333912911220/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912911220-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4333912911220/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4333912954310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -218,6 +263,11 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4333912954310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4333912954310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4333912954310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333912954310-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4333912954310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4758032110023-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -236,6 +286,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4864724890012-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4864724890012-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4864724890012-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4864724890012/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4758032110023-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -253,6 +309,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4758032110023-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4758032110023-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4758032110023-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4758032110023/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4046834110067/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -269,6 +331,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4332245000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4310000599171/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4310000599458/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4040645010045-vs-4330996900310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -284,6 +352,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4332245000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4310000599171/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4310000599458/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4046834110067-vs-4330996900310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4824001110078-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4824001110078-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4824001110078-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -298,6 +372,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/4824001110078-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4824001110078-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4824001110078-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4824001110078/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671308504690-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671308504690-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671308504690-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -311,6 +391,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/6671308504690-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-6671308504690/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/konosuba-1-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/goblin-slayer-1-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/konosuba-1-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -323,6 +409,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/konosuba-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-konosuba-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/goblin-slayer-1-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/nogame-nolife-1-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -334,6 +426,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/seirei-gensouki-1-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-tate-no-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/goblin-slayer-1-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/goblin-slayer-1-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -344,6 +442,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/goblin-slayer-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-goblin-slayer-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/kumo-desuga-1-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/hachinan-1-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -353,6 +457,12 @@
   <url><loc>https://isekai-compas.vercel.app/compare/nogame-nolife-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-nogame-nolife-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -361,6 +471,11 @@
   <url><loc>https://isekai-compas.vercel.app/compare/deathmarch-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-deathmarch-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/hachinan-1-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/isekai-maou-1-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/genjitsu-yusha-1-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
@@ -368,27 +483,90 @@
   <url><loc>https://isekai-compas.vercel.app/compare/kumo-desuga-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-kumo-desuga-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/hachinan-1-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/genjitsu-yusha-1-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/hachinan-1-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/hachinan-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-hachinan-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/genjitsu-yusha-1-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/isekai-maou-1-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/isekai-maou-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-isekai-maou-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/genjitsu-yusha-1-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/genjitsu-yusha-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-genjitsu-yusha-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/isekai-shokudo-1-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-isekai-shokudo-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/6671298194020-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-seirei-gensouki-1/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4332245000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4332245000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4332245000320-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4332245000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4913603350008-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-6671298194020/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4310000599458/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599171-vs-4330996900310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4310000599458-vs-4330996900310/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4335706000320-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4335706000320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4333958700320-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4333958700320/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/compare/4330996900310-vs-4913603350008/</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://isekai-compas.vercel.app/tags/ref-abb310cf53/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/tags/ref-34ff98f51b/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/tags/ref-23311bdc4b/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
@@ -527,6 +705,21 @@
   <url><loc>https://isekai-compas.vercel.app/tags/ref-d0436a96da/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/tags/ref-b6a609ecc4/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/tags/ref-757f63019f/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-16a35c18b6/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-31f1f7fd23/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-01e03535bd/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-f423732313/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-70584bf029/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-17ac45c8db/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-99837496cd/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-e8aedeeac6/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/revenge/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-33be62f664/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-078a389644/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-7e7096c0b7/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-81e3215ae0/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-73301f6567/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/tags/ref-b734e0867d/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/authors/ref-82c83ffe02/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/authors/ref-f438c05c59/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/authors/ref-0fb04e9240/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
@@ -554,6 +747,12 @@
   <url><loc>https://isekai-compas.vercel.app/authors/riv/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/authors/ref-22312298a8/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/authors/maru/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/authors/ref-19db7ed259/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/authors/ref-f080994f64/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/authors/ref-9bc67d27ed/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/authors/kanco/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/authors/ref-d34f429a6b/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/authors/ref-0eed850d3e/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-8b522965d8/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-16a35c18b6/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-d3d7cca707/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
@@ -581,4 +780,10 @@
   <url><loc>https://isekai-compas.vercel.app/series/ref-1c02c3abe4/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-3b226a95b8/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-1e2f6c366e/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/series/ref-59535b2bf9/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/series/ref-69ce170cf6/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/series/ref-244b522675/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/series/ref-6c415569a5/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/series/ref-a8378dc90b/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://isekai-compas.vercel.app/series/ref-89894b5147/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
 </urlset>
