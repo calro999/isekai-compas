@@ -1509,5 +1509,36 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/627c9f0f7471327298114c888f35b980/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-27T19:24:10.838Z"
+  },
+  {
+    "id": "7276000883859",
+    "slug": "7276000883859",
+    "title": "こちら、異世界サポートセンターのスズキが承ります 連載版：3",
+    "author": "ながつきまさ美/岡崎マサムネ/しょうじ",
+    "seriesName": "こちら、異世界サポートセンターのスズキが承ります 連載版",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ファンタジー",
+      "おすすめ",
+      "コミックス"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4728/2000021104728.jpg?_ex=200x200",
+    "description": "スズキさんは異世界のサポートセンター勤務。身勝手な勇者たちが起こすトラブル対応に追われる彼女は、ある事件をきっかけに半魔族の少年マオを引き取ることに…お困りごとは今すぐお電話を、異世界OL奮闘記！",
+    "aiIntro": "こちら、異世界サポートセンターのスズキが承ります 連載版：3は、ながつきまさ美/岡崎マサムネ/しょうじによる注目の異世界作品です。独自の世界観と魅力的なキャラクターが描かれています。",
+    "readerTypes": [
+      "異世界ファンタジーが好きな人",
+      "爽快な物語を楽しみたい人",
+      "話題の作品をチェックしたい人"
+    ],
+    "price": 165,
+    "salesDate": "2026年08月21日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F48a62d42562e31f9beb94cfb0e95bdcc%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F48a62d42562e31f9beb94cfb0e95bdcc%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/48a62d42562e31f9beb94cfb0e95bdcc/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-27T19:52:45.487Z"
   }
 ]
