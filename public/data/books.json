@@ -1874,5 +1874,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/55f2fcf15472300ebfef6355d91a8787/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-28T21:21:18.926Z"
+  },
+  {
+    "id": "7224000893001",
+    "slug": "7224000893001",
+    "title": "異世界で水の大精霊やってます。５",
+    "author": "青木千尋/穂高稲穂",
+    "seriesName": "異世界で水の大精霊やってます。",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "水の大精霊",
+      "ダンジョン探索",
+      "ファンタジー冒険",
+      "精霊魔法",
+      "成長物語",
+      "秘宝",
+      "異世界ファンタジー"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/9505/2000021259505.jpg?_ex=200x200",
+    "description": "湖を司る水の大精霊にして、異世界転生者であるナギ。契約者ヨナが勇者修行で湖を離れて一月、平穏な日常は突如として破られた。近隣で発見されたのは、未知なるダンジョン――。豊富な資源と秘宝が眠ると噂されるその深淵を調査すべく、ナギはついに聖域たる湖を離れ、新たな冒険の舞台へと足を踏み入れる！精霊の力でダンジョンを切り拓く、壮大な物語の幕開け！",
+    "aiIntro": "待望のシリーズ第5巻！湖を司る水の大精霊・ナギが、異世界で紡ぐ冒険譚が新たな局面を迎える！今回は、突如現れた未知のダンジョンを舞台に、ナギがその聖域を飛び出し、危険と神秘に満ちた探索へと挑む。精霊の圧倒的な力で、隠された資源と秘宝を巡るダンジョンを攻略するナギの活躍は必見！読者の心を掴む、壮大なファンタジーが今、始まる！",
+    "readerTypes": [
+      "異世界転生ファン",
+      "精霊系ファンタジー好き",
+      "ダンジョン攻略モノ愛好家"
+    ],
+    "price": 792,
+    "salesDate": "2026年08月20日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F4ed51719cacd3a4b8e0109b8773bf78b%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F4ed51719cacd3a4b8e0109b8773bf78b%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/4ed51719cacd3a4b8e0109b8773bf78b/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-28T23:14:26.728Z"
   }
 ]
