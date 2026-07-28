@@ -361,9 +361,13 @@ ${renderFooter()}
 function isSameSeries(a, b) {
   if (a.id === b.id) return true
   if (a.seriesName && b.seriesName && a.seriesName === b.seriesName) return true
-  const normA = (a.seriesName || a.title).replace(/[\s\d〜～「」『』（）()【】分冊版]/g, '').toLowerCase()
-  const normB = (b.seriesName || b.title).replace(/[\s\d〜～「」『』（）()【】分冊版]/g, '').toLowerCase()
+  const junkRegex = /[\s\d〜～「」『』（）()【】分冊版:：！？!?・]/g
+  const normA = (a.seriesName || a.title).replace(junkRegex, '').toLowerCase().replace(/短編集|外伝|コミック|巻/g, '')
+  const normB = (b.seriesName || b.title).replace(junkRegex, '').toLowerCase().replace(/短編集|外伝|コミック|巻/g, '')
   if (normA && normB && normA === normB) return true
+  if (normA && normB && (normA.length > 10 && normB.length > 10)) {
+    if (normA.startsWith(normB) || normB.startsWith(normA)) return true
+  }
   return false
 }
 
@@ -725,26 +729,26 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
 
   // 2. 新刊一覧 (/new/)
   const now = new Date()
-  const thirtyDaysAgo = new Date(now)
-  thirtyDaysAgo.setDate(now.getDate() - 30)
+
+  const sortedByDate = [...uniqueBooks].sort((a, b) => {
+    const dA = releaseDateOf(a.salesDate) || new Date(0)
+    const dB = releaseDateOf(b.salesDate) || new Date(0)
+    return dB - dA
+  })
 
   const upcomingBooks = []
   const recentBooks = []
 
-  for (const b of uniqueBooks) {
+  for (const b of sortedByDate) {
     const date = releaseDateOf(b.salesDate)
-    if (date) {
-      if (date > now) {
-        upcomingBooks.push(b)
-      } else if (date >= thirtyDaysAgo) {
+    if (date && date > now) {
+      upcomingBooks.push(b)
+    } else {
+      if (recentBooks.length < 30) {
         recentBooks.push(b)
       }
     }
   }
-
-  upcomingBooks.sort((a, b) => releaseDateOf(a.salesDate) - releaseDateOf(b.salesDate))
-  recentBooks.sort((a, b) => releaseDateOf(b.salesDate) - releaseDateOf(a.salesDate))
-  if (recentBooks.length === 0) recentBooks = uniqueBooks.slice(-20)
 
   const renderUpcomingCard = (book) => `
     <div class="book-card" style="border-color:#d6a24a; box-shadow:0 4px 12px rgba(214,162,74,0.15);">
