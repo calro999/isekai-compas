@@ -1839,5 +1839,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/ea7ea489d25a3970ac5890f0959f95ae/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-28T19:50:53.306Z"
+  },
+  {
+    "id": "7224000893000",
+    "slug": "7224000893000",
+    "title": "異世界じゃスローライフはままならない　〜聖獣の主人は島育ち〜７",
+    "author": "ひなた丸だいや/夏柿シン",
+    "seriesName": "異世界じゃスローライフはままならない　〜聖獣の主人は島育ち〜",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "スローライフ",
+      "聖獣",
+      "従魔",
+      "バトル",
+      "ファンタジー",
+      "少年主人公",
+      "冒険"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/9492/2000021259492.jpg?_ex=200x200",
+    "description": "異世界に転生した少年ライルは、聖獣となった愛犬や従魔たちと穏やかな日々を送っていた。しかし、二度目の課外実習中にワイバーンの大群に襲撃され、平穏は一変。ライルは仲間を守るため、凶悪な魔獣に立ち向かう。これは、世界を巻き込む大動乱の序章に過ぎなかった――。彼のスローライフは、果たしてどうなるのか？。",
+    "aiIntro": "「異世界じゃスローライフはままならない」最新刊が登場！　転生少年ライルが聖獣の愛犬や従魔たちと送るはずだった穏やかな日々は、ワイバーンの大群襲撃で一変。迫りくる危機に立ち向かうライルの成長と、世界を揺るがす大動乱の予兆が描かれる本作。スローライフと激動の冒険が交錯する物語を、ぜひお楽しみください！",
+    "readerTypes": [
+      "異世界転生ファン",
+      "聖獣・従魔との絆に心惹かれる方",
+      "スローライフからの激動展開を求める読者"
+    ],
+    "price": 792,
+    "salesDate": "2026年08月20日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F55f2fcf15472300ebfef6355d91a8787%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F55f2fcf15472300ebfef6355d91a8787%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/55f2fcf15472300ebfef6355d91a8787/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-28T21:21:18.926Z"
   }
 ]
