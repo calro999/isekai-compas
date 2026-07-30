@@ -2204,5 +2204,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/7c14fff77edc355f83075a16d287a882/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-30T03:25:01.172Z"
+  },
+  {
+    "id": "5190000879186",
+    "slug": "5190000879186",
+    "title": "断罪の吸血姫4",
+    "author": "Ｔｒｕｌｐｐｅ/鵺卷恢",
+    "seriesName": "断罪の吸血姫",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "ダークファンタジー",
+      "ロマンス",
+      "吸血姫",
+      "ヴァンパイア",
+      "罪と罰",
+      "英雄",
+      "記憶喪失",
+      "処刑人"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/3955/2000021193955.jpg?_ex=200x200",
+    "description": "「断罪の吸血姫」シリーズ第4巻。祖国を救った英雄から一転、大罪人として吸血姫ミラの処刑城へ送られたシン。記憶を失い、その身に深き秘密を抱える処刑人ミラは、シンの過去に触れたとき、彼にある“取引”を持ちかける。国を救った英雄と、記憶なき処刑人。罪と罰、そして抗えぬ運命が交錯する二人の物語は、第4巻でさらなる深淵へと誘う。ダークファンタジーの重厚な世界…",
+    "aiIntro": "英雄から大罪人へ――。運命に翻弄されるシンと、記憶を失った吸血姫ミラが織りなすダークファンタジー「断罪の吸血姫」シリーズ第4巻。重厚な世界観で描かれる「罪と罰」、そして「禁断のロマンス」は、読者の心を深く揺さぶります。予測不能な展開と、登場人物たちの「複雑な人間ドラマ」が織りなす物語は、ダークファンタジー好きはもちろん、心に残るロマンス小説を求める…",
+    "readerTypes": [
+      "重厚なダークファンタジーの世界観に没頭したい読者",
+      "禁断のロマンスや切ない恋物語に心惹かれる読者",
+      "善悪の境界線が曖昧な、複雑な人間ドラマを深く味わいたい読者"
+    ],
+    "price": 220,
+    "salesDate": "2026年08月15日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fc1f9b5c55efa3f5e90962397eed1ed30%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fc1f9b5c55efa3f5e90962397eed1ed30%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/c1f9b5c55efa3f5e90962397eed1ed30/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-30T10:34:03.339Z"
   }
 ]
