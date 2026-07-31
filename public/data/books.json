@@ -2631,5 +2631,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/d2f4ec0e5d1c3d66989018ee98e9d458/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-07-31T21:19:54.400Z"
+  },
+  {
+    "id": "7275000876222",
+    "slug": "7275000876222",
+    "title": "第3王子はスローライフをご所望 【連載版】４２",
+    "author": "yui／サウスのサウス（ツギクル）/藤島真ノ介",
+    "seriesName": "第3王子はスローライフをご所望 【連載版】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "スローライフ",
+      "チート",
+      "多重転生",
+      "人生やり直し",
+      "癒やし",
+      "辺境領地",
+      "ストレスフリー"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/0479/2000020970479.jpg?_ex=200x200",
+    "description": "社畜として過酷な人生を終え、チート能力で魔王を倒すも再び激務に追われた主人公。もう転生は嫌だと願う彼に女神が手を差し伸べ、三度目の人生が始まる。前世の知識と能力を全て引き継いだ彼は、辺境の地で念願のスローライフを満喫することに。優しい人々に囲まれ、今度こそはのんびり過ごしたいと願う彼の、癒やしと安らぎの異世界生活が描かれる。",
+    "aiIntro": "二度の人生で社畜と英雄、どちらも過酷な運命を辿った主人公が、三度目の転生でついに手に入れたのは、辺境での穏やかなスローライフ！　チート能力と前世の知識を活かし、優しい人々に囲まれてのんびり過ごす彼の姿は、日々の疲れを癒やしてくれること間違いなし。ストレスフリーな異世界生活を求めるあなたに、ぜひ読んでほしい一作です。",
+    "readerTypes": [
+      "日々の疲れを癒やしたい人",
+      "異世界転生ものが好きな人",
+      "ストレスフリーな物語を求める人"
+    ],
+    "price": 110,
+    "salesDate": "2026年08月17日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F8cbca1fdc13537c7a071b7ba40eb307b%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F8cbca1fdc13537c7a071b7ba40eb307b%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/8cbca1fdc13537c7a071b7ba40eb307b/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-07-31T23:14:45.778Z"
   }
 ]
