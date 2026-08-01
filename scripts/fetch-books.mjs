@@ -929,6 +929,157 @@ ${urls.map(url => `  <url><loc>${siteUrl}${url}</loc><changefreq>daily</changefr
 
   await fs.writeFile(path.join(root, 'public/sitemap.xml'), xml)
   console.log(`Generated sitemap.xml with ${urls.length} URLs.`)
+
+  // 1. robots.txt
+  const robotsTxt = `User-agent: *
+Allow: /
+
+# AI Crawlers & LLM Agents Explicit Authorization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+Sitemap: ${siteUrl}/sitemap.xml
+Sitemap: ${siteUrl}/sitemap/
+`
+  await fs.writeFile(path.join(root, 'public/robots.txt'), robotsTxt)
+
+  // 2. llms.txt & llms-full.txt
+  const uniqueBooks = getUniqueSeriesBooks(books)
+  const llmsTxt = `# 異世界コンパス (Isekai Compass)
+
+> 異世界転生・なろう系・ファンタジー小説・漫画の比較、あらすじ、見どころ、最新刊・出版予定日データベース。
+
+## メインナビゲーション
+- [トップページ](${siteUrl}/): 異世界コンパス ポータル
+- [全作品一覧](${siteUrl}/works/): 全異世界作品のデータベース一覧
+- [新刊・最新発売情報](${siteUrl}/new/): 最新刊および1週間以内の予約・発売予定作品
+- [おすすめ特集一覧](${siteUrl}/features/): 主人公最強・スローライフ・頭脳戦などのテーマ別厳選作品
+- [作品徹底比較](${siteUrl}/compare/): 第1話原点ストーリー・設定・読後感の2作品比較レビュー
+- [タグから探す](${siteUrl}/tags/): 設定・世界観・ジャンル別タグ一覧
+- [作者一覧](${siteUrl}/authors/): 人気ライトノベル・漫画作家ディレクトリ
+- [シリーズ一覧](${siteUrl}/series/): シリーズ別作品まとめ
+- [HTMLサイトマップ](${siteUrl}/sitemap/): 全ページリンク一覧
+
+## LLM用テキストアーカイブ
+- [LLMs Full Text Archive](${siteUrl}/llms-full.txt): 全作品のあらすじ・解説・見どころ・第1話ストーリーのフルテキストデータベース
+
+## 収録作品一覧 (${uniqueBooks.length}シリーズ)
+${uniqueBooks.map(b => `- [${b.title}](${siteUrl}/works/${b.slug}/): 作者: ${b.author} | ジャンル: ${b.genre} | ${b.oneLineCatch || b.description}`).join('\n')}
+`
+  await fs.writeFile(path.join(root, 'public/llms.txt'), llmsTxt)
+
+  const llmsFullTxt = `# 異世界コンパス フルテキストアーカイブ (Isekai Compass Full Text Database)
+
+> 本ファイルはAIクローラー（GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot等）およびLLM学習・検索インデックス用に提供される全作品のフルテキストデータベースです。
+
+${uniqueBooks.map(b => `
+---
+## 作品名: ${b.title}
+- **URL**: ${siteUrl}/works/${b.slug}/
+- **作者**: ${b.author}
+- **ジャンル**: ${b.genre}
+- **最新発売日**: ${b.salesDate}
+- **タグ**: ${(b.tags || []).join(', ')}
+
+### 3分あらすじ・要約
+${(b.geoSummary || []).map(s => `- ${s}`).join('\n') || b.description}
+
+### 1話原点ストーリー・世界観
+${b.firstVolumeStory || b.description}
+
+### 作品考察・深掘り解説レビュー
+${b.review || b.description}
+
+### おすすめ読者タイプ
+${(b.readerTypes || []).map(r => `- ${r}`).join('\n')}
+`).join('\n\n')}
+`
+  await fs.writeFile(path.join(root, 'public/llms-full.txt'), llmsFullTxt)
+
+  // 3. IndexNow Key File & Instant Submission
+  const indexNowKey = '42279cb58d5140839e552ac53b0b69ee'
+  await fs.writeFile(path.join(root, `public/${indexNowKey}.txt`), indexNowKey)
+
+  await submitIndexNow(urls, indexNowKey)
+}
+
+async function submitIndexNow(urlList, indexNowKey) {
+  const host = 'isekai-compas.vercel.app'
+  const fullUrls = urlList.map(u => u.startsWith('http') ? u : `https://${host}${u}`)
+
+  const payload = {
+    host,
+    key: indexNowKey,
+    keyLocation: `https://${host}/${indexNowKey}.txt`,
+    urlList: fullUrls
+  }
+
+  const endpoints = [
+    'https://api.indexnow.org/IndexNow',
+    'https://www.bing.com/IndexNow',
+    'https://yandex.com/indexnow'
+  ]
+
+  for (const endpoint of endpoints) {
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify(payload)
+      })
+      console.log(`IndexNow ping to ${endpoint}: ${res.status}`)
+    } catch (e) {
+      console.warn(`IndexNow ping failed for ${endpoint}:`, e.message)
+    }
+  }
+
+  // Ping Google & Bing Sitemaps
+  const sitemapUrl = `https://${host}/sitemap.xml`
+  const pingUrls = [
+    `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
+    `https://www.bing.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`
+  ]
+  for (const p of pingUrls) {
+    try {
+      await fetch(p)
+      console.log(`Sitemap pinged: ${p}`)
+    } catch (e) {
+      // ignore
+    }
+  }
 }
 
 async function writeComparePages(books) {
