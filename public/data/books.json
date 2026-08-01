@@ -2732,5 +2732,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/211858e5fd40346f83c6673ce3c5ba8a/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-01T06:39:47.359Z"
+  },
+  {
+    "id": "5190000879154",
+    "slug": "5190000879154",
+    "title": "宝石の娘と異能の王子43",
+    "author": "村上私/万衣花",
+    "seriesName": "宝石の娘と異能の王子",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "ファンタジーロマンス",
+      "特殊能力",
+      "王子",
+      "メイド",
+      "シンデレラストーリー",
+      "運命の恋",
+      "身分差",
+      "逆境ヒロイン"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/3999/2000021193999.jpg?_ex=200x200",
+    "description": "継母に虐げられ、過酷な運命に翻弄されるメイドの少女アンナ。一方、人の心が読める異能ゆえに孤独を抱え、心を閉ざした王子エヴァン。異なる境遇で生きる二人が運命的に出会った時、世界を揺るがす「伝説の宝石」を巡る壮大な陰謀が動き出す。心優しい少女の温もりと、秘めたる王子の力が織りなす、愛と勇気の王道ファンタジー。",
+    "aiIntro": "孤独な異能の王子と、逆境に立ち向かう健気なメイド。光と影、異なる世界に生きてきた二人が交差する時、閉ざされた心に希望の光が灯る。しかし、その出会いは、古の伝説に秘められた「宝石」を巡る王国の深い陰謀を呼び覚ます。果たして彼らは、迫りくる危機を乗り越え、真実の愛と世界の未来を掴むことができるのか？ 純粋な愛と勇気が紡ぐ、感動と冒険のグランドファンタジー。",
+    "readerTypes": [
+      "壮大なファンタジー世界に没入したい方",
+      "純愛に胸キュンしたい方",
+      "困難に立ち向かうヒロインに共感したい方"
+    ],
+    "price": 220,
+    "salesDate": "2026年08月15日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F6940a59dc56c304791ce3eccd5badfeb%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F6940a59dc56c304791ce3eccd5badfeb%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/6940a59dc56c304791ce3eccd5badfeb/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-01T09:52:22.161Z"
   }
 ]
