@@ -3194,5 +3194,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/b40c0cea08323523bfc868930f398879/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-02T15:17:50.938Z"
+  },
+  {
+    "id": "4335922400320",
+    "slug": "4335922400320",
+    "title": "異世界ウォーキング 14　〜ボースハイル帝国編〜",
+    "author": "あるくひと/ゆーにっと",
+    "seriesName": "異世界ウォーキング",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "冒険",
+      "ダンジョン",
+      "スキル",
+      "ファンタジー",
+      "帝国",
+      "探索",
+      "おすすめ"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6781/2000021336781.jpg?_ex=200x200",
+    "description": "不死神の半身を求め、ソラたちは因縁のボースハイル帝国へ。神の反応が示すのは、皇帝城の真下にある巨大ダンジョン。そこには広大な地下空間が広がり、特殊ルールと広大な地形が攻略者を阻む。しかし、ウォーキングスキルが新たな活路を見出す。そして、予期せぬ出会いが物語を新たな展開へと導く。",
+    "aiIntro": "異世界ウォーキング最新刊は、因縁のボースハイル帝国が舞台。皇帝城の地下に広がる巨大ダンジョンに挑むソラたちの冒険が描かれる。特殊なルールと広大な空間が待ち受ける迷宮で、ウォーキングスキルがどのように活かされるのか。そして、新たな出会いが物語に深みを与える。異世界を舞台にした冒険譚、その新たな章をぜひお楽しみください。",
+    "readerTypes": [
+      "ダンジョン攻略好き",
+      "ユニークスキル主人公好き",
+      "壮大な冒険譚を求める人"
+    ],
+    "price": 1815,
+    "salesDate": "2026年08月10日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fccb9b007864537b09b26cfcb2b9ede83%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fccb9b007864537b09b26cfcb2b9ede83%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/ccb9b007864537b09b26cfcb2b9ede83/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-02T17:13:18.635Z"
   }
 ]
