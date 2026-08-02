@@ -3159,5 +3159,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/1b055628541c3c4d9480ec877682ba9a/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-02T13:51:32.004Z"
+  },
+  {
+    "id": "4335921800320",
+    "slug": "4335921800320",
+    "title": "おっさん異世界で最強になる ６　〜物理特化の覚醒者〜",
+    "author": "次佐　駆人/peroshi",
+    "seriesName": "おっさん異世界で最強になる",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界ファンタジー",
+      "おっさん主人公",
+      "最強主人公",
+      "物理特化",
+      "ダンジョン攻略",
+      "ドワーフ",
+      "ドラゴン",
+      "仲間との旅"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6786/2000021336786.jpg?_ex=200x200",
+    "description": "王都を揺るがした騒動を鮮やかに収束させ、その名を轟かせたソウシたち。新たにサクラヒメを仲間に加え、一行は次なる目標、最難関ダンジョンへと挑む！しかし、頼れる相棒たる愛用のメイスがまさかの破損。修理のためドワーフの里を目指す道中、彼らを待ち受けていたのは、世界を揺るがす超巨大ドラゴンの影、そして暗躍する『黄昏の眷族』の不穏な噂だった――。果たしてソウ…",
+    "aiIntro": "物理特化のおっさん冒険者ソウシ、その快進撃は止まらない！王都での功績を引っ提げ、新メンバー・サクラヒメと共に最難関ダンジョンへ。しかし、愛用のメイス破損でドワーフの里へ急行する道中、超巨大ドラゴンや謎の『黄昏の眷族』の影が迫る。天運スキルを武器に、最強おっさんが新たな波乱に挑む異世界成り上がりファンタジー第６巻！",
+    "readerTypes": [
+      "異世界ファンタジーの王道と新機軸を求める人",
+      "最強おっさん主人公の活躍に胸を熱くする人",
+      "仲間との絆が深まる冒険物語が好きな人"
+    ],
+    "price": 1705,
+    "salesDate": "2026年08月10日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fb40c0cea08323523bfc868930f398879%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fb40c0cea08323523bfc868930f398879%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/b40c0cea08323523bfc868930f398879/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-02T15:17:50.938Z"
   }
 ]
