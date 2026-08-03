@@ -3326,5 +3326,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/962fa2f2e69c3b898aa3a7187c8e9c78/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-03T03:51:35.190Z"
+  },
+  {
+    "id": "7276000897493",
+    "slug": "7276000897493",
+    "title": "異世界に召喚された俺は、拳法宗家に拳を捧げてしまった（挿絵版）",
+    "author": "鹿野灯哉",
+    "seriesName": "異世界に召喚された俺は、拳法宗家に拳を捧げてしまった（挿絵版）",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "BL",
+      "異世界召喚",
+      "拳法宗家",
+      "武術",
+      "格闘アクション",
+      "執着",
+      "溺愛",
+      "純愛"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/8758/2000021338758.jpg?_ex=200x200",
+    "description": "現代日本で拳法に挫折した「俺」は、突如、武術が息づく異世界シノナへ召喚される。そこで出会ったのは、若き拳法宗家。拳を交わすたびに深まる絆と、宗家が「俺」にだけ見せる静かで奥底に秘めた執着に、抗いがたく惹かれていく。強制的な関係に頼らず、武術を通じた魂の交流で結ばれる、純粋で濃密なボーイズラブ。異世界での新たな生き方を選択し、二人の関係が宿命のように…",
+    "aiIntro": "拳法に全てを捧げた男が異世界で出会ったのは、同じく拳で家を背負う若き宗家。互いの拳を交わすことで深まる絆と、宗家が主人公にだけ見せる静かな執着が、読者の心を掴みます。強制的な関係に頼らない、武術を通じた純粋な愛の形が、二人の行く末を丁寧に紡ぎ出すR-18異世界BL。",
+    "readerTypes": [
+      "異世界BLで、強制的な関係ではない純粋な愛を求める方",
+      "拳法や武術を題材にした世界観やアクションが好きな方",
+      "静かで奥深い執着や溺愛描写に心惹かれる方"
+    ],
+    "price": 990,
+    "salesDate": "2026年08月10日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd5bc064ed89a376fa47a2eb077a45b40%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd5bc064ed89a376fa47a2eb077a45b40%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/d5bc064ed89a376fa47a2eb077a45b40/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-03T07:44:33.909Z"
   }
 ]
