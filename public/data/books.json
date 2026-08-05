@@ -3951,5 +3951,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/8afd7541e8ba3e48a92dfa72657d15a8/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-05T17:53:03.954Z"
+  },
+  {
+    "id": "4694295604810",
+    "slug": "4694295604810",
+    "title": "初心者のためのなろう小説API入門",
+    "author": "万灯 あお",
+    "seriesName": "技術の泉シリーズ",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "小説家になろう",
+      "API",
+      "Python",
+      "PHP",
+      "データ分析",
+      "プログラミング",
+      "異世界コンテンツ",
+      "Web開発"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4048/2000021354048.jpg?_ex=200x200",
+    "description": "「小説家になろう」の公式APIをPythonとPHPで利用し、作品データを取得・分析するための入門書。APIからのデータ取得、JSON・gzip圧縮ファイルの処理、データの変換・解析を解説します。公式PHPサンプルコードの解説から、筆者作成のPythonソースコードによる小説、R18、ユーザー検索、ランキング、殿堂入りなど各APIの具体的な利用法ま…",
+    "aiIntro": "異世界作品の宝庫「小説家になろう」のデータを、PythonとPHPで自在に操る術を学びませんか？本書は、公式APIを使った作品データ取得から分析までを網羅。Pythonコードを改変すれば、あなただけのデータ収集ツールが完成します。人気作品の傾向分析や、新たな才能の発掘に役立つこと間違いなし。異世界コンテンツを深く掘り下げたい編集者やデータ分析担当者…",
+    "readerTypes": [
+      "プログラミング初心者（Python/PHP）",
+      "データ分析に興味がある異世界ファン",
+      "Webサービス開発者"
+    ],
+    "price": 1980,
+    "salesDate": "2026年08月07日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5043e78f0f6c3ba9805af89db63a3c3e%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5043e78f0f6c3ba9805af89db63a3c3e%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/5043e78f0f6c3ba9805af89db63a3c3e/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-05T19:52:34.293Z"
   }
 ]
