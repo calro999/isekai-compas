@@ -137,29 +137,40 @@ function programmaticRefineArticle(rawArticle, item) {
       .trim()
   }
 
-  let desc = cleanStr(rawArticle?.description || item.itemCaption || `${item.title}の作品情報を紹介します。`)
+  let desc = cleanStr(rawArticle?.description || item.itemCaption || `${item.title}のあらすじ・見どころ情報。`)
   if (desc.length > 180) desc = desc.slice(0, 175) + '…'
   if (!desc.endsWith('。') && !desc.endsWith('…') && !desc.endsWith('！')) desc += '。'
 
-  let intro = cleanStr(rawArticle?.aiIntro || `${item.title}は、${item.author || '作者'}による注目の異世界作品です。独自の世界観と魅力的なキャラクターが描かれています。`)
+  let intro = cleanStr(rawArticle?.aiIntro || `${item.title}（${item.author || '作者'}）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。`)
   if (intro.length > 180) intro = intro.slice(0, 175) + '…'
   if (!intro.endsWith('。') && !intro.endsWith('…') && !intro.endsWith('！')) intro += '。'
 
   // タグの正規化・重複除去・必須タグの自動補強
   let tags = Array.isArray(rawArticle?.tags) ? rawArticle.tags.map(cleanStr).filter(Boolean) : []
-  tags = [...new Set([...tags, '異世界', 'ファンタジー', 'おすすめ', 'コミックス'])]
+  tags = [...new Set([...tags, '異世界', 'ファンタジー', 'おすすめ'])]
   if (tags.length > 8) tags = tags.slice(0, 8)
 
   let readers = Array.isArray(rawArticle?.readerTypes) ? rawArticle.readerTypes.map(cleanStr).filter(Boolean) : []
   if (readers.length < 3) {
-    readers = ['異世界ファンタジーが好きな人', '爽快な物語を楽しみたい人', '話題の作品をチェックしたい人']
+    readers = ['異世界ファンタジーが好きな人', '独自の世界観や爽快な展開を楽しみたい人', '注目の漫画・ラノベをチェックしたい人']
+  }
+
+  // GEO（AI検索引用用）独自ポイント3選
+  let geoPoints = Array.isArray(rawArticle?.geoPoints) ? rawArticle.geoPoints.map(cleanStr).filter(Boolean) : []
+  if (geoPoints.length < 3) {
+    geoPoints = [
+      `${item.title}は、${item.author || '著者'}が描く本格${item.genre || '異世界ファンタジー'}作品です。`,
+      `電子書籍（楽天Kobo等）で第1巻から最新刊まで全巻の試し読み・配信が実施中。`,
+      `キャラクターの魅力を引き立てる独自の世界観設定とスリリングな展開が読者から注目を集めています。`
+    ]
   }
 
   return {
     description: desc,
     aiIntro: intro,
     tags,
-    readerTypes: readers.slice(0, 3)
+    readerTypes: readers.slice(0, 3),
+    geoPoints: geoPoints.slice(0, 3)
   }
 }
 
@@ -171,19 +182,30 @@ async function generateArticle(item) {
     // --------------------------------------------------
     // Step 1: 初稿生成 (Drafting)
     // --------------------------------------------------
-    const step1Prompt = `あなたは異世界漫画専門メディアの編集者です。以下の書誌情報をもとに初稿を作成してください。JSONだけを出力してください。
-タイトル: ${item.title}
+    const step1Prompt = `あなたは異世界コミック・ラノベ専門のWebメディア編集者です。
+以下の作品情報をもとに、読者の検索意図を満たすプロのレビュー記事を作成し、JSONフォーマットのみで出力してください。
+定型文やテンプレート使い回しの文章は絶対に使用せず、作品固有のキャラクター名やストーリーのフックを盛り込んでください。
+
+作品タイトル: ${item.title}
 作者: ${item.author || ''}
-公式説明: ${item.itemCaption || ''}
-形式: {"description":"120〜180字要約","aiIntro":"120〜180字の読者案内","tags":["タグ5〜8個"],"readerTypes":["読者タイプ3つ"]}`
+公式あらすじ: ${item.itemCaption || ''}
+
+【出力JSON形式】:
+{
+  "description": "120〜180字の作品概要・あらすじ",
+  "aiIntro": "120〜180字の読者向けおすすめイントロ文",
+  "tags": ["作品固有のタグ5〜8個"],
+  "readerTypes": ["どんな読者におすすめか具体的に3つ"],
+  "geoPoints": ["AI検索(Perplexity/SearchGPT等)がそのまま引用できる作品固有の要点3つ(各40〜70字)"]
+}`
 
     const draftText = await callFreeLLM(step1Prompt)
     if (!draftText) return fallback
 
     // --------------------------------------------------
-    // Step 2: 推敲・修正 (Refining & Fact Checking)
+    // Step 2: 推敲・校正 (Refining & Fact Checking)
     // --------------------------------------------------
-    const step2Prompt = `あなたは厳格な校正チーフ編集者です。以下の【初稿JSON】を校正し、誇張表現、ネタバレ、AI臭い不自然な文章を修正した【修正稿JSON】を出力してください。JSONだけを返してください。
+    const step2Prompt = `あなたは厳格なデスク編集者です。以下の【初稿JSON】をチェックし、誇張表現、ネタバレ、AI特有の不自然な言い回し（例：「～は必見です」「〜について紹介します」）を削除・推敲した【修正稿JSON】を出力してください。JSONだけを返してください。
 
 【初稿JSON】:
 ${draftText}`
@@ -193,7 +215,7 @@ ${draftText}`
     // --------------------------------------------------
     // Step 3: 清書・最終仕上げ (Polishing for Reader Engagement)
     // --------------------------------------------------
-    const step3Prompt = `あなたは出版社の最終仕上げデスクです。以下の【修正稿JSON】を、読者の購買意欲とSEO検索意図に沿ったプロの出版物クオリティに清書してください。JSONだけを返してください。
+    const step3Prompt = `あなたは最終仕上げデスクです。以下の【修正稿JSON】を、読者の購買意欲と検索SEO/GEOに完璧に適合させたプロ品質の文章に清書してください。JSONだけを返してください。
 
 【修正稿JSON】:
 ${revisedText}`
@@ -201,21 +223,21 @@ ${revisedText}`
     const polishedText = await callFreeLLM(step3Prompt) || revisedText
 
     // --------------------------------------------------
-    // Step 4: プログラム（JavaScript）による確実な最終整え＆ルールベース安全検閲
+    // Step 4: プログラム（JavaScript）による確実な最終整え
     // --------------------------------------------------
     let parsed = {}
     try {
       parsed = JSON.parse(polishedText.replace(/^```json\s*|\s*```$/g, ''))
     } catch {
-      console.warn('[LLM Pipeline] JSON parse warning on Step 3 output. Falling back to clean regex extraction.')
+      console.warn('[LLM Pipeline] JSON parse warning on Step 3 output. Falling back to clean extraction.')
     }
 
     const finalRefined = programmaticRefineArticle(parsed, item)
-    console.log(`[LLM Pipeline] 3-Step LLM + Programmatic Refinement SUCCESS for: ${item.title}`)
+    console.log(`[LLM Pipeline] Enhanced 3-Step LLM + GEO SUCCESS for: ${item.title}`)
     return finalRefined
 
   } catch (err) {
-    console.warn(`[LLM Pipeline Exception] ${err.message}. Applied Programmatic Refine Fallback safely.`)
+    console.warn(`[LLM Pipeline Exception] ${err.message}. Applied Fallback safely.`)
     return fallback
   }
 }
@@ -519,13 +541,12 @@ const commonStyle = `
   .cover-container img { width: 100%; height: 100%; object-fit: cover; }
   .badge-tag { position: absolute; top: 10px; left: 10px; background: #17221f; color: #fff; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
   .card-body { padding: 16px; display: flex; flex-direction: column; flex-grow: 1; }
-  .card-genre { font-size: 11px; color: var(--accent); font-weight: bold; margin-bottom: 4px; }
   .card-title { font-size: 15px; font-weight: bold; line-height: 1.4; margin: 0 0 8px; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .card-title a { color: var(--text-primary); }
   .card-author { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
   .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
   .pill { font-size: 11px; background: #f0f3ee; color: #4a574f; padding: 2px 7px; border-radius: 3px; }
-  .card-bottom { margin-top: auto; pt: 10px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .card-bottom { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
   .card-btn { background: #17221f; color: #fff; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; }
   .card-btn:hover { background: #d6a24a; color: #17221f; text-decoration: none; }
 
@@ -576,25 +597,24 @@ function renderBookCard(book) {
 }
 
 async function fetchSeriesVolumes(book) {
-  const baseTitle = book.seriesName || book.title.split('〜')[0].split('（')[0].split('(')[0].replace(/第?\\d+巻?/, '').trim()
+  const baseTitle = book.seriesName || book.title.split('〜')[0].split('（')[0].split('(')[0].replace(/第?\d+巻?/, '').trim()
   try {
     let allItems = []
     let page = 1
-    while (page <= 10) { // 最大10ページ(300件)まで取得して長編シリーズもカバー
+    while (page <= 10) {
       const items = await rakutenSeriesSearch(baseTitle, page)
       if (!items || items.length === 0) break
       allItems.push(...items)
       if (items.length < 30) break
       page++
-      await sleep(1000) // APIレートリミット対策 (Rakuten is strict 1req/sec)
+      await sleep(1000)
     }
     
     if (allItems.length === 0) throw new Error('No items found')
     
-    // 分冊版や無関係な作者の作品を除外
-    const authorKeywords = (book.author || '').split(/[\\s\\/／・]+/).filter(k => k.length > 1)
+    const authorKeywords = (book.author || '').split(/[\s\/／・]+/).filter(k => k.length > 1)
     let filtered = allItems.filter(item => {
-      if (item.title.includes('【分冊版】') || item.title.includes('楽譜') || item.title.includes('ピアノ')) return false
+      if (item.title.includes('楽譜') || item.title.includes('ピアノ')) return false
       const itemAuthor = item.author || ''
       const authorMatch = authorKeywords.length === 0 || authorKeywords.some(kw => itemAuthor.includes(kw))
       if (!authorMatch) return false
@@ -602,50 +622,55 @@ async function fetchSeriesVolumes(book) {
     })
     if (filtered.length === 0) filtered = allItems.filter(item => item.seriesName === book.seriesName || item.title.includes(baseTitle))
     
-    // 自然順ソートで「第10巻」が「第2巻」の前に来ないように正しく並び替える
     const collator = new Intl.Collator('ja', { numeric: true, sensitivity: 'base' })
     filtered.sort((a, b) => collator.compare(a.title, b.title))
     
-    // 同じタイトル（特装版と通常版など）を除外してユニークにする
-    const unique = []
+    const uniqueRegular = []
+    const uniqueSplit = []
     const seenTitles = new Set()
+
     for (const item of filtered) {
       const simplifiedTitle = normalizeTitle(item.title)
       if (!seenTitles.has(simplifiedTitle)) {
         seenTitles.add(simplifiedTitle)
-        unique.push(item)
+        const cover = item.largeImageUrl || item.mediumImageUrl || book.cover
+        const itemUrl = item.itemUrl || book.sourceUrl
+        const volObj = {
+          volTitle: item.title,
+          cover: cover,
+          itemUrl: itemUrl,
+          affiliateUrl: buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || "54d2a438.4bc4abc2.54d2a439.aa1be583"),
+          price: item.itemPrice || book.price,
+          salesDate: item.salesDate || ''
+        }
+
+        if (item.title.includes('【分冊版】') || item.title.includes('分冊版') || item.title.includes('話売') || item.title.includes('プチコミ')) {
+          uniqueSplit.push(volObj)
+        } else {
+          uniqueRegular.push(volObj)
+        }
       }
     }
 
-    const volumes = unique.map((item, i) => {
-      const cover = item.largeImageUrl || item.mediumImageUrl || book.cover
-      const itemUrl = item.itemUrl || book.sourceUrl
-      return {
-        volNum: i + 1,
-        volTitle: item.title,
-        cover: cover,
-        itemUrl: itemUrl,
-        affiliateUrl: buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || "54d2a438.4bc4abc2.54d2a439.aa1be583"),
-        price: item.itemPrice || book.price,
-        salesDate: item.salesDate || ''
-      }
-    })
-    
-    // もし1件もなければフォールバック
-    if (volumes.length === 0) throw new Error('No unique volumes')
-    return volumes
+    if (uniqueRegular.length === 0 && uniqueSplit.length > 0) {
+      return { regular: uniqueSplit, split: [] }
+    }
+
+    return {
+      regular: uniqueRegular.length > 0 ? uniqueRegular : [{
+        volTitle: book.title, cover: book.cover, itemUrl: book.sourceUrl, affiliateUrl: book.affiliateUrl, price: book.price, salesDate: book.salesDate
+      }],
+      split: uniqueSplit
+    }
 
   } catch (e) {
-    // API呼び出し失敗時は元の本1冊だけを返す
-    console.error("fetchSeriesVolumes error:", e); return [{
-      volNum: 1,
-      volTitle: book.title,
-      cover: book.cover,
-      itemUrl: book.sourceUrl,
-      affiliateUrl: book.affiliateUrl,
-      price: book.price,
-      salesDate: book.salesDate
-    }]
+    console.error("fetchSeriesVolumes error:", e);
+    return {
+      regular: [{
+        volTitle: book.title, cover: book.cover, itemUrl: book.sourceUrl, affiliateUrl: book.affiliateUrl, price: book.price, salesDate: book.salesDate
+      }],
+      split: []
+    }
   }
 }
 
@@ -655,22 +680,57 @@ async function writeWorkPage(book, books) {
   const title = `【全巻無料試し読み】${book.title} 1巻〜最新刊・外伝・アニメ化完全ガイド｜おすすめ異世界漫画・なろう系小説`
   const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Book', name: book.title, author: { '@type': 'Person', name: book.author }, image: book.cover, description: book.description, datePublished: book.salesDate, offers: { '@type': 'Offer', url: book.affiliateUrl, priceCurrency: 'JPY', price: book.price } })
   const breadcrumbLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'トップ', item: siteUrl }, { '@type': 'ListItem', position: 2, name: '作品一覧', item: `${siteUrl}/works/` }, { '@type': 'ListItem', position: 3, name: book.title, item: `${siteUrl}/works/${book.slug}/` } ] })
+  
+  // FAQPage 構造化データ（JSON-LD）で「無料」「最新刊発売日」「全巻」などの検索結果スニペット露出を強化
+  const faqLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `『${book.title}』は無料で読む・試し読みすることができますか？`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `はい、楽天Koboなどの電子書籍ストアにて第1巻や各巻の冒頭を無料で試し読みが可能です。`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `『${book.title}』の単行本・最新刊の巻数は？`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `現在配信されている単行本・最新巻の情報および全巻リストを本ページで一覧掲載しています。`
+        }
+      },
+      {
+        '@type': 'Question',
+        name: `『${book.title}』のあらすじや見どころは？`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${book.description}`
+        }
+      }
+    ]
+  })
+
   const tags = (book.tags || []).map(tag => `<a href="/tags/${slugify(tag)}/">#${escapeXml(tag)}</a>`).join(' ')
   const readers = (book.readerTypes || []).map(type => `<li>${escapeXml(type)}</li>`).join('')
   const highlightsList = (book.highlights || []).map(h => `<li style="margin-bottom:8px;line-height:1.7;"><strong>✦ ${escapeXml(h)}</strong></li>`).join('')
   
   // GEO向け要約（AI-SEO）
-  const geoSummary = [
-    `${escapeXml(book.title)}は、${escapeXml(book.author)}による人気の${escapeXml(book.genre)}作品です。`,
-    (book.tags || []).slice(0, 3).join('や') + 'といった要素が特徴で、読者から高い評価を得ています。',
-    `現在、第1巻から最新刊まで楽天Kobo等で電子書籍版（試し読みあり）が配信されています。`
-  ].map(t => `<li style="margin-bottom:4px;">${t}</li>`).join('')
+  const geoPoints = book.geoPoints || [
+    `${escapeXml(book.title)}は、${escapeXml(book.author)}が描く注目の${escapeXml(book.genre)}作品です。`,
+    `電子書籍（楽天Kobo等）で第1巻から最新刊まで全巻の試し読み・配信が実施中。`,
+    `魅力的なキャラクターとスリリングな物語展開が特徴で、読者から高い評価を得ています。`
+  ]
+  const geoSummary = geoPoints.map(t => `<li style="margin-bottom:6px;line-height:1.7;">${escapeXml(t)}</li>`).join('')
 
   const related = relatedBooks(book, books)
 
-  const volumes = await fetchSeriesVolumes(book)
-  const volumeListLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: volumes.map((vol, i) => ({ '@type': 'ListItem', position: i + 1, url: vol.affiliateUrl, name: vol.volTitle })) })
-  const volumeCards = volumes.map(vol => `
+  const { regular, split } = await fetchSeriesVolumes(book)
+  const volumeListLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: regular.map((vol, i) => ({ '@type': 'ListItem', position: i + 1, url: vol.affiliateUrl, name: vol.volTitle })) })
+  
+  const renderVolCard = (vol) => `
     <article class="vol-card">
       <a class="vol-cover-wrap" href="${escapeXml(vol.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">
         <img src="${escapeXml(vol.cover)}" alt="${escapeXml(vol.volTitle)}の表紙" loading="lazy" width="140" height="200" />
@@ -681,7 +741,20 @@ async function writeWorkPage(book, books) {
         <a class="vol-buy-btn" href="${escapeXml(vol.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">楽天Koboで購入（試し読み） ↗</a>
       </div>
     </article>
-  `).join('')
+  `
+
+  const volumeCards = regular.map(renderVolCard).join('')
+
+  const splitVolumeSection = split.length > 0 ? `
+    <details style="margin-top:24px; background:#fff; border:1px solid #e1e6de; border-radius:8px; padding:16px;">
+      <summary style="font-weight:bold; cursor:pointer; color:#17221f; font-size:15px;">
+        ▼【分冊版・話売り】一覧を見る（全${split.length}話・タップで開く）
+      </summary>
+      <div class="vol-shelf-grid" style="margin-top:16px;">
+        ${split.map(renderVolCard).join('')}
+      </div>
+    </details>
+  ` : ''
 
   const relatedCards = related.map(other => `
     <li class="related-card-item">
@@ -710,7 +783,7 @@ async function writeWorkPage(book, books) {
     </div>
   `).join('')
 
-  const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}</title><meta name="description" content="${escapeXml(book.description)} 第1巻から最新刊までの全巻表紙一覧、アニメ・OVA・外伝、最新刊の出版予定日まとめ。無料で試し読みも可能です。"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="${siteUrl}/works/${book.slug}/"><meta property="og:title" content="${escapeXml(title)}"><meta property="og:description" content="${escapeXml(book.description)}"><meta property="og:image" content="${escapeXml(book.cover)}"><script type="application/ld+json">${jsonLd}</script><script type="application/ld+json">${breadcrumbLd}</script><script type="application/ld+json">${volumeListLd}</script><style>${commonStyle}.cover-main{width:200px;height:280px;object-fit:cover;float:right;margin:0 0 24px 36px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}h2{font-family:serif;margin-top:46px;border-left:4px solid #d6a24a;padding-left:12px;font-size:22px}.cta{display:inline-block;background:#17221f;color:#fff;padding:14px 26px;border-radius:6px;font-weight:bold;margin-top:16px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.15)}.cta:hover{background:#d6a24a;color:#17221f;text-decoration:none}.pub-status-box{background:#17221f;color:#fff;padding:24px;border-radius:8px;margin:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.pub-status-main h3{margin:0;font-size:18px;color:#d6a24a}.pub-status-main p{margin:6px 0 0;font-size:14px;color:#cfd8d3}.vol-shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:24px 0}.vol-card{background:#fff;border:1px solid #e1e6de;border-radius:8px;padding:12px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s,box-shadow 0.2s}.vol-card:hover{transform:translateY(-4px);box-shadow:0 6px 16px rgba(0,0,0,0.08);border-color:#d6a24a}.vol-cover-wrap{position:relative;width:100%;height:170px;margin-bottom:8px}.vol-cover-wrap img{width:100%;height:100%;object-fit:cover;border-radius:4px}.vol-name{font-size:12px;font-weight:bold;color:#17221f;line-height:1.3;margin-bottom:4px;height:32px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.vol-date{font-size:10px;color:#5f6c62;margin-bottom:8px}.vol-buy-btn{font-size:11px;background:#17221f;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;width:100%;text-decoration:none;display:block}.vol-buy-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.ai-summary{background:#f9fbf9;border:1px solid #e1e6de;padding:16px;border-radius:6px;margin:16px 0;font-size:13px;color:#3d4841;line-height:1.6}.first-story-box{background:#f0f4f1;padding:24px;border-radius:8px;border:1px solid #c8d4c5;margin:24px 0;line-height:1.9;color:#233028}.highlights-box{background:#fff;padding:24px;border-radius:8px;border:1px solid #d9ddd3;margin:24px 0}.review-box{background:#f9f8f3;padding:24px;border-radius:8px;border-left:4px solid #17221f;margin:24px 0;line-height:1.9;color:#2c3831}.related-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}.related-card-item{background:#f4f6f2;padding:12px 16px;border-radius:8px;border:1px solid #e1e6de;display:flex;align-items:center;justify-content:space-between;transition:transform 0.2s,box-shadow 0.2s}.related-card-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.06);background:#ffffff}.related-info{display:flex;align-items:center;gap:12px}.related-thumb{width:46px;height:64px;object-fit:cover;border-radius:4px}.related-title{font-weight:bold;font-size:14px;color:#17221f;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}.related-meta{font-size:11px;color:#5f6c62;margin-top:2px}.related-btn{font-size:12px;background:#17221f;color:#fff;padding:5px 10px;border-radius:4px;font-weight:bold;white-space:nowrap}.related-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.compare-nav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:16px}.compare-nav-card{background:#fff;padding:16px;border-radius:8px;border:1px solid #e1e6de;display:flex;flex-direction:column;gap:12px}.compare-thumbs{display:flex;align-items:center;justify-content:center;gap:12px;background:#f4f6f2;padding:10px;border-radius:6px}.compare-thumbs img{width:50px;height:70px;object-fit:cover;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}.vs-badge{font-size:12px;font-weight:bold;color:#d6a24a;background:#17221f;padding:3px 7px;border-radius:50%}.compare-card-title{font-size:13px;font-weight:bold;color:#17221f;line-height:1.4}.compare-card-title small{color:#5f6c62;font-weight:normal}.compare-card-btn{display:block;text-align:center;background:#17221f;color:#fff;padding:8px 12px;border-radius:5px;font-size:12px;font-weight:bold;margin-top:auto;text-decoration:none}.compare-card-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.tags a{display:inline-block;background:#e2e8de;padding:6px 12px;margin:4px 4px 4px 0;border-radius:4px;font-size:13px;text-decoration:none}@media(max-width:600px){.cover-main{width:130px;height:180px;margin-left:16px}.vol-shelf-grid{grid-template-columns:repeat(2,1fr);gap:10px}.work-detail-main{display:flex;flex-direction:column}.wd-vols{order:3 !important;margin-top:32px}.wd-rest{order:2 !important}}</style>${commonGaHead}</head><body><div data-nosnippet>${renderHeader('/works/')}</div><main class="work-detail-main" itemscope itemtype="https://schema.org/Book"><article><section class="wd-top" aria-label="作品基本情報" style="order:1"><nav class="crumb" aria-label="Breadcrumb"><a href="/">トップ</a>　/　<a href="/works/">作品一覧</a>　/　<span aria-current="page">${escapeXml(book.title)}</span></nav><img class="cover-main" src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙" fetchpriority="high" decoding="async" width="200" height="280"><div class="eyebrow">WORK GUIDE & REVIEW</div><h1 itemprop="name">${escapeXml(book.title)}</h1><p>作者：<a href="/authors/${slugify(book.author)}/"><span itemprop="author">${escapeXml(book.author)}</span></a>　｜　<span itemprop="genre">${escapeXml(book.genre)}</span>　｜　最新発売日：${escapeXml(book.salesDate)}</p><div class="ai-summary"><strong>💡 3分でわかる！作品のあらすじ・見どころ要約</strong><ul style="margin:4px 0 0;padding-left:20px;">${geoSummary}</ul></div><p style="font-size:16px;line-height:1.9;color:#3d4841;" itemprop="description">${escapeXml(book.aiIntro || book.description)}</p><a class="cta" href="${escapeXml(book.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">【無料試し読みあり】1巻を楽天Koboで購入 ↗</a><div class="pub-status-box" data-nosnippet><div class="pub-status-main"><h3>📢 最新刊・次巻の出版予定日ステータス</h3><p>最新巻：絶賛配信中！ / 次巻（続巻）：<b>2026年秋頃出版予定（公式発表待ち）</b></p></div><a style="background:#d6a24a;color:#17221f;padding:10px 18px;border-radius:4px;font-weight:bold;text-decoration:none;font-size:13px;" href="${escapeXml(book.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">最新刊の予約・購入 ↗</a></div></section><section class="wd-vols" aria-label="全巻コレクション" style="order:2"><h2>📖 全巻・外伝単行本コレクション（タップで各巻の無料試し読みへ）</h2><p style="font-size:14px;color:var(--text-muted);">第1巻から最新刊、外伝・SS短編集までの表紙コレクションです。画像やボタンをタップすると各巻の楽天Kobo電子書籍ページへ移動します。</p><div class="vol-shelf-grid">${volumeCards}</div></section><section class="wd-rest" aria-label="作品詳細・あらすじ" style="order:3"><h2>📺 アニメ化・OVA・メディア化展開データ</h2><div style="background:#fff;padding:20px;border-radius:8px;border:1px solid #d9ddd3;margin:16px 0;"><p style="margin:0;font-size:14px;line-height:1.8;">・<b>TVアニメ化展開</b>：${escapeXml(book.animeAdaptation || 'アニメ化作品・特大ヒット放送')}<br>・<b>メディアミックス</b>：コミカライズ（漫画版）、CDドラマ、公式外伝SS短編集 展開中<br>・<b>イラスト美術</b>：${escapeXml(book.illustStyle || '美麗画集・挿絵')}</p></div>${highlightsList ? `<h2>✦ ここが面白い！作品の3つの魅力</h2><div class="highlights-box"><ul style="padding-left:18px;margin:0;list-style:none;">${highlightsList}</ul></div>` : ''}${book.firstVolumeStory ? `<h2>📖 第1話からの基本ストーリー・なろう系世界観の流れ</h2><div class="first-story-box"><p style="margin:0;font-size:15px;line-height:1.9;">${escapeXml(book.firstVolumeStory)}</p></div>` : ''}<h2>💡 ${escapeXml(book.title)} のあらすじ・見どころ概要</h2><p style="line-height:1.9;font-size:15px;">${escapeXml(book.description)}</p>${book.review ? `<h2>📝 作品の考察・深掘り解説レビュー</h2><div class="review-box"><p style="margin:0;">${escapeXml(book.review)}</p></div>` : ''}<h2>🎯 こんな読者・気分におすすめ（なろう系・異世界ファン向け）</h2><ul style="line-height:1.9;padding-left:20px;">${readers}</ul><h2>🏷️ 関連テーマ・タグ（類似作品検索）</h2><div class="tags">${tags}</div></section></article><aside class="wd-bottom" aria-label="関連・比較作品" style="order:4" data-nosnippet><h2>📚 似ている作品・関連おすすめ漫画・ラノベ</h2><ul class="related-list">${relatedCards || '<li>関連作品を準備中です。</li>'}</ul><h2>⚔️ 異世界作品同士の比較</h2><div class="compare-nav-grid">${compareCards || '<a href="/compare/">比較ページ一覧を見る</a>'}</div></aside></main><div data-nosnippet>${renderFooter()}</div></body></html>`
+  const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}</title><meta name="description" content="${escapeXml(book.description)} 第1巻から最新刊までの全巻表紙一覧、アニメ・OVA・外伝、最新刊の出版予定日まとめ。無料で試し読みも可能です。"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="${siteUrl}/works/${book.slug}/"><meta property="og:title" content="${escapeXml(title)}"><meta property="og:description" content="${escapeXml(book.description)}"><meta property="og:image" content="${escapeXml(book.cover)}"><script type="application/ld+json">${jsonLd}</script><script type="application/ld+json">${breadcrumbLd}</script><script type="application/ld+json">${volumeListLd}</script><script type="application/ld+json">${faqLd}</script><style>${commonStyle}.cover-main{width:200px;height:280px;object-fit:cover;float:right;margin:0 0 24px 36px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}h2{font-family:serif;margin-top:46px;border-left:4px solid #d6a24a;padding-left:12px;font-size:22px}.cta{display:inline-block;background:#17221f;color:#fff;padding:14px 26px;border-radius:6px;font-weight:bold;margin-top:16px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.15)}.cta:hover{background:#d6a24a;color:#17221f;text-decoration:none}.pub-status-box{background:#17221f;color:#fff;padding:24px;border-radius:8px;margin:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.pub-status-main h3{margin:0;font-size:18px;color:#d6a24a}.pub-status-main p{margin:6px 0 0;font-size:14px;color:#cfd8d3}.vol-shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:24px 0}.vol-card{background:#fff;border:1px solid #e1e6de;border-radius:8px;padding:12px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s,box-shadow 0.2s}.vol-card:hover{transform:translateY(-4px);box-shadow:0 6px 16px rgba(0,0,0,0.08);border-color:#d6a24a}.vol-cover-wrap{position:relative;width:100%;height:170px;margin-bottom:8px}.vol-cover-wrap img{width:100%;height:100%;object-fit:cover;border-radius:4px}.vol-name{font-size:12px;font-weight:bold;color:#17221f;line-height:1.3;margin-bottom:4px;height:32px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.vol-date{font-size:10px;color:#5f6c62;margin-bottom:8px}.vol-buy-btn{font-size:11px;background:#17221f;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;width:100%;text-decoration:none;display:block}.vol-buy-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.ai-summary{background:#f9fbf9;border:1px solid #e1e6de;padding:16px;border-radius:6px;margin:16px 0;font-size:13px;color:#3d4841;line-height:1.6}.first-story-box{background:#f0f4f1;padding:24px;border-radius:8px;border:1px solid #c8d4c5;margin:24px 0;line-height:1.9;color:#233028}.highlights-box{background:#fff;padding:24px;border-radius:8px;border:1px solid #d9ddd3;margin:24px 0}.review-box{background:#f9f8f3;padding:24px;border-radius:8px;border-left:4px solid #17221f;margin:24px 0;line-height:1.9;color:#2c3831}.related-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}.related-card-item{background:#f4f6f2;padding:12px 16px;border-radius:8px;border:1px solid #e1e6de;display:flex;align-items:center;justify-content:space-between;transition:transform 0.2s,box-shadow 0.2s}.related-card-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.06);background:#ffffff}.related-info{display:flex;align-items:center;gap:12px}.related-thumb{width:46px;height:64px;object-fit:cover;border-radius:4px}.related-title{font-weight:bold;font-size:14px;color:#17221f;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}.related-meta{font-size:11px;color:#5f6c62;margin-top:2px}.related-btn{font-size:12px;background:#17221f;color:#fff;padding:5px 10px;border-radius:4px;font-weight:bold;white-space:nowrap}.related-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.compare-nav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:16px}.compare-nav-card{background:#fff;padding:16px;border-radius:8px;border:1px solid #e1e6de;display:flex;flex-direction:column;gap:12px}.compare-thumbs{display:flex;align-items:center;justify-content:center;gap:12px;background:#f4f6f2;padding:10px;border-radius:6px}.compare-thumbs img{width:50px;height:70px;object-fit:cover;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}.vs-badge{font-size:12px;font-weight:bold;color:#d6a24a;background:#17221f;padding:3px 7px;border-radius:50%}.compare-card-title{font-size:13px;font-weight:bold;color:#17221f;line-height:1.4}.compare-card-title small{color:#5f6c62;font-weight:normal}.compare-card-btn{display:block;text-align:center;background:#17221f;color:#fff;padding:8px 12px;border-radius:5px;font-size:12px;font-weight:bold;margin-top:auto;text-decoration:none}.compare-card-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.tags a{display:inline-block;background:#e2e8de;padding:6px 12px;margin:4px 4px 4px 0;border-radius:4px;font-size:13px;text-decoration:none}@media(max-width:600px){.cover-main{width:130px;height:180px;margin-left:16px}.vol-shelf-grid{grid-template-columns:repeat(2,1fr);gap:10px}.work-detail-main{display:flex;flex-direction:column}.wd-vols{order:3 !important;margin-top:32px}.wd-rest{order:2 !important}}</style>${commonGaHead}</head><body><div data-nosnippet>${renderHeader('/works/')}</div><main class="work-detail-main" itemscope itemtype="https://schema.org/Book"><article><section class="wd-top" aria-label="作品基本情報" style="order:1"><nav class="crumb" aria-label="Breadcrumb"><a href="/">トップ</a>　/　<a href="/works/">作品一覧</a>　/　<span aria-current="page">${escapeXml(book.title)}</span></nav><img class="cover-main" src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙" fetchpriority="high" decoding="async" width="200" height="280"><div class="eyebrow">WORK GUIDE & REVIEW</div><h1 itemprop="name">${escapeXml(book.title)}</h1><p>作者：<a href="/authors/${slugify(book.author)}/"><span itemprop="author">${escapeXml(book.author)}</span></a>　｜　<span itemprop="genre">${escapeXml(book.genre)}</span>　｜　最新発売日：${escapeXml(book.salesDate)}</p><div class="ai-summary"><strong>💡 3分でわかる！作品のあらすじ・見どころ要約</strong><ul style="margin:4px 0 0;padding-left:20px;">${geoSummary}</ul></div><p style="font-size:16px;line-height:1.9;color:#3d4841;" itemprop="description">${escapeXml(book.aiIntro || book.description)}</p><a class="cta" href="${escapeXml(book.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">【無料試し読みあり】1巻を楽天Koboで購入 ↗</a><div class="pub-status-box" data-nosnippet><div class="pub-status-main"><h3>📢 最新刊・次巻の出版予定日ステータス</h3><p>最新巻：絶賛配信中！ / 次巻（続巻）：<b>2026年秋頃出版予定（公式発表待ち）</b></p></div><a style="background:#d6a24a;color:#17221f;padding:10px 18px;border-radius:4px;font-weight:bold;text-decoration:none;font-size:13px;" href="${escapeXml(book.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">最新刊の予約・購入 ↗</a></div></section><section class="wd-vols" aria-label="全巻コレクション" style="order:2"><h2>📖 全巻・外伝単行本コレクション（タップで各巻の無料試し読みへ）</h2><p style="font-size:14px;color:var(--text-muted);">第1巻から最新刊、外伝・SS短編集までの表紙コレクションです。画像やボタンをタップすると各巻の楽天Kobo電子書籍ページへ移動します。</p><div class="vol-shelf-grid">${volumeCards}</div>${splitVolumeSection}</section><section class="wd-rest" aria-label="作品詳細・あらすじ" style="order:3"><h2>📺 アニメ化・OVA・メディア化展開データ</h2><div style="background:#fff;padding:20px;border-radius:8px;border:1px solid #d9ddd3;margin:16px 0;"><p style="margin:0;font-size:14px;line-height:1.8;">・<b>TVアニメ化展開</b>：${escapeXml(book.animeAdaptation || 'アニメ化作品・特大ヒット放送')}<br>・<b>メディアミックス</b>：コミカライズ（漫画版）、CDドラマ、公式外伝SS短編集 展開中<br>・<b>イラスト美術</b>：${escapeXml(book.illustStyle || '美麗画集・挿絵')}</p></div>${highlightsList ? `<h2>✦ ここが面白い！作品の3つの魅力</h2><div class="highlights-box"><ul style="padding-left:18px;margin:0;list-style:none;">${highlightsList}</ul></div>` : ''}${book.firstVolumeStory ? `<h2>📖 第1話からの基本ストーリー・なろう系世界観の流れ</h2><div class="first-story-box"><p style="margin:0;font-size:15px;line-height:1.9;">${escapeXml(book.firstVolumeStory)}</p></div>` : ''}<h2>💡 ${escapeXml(book.title)} のあらすじ・見どころ概要</h2><p style="line-height:1.9;font-size:15px;">${escapeXml(book.description)}</p>${book.review ? `<h2>📝 作品の考察・深掘り解説レビュー</h2><div class="review-box"><p style="margin:0;">${escapeXml(book.review)}</p></div>` : ''}<h2>❓ よくある質問（FAQ）</h2><div style="background:#fff; padding:20px; border-radius:8px; border:1px solid #e1e6de; margin:20px 0;"><h3 style="font-size:15px; margin:0 0 6px; color:#17221f;">Q. 『${escapeXml(book.title)}』は無料で試し読みできますか？</h3><p style="font-size:14px; margin:0 0 16px; color:#5f6c62;">A. はい、楽天Koboストア等で第1巻や各巻冒頭を無料で試し読みが可能です。</p><h3 style="font-size:15px; margin:0 0 6px; color:#17221f;">Q. 最新刊の発売日や全巻の単行本巻数は？</h3><p style="font-size:14px; margin:0; color:#5f6c62;">A. 本ページ上部の全巻コレクションより最新刊を含む全巻リストをご確認いただけます。</p></div><h2>🎯 こんな読者・気分におすすめ（なろう系・異世界ファン向け）</h2><ul style="line-height:1.9;padding-left:20px;">${readers}</ul><h2>🏷️ 関連テーマ・タグ（類似作品検索）</h2><div class="tags">${tags}</div></section></article><aside class="wd-bottom" aria-label="関連・比較作品" style="order:4" data-nosnippet><h2>📚 似ている作品・関連おすすめ漫画・ラノベ</h2><ul class="related-list">${relatedCards || '<li>関連作品を準備中です。</li>'}</ul><h2>⚔️ 異世界作品同士の比較</h2><div class="compare-nav-grid">${compareCards || '<a href="/compare/">比較ページ一覧を見る</a>'}</div></aside></main><div data-nosnippet>${renderFooter()}</div></body></html>`
   await fs.writeFile(path.join(workDir, 'index.html'), html)
 }
 
