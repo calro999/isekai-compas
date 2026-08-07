@@ -4437,5 +4437,36 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/011b7be5b68136d6be49eef497f7c674/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-07T11:05:48.854Z"
+  },
+  {
+    "id": "7276000907143",
+    "slug": "7276000907143",
+    "title": "アニメビジネス 漫画・小説・アニメが100倍おもしろくなるアニメの教養",
+    "author": "大貫佑介/木谷高明",
+    "seriesName": "アニメビジネス",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ファンタジー",
+      "おすすめ",
+      "コミックス"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/0967/2000021460967.jpg?_ex=200x200",
+    "description": "※この商品はタブレットなど大きいディスプレイを備えた端末で読むことに適しています。また、文字だけを拡大することや、文字列のハイライト、検索、辞書の参照、引用などの機能が使用できません。\n★なぜ、異世界転生ばかり増えるのか？★\n★なぜ、人気アニメなのに2期が作られないのか？★\n★なぜ、リメイク作品ばかり目立つのか？★\n★なぜ、おもしろい原作でもアニメ…",
+    "aiIntro": "アニメビジネス 漫画・小説・アニメが100倍おもしろくなるアニメの教養は、大貫佑介/木谷高明による注目の異世界作品です。独自の世界観と魅力的なキャラクターが描かれています。",
+    "readerTypes": [
+      "異世界ファンタジーが好きな人",
+      "爽快な物語を楽しみたい人",
+      "話題の作品をチェックしたい人"
+    ],
+    "price": 1760,
+    "salesDate": "2026年08月12日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F25f0c6f2333d37ecaa3375c70494e1e9%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F25f0c6f2333d37ecaa3375c70494e1e9%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/25f0c6f2333d37ecaa3375c70494e1e9/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-07T13:36:29.677Z"
   }
 ]
