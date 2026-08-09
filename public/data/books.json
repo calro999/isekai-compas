@@ -5034,5 +5034,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/292fe7861dca39ea96dc1bdf39846970/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-09T18:59:13.871Z"
+  },
+  {
+    "id": "4972000162879",
+    "slug": "4972000162879",
+    "title": "Queen【期間限定試し読み増量】 8",
+    "author": "小田原みづえ",
+    "seriesName": "Queen【期間限定無料】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "王宮ミステリー",
+      "政治サスペンス",
+      "歴史ミステリー",
+      "王女殺害事件",
+      "宮廷陰謀",
+      "アレキサンドライト",
+      "謎解き",
+      "真実の追求"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4169/2000021384169.jpg?_ex=200x200",
+    "description": "「Queen 8」では、10年前の王女殺害事件の闇が再びクィンを襲う。容疑者として浮上したアクトを追うクィンとオズは、宮殿を離れ真実を求め接触する。しかしアクトは、王妃の首飾り「アレキサンドライト」の行方を問い、さらに謎多きルキアへの警戒を促す。複雑に絡み合う宮廷の陰謀が、クィンを国王との会食へと導く。果たして、彼女は隠された真実を暴き、迫りくる危…",
+    "aiIntro": "「Queen 8」で、クィンは10年前の王女殺害事件の真相を追う。アクトの疑惑、王妃の首飾り「アレキサンドライト」の謎、ルキアの警告。宮殿を離れ真実を求めるクィンとオズは、ついに国王との会食へ。宮廷の深淵に潜む陰謀の核心に迫る、緊迫の王宮ミステリー。",
+    "readerTypes": [
+      "壮麗な王宮を舞台に繰り広げられる、複雑な人間関係と政治的駆け引きの深淵に魅了される読者。",
+      "10年前の王女殺害事件という過去の闇を巡る、息詰まるサスペンスと緻密な謎解きに没頭したい読者。",
+      "主人公クィンが、危険な宮廷陰謀の渦中で真実を追い求め、成長していく姿に共感し、応援したい読者。"
+    ],
+    "price": 0,
+    "salesDate": "2026年08月10日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fda41150841cd3e88aa8d059232a0a1eb%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fda41150841cd3e88aa8d059232a0a1eb%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/da41150841cd3e88aa8d059232a0a1eb/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-09T20:50:29.436Z"
   }
 ]
