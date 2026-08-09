@@ -5069,5 +5069,35 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/da41150841cd3e88aa8d059232a0a1eb/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-09T20:50:29.436Z"
+  },
+  {
+    "id": "4972000162877",
+    "slug": "4972000162877",
+    "title": "Queen【期間限定無料】 1",
+    "author": "小田原みづえ",
+    "seriesName": "Queen【期間限定無料】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ファンタジー",
+      "おすすめ"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4200/2000021384200.jpg?_ex=200x200",
+    "description": "※2026年8月19日までの期間限定無料お試し版です。2026年8月20日以降はご利用できなくなります。【買い逃してない？　集英社準新刊一挙試し読みキャンペーン!!!】身分を隠して生きる元王女クィンの願いは、地味に目立たず天命を全うすること。「誰も信じず、誰も愛さない」と心に決めているけど、王侯貴族専門の公安捜査官オズノルドに出会ったことから運命が…",
+    "aiIntro": "Queen【期間限定無料】 1（小田原みづえ）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。",
+    "readerTypes": [
+      "異世界ファンタジーが好きな人",
+      "独自の世界観や爽快な展開を楽しみたい人",
+      "注目の漫画・ラノベをチェックしたい人"
+    ],
+    "price": 0,
+    "salesDate": "2026年08月10日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F09fb4f6ff4e63c50b8962ab535b99866%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F09fb4f6ff4e63c50b8962ab535b99866%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/09fb4f6ff4e63c50b8962ab535b99866/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-09T22:48:09.244Z"
   }
 ]
