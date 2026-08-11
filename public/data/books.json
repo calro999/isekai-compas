@@ -5474,5 +5474,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/34702e20faf43fc5999f7f2c0dac8263/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-11T05:21:00.531Z"
+  },
+  {
+    "id": "4331169900307",
+    "slug": "4331169900307",
+    "title": "フロンティアダイアリー　〜元貴族の異世界辺境生活日記　１【期間限定無料】",
+    "author": "阿部花次郎/鬼ノ城　ミヤ/狂ｚｉｐ",
+    "seriesName": "フロンティアダイアリー　〜元貴族の異世界辺境生活日記【期間限定無料】20260820まで",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界ファンタジー",
+      "追放系",
+      "スローライフ",
+      "開拓物語",
+      "町づくり",
+      "宿場町",
+      "エルフ",
+      "猫人"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/8691/2000021228691.jpg?_ex=200x200",
+    "description": "【追放された元貴族が、辺境で第二の人生を切り拓く！】森の奥深く、忘れ去られた宿場町で新たな生活を始めたサファテ。エルフのエルデナ、猫人のウーニャをはじめとする個性豊かな仲間たちと共に、荒れ果てた土地を豊かなフロンティアへと変貌させていく。復讐劇ではない、地に足の着いた開拓の日々。様々な人々が集い、絆を育み、賑やかなコミュニティが築かれていく過程を丁…",
+    "aiIntro": "追放された元貴族サファテが、辺境の森で新たな人生をスタート。エルフのエルデナ、猫人のウーニャらと共に、荒れた土地をゼロから開拓し、活気ある宿場町を築き上げる。復讐ではなく、開拓と人々の温かい交流に焦点を当てた、心癒される異世界スローライフファンタジー。",
+    "readerTypes": [
+      "追放された主人公が復讐ではなく、辺境で「第二の人生」を切り拓く物語に心惹かれる方。",
+      "異世界でゼロから町やコミュニティを育んでいく、壮大な「開拓スローライフ」を体験したい方。",
+      "エルフのエルデナや猫人のウーニャといった個性豊かな仲間たちとの、心温まる交流や日常描写に「癒やし」を求める方。"
+    ],
+    "price": 0,
+    "salesDate": "2026年08月07日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Ff6d99de262af32c9a2a79abbdfbb947c%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Ff6d99de262af32c9a2a79abbdfbb947c%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/f6d99de262af32c9a2a79abbdfbb947c/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-11T07:34:25.832Z"
   }
 ]
