@@ -5734,5 +5734,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/c0dc22b30aea336eaed11005ed659757/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-12T21:01:22.955Z"
+  },
+  {
+    "id": "9787301349106",
+    "slug": "9787301349106",
+    "title": "中华文化与现代世界ーー新文化运动一百年",
+    "author": "北京大学社会科学部",
+    "seriesName": "",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "新文化運動",
+      "中国近代史",
+      "思想史",
+      "科学と人文",
+      "社会変革",
+      "北京大学",
+      "『新青年』",
+      "伝統と革新"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/2235/2000021452235.jpg?_ex=200x200",
+    "description": "北京大学社会科学部が紐解く、新文化運動百年の軌跡。科学と人文、歴史と現実、自由と秩序という三つの核心テーマを軸に、近代中国の精神的変革を深く掘り下げます。『新青年』創刊がもたらした文化の潮流、伝統的礼教と現代秩序の対話、そして科学技術が社会に与えた影響まで、多角的な視点からその深遠な影響を分析。現代中国を形作った思想の源流を辿る、知的好奇心を刺激す…",
+    "aiIntro": "もしあなたが、異世界転生したかのように激動する近代中国の知のフロンティアを体験したいなら、本書は必読です。新文化運動が巻き起こした「科学」と「人文」の嵐、伝統と革新の狭間で揺れ動いた人々の思想。まるで壮大な歴史ドラマを読み解くように、現代中国の根幹をなす精神の源流へと誘います。知的好奇心を刺激する、まさに「文化の異世界冒険」へ出発しましょう。",
+    "readerTypes": [
+      "現代中国の思想的背景に興味を持つ知的好奇心旺盛な読者",
+      "歴史上の大転換期における文化と社会の相互作用を深く考察したい研究者や学生",
+      "科学と人文の対立と調和、個人の自由と社会秩序のバランスといった普遍的テーマに関心がある読者"
+    ],
+    "price": 4670,
+    "salesDate": "2026年08月06日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd3f9138c5edb3d648226a6d0b63e10e2%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fd3f9138c5edb3d648226a6d0b63e10e2%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/d3f9138c5edb3d648226a6d0b63e10e2/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-12T22:59:06.227Z"
   }
 ]
