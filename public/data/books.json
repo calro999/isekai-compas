@@ -6599,5 +6599,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/8f918023aef5386ca834d57bc3f3eb3f/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-15T04:44:59.844Z"
+  },
+  {
+    "id": "4310000903690",
+    "slug": "4310000903690",
+    "title": "独身貴族は異世界を謳歌する　〜結婚しない男の優雅なおひとりさまライフ〜（８）",
+    "author": "駒鳥ひわ/錬金王/三登いつき",
+    "seriesName": "独身貴族は異世界を謳歌する　〜結婚しない男の優雅なおひとりさまライフ〜",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "独身貴族",
+      "異世界スローライフ",
+      "おひとりさま",
+      "グルメ",
+      "コメディ",
+      "写真",
+      "喫茶店",
+      "貴族"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/8806/2000021418806.jpg?_ex=200x200",
+    "description": "ジルクは念願の「生ハムの原木」を手にし、優雅な晩酌を満喫。出資したブレンド伯爵の喫茶店も無事オープンし、おひとりさまライフは順風満帆のはずだった。しかし、趣味で撮影した写真がフォトナー子爵の目に留まり、王都での写真展開催が決定。趣味の充実が思わぬ騒動を巻き起こす、大忙しの異世界コメディ第8巻。",
+    "aiIntro": "独身貴族ジルクの優雅な異世界おひとりさまライフ、第8巻では「趣味」がまさかの大騒動を巻き起こします。生ハムの原木を堪能し、ブレンド伯爵の喫茶店オープンに喜びを噛み締める彼が、写真展開催で王都の注目を集めることに。望まぬ名声と、それでもマイペースを貫くジルクの姿に、きっとあなたも癒されるはず。",
+    "readerTypes": [
+      "マイペースな主人公の日常系コメディで癒されたい読者",
+      "異世界でのグルメや趣味の追求に魅力を感じる読者",
+      "予期せぬ出来事でスローライフが掻き乱される展開が好きな読者"
+    ],
+    "price": 792,
+    "salesDate": "2026年08月07日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fcdd49d268df332cbae7e8af7c8857d0a%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fcdd49d268df332cbae7e8af7c8857d0a%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/cdd49d268df332cbae7e8af7c8857d0a/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-15T06:55:55.325Z"
   }
 ]
