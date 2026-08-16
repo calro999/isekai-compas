@@ -7029,5 +7029,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/85dede632c6f399795e06b4ae593ea9b/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-16T06:58:07.479Z"
+  },
+  {
+    "id": "7275000904172",
+    "slug": "7275000904172",
+    "title": "自閉スペクトラム症者が小説をめぐって語りあう",
+    "author": "横道誠",
+    "seriesName": "自閉スペクトラム症者が小説をめぐって語りあう",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "自閉スペクトラム症",
+      "ASD",
+      "発達障害",
+      "当事者研究",
+      "文学",
+      "対話",
+      "横道誠",
+      "多様性"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/8494/2000021428494.jpg?_ex=200x200",
+    "description": "【横道誠氏企画】自閉スペクトラム症（ASD）当事者たちが、文学作品を媒介にその内面世界と豊かな想像力を解き放つ、画期的な対話の記録。定型発達者には見えにくい、ASD特有の多様な認知と他者理解の形を、当事者自身の言葉で深く探求します。文学が架け橋となり、共感と新たな発見が生まれる感動のプロセスを追体験。認知の多様性を理解し、共生社会への一歩を踏み出す…",
+    "aiIntro": "自閉スペクトラム症者が小説をめぐって語りあう（横道誠）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。",
+    "readerTypes": [
+      "自閉スペクトラム症（ASD）当事者のリアルな声と、その豊かな内面世界、独自の思考プロセスを深く理解したいと願う方。",
+      "文学が他者理解や共感形成に果たす役割、そして認知の多様性が織りなす新たなコミュニケーションの可能性を探求したい研究者、教育者、医療従事者。",
+      "定型発達者の視点だけでは捉えきれない、多様な想像力と共感の形に触れ、共生社会への理解を深めたいと願うすべての方。"
+    ],
+    "price": 2200,
+    "salesDate": "2026年08月07日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fe7c1b97c30f0380e9878bc730987d18e%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fe7c1b97c30f0380e9878bc730987d18e%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/e7c1b97c30f0380e9878bc730987d18e/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-16T08:45:59.726Z"
   }
 ]
