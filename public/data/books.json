@@ -8404,5 +8404,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/a777030d4f9935cfb9f71dd2a164907a/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-20T20:44:03.559Z"
+  },
+  {
+    "id": "7328131367001",
+    "slug": "7328131367001",
+    "title": "カミヨミ 1巻【無料お試し版】",
+    "author": "柴田亜美",
+    "seriesName": "カミヨミ",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "カミヨミ",
+      "柴田亜美",
+      "和風伝奇",
+      "ミステリー",
+      "ホラー",
+      "ダークファンタジー",
+      "少年漫画",
+      "超常現象"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1346/2000021381346.jpg?_ex=200x200",
+    "description": "柴田亜美が贈る、戦慄の和風伝奇ミステリー『カミヨミ』。平和な小村を襲った凄惨な全滅殺人事件を皮切りに、少年たちは不可解な“怪し”と“謎”の深淵へと引きずり込まれていく。彼らが追うのは、この世の理を越えた“禁忌の存在”の正体。和風ホラーとダークファンタジーが交錯する、予測不能な超常現象ミステリーの幕開けを、今、体験せよ。",
+    "aiIntro": "伝説の漫画家・柴田亜美が贈る、衝撃の和風伝奇ミステリー『カミヨミ』。少年たちの運命を揺るがす壮大な物語が、独特の筆致で紡がれます。謎が謎を呼ぶ展開、そして心に深く刻まれる“怪し”が、読者を禁忌の世界へと誘うでしょう。今すぐ無料お試し版で、そのミステリアスな深淵に足を踏み入れてみませんか？一度読めば、きっとその世界観から抜け出せなくなるはずです。",
+    "readerTypes": [
+      "柴田亜美作品の独特な世界観と筆致を愛するファン",
+      "和風伝奇やダークファンタジーの奥深い物語に没頭したい読者",
+      "少年たちが不可解な事件や怪異に挑むミステリー展開が好きな方"
+    ],
+    "price": 0,
+    "salesDate": "2026年08月01日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F750412de476c33f28c199936aaa2f11d%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F750412de476c33f28c199936aaa2f11d%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/750412de476c33f28c199936aaa2f11d/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-20T22:43:12.361Z"
   }
 ]
