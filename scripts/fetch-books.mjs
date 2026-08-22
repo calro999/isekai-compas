@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import crypto from 'node:crypto'
 import { fileURLToPath } from 'node:url'
+import { buildFeaturePages } from './generate-features.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dataPath = path.join(root, 'public/data/books.json')
@@ -319,7 +320,7 @@ ${books.map(b => `| **${escapeXml(b.title)}** | ${escapeXml(b.author)} | ${escap
 const escapeXml = value => String(value).replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[c]))
 
 async function clearGeneratedPages() {
-  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new', 'features', 'sitemap']) {
+  for (const dir of ['works', 'compare', 'tags', 'authors', 'series', 'new', 'sitemap']) {
     await fs.rm(path.join(root, 'public', dir), { recursive: true, force: true })
   }
 }
@@ -674,6 +675,103 @@ async function fetchSeriesVolumes(book) {
   }
 }
 
+function getWorkSpecificFaqs(book) {
+  const faqs = []
+  const title = book.title || ''
+
+  if (title.includes('無職転生')) {
+    faqs.push({
+      q: '『無職転生』の結末はハッピーエンドですか？',
+      a: 'はい、大団円の感動的なハッピーエンドを迎えます。主人公ルーデウスは愛する家族や仲間たちに見守られながら天寿を全うし、前世の後悔を完全に乗り越えて生涯を全うします。'
+    })
+    faqs.push({
+      q: '作者「理不尽な孫の手」先生の性別やプロフィールは？',
+      a: '原作者の理不尽な孫の手先生は男性の作家です。「小説家になろう」で累計ランキング1位を長年保持し、圧倒的な構成力と人間ドラマで世界的なヒットを記録しました。'
+    })
+    faqs.push({
+      q: '『無職転生』は無料で試し読みできますか？',
+      a: 'はい、楽天Koboなどの電子書籍ストアにて第1巻や各巻の冒頭サンプルを無料で試し読み可能です。'
+    })
+  } else if (title.includes('転生したらスライムだった件') || title.includes('転スラ')) {
+    faqs.push({
+      q: 'スピンオフ『転スラ日記』と本編の作画・絵の違いは？',
+      a: '本編コミカライズは川上泰樹先生が担当し重厚で迫力あるバトルや美麗な世界観を描くのに対し、『転スラ日記』は柴先生が作画を担当し、テンペストの住人たちの日常やギャグを柔らかく可愛らしいタッチで描いています。'
+    })
+    faqs.push({
+      q: '『転スラ』の書籍版とWeb版の違いや評価は？',
+      a: 'Web版をベースにしつつ、書籍版では中盤（ヒナタ戦や開国祭）以降に大幅なストーリーの加筆・新キャラクターや新勢力が多数追加され、より洗練されたプロットとして高い評価を得ています。'
+    })
+  } else if (title.includes('とんでもスキルで異世界放浪メシ')) {
+    faqs.push({
+      q: '『とんでもスキルで異世界放浪メシ』の試し読みや料理の見どころは？',
+      a: '楽天Kobo等で第1巻冒頭を無料試し読みできます。オーク肉を使った生姜焼きやカツ丼、ロックバードの唐揚げなど、作中に出てくる肉料理の圧倒的な飯テロ描写が最大の魅力です。'
+    })
+    faqs.push({
+      q: '作中での奴隷解放や魔王・従魔たちの活躍は？',
+      a: '主人公ムコーダはフェルやスイ、ドラちゃんといった最強従魔たちに守られながら、奴隷商人から保護した仲間たちやダンジョン攻略を完全ストレスフリーで進めていきます。'
+    })
+  } else if (title.includes('精魂貯蔵者') || title.includes('リビドータンカー')) {
+    faqs.push({
+      q: '『精魂貯蔵者（リビドータンカー）』のあらすじと見どころは？',
+      a: '蘭田夢先生が描く作品で、美少女幽霊たちと出会った主人公が「精魂（リビドー）」をエネルギーに変える固有能力を駆使して活躍する、ちょっとエッチで痛快な異世界アドベンチャーです。'
+    })
+    faqs.push({
+      q: '『精魂貯蔵者』は全巻無料試し読みできますか？',
+      a: 'はい、楽天Kobo等の電子書籍ストアで第1巻や各巻の試し読み・電子単行本が配信されています。'
+    })
+  } else if (title.includes('替え玉聖女')) {
+    faqs.push({
+      q: '『替え玉聖女は王子殿下の呪いを愛で癒す』のネタバレ見どころは？',
+      a: '西雲ササメ先生原作のなろう発人気作。身代わりとして呪われた冷酷王子の元へ嫁いだ聖女エルサが、献身的な愛で王子の呪いを癒やし、やがて王子から狂おしいほどの溺愛を注がれる王道ハッピーエンドが描かれます。'
+    })
+    faqs.push({
+      q: '原作小説（なろう版）とコミカライズ版の違いは？',
+      a: 'コミカライズ版では盛元かな先生の美麗な作画によって王子の表情の変化や胸キュンシーンがより情感豊かに描かれています。'
+    })
+  } else if (title.includes('治癒魔法の間違った使い方')) {
+    faqs.push({
+      q: '『治癒魔法の間違った使い方』の強さランキングや主要キャラの戦闘力は？',
+      a: '救命団長ローズが圧倒的な戦闘力とカリスマを誇り、ウサトは地獄の訓練と治癒超回復で素手で魔物を粉砕する怪力ヒーラーへと成長します。魔王軍幹部や黒騎士との死闘も見どころです。'
+    })
+  } else if (title.includes('デスマーチからはじまる異世界狂想曲')) {
+    faqs.push({
+      q: '『デスマ』のサトゥーの強さランキング・チート能力の詳細は？',
+      a: '主人公サトゥーは初期の「流星雨」でレベル310に到達し、神殺しの火力と無限のアイテム収納を持つ作中最上位のチートスペックを誇ります。'
+    })
+  } else if (title.includes('終末のハーレム ファンタジア')) {
+    faqs.push({
+      q: '『終末のハーレム ファンタジア』と本編の違いは？',
+      a: '現代SFサスペンスの無印本編に対し、「ファンタジア」は中世ダークファンタジーの剣と魔法の世界を舞台に、国家間戦争と竜を巡る戦いを描いた骨太な戦記ハーレム作品です。'
+    })
+  } else if (title.includes('蘇り令嬢')) {
+    faqs.push({
+      q: '『蘇り令嬢』の186日間の復讐劇のネタバレ・見どころは？',
+      a: '毒殺された令嬢が186日限定の命で墓場から蘇り、婚約者や裏切り者たちを徹底的な頭脳戦で社会的・精神的に破滅へと追い詰める戦慄のざまあ劇が展開されます。'
+    })
+  } else if (title.includes('転生令嬢は旅する編纂者')) {
+    faqs.push({
+      q: '『転生令嬢は旅する編纂者』の物語の魅力と見どころは？',
+      a: '采火先生による知的トラベルファンタジー。お茶会で見つけた「サンドイッチ」を皮切りに、過去の転生者たちが異世界に遺した文化や料理の痕跡を外交官フェリシアが記録する情緒豊かな物語です。'
+    })
+  }
+
+  // 共通の基本FAQ
+  faqs.push({
+    q: `『${book.title}』は無料で読む・試し読みすることができますか？`,
+    a: `はい、楽天Koboなどの電子書籍ストアにて第1巻や各巻の冒頭を無料で試し読みが可能です。`
+  })
+  faqs.push({
+    q: `『${book.title}』の単行本・最新刊の巻数や発売日は？`,
+    a: `最新巻は ${book.salesDate || '現在配信中'} です。本ページの全巻コレクションより最新刊を含む全巻リストをご確認いただけます。`
+  })
+  faqs.push({
+    q: `『${book.title}』のあらすじや見どころは？`,
+    a: `${book.description}`
+  })
+
+  return faqs
+}
+
 async function writeWorkPage(book, books) {
   const workDir = path.join(root, 'public/works', book.slug)
   await fs.mkdir(workDir, { recursive: true })
@@ -681,37 +779,24 @@ async function writeWorkPage(book, books) {
   const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Book', name: book.title, author: { '@type': 'Person', name: book.author }, image: book.cover, description: book.description, datePublished: book.salesDate, offers: { '@type': 'Offer', url: book.affiliateUrl, priceCurrency: 'JPY', price: book.price } })
   const breadcrumbLd = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'トップ', item: siteUrl }, { '@type': 'ListItem', position: 2, name: '作品一覧', item: `${siteUrl}/works/` }, { '@type': 'ListItem', position: 3, name: book.title, item: `${siteUrl}/works/${book.slug}/` } ] })
   
-  // FAQPage 構造化データ（JSON-LD）で「無料」「最新刊発売日」「全巻」などの検索結果スニペット露出を強化
+  const specificFaqs = getWorkSpecificFaqs(book)
   const faqLd = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `『${book.title}』は無料で読む・試し読みすることができますか？`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `はい、楽天Koboなどの電子書籍ストアにて第1巻や各巻の冒頭を無料で試し読みが可能です。`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `『${book.title}』の単行本・最新刊の巻数は？`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `現在配信されている単行本・最新巻の情報および全巻リストを本ページで一覧掲載しています。`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `『${book.title}』のあらすじや見どころは？`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `${book.description}`
-        }
+    mainEntity: specificFaqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a
       }
-    ]
+    }))
   })
+
+  const faqHtml = specificFaqs.map(f => `
+    <h3 style="font-size:15px; margin:16px 0 6px; color:#17221f;">Q. ${escapeXml(f.q)}</h3>
+    <p style="font-size:14px; margin:0 0 12px; color:#3d4841; line-height:1.7;">A. ${escapeXml(f.a)}</p>
+  `).join('')
 
   const tags = (book.tags || []).map(tag => `<a href="/tags/${slugify(tag)}/">#${escapeXml(tag)}</a>`).join(' ')
   const readers = (book.readerTypes || []).map(type => `<li>${escapeXml(type)}</li>`).join('')
@@ -783,7 +868,7 @@ async function writeWorkPage(book, books) {
     </div>
   `).join('')
 
-  const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}</title><meta name="description" content="${escapeXml(book.description)} 第1巻から最新刊までの全巻表紙一覧、アニメ・OVA・外伝、最新刊の出版予定日まとめ。無料で試し読みも可能です。"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="${siteUrl}/works/${book.slug}/"><meta property="og:title" content="${escapeXml(title)}"><meta property="og:description" content="${escapeXml(book.description)}"><meta property="og:image" content="${escapeXml(book.cover)}"><script type="application/ld+json">${jsonLd}</script><script type="application/ld+json">${breadcrumbLd}</script><script type="application/ld+json">${volumeListLd}</script><script type="application/ld+json">${faqLd}</script><style>${commonStyle}.cover-main{width:200px;height:280px;object-fit:cover;float:right;margin:0 0 24px 36px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}h2{font-family:serif;margin-top:46px;border-left:4px solid #d6a24a;padding-left:12px;font-size:22px}.cta{display:inline-block;background:#17221f;color:#fff;padding:14px 26px;border-radius:6px;font-weight:bold;margin-top:16px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.15)}.cta:hover{background:#d6a24a;color:#17221f;text-decoration:none}.pub-status-box{background:#17221f;color:#fff;padding:24px;border-radius:8px;margin:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.pub-status-main h3{margin:0;font-size:18px;color:#d6a24a}.pub-status-main p{margin:6px 0 0;font-size:14px;color:#cfd8d3}.vol-shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:24px 0}.vol-card{background:#fff;border:1px solid #e1e6de;border-radius:8px;padding:12px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s,box-shadow 0.2s}.vol-card:hover{transform:translateY(-4px);box-shadow:0 6px 16px rgba(0,0,0,0.08);border-color:#d6a24a}.vol-cover-wrap{position:relative;width:100%;height:170px;margin-bottom:8px}.vol-cover-wrap img{width:100%;height:100%;object-fit:cover;border-radius:4px}.vol-name{font-size:12px;font-weight:bold;color:#17221f;line-height:1.3;margin-bottom:4px;height:32px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.vol-date{font-size:10px;color:#5f6c62;margin-bottom:8px}.vol-buy-btn{font-size:11px;background:#17221f;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;width:100%;text-decoration:none;display:block}.vol-buy-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.ai-summary{background:#f9fbf9;border:1px solid #e1e6de;padding:16px;border-radius:6px;margin:16px 0;font-size:13px;color:#3d4841;line-height:1.6}.first-story-box{background:#f0f4f1;padding:24px;border-radius:8px;border:1px solid #c8d4c5;margin:24px 0;line-height:1.9;color:#233028}.highlights-box{background:#fff;padding:24px;border-radius:8px;border:1px solid #d9ddd3;margin:24px 0}.review-box{background:#f9f8f3;padding:24px;border-radius:8px;border-left:4px solid #17221f;margin:24px 0;line-height:1.9;color:#2c3831}.related-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}.related-card-item{background:#f4f6f2;padding:12px 16px;border-radius:8px;border:1px solid #e1e6de;display:flex;align-items:center;justify-content:space-between;transition:transform 0.2s,box-shadow 0.2s}.related-card-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.06);background:#ffffff}.related-info{display:flex;align-items:center;gap:12px}.related-thumb{width:46px;height:64px;object-fit:cover;border-radius:4px}.related-title{font-weight:bold;font-size:14px;color:#17221f;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}.related-meta{font-size:11px;color:#5f6c62;margin-top:2px}.related-btn{font-size:12px;background:#17221f;color:#fff;padding:5px 10px;border-radius:4px;font-weight:bold;white-space:nowrap}.related-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.compare-nav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:16px}.compare-nav-card{background:#fff;padding:16px;border-radius:8px;border:1px solid #e1e6de;display:flex;flex-direction:column;gap:12px}.compare-thumbs{display:flex;align-items:center;justify-content:center;gap:12px;background:#f4f6f2;padding:10px;border-radius:6px}.compare-thumbs img{width:50px;height:70px;object-fit:cover;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}.vs-badge{font-size:12px;font-weight:bold;color:#d6a24a;background:#17221f;padding:3px 7px;border-radius:50%}.compare-card-title{font-size:13px;font-weight:bold;color:#17221f;line-height:1.4}.compare-card-title small{color:#5f6c62;font-weight:normal}.compare-card-btn{display:block;text-align:center;background:#17221f;color:#fff;padding:8px 12px;border-radius:5px;font-size:12px;font-weight:bold;margin-top:auto;text-decoration:none}.compare-card-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.tags a{display:inline-block;background:#e2e8de;padding:6px 12px;margin:4px 4px 4px 0;border-radius:4px;font-size:13px;text-decoration:none}@media(max-width:600px){.cover-main{width:130px;height:180px;margin-left:16px}.vol-shelf-grid{grid-template-columns:repeat(2,1fr);gap:10px}.work-detail-main{display:flex;flex-direction:column}.wd-vols{order:3 !important;margin-top:32px}.wd-rest{order:2 !important}}</style>${commonGaHead}</head><body><div data-nosnippet>${renderHeader('/works/')}</div><main class="work-detail-main" itemscope itemtype="https://schema.org/Book"><article><section class="wd-top" aria-label="作品基本情報" style="order:1"><nav class="crumb" aria-label="Breadcrumb"><a href="/">トップ</a>　/　<a href="/works/">作品一覧</a>　/　<span aria-current="page">${escapeXml(book.title)}</span></nav><img class="cover-main" src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙" fetchpriority="high" decoding="async" width="200" height="280"><div class="eyebrow">WORK GUIDE & REVIEW</div><h1 itemprop="name">${escapeXml(book.title)}</h1><p>作者：<a href="/authors/${slugify(book.author)}/"><span itemprop="author">${escapeXml(book.author)}</span></a>　｜　<span itemprop="genre">${escapeXml(book.genre)}</span>　｜　最新発売日：${escapeXml(book.salesDate)}</p><div class="ai-summary"><strong>💡 3分でわかる！作品のあらすじ・見どころ要約</strong><ul style="margin:4px 0 0;padding-left:20px;">${geoSummary}</ul></div><p style="font-size:16px;line-height:1.9;color:#3d4841;" itemprop="description">${escapeXml(book.aiIntro || book.description)}</p><a class="cta" href="${escapeXml(book.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">【無料試し読みあり】1巻を楽天Koboで購入 ↗</a><div class="pub-status-box" data-nosnippet><div class="pub-status-main"><h3>📢 最新刊・次巻の出版予定日ステータス</h3><p>最新巻：絶賛配信中！ / 次巻（続巻）：<b>2026年秋頃出版予定（公式発表待ち）</b></p></div><a style="background:#d6a24a;color:#17221f;padding:10px 18px;border-radius:4px;font-weight:bold;text-decoration:none;font-size:13px;" href="${escapeXml(book.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">最新刊の予約・購入 ↗</a></div></section><section class="wd-vols" aria-label="全巻コレクション" style="order:2"><h2>📖 全巻・外伝単行本コレクション（タップで各巻の無料試し読みへ）</h2><p style="font-size:14px;color:var(--text-muted);">第1巻から最新刊、外伝・SS短編集までの表紙コレクションです。画像やボタンをタップすると各巻の楽天Kobo電子書籍ページへ移動します。</p><div class="vol-shelf-grid">${volumeCards}</div>${splitVolumeSection}</section><section class="wd-rest" aria-label="作品詳細・あらすじ" style="order:3"><h2>📺 アニメ化・OVA・メディア化展開データ</h2><div style="background:#fff;padding:20px;border-radius:8px;border:1px solid #d9ddd3;margin:16px 0;"><p style="margin:0;font-size:14px;line-height:1.8;">・<b>TVアニメ化展開</b>：${escapeXml(book.animeAdaptation || 'アニメ化作品・特大ヒット放送')}<br>・<b>メディアミックス</b>：コミカライズ（漫画版）、CDドラマ、公式外伝SS短編集 展開中<br>・<b>イラスト美術</b>：${escapeXml(book.illustStyle || '美麗画集・挿絵')}</p></div>${highlightsList ? `<h2>✦ ここが面白い！作品の3つの魅力</h2><div class="highlights-box"><ul style="padding-left:18px;margin:0;list-style:none;">${highlightsList}</ul></div>` : ''}${book.firstVolumeStory ? `<h2>📖 第1話からの基本ストーリー・なろう系世界観の流れ</h2><div class="first-story-box"><p style="margin:0;font-size:15px;line-height:1.9;">${escapeXml(book.firstVolumeStory)}</p></div>` : ''}<h2>💡 ${escapeXml(book.title)} のあらすじ・見どころ概要</h2><p style="line-height:1.9;font-size:15px;">${escapeXml(book.description)}</p>${book.review ? `<h2>📝 作品の考察・深掘り解説レビュー</h2><div class="review-box"><p style="margin:0;">${escapeXml(book.review)}</p></div>` : ''}<h2>❓ よくある質問（FAQ）</h2><div style="background:#fff; padding:20px; border-radius:8px; border:1px solid #e1e6de; margin:20px 0;"><h3 style="font-size:15px; margin:0 0 6px; color:#17221f;">Q. 『${escapeXml(book.title)}』は無料で試し読みできますか？</h3><p style="font-size:14px; margin:0 0 16px; color:#5f6c62;">A. はい、楽天Koboストア等で第1巻や各巻冒頭を無料で試し読みが可能です。</p><h3 style="font-size:15px; margin:0 0 6px; color:#17221f;">Q. 最新刊の発売日や全巻の単行本巻数は？</h3><p style="font-size:14px; margin:0; color:#5f6c62;">A. 本ページ上部の全巻コレクションより最新刊を含む全巻リストをご確認いただけます。</p></div><h2>🎯 こんな読者・気分におすすめ（なろう系・異世界ファン向け）</h2><ul style="line-height:1.9;padding-left:20px;">${readers}</ul><h2>🏷️ 関連テーマ・タグ（類似作品検索）</h2><div class="tags">${tags}</div></section></article><aside class="wd-bottom" aria-label="関連・比較作品" style="order:4" data-nosnippet><h2>📚 似ている作品・関連おすすめ漫画・ラノベ</h2><ul class="related-list">${relatedCards || '<li>関連作品を準備中です。</li>'}</ul><h2>⚔️ 異世界作品同士の比較</h2><div class="compare-nav-grid">${compareCards || '<a href="/compare/">比較ページ一覧を見る</a>'}</div></aside></main><div data-nosnippet>${renderFooter()}</div></body></html>`
+  const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(title)}</title><meta name="description" content="${escapeXml(book.description)} 第1巻から最新刊までの全巻表紙一覧、アニメ・OVA・外伝、最新刊の出版予定日まとめ。無料で試し読みも可能です。"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="${siteUrl}/works/${book.slug}/"><meta property="og:title" content="${escapeXml(title)}"><meta property="og:description" content="${escapeXml(book.description)}"><meta property="og:image" content="${escapeXml(book.cover)}"><script type="application/ld+json">${jsonLd}</script><script type="application/ld+json">${breadcrumbLd}</script><script type="application/ld+json">${volumeListLd}</script><script type="application/ld+json">${faqLd}</script><style>${commonStyle}.cover-main{width:200px;height:280px;object-fit:cover;float:right;margin:0 0 24px 36px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.12)}h2{font-family:serif;margin-top:46px;border-left:4px solid #d6a24a;padding-left:12px;font-size:22px}.cta{display:inline-block;background:#17221f;color:#fff;padding:14px 26px;border-radius:6px;font-weight:bold;margin-top:16px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.15)}.cta:hover{background:#d6a24a;color:#17221f;text-decoration:none}.pub-status-box{background:#17221f;color:#fff;padding:24px;border-radius:8px;margin:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.pub-status-main h3{margin:0;font-size:18px;color:#d6a24a}.pub-status-main p{margin:6px 0 0;font-size:14px;color:#cfd8d3}.vol-shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px;margin:24px 0}.vol-card{background:#fff;border:1px solid #e1e6de;border-radius:8px;padding:12px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform 0.2s,box-shadow 0.2s}.vol-card:hover{transform:translateY(-4px);box-shadow:0 6px 16px rgba(0,0,0,0.08);border-color:#d6a24a}.vol-cover-wrap{position:relative;width:100%;height:170px;margin-bottom:8px}.vol-cover-wrap img{width:100%;height:100%;object-fit:cover;border-radius:4px}.vol-name{font-size:12px;font-weight:bold;color:#17221f;line-height:1.3;margin-bottom:4px;height:32px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.vol-date{font-size:10px;color:#5f6c62;margin-bottom:8px}.vol-buy-btn{font-size:11px;background:#17221f;color:#fff;padding:6px 10px;border-radius:4px;font-weight:bold;width:100%;text-decoration:none;display:block}.vol-buy-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.ai-summary{background:#f9fbf9;border:1px solid #e1e6de;padding:16px;border-radius:6px;margin:16px 0;font-size:13px;color:#3d4841;line-height:1.6}.first-story-box{background:#f0f4f1;padding:24px;border-radius:8px;border:1px solid #c8d4c5;margin:24px 0;line-height:1.9;color:#233028}.highlights-box{background:#fff;padding:24px;border-radius:8px;border:1px solid #d9ddd3;margin:24px 0}.review-box{background:#f9f8f3;padding:24px;border-radius:8px;border-left:4px solid #17221f;margin:24px 0;line-height:1.9;color:#2c3831}.related-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:16px}.related-card-item{background:#f4f6f2;padding:12px 16px;border-radius:8px;border:1px solid #e1e6de;display:flex;align-items:center;justify-content:space-between;transition:transform 0.2s,box-shadow 0.2s}.related-card-item:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.06);background:#ffffff}.related-info{display:flex;align-items:center;gap:12px}.related-thumb{width:46px;height:64px;object-fit:cover;border-radius:4px}.related-title{font-weight:bold;font-size:14px;color:#17221f;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}.related-meta{font-size:11px;color:#5f6c62;margin-top:2px}.related-btn{font-size:12px;background:#17221f;color:#fff;padding:5px 10px;border-radius:4px;font-weight:bold;white-space:nowrap}.related-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.compare-nav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:16px}.compare-nav-card{background:#fff;padding:16px;border-radius:8px;border:1px solid #e1e6de;display:flex;flex-direction:column;gap:12px}.compare-thumbs{display:flex;align-items:center;justify-content:center;gap:12px;background:#f4f6f2;padding:10px;border-radius:6px}.compare-thumbs img{width:50px;height:70px;object-fit:cover;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.1)}.vs-badge{font-size:12px;font-weight:bold;color:#d6a24a;background:#17221f;padding:3px 7px;border-radius:50%}.compare-card-title{font-size:13px;font-weight:bold;color:#17221f;line-height:1.4}.compare-card-title small{color:#5f6c62;font-weight:normal}.compare-card-btn{display:block;text-align:center;background:#17221f;color:#fff;padding:8px 12px;border-radius:5px;font-size:12px;font-weight:bold;margin-top:auto;text-decoration:none}.compare-card-btn:hover{background:#d6a24a;color:#17221f;text-decoration:none}.tags a{display:inline-block;background:#e2e8de;padding:6px 12px;margin:4px 4px 4px 0;border-radius:4px;font-size:13px;text-decoration:none}@media(max-width:600px){.cover-main{width:130px;height:180px;margin-left:16px}.vol-shelf-grid{grid-template-columns:repeat(2,1fr);gap:10px}.work-detail-main{display:flex;flex-direction:column}.wd-vols{order:3 !important;margin-top:32px}.wd-rest{order:2 !important}}</style>${commonGaHead}</head><body><div data-nosnippet>${renderHeader('/works/')}</div><main class="work-detail-main" itemscope itemtype="https://schema.org/Book"><article><section class="wd-top" aria-label="作品基本情報" style="order:1"><nav class="crumb" aria-label="Breadcrumb"><a href="/">トップ</a>　/　<a href="/works/">作品一覧</a>　/　<span aria-current="page">${escapeXml(book.title)}</span></nav><img class="cover-main" src="${escapeXml(book.cover)}" alt="${escapeXml(book.title)}の表紙" fetchpriority="high" decoding="async" width="200" height="280"><div class="eyebrow">WORK GUIDE & REVIEW</div><h1 itemprop="name">${escapeXml(book.title)}</h1><p>作者：<a href="/authors/${slugify(book.author)}/"><span itemprop="author">${escapeXml(book.author)}</span></a>　｜　<span itemprop="genre">${escapeXml(book.genre)}</span>　｜　最新発売日：${escapeXml(book.salesDate)}</p><div class="ai-summary"><strong>💡 3分でわかる！作品のあらすじ・見どころ要約</strong><ul style="margin:4px 0 0;padding-left:20px;">${geoSummary}</ul></div><p style="font-size:16px;line-height:1.9;color:#3d4841;" itemprop="description">${escapeXml(book.aiIntro || book.description)}</p><a class="cta" href="${escapeXml(book.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">【無料試し読みあり】1巻を楽天Koboで購入 ↗</a><div class="pub-status-box" data-nosnippet><div class="pub-status-main"><h3>📢 最新刊・次巻の出版予定日ステータス</h3><p>最新巻：絶賛配信中！ / 次巻（続巻）：<b>2026年秋頃出版予定（公式発表待ち）</b></p></div><a style="background:#d6a24a;color:#17221f;padding:10px 18px;border-radius:4px;font-weight:bold;text-decoration:none;font-size:13px;" href="${escapeXml(book.affiliateUrl)}" target="_blank" rel="sponsored nofollow noopener">最新刊の予約・購入 ↗</a></div></section><section class="wd-vols" aria-label="全巻コレクション" style="order:2"><h2>📖 全巻・外伝単行本コレクション（タップで各巻の無料試し読みへ）</h2><p style="font-size:14px;color:var(--text-muted);">第1巻から最新刊、外伝・SS短編集までの表紙コレクションです。画像やボタンをタップすると各巻の楽天Kobo電子書籍ページへ移動します。</p><div class="vol-shelf-grid">${volumeCards}</div>${splitVolumeSection}</section><section class="wd-rest" aria-label="作品詳細・あらすじ" style="order:3"><h2>📺 アニメ化・OVA・メディア化展開データ</h2><div style="background:#fff;padding:20px;border-radius:8px;border:1px solid #d9ddd3;margin:16px 0;"><p style="margin:0;font-size:14px;line-height:1.8;">・<b>TVアニメ化展開</b>：${escapeXml(book.animeAdaptation || 'アニメ化作品・特大ヒット放送')}<br>・<b>メディアミックス</b>：コミカライズ（漫画版）、CDドラマ、公式外伝SS短編集 展開中<br>・<b>イラスト美術</b>：${escapeXml(book.illustStyle || '美麗画集・挿絵')}</p></div>${highlightsList ? `<h2>✦ ここが面白い！作品の3つの魅力</h2><div class="highlights-box"><ul style="padding-left:18px;margin:0;list-style:none;">${highlightsList}</ul></div>` : ''}${book.firstVolumeStory ? `<h2>📖 第1話からの基本ストーリー・なろう系世界観の流れ</h2><div class="first-story-box"><p style="margin:0;font-size:15px;line-height:1.9;">${escapeXml(book.firstVolumeStory)}</p></div>` : ''}<h2>💡 ${escapeXml(book.title)} のあらすじ・見どころ概要</h2><p style="line-height:1.9;font-size:15px;">${escapeXml(book.description)}</p>${book.review ? `<h2>📝 作品の考察・深掘り解説レビュー</h2><div class="review-box"><p style="margin:0;">${escapeXml(book.review)}</p></div>` : ''}<h2>❓ よくある質問（FAQ）</h2><div style="background:#fff; padding:20px; border-radius:8px; border:1px solid #e1e6de; margin:20px 0;">${faqHtml}</div><h2>🎯 こんな読者・気分におすすめ（なろう系・異世界ファン向け）</h2><ul style="line-height:1.9;padding-left:20px;">${readers}</ul><h2>🏷️ 関連テーマ・タグ（類似作品検索）</h2><div class="tags">${tags}</div></section></article><aside class="wd-bottom" aria-label="関連・比較作品" style="order:4" data-nosnippet><h2>📚 似ている作品・関連おすすめ漫画・ラノベ</h2><ul class="related-list">${relatedCards || '<li>関連作品を準備中です。</li>'}</ul><h2>⚔️ 異世界作品同士の比較</h2><div class="compare-nav-grid">${compareCards || '<a href="/compare/">比較ページ一覧を見る</a>'}</div></aside></main><div data-nosnippet>${renderFooter()}</div></body></html>`
   await fs.writeFile(path.join(workDir, 'index.html'), html)
 }
 
@@ -914,63 +999,11 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
     await write(`series/${slugify(series)}`, html)
   }
 
-  // 9. おすすめ特集（ハブ）ページ (/features/)
-  await writeFeaturePages(books)
+  // 9. おすすめ特集（ハブ＆10選詳細）ページ (/features/)
+  await buildFeaturePages()
 
   // 10. sitemap.xml生成
   await writeSitemap(books, getPairs(books), tagEntries, authorEntries, seriesEntries)
-}
-
-async function writeFeaturePages(books) {
-  const features = [
-    {
-      slug: 'musou',
-      title: '【圧倒的無双・爽快感】強すぎる主人公が気持ちいいおすすめ異世界作品 7選',
-      description: 'ストレスゼロで圧倒的なカタルシスを味わえる！チート能力や規格外の実力で敵をなぎ倒す無双系名作アニメ・漫画・ラノベを徹底厳選。',
-      matchKeys: ['無職転生', '転生したらスライム', '陰の実力者', 'オーバーロード', 'ありふれた職業', 'ゴブリンスレイヤー', '精霊幻想記']
-    },
-    {
-      slug: 'slowlife',
-      title: '【癒やし・スローライフ】異世界グルメとまったり日常を楽しむおすすめ作品 5選',
-      description: '殺伐としたバトルはひと休み。絶品異世界飯やのんびりスローライフで癒やされたい人向けの心温まる名作まとめ。',
-      matchKeys: ['とんでもスキル', '本好きの下剋上', '異世界おじさん', '異世界食堂', '八男って']
-    },
-    {
-      slug: 'brain',
-      title: '【頭脳戦・深み】世界観と伏線が緻密なおすすめ異世界作品 6選',
-      description: '単なる無双にとどまらない！考察が止まらない重厚な世界観と緻密な頭脳戦・心理戦が展開される傑作ラノベ・コミック。',
-      matchKeys: ['薬屋のひとりごと', 'Re：ゼロから始める', '乙女ゲームの破滅フラグ', 'ノーゲーム・ノーライフ', '蜘蛛ですが', '現実主義勇者']
-    },
-    {
-      slug: 'climb',
-      title: '【成り上がり・逆転】どん底・最弱から世界の頂点へ挑む作品 6選',
-      description: 'レベル1、職不遇、追放、どん底の境遇から、己の努力とアイデアで世界の頂点へ上り詰める熱血・逆転劇！',
-      matchKeys: ['俺、勇者じゃないですから', '盾の勇者', '治癒魔法の間違った使い方', 'デスマーチから', '異世界魔王', '魅力']
-    }
-  ]
-
-  const featureCards = features.map(f => `
-    <div class="cat-card" style="padding:24px;">
-      <span class="badge-tag" style="background:#d6a24a;color:#17221f;font-weight:bold;">SPECIAL FEATURE</span>
-      <h3 style="margin:12px 0;"><a href="/features/${f.slug}/">${escapeXml(f.title)}</a></h3>
-      <p style="font-size:14px;color:var(--text-muted);line-height:1.7;">${escapeXml(f.description)}</p>
-      <a class="card-btn" href="/features/${f.slug}/" style="display:inline-block;margin-top:12px;">特集を読む →</a>
-    </div>
-  `).join('')
-
-  const indexHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>異世界アニメ・漫画・ラノベおすすめ特集一覧｜異世界コンパス</title><meta name="description" content="爽快無双、スローライフ、頭脳戦、成り上がりなど気分に合わせた特化テーマ別おすすめ異世界作品まとめ。"><link rel="canonical" href="${siteUrl}/features/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/features/')}<main><div class="crumb"><a href="/">トップ</a>　/　特集一覧</div><div class="eyebrow">CURATED FEATURES</div><h1>異世界作品 おすすめ特化テーマ特集</h1><p class="lead">今の気分にぴったりな作品がすぐ見つかる！テーマ・属性別の厳選まとめ特集です。</p><div class="category-grid" style="grid-template-columns:1fr;gap:24px;">${featureCards}</div></main>${renderFooter()}</body></html>`
-  
-  await fs.mkdir(path.join(root, 'public/features'), { recursive: true })
-  await fs.writeFile(path.join(root, 'public/features/index.html'), indexHtml)
-
-  for (const f of features) {
-    const fBooks = books.filter(b => f.matchKeys.some(k => b.title.includes(k)))
-    const bookCards = fBooks.map(renderBookCard).join('')
-    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(f.title)}｜異世界コンパス</title><meta name="description" content="${escapeXml(f.description)}"><link rel="canonical" href="${siteUrl}/features/${f.slug}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/features/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/features/">特集一覧</a>　/　特集詳細</div><div class="eyebrow">RECOMMENDED SELECTION</div><h1>${escapeXml(f.title)}</h1><p class="lead" style="font-size:16px;background:#fff;padding:20px;border-left:4px solid #d6a24a;border-radius:4px;color:#233028;">${escapeXml(f.description)}</p><div class="book-cards-grid">${bookCards}</div></main>${renderFooter()}</body></html>`
-    const dir = path.join(root, 'public/features', f.slug)
-    await fs.mkdir(dir, { recursive: true })
-    await fs.writeFile(path.join(dir, 'index.html'), html)
-  }
 }
 
 async function writeSitemap(books, pairs, tagEntries, authorEntries, seriesEntries) {
@@ -983,10 +1016,10 @@ async function writeSitemap(books, pairs, tagEntries, authorEntries, seriesEntri
     '/series/',
     '/compare/',
     '/features/',
-    '/features/musou/',
-    '/features/slowlife/',
-    '/features/brain/',
-    '/features/climb/'
+    '/features/slowlife-10/',
+    '/features/monster-reincarnation-10/',
+    '/features/territory-management-10/',
+    '/features/cheat-musou-10/'
   ]
 
   for (const b of books) urls.push(`/works/${b.slug}/`)
