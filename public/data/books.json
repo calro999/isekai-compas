@@ -5284,5 +5284,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/71bd7007b1533b86953cfae95d6154fc/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-22T06:57:18.658Z"
+  },
+  {
+    "id": "4310000912076",
+    "slug": "4310000912076",
+    "title": "かみなり様の恋衣　分冊版（１５）",
+    "author": "追本",
+    "seriesName": "かみなり様の恋衣　分冊版",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "和風ファンタジー",
+      "稀血",
+      "雷神",
+      "異類婚姻譚",
+      "時を超えた恋",
+      "あやかし",
+      "宿命",
+      "禁断の恋"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/0573/2000021550573.jpg?_ex=200x200",
+    "description": "「稀血」ゆえに妖に狙われ、両親を奪われた少女・明乃。救いの手を差し伸べた従兄・崇光に尽くす日々、彼女は自らの血を捧げる運命を受け入れていた。しかし、再び妖に襲われた明乃を救ったのは、崇光が「凶暴な妖」と語っていたはずの「雷様」だった。その姿は、明乃の想像をはるかに超え、優しく、そしてどこか切ない瞳をしていた――。稀血の少女と、謎多き雷神様が織りなす…",
+    "aiIntro": "妖に狙われる「稀血」の少女・明乃。彼女を救ったのは、従兄が「凶暴な妖」と語る「雷様」だった。明乃が知る雷様の真実とは？ 両親の仇、そして自身の運命を巡る壮大な和風ファンタジー。時を超えた絆と、禁断の恋の行方が胸を締め付ける。",
+    "readerTypes": [
+      "和風の世界観で繰り広げられる、切なくも壮大なファンタジーロマンスを求める方。",
+      "人外の存在との禁断の恋や、運命に抗うヒロインの成長物語に心惹かれる方。",
+      "従兄・崇光の思惑や「雷様」の正体など、謎が深まる展開に没頭し、ハラハラドキドキしたい方。"
+    ],
+    "price": 209,
+    "salesDate": "2026年08月28日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F375dfd683b3630028ced5cbd12862b16%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F375dfd683b3630028ced5cbd12862b16%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/375dfd683b3630028ced5cbd12862b16/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-22T08:46:07.360Z"
   }
 ]
