@@ -109,10 +109,6 @@ const commonStyle = `
   .ranking-item-card.silver { border-left: 6px solid #bdc3c7; }
   .ranking-item-card.bronze { border-left: 6px solid #e59866; }
   .ranking-item-card h3 { font-size: 20px; color: #fff; margin: 0 0 14px; display: flex; align-items: center; gap: 12px; }
-  .ranking-badge { display: inline-block; font-size: 12.5px; padding: 3px 12px; border-radius: 4px; font-weight: bold; color: #17221f; }
-  .ranking-badge.gold { background: #f5b041; }
-  .ranking-badge.silver { background: #bdc3c7; }
-  .ranking-badge.bronze { background: #e59866; }
   .ranking-item-card p { font-size: 15px; color: #e2ece6; line-height: 1.85; margin: 0; }
 
   /* FAQ Section (GEO / AI-SEO) */
@@ -240,7 +236,7 @@ async function fetchRakutenBookDirect(keyword) {
   return null
 }
 
-// 全6ジャンルの最高品質10選特集データ
+// 6ジャンルの最高品質10選特集データ
 export const featureDefinitions = [
   {
     slug: 'slowlife-10',
@@ -651,14 +647,14 @@ export const featureDefinitions = [
         ]
       },
       {
-        keyword: 'お前のご奉仕はその程度か？',
-        customTitle: 'お前のご奉仕はその程度か？',
-        synopsis: '名門貴族の跡取り息子として領地を任された主人公が、悪友やメイドたちと共に領内の産業振興と治安維持に奮闘。ユーモラスなラブコメディの裏で、着実に領民の生活水準を向上させていく領主系快作。',
-        recommendReason: 'ライトなノリでサクサク読めつつも、領地経営の勘所をしっかり押さえた構成が魅力です。魅力的なヒロインたちとの賑やかなやり取りを楽しみながら、領地が発展していく満足感を味わえます。',
+        keyword: '異世界転生騒動記',
+        customTitle: '異世界転生騒動記',
+        synopsis: '貴族の息子バルドの身体に、戦国武将の岡治三郎の魂と、現代日本のオタク高校生・岡雅晴の魂が同居！現代の技術・商業知識と戦国武将の用兵術を融合させ、没落寸前の領地を画期的な特産品開発（製糖・ガラス・鍛造）と大胆な金融政策で大繁栄させていきます。',
+        recommendReason: '「現代知識×戦国武将の知略」の二重チートで領地を発展させる内政描写の爽快感が抜群です。特産品開発による経済戦争から、軍事的防衛戦まで、息もつかせぬ展開で楽しめる領主系ラノベの傑作です。',
         points: [
-          'コメディタッチでテンポよく進む、明るく楽しい領地経営ストーリー',
-          '個性豊かなヒロインたちとの軽妙な掛け合いと賑やかな領主館の日常',
-          '産業振興や治安改善など、領主としての仕事をスマートにこなす爽快感'
+          '現代知識と戦国武将の兵法が融合した唯一無二のハイブリッド内政',
+          '製糖やガラス製品など特産品開発で莫大な富を領地にもたらす痛快な商才',
+          '少数の領地軍を率いて大軍を打ち破る迫力の合戦・軍略シーン'
         ]
       }
     ],
