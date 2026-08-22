@@ -195,7 +195,7 @@ function renderFooter() {
 
 async function fetchRakutenBookDirect(keyword) {
   await sleep(1050)
-  // 1. Kobo EbookSearch (ジャンル制限なし)
+  // 1. Kobo EbookSearch
   try {
     const params = new URLSearchParams({
       applicationId: process.env.RAKUTEN_APPLICATION_ID,
@@ -218,7 +218,26 @@ async function fetchRakutenBookDirect(keyword) {
     }
   } catch (e) {}
 
-  // 2. BooksBook Search フォールバック
+  // 2. BooksTotal Search フォールバック
+  try {
+    const totalParams = new URLSearchParams({
+      applicationId: process.env.RAKUTEN_APPLICATION_ID,
+      accessKey: process.env.RAKUTEN_ACCESS_KEY,
+      affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
+      format: 'json',
+      formatVersion: '2',
+      keyword: keyword,
+      hits: '5'
+    })
+    const tRes = await fetch(`https://openapi.rakuten.co.jp/services/api/BooksTotal/Search/20170404?${totalParams}`)
+    if (tRes.ok) {
+      const tJson = await tRes.json()
+      const tItems = tJson.Items || tJson.items || []
+      if (tItems.length > 0) return tItems[0]
+    }
+  } catch (e) {}
+
+  // 3. BooksBook Search フォールバック
   try {
     const bookParams = new URLSearchParams({
       applicationId: process.env.RAKUTEN_APPLICATION_ID,
@@ -598,7 +617,7 @@ export const featureDefinitions = [
       {
         keyword: '理想のヒモ生活',
         customTitle: '理想のヒモ生活',
-        synopsis: 'ブラック企業の会社員・山井善治郎が、異世界の女王アウラから「王配（女王の夫）になって子供を作ってほしい」とスカウトされて異世界へ。政治に口を出さない「ヒモ」としてのんびり暮らすはずが、王宮内の派閥抗争や貴族の陰謀を前に、現代社会で培った常識と気配りを武器に巧妙な政治的立ち回りを演じることになります。',
+        synopsis: 'ブラック企業の会社員・山井善治郎が、異世界の女王アウラから「王配（女王の夫）になって子供を作ってほしい」とスカウトされて異世界へ。政治に口を出さない「ヒモ」としてのんびり暮らすはずが、王宮内の派閥抗争や貴族の陰謀を前に、現代社会で培った常シックと気配りを武器に巧妙な政治的立ち回りを演じることになります。',
         recommendReason: '派手なバトルや無双チートを排し、宮廷政治、外交交渉、婚姻政策、税制改革などのリアルな権力闘争を緻密に描いた大人のための内政ファンタジーです。女王アウラとの成熟した夫婦愛も素晴らしく、じっくり読ませる傑作です。',
         points: [
           '派手なチート無双を排した、大人のための本格的な宮廷政治＆外交サスペンス',
