@@ -1019,7 +1019,9 @@ async function writeSitemap(books, pairs, tagEntries, authorEntries, seriesEntri
     '/features/slowlife-10/',
     '/features/monster-reincarnation-10/',
     '/features/territory-management-10/',
-    '/features/cheat-musou-10/'
+    '/features/cheat-musou-10/',
+    '/features/banished-underdog-10/',
+    '/features/villainess-reincarnation-10/'
   ]
 
   for (const b of books) urls.push(`/works/${b.slug}/`)

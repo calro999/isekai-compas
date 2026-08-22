@@ -46,6 +46,7 @@ function App() {
     <header className="header wrap">
       <a className="brand" href="/"><span class="brand-mark">✦</span><span><strong>異世界</strong>コンパス<small>ISEKAI COMPASS</small></span></a>
       <nav className="main-nav">
+        <a href="/features/">特集<em>HOT</em></a>
         <a href="/works/">作品を探す</a>
         <a href="/new/">新刊<em>NEW</em></a>
         <a href="/tags/">タグから探す</a>
@@ -163,6 +164,7 @@ function App() {
       <div className="wrap footer-inner">
         <a className="brand light" href="#top"><span className="brand-mark">✦</span><span><strong>異世界</strong>コンパス<small>ISEKAI COMPASS</small></span></a>
         <div className="footer-links">
+          <a href="/features/">おすすめ特集</a>
           <a href="/works/">全作品</a>
           <a href="/new/">新刊一覧</a>
           <a href="/tags/">タグ一覧</a>

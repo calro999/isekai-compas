@@ -43,13 +43,13 @@ const commonStyle = `
     --bg-main: #f4f1e9;
     --card-bg: #ffffff;
     --text-primary: #17221f;
-    --text-muted: #5f6c62;
+    --text-muted: #57655a;
     --accent: #8b672d;
     --accent-light: #d6a24a;
-    --border-color: #e2e8de;
+    --border-color: #dce3d8;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; color: var(--text-primary); background: var(--bg-main); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; line-height: 1.7; }
+  body { margin: 0; color: var(--text-primary); background: var(--bg-main); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
@@ -64,65 +64,73 @@ const commonStyle = `
   .main-nav a:hover, .main-nav a.active { color: #fff; text-decoration: none; }
   .main-nav a em { font-style: normal; font-size: 9px; background: #d6a24a; color: #17221f; padding: 1px 4px; border-radius: 3px; font-weight: bold; margin-left: 3px; }
 
-  main { padding: 40px 20px 80px; max-width: 960px; margin: 0 auto; }
+  main { padding: 40px 20px 80px; max-width: 920px; margin: 0 auto; }
   .crumb { font-size: 13px; margin-bottom: 24px; color: var(--text-muted); }
   .eyebrow { font-size: 12px; letter-spacing: 0.18em; color: #a37a32; font-weight: bold; }
-  h1 { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 30px; margin: 8px 0 16px; line-height: 1.4; color: #17221f; }
-  .lead { font-size: 15px; color: #2d3832; background: #fff; padding: 22px; border-left: 4px solid #d6a24a; border-radius: 6px; margin-bottom: 36px; line-height: 1.8; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+  h1 { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 29px; margin: 8px 0 20px; line-height: 1.45; color: #17221f; }
+  .lead { font-size: 15.5px; color: #233027; background: #fff; padding: 24px; border-left: 5px solid #d6a24a; border-radius: 6px; margin-bottom: 36px; line-height: 1.85; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
 
   /* Feature Article Styles */
-  .toc-box { background: #eef2ec; border: 1px solid #d2dcd0; border-radius: 8px; padding: 20px 24px; margin-bottom: 40px; }
-  .toc-title { font-weight: bold; font-size: 16px; margin-bottom: 12px; color: #17221f; display: flex; align-items: center; gap: 6px; }
-  .toc-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; font-size: 14px; }
-  .toc-list li a { color: #2a3c33; }
-  .toc-list li a:hover { color: #8b672d; }
+  .toc-box { background: #eaf0e8; border: 1px solid #c9d8c6; border-radius: 8px; padding: 22px 24px; margin-bottom: 40px; }
+  .toc-title { font-weight: bold; font-size: 16px; margin-bottom: 14px; color: #17221f; display: flex; align-items: center; gap: 8px; }
+  .toc-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; font-size: 14px; }
+  .toc-list li a { color: #23372d; font-weight: 500; }
+  .toc-list li a:hover { color: #8b672d; text-decoration: underline; }
 
-  .feature-item-section { background: #fff; border: 1px solid var(--border-color); border-radius: 10px; padding: 28px; margin-bottom: 40px; box-shadow: 0 4px 14px rgba(0,0,0,0.03); }
-  h2.feature-work-title { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 23px; color: #17221f; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid #e8ece7; display: flex; align-items: baseline; gap: 10px; }
-  .work-rank-num { font-size: 26px; color: #d6a24a; font-family: system-ui, sans-serif; font-weight: bold; }
+  .feature-item-section { background: #fff; border: 1px solid var(--border-color); border-radius: 10px; padding: 32px 28px; margin-bottom: 48px; box-shadow: 0 4px 16px rgba(0,0,0,0.03); }
+  h2.feature-work-title { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 24px; color: #17221f; margin: 0 0 20px; padding-bottom: 12px; border-bottom: 2px solid #e8ece7; display: flex; align-items: baseline; gap: 12px; line-height: 1.4; }
+  .work-rank-num { font-size: 28px; color: #d6a24a; font-family: system-ui, sans-serif; font-weight: bold; }
 
-  .work-hero { display: flex; gap: 24px; margin-bottom: 24px; background: #fafbfa; border: 1px solid #eef2ec; padding: 18px; border-radius: 8px; }
-  .work-cover-wrap { width: 150px; flex-shrink: 0; text-align: center; }
-  .work-cover-wrap img { width: 100%; height: auto; max-height: 220px; object-fit: contain; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); }
+  .work-hero { display: flex; gap: 24px; margin-bottom: 24px; background: #f9fbf8; border: 1px solid #e8ede5; padding: 20px; border-radius: 8px; }
+  .work-cover-wrap { width: 160px; flex-shrink: 0; text-align: center; }
+  .work-cover-wrap img { width: 100%; height: auto; max-height: 230px; object-fit: contain; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
   .work-meta { flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-  .work-meta-list { list-style: none; padding: 0; margin: 0 0 16px; font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+  .work-meta-list { list-style: none; padding: 0; margin: 0 0 16px; font-size: 13.5px; color: var(--text-muted); line-height: 2.0; }
   .work-meta-list strong { color: var(--text-primary); }
 
-  .rakuten-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #bf0000; color: #fff !important; font-weight: bold; font-size: 14px; padding: 12px 20px; border-radius: 6px; text-decoration: none !important; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 10px rgba(191,0,0,0.25); }
-  .rakuten-btn:hover { background: #990000; transform: translateY(-2px); }
+  .rakuten-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #bf0000; color: #fff !important; font-weight: bold; font-size: 14.5px; padding: 12px 24px; border-radius: 6px; text-decoration: none !important; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 10px rgba(191,0,0,0.22); }
+  .rakuten-btn:hover { background: #990000; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(191,0,0,0.3); }
 
-  .feature-content-box { margin-top: 20px; }
-  .feature-content-box h3 { font-size: 17px; color: #17221f; margin: 24px 0 10px; display: flex; align-items: center; gap: 8px; font-weight: bold; border-left: 4px solid #8b672d; padding-left: 10px; }
-  .feature-content-box p { font-size: 15px; color: #334038; line-height: 1.85; margin: 0 0 16px; text-align: justify; }
+  .feature-content-box { margin-top: 24px; }
+  .feature-content-box h3 { font-size: 18px; color: #17221f; margin: 28px 0 12px; display: flex; align-items: center; gap: 8px; font-weight: bold; border-left: 5px solid #8b672d; padding-left: 12px; }
+  .feature-content-box p { font-size: 15.5px; color: #2a3830; line-height: 1.9; margin: 0 0 18px; text-align: justify; }
+  
+  .points-box { background: #f4f8f3; border: 1px solid #d4e2d2; border-radius: 6px; padding: 16px 20px; margin: 18px 0; }
+  .points-title { font-weight: bold; font-size: 14px; color: #1d3326; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .points-list { margin: 0; padding-left: 20px; font-size: 14px; color: #2c4234; line-height: 1.8; }
 
   /* Ranking Section */
-  .ranking-section { background: #17221f; color: #fff; padding: 36px 30px; border-radius: 12px; margin-top: 50px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-  h2.ranking-main-title { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 26px; color: #d6a24a; margin: 0 0 12px; text-align: center; border: none; padding: 0; }
-  .ranking-intro { font-size: 15px; color: #cfd8d3; text-align: center; max-width: 680px; margin: 0 auto 30px; line-height: 1.8; }
+  .ranking-section { background: #17221f; color: #fff; padding: 40px 32px; border-radius: 12px; margin-top: 60px; box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+  h2.ranking-main-title { font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; font-size: 28px; color: #d6a24a; margin: 0 0 14px; text-align: center; border: none; padding: 0; }
+  .ranking-intro { font-size: 15px; color: #d2ddd6; text-align: center; max-width: 700px; margin: 0 auto 36px; line-height: 1.85; }
   
-  .ranking-item-card { background: #23312d; border: 1px solid #374b43; border-radius: 8px; padding: 24px; margin-bottom: 20px; }
+  .ranking-item-card { background: #23312c; border: 1px solid #374b41; border-radius: 8px; padding: 26px; margin-bottom: 24px; }
   .ranking-item-card.gold { border-left: 6px solid #f5b041; }
   .ranking-item-card.silver { border-left: 6px solid #bdc3c7; }
   .ranking-item-card.bronze { border-left: 6px solid #e59866; }
-  .ranking-item-card h3 { font-size: 19px; color: #fff; margin: 0 0 12px; display: flex; align-items: center; gap: 10px; }
-  .ranking-badge { display: inline-block; font-size: 12px; padding: 3px 10px; border-radius: 4px; font-weight: bold; color: #17221f; }
-  .ranking-badge.gold { background: #f5b041; }
-  .ranking-badge.silver { background: #bdc3c7; }
-  .ranking-badge.bronze { background: #e59866; }
-  .ranking-item-card p { font-size: 14.5px; color: #dce4e0; line-height: 1.8; margin: 0; }
+  .ranking-item-card h3 { font-size: 20px; color: #fff; margin: 0 0 14px; display: flex; align-items: center; gap: 12px; }
+  .ranking-item-card p { font-size: 15px; color: #e2ece6; line-height: 1.85; margin: 0; }
+
+  /* FAQ Section (GEO / AI-SEO) */
+  .faq-section { background: #fff; border: 1px solid var(--border-color); border-radius: 10px; padding: 32px 28px; margin-top: 48px; }
+  .faq-section h2 { font-size: 22px; margin: 0 0 20px; border-left: 5px solid #d6a24a; padding-left: 12px; color: #17221f; font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; }
+  .faq-item { margin-bottom: 20px; border-bottom: 1px solid #edf1eb; padding-bottom: 16px; }
+  .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .faq-q { font-weight: bold; font-size: 16px; color: #17221f; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .faq-a { font-size: 14.5px; color: #37463e; line-height: 1.8; margin: 0; }
 
   /* Feature Hub Cards */
-  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-top: 24px; }
-  .feature-hub-card { background: #fff; border: 1px solid var(--border-color); border-radius: 10px; padding: 24px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
-  .feature-hub-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-color: #d6a24a; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 26px; margin-top: 28px; }
+  .feature-hub-card { background: #fff; border: 1px solid var(--border-color); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
+  .feature-hub-card:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(0,0,0,0.08); border-color: #d6a24a; }
   .feature-hub-badge { align-self: flex-start; background: #17221f; color: #d6a24a; font-size: 11px; font-weight: bold; padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
-  .feature-hub-title { font-size: 18px; font-weight: bold; margin: 0 0 10px; line-height: 1.5; }
+  .feature-hub-title { font-size: 18.5px; font-weight: bold; margin: 0 0 12px; line-height: 1.5; }
   .feature-hub-title a { color: #17221f; }
-  .feature-hub-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; flex-grow: 1; margin-bottom: 18px; }
-  .feature-hub-btn { background: #17221f; color: #fff !important; padding: 10px 16px; border-radius: 6px; font-size: 13px; font-weight: bold; text-align: center; text-decoration: none !important; }
+  .feature-hub-desc { font-size: 14px; color: var(--text-muted); line-height: 1.75; flex-grow: 1; margin-bottom: 20px; }
+  .feature-hub-btn { background: #17221f; color: #fff !important; padding: 11px 18px; border-radius: 6px; font-size: 13.5px; font-weight: bold; text-align: center; text-decoration: none !important; }
   .feature-hub-btn:hover { background: #d6a24a; color: #17221f !important; }
 
-  .site-footer { background: #17221f; color: #a3b0a8; padding: 40px 20px; margin-top: 60px; font-size: 14px; }
+  .site-footer { background: #17221f; color: #a3b0a8; padding: 44px 20px; margin-top: 60px; font-size: 14px; }
   .footer-inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
   .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
   .footer-links a { color: #cfd8d3; }
@@ -133,10 +141,10 @@ const commonStyle = `
     .toc-list { grid-template-columns: 1fr; }
     .work-hero { flex-direction: column; align-items: center; text-align: center; }
     .work-meta { align-items: center; }
-    .feature-item-section { padding: 20px 16px; }
-    h1 { font-size: 24px; }
-    h2.feature-work-title { font-size: 20px; }
-    .ranking-section { padding: 24px 16px; }
+    .feature-item-section { padding: 22px 18px; }
+    h1 { font-size: 23px; }
+    h2.feature-work-title { font-size: 19px; }
+    .ranking-section { padding: 26px 18px; }
   }
 `
 
@@ -183,24 +191,31 @@ function renderFooter() {
 
 async function fetchRakutenBookDirect(keyword) {
   await sleep(1050)
-  const params = new URLSearchParams({
-    applicationId: process.env.RAKUTEN_APPLICATION_ID,
-    accessKey: process.env.RAKUTEN_ACCESS_KEY,
-    affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
-    format: 'json',
-    formatVersion: '2',
-    keyword: keyword,
-    koboGenreId: '101',
-    hits: '10',
-    sort: 'standard'
-  })
-  const res = await fetch(`https://openapi.rakuten.co.jp/services/api/Kobo/EbookSearch/20170426?${params}`)
-  if (!res.ok) {
-    throw new Error(`Rakuten API Error ${res.status}: ${await res.text()}`)
-  }
-  const json = await res.json()
-  const items = json.Items || json.items || []
-  if (items.length === 0) {
+  // 1. Kobo EbookSearch (ジャンル制限なし)
+  try {
+    const params = new URLSearchParams({
+      applicationId: process.env.RAKUTEN_APPLICATION_ID,
+      accessKey: process.env.RAKUTEN_ACCESS_KEY,
+      affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
+      format: 'json',
+      formatVersion: '2',
+      keyword: keyword,
+      hits: '10',
+      sort: 'standard'
+    })
+    const res = await fetch(`https://openapi.rakuten.co.jp/services/api/Kobo/EbookSearch/20170426?${params}`)
+    if (res.ok) {
+      const json = await res.json()
+      const items = json.Items || json.items || []
+      if (items.length > 0) {
+        const nonSplit = items.filter(i => !i.title.includes('【分冊版】') && !i.title.includes('分冊版'))
+        return nonSplit.length > 0 ? nonSplit[0] : items[0]
+      }
+    }
+  } catch (e) {}
+
+  // 2. BooksBook Search フォールバック
+  try {
     const bookParams = new URLSearchParams({
       applicationId: process.env.RAKUTEN_APPLICATION_ID,
       accessKey: process.env.RAKUTEN_ACCESS_KEY,
@@ -208,7 +223,7 @@ async function fetchRakutenBookDirect(keyword) {
       format: 'json',
       formatVersion: '2',
       title: keyword,
-      hits: '10'
+      hits: '5'
     })
     const bRes = await fetch(`https://openapi.rakuten.co.jp/services/api/BooksBook/Search/20170404?${bookParams}`)
     if (bRes.ok) {
@@ -216,86 +231,139 @@ async function fetchRakutenBookDirect(keyword) {
       const bItems = bJson.Items || bJson.items || []
       if (bItems.length > 0) return bItems[0]
     }
-    return null
-  }
-  const nonSplit = items.filter(i => !i.title.includes('【分冊版】') && !i.title.includes('分冊版'))
-  return nonSplit.length > 0 ? nonSplit[0] : items[0]
+  } catch (e) {}
+
+  return null
 }
 
-let featureDefsFromFile = []
-try {
-  const jsonPath = path.join(root, 'public/data/curated-features.json')
-  const content = await fs.readFile(jsonPath, 'utf8')
-  featureDefsFromFile = JSON.parse(content)
-} catch (e) {}
-
-export const featureDefinitions = featureDefsFromFile.length > 0 ? featureDefsFromFile : [
+// 全6ジャンルの最高品質10選特集データ
+export const featureDefinitions = [
   {
     slug: 'slowlife-10',
     title: '異世界でスローライフを満喫できるおすすめラノベ10選',
-    metaTitle: '異世界スローライフ系おすすめラノベ10選！のんびり田舎暮らし＆グルメを満喫できる傑作まとめ',
-    description: 'バトルやギスギスした人間関係に疲れたあなたへ。美味しい異世界飯、もふもふの相棒たち、のんびりとした領地開拓やカフェ経営など、読んでいるだけで心がじんわり温まるスローライフ系異世界ライトノベル10作品を読者目線で徹底解説します。',
-    eyecatchBadge: '癒やし＆日常',
+    metaTitle: '異世界スローライフ系おすすめラノベ10選！のんびり田舎暮らし・絶品グルメ・ものづくり傑作まとめ',
+    description: '激しいバトルやギスギスした人間関係から解放されたい読者へ！絶品異世界グルメの飯テロ、もふもふ従魔との心温まる絆、まったり開拓やカフェ・工房経営など、読むだけでストレスが溶けていく極上のスローライフ系異世界ラノベ10作品を徹底解説します。',
+    eyecatchBadge: '癒やし・グルメ・日常',
+    faq: [
+      {
+        q: '異世界スローライフ作品の魅力は何ですか？',
+        a: '命がけの戦いや過酷な使命に追われることなく、主人公が自分のペースで料理、開拓、ものづくり、仲間との穏やかな日常をマイペースに楽しむ点にあります。読者も一切のストレスなくリラックスして読書に没頭できます。'
+      },
+      {
+        q: '初心者におすすめのスローライフ系ラノベは？',
+        a: 'アニメ化も大ヒットした『とんでもスキルで異世界放浪メシ』や『神達に拾われた男』がおすすめです。どちらもテンポが良く、主人公と可愛い従魔たちとのほのぼのとした関係性に癒やされます。'
+      }
+    ],
     items: [
       {
         keyword: 'とんでもスキルで異世界放浪メシ',
         customTitle: 'とんでもスキルで異世界放浪メシ',
-        synopsis: '勇者召喚に巻き込まれた平凡なサラリーマン・ムコーダ。固有スキル「ネットスーパー」で現代日本の食材や調味料を取り寄せられることに気づき、危険な王城を脱出して気ままな一人旅に出発します。しかし、ネットスーパーの調味料で焼いた生姜焼きやステーキの匂いにつられ、伝説の魔獣フェンリル（フェル）や食いしん坊なスライム（スイ）が従魔になってしまい、至高のグルメ食い倒れ旅が幕を開けます。',
-        recommendReason: 'とにかく作中に出てくる肉料理やスイーツの描写が圧倒的に飯テロです！食いしん坊なフェルや無邪気で可愛いスイに「おかわり！」とせがまれ、嬉しそうに料理を振る舞うムコーダの姿に思わず頬が緩みます。戦闘は基本的にチート従魔たちが秒殺してくれるため、読者は一切のストレスなく、旅先の風景と絶品料理の数々をまったり楽しめます。仕事終わりのリラックスタイムに最高の一冊です。'
+        synopsis: '勇者召喚の巻き添えを食らった平凡なサラリーマン・ムコーダ（向田剛志）。固有スキルが「ネットスーパー」という非戦闘系だったため、怪しい王宮から速やかに脱出し気ままな一人旅を始めます。しかし、日本の調味料で焼いた極上ステーキや生姜焼きの匂いに誘われて、伝説の魔獣フェンリル（フェル）や無邪気なスライム（スイ）が次々と従魔に加入！チート従魔たちに美味い飯を振る舞いながら、世界中を巡る至福のグルメ旅が始まります。',
+        recommendReason: '「異世界スローライフ×グルメ」の最高到達点です。作中に登場する肉料理やスープ、スイーツの描写が圧倒的にリアルで、読んでいるだけで猛烈にお腹が空いてきます。戦闘は規格外の強さを持つフェルたちが瞬殺してくれるため、読者にかかるストレスは完全にゼロ。フェルが「もっと肉を寄越せ！」と駄々をこねたり、スイがお腹を空かせてプルプル跳ねる姿に誰もが癒やされるはずです。',
+        points: [
+          '読めば必ずお腹が空く圧倒的な飯テロ描写と日本の調味料チート',
+          'フェンリルやスライムなど、愛嬌たっぷりなもふもふ従魔たちとの家族のような絆',
+          '危険な冒険を避け、美味しい料理と商売でマイペースに旅を続ける安心感'
+        ]
       },
       {
         keyword: '異世界居酒屋「のぶ」',
         customTitle: '異世界居酒屋「のぶ」',
-        synopsis: '古都アイテーリアの片隅に、なぜか日本の京都にある居酒屋「のぶ」の入り口が繋がってしまいます。店主のノブが生み出す揚げたての唐揚げや冷えた生ビール（トリアエズナマ）、おでんなど、異世界の人々にとっては未知の「極上料理」が、衛兵や貴族、果ては司教までも虜にしていきます。',
-        recommendReason: 'ただ美味しい料理を食べるだけでなく、料理を通じて頑固な衛兵同士のわだかまりが解けたり、悩める職人が自信を取り戻したりと、人情味あふれる群像劇が描かれているのが最大の魅力です。1話完結型でテンポよく読めるので、疲れた夜にビール片手に読むと格別の癒やしを味わえます。'
+        synopsis: '中世ヨーロッパ風の古都アイテーリアの片隅に、なぜか日本の京都にある居酒屋「のぶ」の正面入口が繋がってしまいます。大将のノブが生み出す揚げたての唐揚げ、熱々のおでん、冷えた生ビール（トリアエズナマ）など、異世界の人々にとっては未体験の絶品料理の数々が、真面目な衛兵、気難しい貴族、果ては強欲な徴税請負人までも次々と虜にしていきます。',
+        recommendReason: '料理そのものの美味しさはもちろんのこと、一杯の酒と温かい料理をきっかけに、頑固な職人が情熱を取り戻したり、身分違いの恋が実を結んだりと、心温まる人情味あふれる群像劇が描かれるのが最大の魅力です。1話完結形式でテンポよく読めるため、仕事終わりの晩酌のお供にこれ以上ない傑作です。',
+        points: [
+          '冷えたビールと居酒屋メニューが異世界人を骨抜きにする痛快なカルチャーショック',
+          '古都アイテーリアで生きる人々の喜怒哀楽を丁寧に紡いだ極上の人情ドラマ',
+          '短編連作形式でサクサク読めて、どこから読んでもほっこり温かい気持ちになれる構成'
+        ]
       },
       {
         keyword: '鍛冶屋ではじめる異世界スローライフ',
         customTitle: '鍛冶屋ではじめる異世界スローライフ',
-        synopsis: '過労死した中年サラリーマン・エイゾウが、神様からチートな鍛冶スキルを授かって森の奥深くで第二の人生をスタート。オーダーメイドで包丁やナタ、農具を作りながら、森で行き倒れていたエルフの少女サーミャや獣人たちを保護し、家族のように食卓を囲む穏やかな日々を紡ぎます。',
-        recommendReason: '主人公が「世界を救う気は一切ない」「ただ好きなものを作って静かに暮らしたい」というスタンスを一貫しているのが本当に心地よいです。鉄を打ち、木を削り、美味しい森の幸を食べる。ものづくりへのこだわりと、素朴で温かい同居生活の描写に心のトゲがすっと消えていく感覚を味わえます。'
+        synopsis: '激務の末に過労死した中年サラリーマン・エイゾウ。神様から「鍛冶チートスキル」を授かって異世界の深き森の奥で第二の人生を始めます。世界を救う気は一切なく、ただ自分の気に入った包丁やナタ、農具を心を込めて打つ日々。森で瀕死だったエルフの少女サーミャや獣人の仲間を保護し、みんなで暖炉を囲んで手料理を味わう穏やかな毎日を紡いでいきます。',
+        recommendReason: '「世界を救う気はなく、ただ静かに好きなモノづくりをして生きたい」という主人公の徹底した脱力・職人気質スタンスが本当に心地よい作品です。鉄を打ち、焼き入れをし、木の柄を削るという職人技の緻密な描写と、森の恵みを料理して家族のように分け合う食事シーンの温かさに、疲れた心がじんわりと解きほぐされます。',
+        points: [
+          'ものづくりへの情熱と職人技のこだわりが緻密に描かれるクラフト系スローライフ',
+          '森の奥深くで種族を超えた仲間たちと築く、温かいファミリーのような共同生活',
+          '無理な成り上がりや権力闘争とは無縁の、静かで満ち足りた日常の空気感'
+        ]
       },
       {
-        keyword: '異世界でカフェを開店しました。',
-        customTitle: '異世界でカフェを開店しました。',
-        synopsis: '料理が大好きなOL・リサが転移した異世界は、なぜか料理の味が非常に大雑把で不味い世界でした。食への情熱を抑えきれなくなったリサは、妖精の助けを借りて森の近くに小さなカフェをオープン。ふわふわのフレンチトーストやハーブティー、手作りスープを振る舞い、噂を聞きつけた精霊や騎士たちで賑わう人気店へと育てていきます。',
-        recommendReason: 'カフェの温もりあるインテリアや、焼き立てのパンと甘いスイーツの香りがページ越しに漂ってくるような丁寧な描写が秀逸です。女性主人公ならではの細やかな気配りや、訪れるお客さんたちとの心温まる交流に、日常の慌ただしさを忘れさせてくれます。'
+        keyword: '魔導具師ダリヤはうつむかない',
+        customTitle: '魔導具師ダリヤはうつむかない 〜きょうから自由な職人ライフ〜',
+        synopsis: '結婚直前に婚約者から身勝手な婚約破棄を言い渡された魔導具師のダリヤ・ロセッティ。しかし彼女は泣き寝入りするのではなく、「もう誰かに合わせる人生はやめて、大好きな魔導具作りに全力を注いで自由に生きる！」と顔を上げます。防水布、小型魔導コンロ、人工乾燥機など、前世の知識と豊かな発想力で暮らしを豊かにする画期的な発明を次々と生み出し、職人として堂々と自立していきます。',
+        recommendReason: '失意のどん底から自分の腕一本で立ち上がり、美味しいお酒と肴を楽しみながら情熱的に魔導具作りに没頭するダリヤの姿が実に凛々しく魅力的です。魔物討伐部隊の騎士ヴォルフとの、互いに美味い酒と料理を語り合いながら少しずつ信頼を深めていく大人同士のじれったい距離感もたまりません。',
+        points: [
+          '婚約破棄から自立し、ものづくりの情熱で道を切り拓く自立系ヒロインの痛快なサクセスストーリー',
+          '実在の酒と料理のように美味しそうな晩酌シーンと、大人同士の心地よい距離感の恋愛描写',
+          'ファンタジー世界のリアリティある商会経営・貴族社会との駆け引きの面白さ'
+        ]
       },
       {
         keyword: '神達に拾われた男',
         customTitle: '神達に拾われた男',
-        synopsis: 'ブラック企業で過酷な人生を終えた中年男性・竹林竜馬。神々から祝福を受けて子供の姿で異世界へ転生した彼は、森の中で様々なスライムの研究とテイムに没頭します。クリーナースライムで洗濯や掃除をこなしたり、スカベンジャーでゴミ処理をしたりと、スライムたちの特性を活かして街の衛生問題を解決し、クリーニング店を開業して大成功を収めます。',
-        recommendReason: '前世で酷使されていた主人公が、周囲の優しい人々（公爵家一家など）から純粋に感謝され、温かく見守られながら自分のペースで幸せを掴んでいく姿に涙腺が緩みます。スライムを便利屋のように活用するユニークな発想と、善人しかいない優しい世界観に安心して浸ることができます。'
+        synopsis: 'ブラック企業で酷使され、理不尽な死を迎えた心優しい中年男性・竹林竜馬。神々から手厚い祝福を受けて少年の姿で異世界へ転生した彼は、森の中でスライムたちの研究とテイムに没頭します。クリーナースライムで洗濯や消臭をこなしたり、スカベンジャースライムで廃棄物を処理したりと、スライムの特性を活かして街の衛生問題を劇的に改善し、クリーニング店を開業して大成功を収めます。',
+        recommendReason: '前世で酷使されていた主人公が、公爵家一家をはじめとする優しい周囲の人々から純粋に感謝され、温かく見守られながら自分のペースで幸せを掴んでいく姿に胸が熱くなります。スライムを便利屋のように活用するユニークな発想と、悪人のいない優しい世界観に安心して浸ることができます。',
+        points: [
+          '前世の苦労人が報われ、周囲から愛され大切にされていく心温まる癒やし展開',
+          '多種多様なスライムの特性を活かした町おこし＆クリーニング店経営のワクワク感',
+          'ストレスフリーで読める善人だらけの穏やかで平和な世界観'
+        ]
       },
       {
         keyword: 'チート薬師のスローライフ',
         customTitle: 'チート薬師のスローライフ〜異世界に作ろうドラッグストア〜',
-        synopsis: '社畜としてすり減っていた桐尾礼治が、創薬スキルを持って異世界へ転生。戦闘用ではなく、日常生活を快適にするポーション（目薬、エナジードリンク、消臭剤、虫除けなど）を開発し、狼耳の少女ノエラや幽霊のミナと一緒に田舎町で小さなドラッグストアを営みます。',
-        recommendReason: '「異世界の住人が抱える日常のささやかな悩み」を現代的な発想の薬品で解決していくコミカルな日常劇が楽しい作品です。看板娘ノエラの無邪気な可愛さと、主人公の脱力系ツッコミの掛け合いが絶妙で、クスッと笑いながらストレスフリーで読み進められます。'
+        synopsis: '社畜としてすり減っていた青年・桐尾礼治が、創薬スキルを持って異世界へ転生。戦闘用ではなく、日常生活を劇的に快適にするポーション（疲れ目用目薬、エナジードリンク、消臭液、虫除けスプレーなど）を開発し、狼耳の無邪気な少女ノエラや幽霊のミナと一緒に田舎町で小さなドラッグストアをオープンします。',
+        recommendReason: '「異世界の住人たちが抱える日常のささやかな悩み」を現代的な発想の薬品で解決していくコミカルな日常劇が楽しい作品です。看板娘ノエラの無邪気な可愛さと、主人公の脱力系ツッコミの掛け合いが絶妙で、クスッと笑いながらストレスフリーで読み進められます。',
+        points: [
+          '目薬やエナジードリンクなど身近な日用品で異世界人の生活を劇的改善する面白さ',
+          'もふもふ人狼少女ノエラをはじめとする個性豊かで可愛いヒロインたちとのドタバタ劇',
+          '徹底して戦闘を避け、平和な街の薬局経営に徹するリラックス感'
+        ]
       },
       {
         keyword: '異世界料理道',
         customTitle: '異世界料理道',
-        synopsis: '大衆食堂の見習い料理人・津留見明日太が、火事から包丁を守ろうとして異世界「森辺の民」の集落へ飛ばされてしまいます。狩猟民族である森辺の民は、巨大イノシシ「ギバ」の肉を臭くて硬い不味いものとして扱っていました。明日太は地球で培った下処理と調理技術を駆使し、ギバ肉を絶品の家庭料理へと昇華させていきます。',
-        recommendReason: '異世界グルメ作品の中でも群を抜いて「食文化の衝突と相互理解」を深く掘り下げた重厚なスローライフです。魔法によるイージーなチートに頼らず、丁寧な下ごしらえや火加減、現地で手に入る食材の研究によって少しずつ集落の人々の信頼を勝ち取っていく過程は、読み応え抜群のドラマになっています。'
-      },
-      {
-        keyword: 'ポーション頼みで生き延びます！',
-        customTitle: 'ポーション頼みで生き延びます！',
-        synopsis: '神様のミスで命を落としたOL・長瀬香。異世界転生にあたり「思い通りの容器に望む通りの効果の薬品を自由に出現させるスキル」を要求し、カオルとして異世界へ。権力者からの囲い込みや面倒な争いを巧みな話術とポーションチートで回避しながら、自分の自由気ままな安寧ライフを死守するために奔走します。',
-        recommendReason: '主人公カオルのちゃっかりした商売上手ぶりと、機転の利いた立ち回りが痛快です。ただのんびりするだけでなく、自分の平穏を脅かす悪徳商人や貴族をギャフンと言わせる爽快感もあり、テンポの良さとユーモアに引き込まれます。'
+        synopsis: '大衆食堂の見習い料理人・津留見明日太が、火事から愛用の包丁を守ろうとして異世界「森辺の民」の集落へ飛ばされてしまいます。狩猟民族である森辺の民は、巨大イノシシ「ギバ」の肉を臭くて硬い不味いものとして扱っていました。明日太は地球で培った丁寧な下処理と調理技術を駆使し、ギバ肉を極上の家庭料理へと昇華させていきます。',
+        recommendReason: '異世界グルメ作品の中でも群を抜いて「食文化の衝突と相互理解」を深く掘り下げた重厚なスローライフです。魔法によるイージーなチートに頼らず、丁寧な下ごしらえや火加減、現地で手に入る食材の研究によって少しずつ集落の人々の信頼を勝ち取っていく過程は、読み応え抜群の大河ドラマになっています。',
+        points: [
+          '魔法チートなし！本物の料理人の技術と工夫で異文化の味覚を拓くリアリズム',
+          '狩猟民族「森辺の民」の掟や文化、人間関係が極めて緻密に描かれる重厚な世界観',
+          '一杯のスープ、一枚の焼き肉を通じて固い信頼と家族の絆が生まれていく深い感動'
+        ]
       },
       {
         keyword: '異世界のんびり農家',
         customTitle: '異世界のんびり農家',
         synopsis: '闘病生活の末に亡くなった青年・街尾火楽（ヒラク）。神様から健康な肉体と「万能農具」を授かり、誰も立ち入らない魔の森の中心で一人開墾を始めます。農具を振るうだけで思い通りの農地や作物が育ち、インフェルノウルフのクロや吸血鬼のルー、ハイエルフたちが集まってきて、いつの間にか巨大な「大樹の村」へと発展していきます。',
-        recommendReason: '荒れ地を耕し、作物を収穫し、家や施設を拡張していく「サンドボックス型ゲーム」のようなワクワク感がたまりません。村人たちがみんなヒラクを敬愛しており、村全体で酒を酌み交わしたり収穫祭を楽しんだりする大所帯のほのぼのライフが癖になります。'
+        recommendReason: '荒れ地を耕し、作物を収穫し、家や施設を拡張していく「サンドボックス型ゲーム」のようなワクワク感がたまりません。村人たちがみんなヒラクを敬愛しており、村全体で酒を酌み交わしたり収穫祭を楽しんだりする大所帯のほのぼのライフが癖になります。',
+        points: [
+          '万能農具で森を拓き、村から一大自治都市へと発展していく開拓シミュレーションの快感',
+          '吸血鬼、エルフ、ドラゴン、獣人など多種多様な種族が平和に暮らす大樹の村の日常',
+          '収穫した野菜や果物で作る自家製料理や酒宴のほのぼのとした幸福感'
+        ]
       },
       {
-        keyword: '魔導具師ダリヤはうつむかない',
-        customTitle: '魔導具師ダリヤはうつむかない 〜きょうから自由な職人ライフ〜',
-        synopsis: '結婚直前に婚約者から浮気・婚約破棄を言い渡された魔導具師のダリヤ。しかし彼女は泣き寝入りするどころか、「これからは誰にも縛られず、大好きな魔導具作りに没頭して自由に生きる！」と前を向きます。ドライヤー、防水布、小型魔導コンロなど、前世の知識と豊かな発想力で画期的な魔導具を次々と生み出し、職人として自立していきます。',
-        recommendReason: '失意のどん底から自分の腕一本で立ち上がり、美味しいお酒と料理を味わいながら情熱を注ぎ込むダリヤの姿が実にカッコよく、清々しい応援したくなるヒロイン像です。友人の騎士ヴォルフとの大人でじれったい距離感や、お互いに美味い酒と肴を語り合う晩酌シーンの描写が絶品です。'
+        keyword: 'ポーション頼みで生き延びます！',
+        customTitle: 'ポーション頼みで生き延びます！',
+        synopsis: '神様のミスで命を落としたOL・長瀬香。異世界転生にあたり「思い通りの容器に望む通りの効果の薬品を自由に出現させるスキル」を要求し、カオルとして異世界へ。権力者からの囲い込みや面倒な争いを巧みな話術とポーションチートで回避しながら、自分の自由気ままな安寧ライフを死守するために奔走します。',
+        recommendReason: '主人公カオルのちゃっかりした商売上手ぶりと、機転の利いた立ち回りが痛快です。ただのんびりするだけでなく、自分の平穏を脅かす悪徳商人や貴族をギャフンと言わせる爽快感もあり、テンポの良さとユーモアに引き込まれます。',
+        points: [
+          '容器も効果も自由自在なポーションチートと主人公の切れ味鋭い頭脳プレー',
+          '権力者に媚びず、自分の自由と正義を貫いてトラブルを痛快に解決するカタルシス',
+          '可愛い美少女の外見の裏に隠された、したたかな大人の商売センス'
+        ]
+      },
+      {
+        keyword: '異世界でカフェを開店しました。',
+        customTitle: '異世界でカフェを開店しました。',
+        synopsis: '料理が大好きなOL・リサが転移した異世界は、なぜか料理の味が非常に大雑把で不味い世界でした。食への情熱を抑えきれなくなったリサは、妖精の助けを借りて森の近くに小さなカフェをオープン。ふわふわのフレンチトーストやハーブティー、手作りスープを振る舞い、噂を聞きつけた精霊や騎士たちで賑わう人気店へと育てていきます。',
+        recommendReason: 'カフェの温もりあるインテリアや、焼き立てのパンと甘いスイーツの香りがページ越しに漂ってくるような丁寧な描写が秀逸です。女性主人公ならではの細やかな気配りや、訪れるお客さんたちとの心温まる交流に、日常の慌ただしさを忘れさせてくれます。',
+        points: [
+          'フレンチトーストや紅茶など、おしゃれで美味しそうなカフェメニューの数々',
+          '妖精や精霊、街の騎士たちが集う穏やかで洗練された癒やしの空間',
+          '殺伐とした要素が一切ない、純度100%の女性向けほのぼのクッキングライフ'
+        ]
       }
     ],
     ranking: [
@@ -319,69 +387,129 @@ export const featureDefinitions = featureDefsFromFile.length > 0 ? featureDefsFr
   {
     slug: 'monster-reincarnation-10',
     title: '異世界転生したら人外・魔物だったおすすめラノベ10選',
-    metaTitle: '人外・魔物転生おすすめ異世界ラノベ10選！スライム・蜘蛛・剣・骸骨など異形の成り上がり傑作まとめ',
-    description: '人間をやめた主人公たちの規格外な大冒険！スライム、蜘蛛、ドラゴン、生ける骸骨、はては「剣」や「温泉」にまで転生してしまった異色の異世界ファンタジー小説から、進化とサバイバルの面白さが詰まった傑作10選を読者目線で厳選紹介します。',
-    eyecatchBadge: '人外転生＆進化',
+    metaTitle: '人外・魔物転生おすすめ異世界ラノベ10選！スライム・蜘蛛・剣・骸骨など異形の進化＆サバイバル傑作まとめ',
+    description: '人間をやめた主人公たちの規格外な大冒険！最弱モンスターからの進化サバイバル、圧倒的魔王としての君臨、意思を持つ武器への転生など、人外転生ならではの独自スキルと進化ツリーが熱い傑作10選を読者目線で徹底解説します。',
+    eyecatchBadge: '人外転生・進化・異形',
+    faq: [
+      {
+        q: '人外・魔物転生モノの最大の面白さは何ですか？',
+        a: '人間としての常識が通用しない弱肉強食の世界で、経験値を稼いで「多段階進化」していくゲームライクな育成要素と、異形の姿を活かした型破りな戦闘スタイルにあります。'
+      },
+      {
+        q: '人外転生ラノベのおすすめ入門作は？',
+        a: '圧倒的な知名度と完成度を誇る『転生したらスライムだった件』や、迷宮サバイバルの緊迫感が抜群の『蜘蛛ですが、なにか？』から入るのが鉄板です。'
+      }
+    ],
     items: [
       {
         keyword: '転生したらスライムだった件',
         customTitle: '転生したらスライムだった件',
-        synopsis: '通り魔に刺されて死んだサラリーマン・三上悟が、異世界の洞窟で目覚めると最弱モンスター「スライム」になっていました。しかし授かったスキル「捕食者」で相手の能力を奪い、「大賢者」の知恵を借りることで驚異的な進化を遂げます。暴風竜ヴェルドラと友達になり「リムル」と名乗った彼は、ゴブリンや鬼人たちを束ね、多種族が共存できる理想の魔国を建国していきます。',
-        recommendReason: '人外転生ブームの頂点に君臨する大人気作。ぷにぷにとした見た目の可愛さと、敵対勢力を一瞬で圧倒する規格外の強さのギャップがたまりません。仲間たちに名前をつけて進化させ、荒れ地から一大文明都市を築き上げていく内政＆無双のテンポの良さは何度読んでも胸が躍ります。'
+        synopsis: '通り魔に刺されて命を落としたサラリーマン・三上悟。異世界の洞窟で目覚めると、なんと最弱モンスターの「スライム」に転生していました。しかし授かったスキル「捕食者」で相手の能力を吸収・再現し、「大賢者」の完璧なナビゲートを得たことで驚異的な進化を遂げます。封印されていた暴風竜ヴェルドラと友達になり「リムル」と名乗った彼は、ゴブリンや鬼人、ドワーフたちを仲間に引き入れ、魔物と人間が平和に暮らせる「魔国連邦（テンペスト）」を築き上げていきます。',
+        recommendReason: '人外転生ブームの金字塔であり最高傑作。ぷにぷにとした愛らしいスライム姿と、敵対する軍勢を一瞬で消滅させる規格外の魔王パワーのギャップが爽快無比です。魔物たちに名前をつけて進化させ、荒れ野から一大文明都市を築き上げる建国内政のワクワク感と、仲間を守るために冷徹な覚悟を見せるリムルのカッコよさに誰もが魅了されます。',
+        points: [
+          '最弱スライムから世界の頂点に立つ魔王へと上り詰める圧巻の成り上がり進化劇',
+          '多種族モンスターたちが手を取り合い、最新鋭の理想都市を築く建国・内政の面白さ',
+          'リムルの圧倒的なカリスマ性と、仲間たちとの熱い絆が織りなす極上のエンタメ性'
+        ]
       },
       {
         keyword: '蜘蛛ですが、なにか？',
         customTitle: '蜘蛛ですが、なにか？',
-        synopsis: '教室の爆発事故で命を落とした女子高生が、最悪の難関迷宮の底で蜘蛛の魔物として孵化。生まれた瞬間から共食いや凶悪モンスターの襲撃に晒される極限状態の中、知恵と糸スキル、毒を駆使した命がけのサバイバルを繰り広げます。',
-        recommendReason: '「私（蜘蛛子）」のテンションの高いハイテンションな一人語りと、それとは裏腹な過酷すぎる迷宮サバイバルの対比が最高に面白いです！弱者が格上の敵をトラップと状態異常でハメ倒してレベルアップし、より強力な蜘蛛形態へと進化していくゲームライクなカタルシスが中毒性を生み出しています。'
+        synopsis: '女子高生だった「私」は、教室の爆発事故で死亡し、異世界最大の難関「エルロー大迷宮」の底で蜘蛛の魔物として孵化。生まれた瞬間から共食いや凶悪モンスターの襲撃に晒される絶望的な極限状態の中、持ち前のポジティブ思考と知恵、糸スキルと猛毒を駆使した命がけのサバイバルを繰り広げます。',
+        recommendReason: '「私（蜘蛛子）」の超ハイテンションな一人語りと、それとは裏腹な過酷すぎる命がけの迷宮サバイバルのギャップが中毒性抜群です！弱者が格上の凶悪モンスターを罠と状態異常でハメ倒して経験値を稼ぎ、上位の蜘蛛形態へと進化していくカタルシスは格別。物語後半に明かされる緻密な世界設定と驚愕の伏線回収にも鳥肌が立ちます。',
+        points: [
+          'テンションMAXの軽快なモノローグと、一歩間違えれば即死の極限サバイバル',
+          'レベルアップと進化ツリーを駆け上がるゲームライクな育成・戦闘の面白さ',
+          '世界の真実と転生者たちの運命が複雑に絡み合う圧巻のストーリーテリング'
+        ]
       },
       {
         keyword: '転生したら剣でした',
         customTitle: '転生したら剣でした',
-        synopsis: '気がつくと台座に突き刺さった「知性を持つ魔剣」に転生していた主人公。魔物を自力で倒してスキルを吸収しながら己を強化していたところ、奴隷として虐待されていた黒猫族の少女フランと出会います。フランの装備者となり、彼女の「進化したい」という切実な願いを叶えるため、過保護な親馬鹿剣として世界中を旅します。',
-        recommendReason: '無機物転生という斬新な設定ながら、主人公の「剣」と幼いフランの「父娘」のような絆が非常に尊い名作です。フランがどんどん強くなり、理不尽な敵をバッサバッサとなぎ倒していくアクションの爽快感と、美味しいカレーをフランに食べさせて喜ばせる日常のギャップが魅力的です。'
+        synopsis: '気がつくと見知らぬ草原の台座に突き刺さった「知性を持つ魔剣」に転生していた主人公。魔物を自力で倒してスキルを吸収しながら己を鍛え上げていたところ、奴隷として過酷な虐待を受けていた黒猫族の少女フランと運命の出会いを果たします。フランの装備者となり、彼女の「黒猫族を進化させたい」という切実な悲願を叶えるため、過保護な親馬鹿剣（師匠）として世界を駆ける冒険が始まります。',
+        recommendReason: '無機物転生という斬新な設定でありながら、主人公の「剣」と幼いフランの「父娘」のような絆が非常に尊い名作です。フランがどんどん強くなり、理不尽な差別や敵をバッサバッサとなぎ倒していくアクションの爽快感と、フランに美味しいカレーを食べさせて喜ばせる日常のギャップが読者の心を掴んで離しません。',
+        points: [
+          '知性を持つ魔剣（師匠）と黒猫族の少女フランの尊すぎる疑似親子バディ関係',
+          '魔石を吸収して剣自体が進化・強化されていくワクワクするスキル獲得システム',
+          '差別に立ち向かい、圧倒的な剣技と魔術で強敵を粉砕する爽快なバトルアクション'
+        ]
       },
       {
         keyword: 'オーバーロード',
         customTitle: 'オーバーロード',
-        synopsis: 'サービス終了を迎えたVRMMORPGの片隅で、骸骨の姿をした大魔法使い「モモンガ」はギルド拠点ごと異世界へ転移してしまいます。かつてNPCだった配下の悪魔や吸血鬼たちが自我を持ち、自分を「至高の支配者」として崇拝する中、彼はアンデッドの魔王アインズ・ウール・ゴウンとして世界征服へ乗り出します。',
-        recommendReason: '正義のヒーローではなく、冷徹なアンデッドの「絶対悪（魔王）」の視点から描かれるダークファンタジーの最高峰です。アインズの圧倒的な軍事力と心理的駆け引き、そして部下たちの勘違いに冷や汗を流しながらも威厳を保つコメディ要素のバランスが神がかっており、一度読み始めると止まりません。'
+        synopsis: 'サービス終了を迎えたVRMMORPG「ユグドラシル」の片隅で、骸骨の姿をした大魔法使い「モモンガ」はギルド拠点「ナザリック地下大墳墓」ごと異世界へ転移してしまいます。かつてNPCだった配下の悪魔や吸血鬼たちが自我を持ち、自分を「絶対の支配者」として崇拝する中、彼はアンデッドの魔王アインズ・ウール・ゴウンとして世界征服へ乗り出します。',
+        recommendReason: '正義の味方ではなく、冷徹なアンデッドの「絶対悪（魔王）」の視点から描かれるダークファンタジーの最高峰です。アインズの圧倒的な軍事力と心理的駆け引き、そして部下たちの勘違いに冷や汗を流しながらも威厳を保つコメディ要素のバランスが神がかっており、一度読み始めるとページをめくる手が止まりません。',
+        points: [
+          '圧倒的な戦力差で敵対勢力を蹂躙する、ダークファンタジーの頂点に立つ魔王の威厳',
+          'NPCたちの過剰な忠誠心と、内心焦りまくるアインズのユーモラスな勘違い劇',
+          '国家の興亡や群像劇が緻密に練り上げられた圧倒的な世界観のリアリティ'
+        ]
       },
       {
         keyword: '骸骨騎士様、只今異世界へお出掛け中',
         customTitle: '骸骨騎士様、只今異世界へお出掛け中',
-        synopsis: 'MMOのゲームプレイ中に寝落ちした主人公が目を覚ますと、自身のアバターである「全身鎧の骸骨騎士アーク」になって異世界に立っていました。目立つとモンスターとして討伐されてしまうため、穏便に旅をしようとするものの、目の前の悪事を見過ごせないお人好しな性格から、エルフの美少女を救出したり国を揺るがす陰謀に巻き込まれていきます。',
-        recommendReason: '見た目は恐ろしい骸骨なのに、中身は陽気で世直しが大好きな好人物というギャップが爽快です。悪党に対して容赦のないチート級の神聖魔法と剣技でスカッと成敗してくれるため、王道勧善懲悪のファンタジーとしてストレスなく楽しめます。'
+        synopsis: 'MMOのプレイ中に寝落ちした主人公が目を覚ますと、自身のアバターである「全身鎧の骸骨騎士アーク」になって異世界に立っていました。目立つとモンスターとして討伐されてしまうため、穏便に旅をしようとするものの、目の前の悪事を見過ごせないお人好しな性格から、エルフの美少女を救出したり国を揺るがす陰謀に巻き込まれていきます。',
+        recommendReason: '見た目は恐ろしいアンデッド骸骨なのに、中身は陽気で世直しが大好きな好人物というギャップが爽快です。悪党に対して容赦のないチート級の神聖魔法と剣技でスカッと成敗してくれるため、王道勧善懲悪のファンタジーとしてストレスなく楽しめます。',
+        points: [
+          '恐ろしい骸骨の見た目とお茶目で正義感あふれる内面の愛すべきギャップ',
+          '悪徳貴族や盗賊を一撃で粉砕する爽快な勧善懲悪バトルと神聖魔法無双',
+          'エルフの戦士アリアンや可愛い精霊獣ポンタとの心温まる旅路'
+        ]
       },
       {
         keyword: 'Re:Monster',
         customTitle: 'Re:Monster',
         synopsis: 'ストーカーに刺されて死亡した主人公が、最弱のモンスター「ゴブリン（ゴブ朗）」として異世界に転生。食べたものの能力を自分のものにできる特異能力【吸喰能力（アブソープション）】を駆使し、過酷な弱肉強食の世界で仲間たちを率いて急速に進化・台頭していきます。',
-        recommendReason: 'モンスター側の視点で群れを統率し、ゴブリンからホブゴブリン、オーガへと段階的に進化していく育成シミュレーションのような面白さが炸裂しています。日記形式でテンポよく進む成り上がり劇と、モンスターならではの容赦ないサバイバル感が刺激的です。'
+        recommendReason: 'モンスター側の視点で群れを統率し、ゴブリンからホブゴブリン、オーガへと段階的に進化していく育成シミュレーションのような面白さが炸裂しています。日記形式でテンポよく進む成り上がり劇と、モンスターならではの容赦ないサバイバル感が刺激的です。',
+        points: [
+          '食べた相手のスキルを奪い取る【吸喰能力】による無限の成長と進化',
+          '最弱のゴブリンの群れを鍛え上げ、最強のモンスター軍団を築く統率の面白さ',
+          '弱肉強食の容赦ない世界を生き抜く、ピカレスク的で骨太なサバイバル感'
+        ]
       },
       {
         keyword: '転生ごときで逃げられるとでも、兄さん？',
         customTitle: '転生ごときで逃げられるとでも、兄さん？',
         synopsis: 'ヤンデレの妹に監禁・殺害された主人公。地獄から逃れるため異世界へ転生するものの、妹もまた異常な執念で異世界へと追跡してきて……！？人外や異形モンスターを巡る狂気とサスペンスが交錯する異色のダークファンタジー。',
-        recommendReason: '常識外れの狂気と圧倒的スピード感で読者を惹きつける異色作です。一般的な異世界モノとは一線を画すスリリングな心理戦と予測不可能な展開に、ページをめくる手が止まらなくなります。'
+        recommendReason: '常識外れの狂気と圧倒的スピード感で読者を惹きつける異色作です。一般的な異世界モノとは一線を画すスリリングな心理戦と予測不可能な展開に、ページをめくる手が止まらなくなります。',
+        points: [
+          '異世界まで追ってくるヤンデレ妹の狂気と、命がけの心理サスペンス',
+          '人外の能力と異能がぶつかり合う緊迫感あふれるダークアクション',
+          '先がまったく読めない怒涛のジェットコースター的ストーリー展開'
+        ]
       },
       {
         keyword: '転生したらドラゴンの卵だった',
         customTitle: '転生したらドラゴンの卵だった〜最強以外目指さねぇ〜',
         synopsis: '気がつくと見知らぬ森で「ドラゴンの卵」として転生していた主人公。殻を割って生まれた小竜の姿から、魔物を狩りまくって経験値を稼ぎ、ステータスを伸ばして凶悪なドラゴンへと多段階進化を目指すサバイバルファンタジー。',
-        recommendReason: '「最初は最弱のトカゲ同然」から始まり、死線をくぐり抜けながら進化ツリーを選択していくワクワク感がたまりません。孤独なモンスター生活の中で出会う相棒たちとの絆や、人間社会との距離感の葛藤など、人外主人公ならではのドラマが熱いです。'
+        recommendReason: '「最初は最弱のトカゲ同然」から始まり、死線をくぐり抜けながら進化ツリーを選択していくワクワク感がたまりません。孤独なモンスター生活の中で出会う相棒たちとの絆や、人間社会との距離感の葛藤など、人外主人公ならではのドラマが熱いです。',
+        points: [
+          '卵から孵化し、死線を越えて強大なドラゴンへと進化していく育成の醍醐味',
+          'スキルとステータスを駆使して格上の魔物を討ち倒す白熱のモンスターバトル',
+          '孤独な魔物生活の中で芽生える相棒との絆と心温まるドラマ'
+        ]
       },
       {
         keyword: '自動販売機に生まれ変わった俺は迷宮を彷徨う',
         customTitle: '自動販売機に生まれ変わった俺は迷宮を彷徨う',
         synopsis: '自販機マニアの男が、落ちてくる自販機から身を守ろうとして事故死。異世界の湖畔で「自動販売機（ハッコン）」として転生してしまいます。移動も会話もできず、「いらっしゃいませ」「ざんねん」の録音ボイスしか出せない中、怪力の少女ラッミスに背負われて迷宮探索へと同行することになります。',
-        recommendReason: '一発ネタに見えて、自販機のラインナップ（缶飲料、カップ麺、缶詰、アイス、簡易カイロ、防犯ブザーなど）を極限まで工夫してモンスター討伐や迷宮サバイバルを支援するロジカルな面白さに脱帽します。ハッコンとラッミスの信頼関係も微笑ましい傑作です。'
+        recommendReason: '一発ネタに見えて、自販機のラインナップ（缶飲料、カップ麺、缶詰、アイス、簡易カイロ、防犯ブザーなど）を極限まで工夫してモンスター討伐や迷宮サバイバルを支援するロジカルな面白さに脱帽します。ハッコンとラッミスの信頼関係も微笑ましい傑作です。',
+        points: [
+          '自販機の機能と現代の商品知識を駆使して迷宮を攻略する唯一無二のアイデア',
+          '会話が定型ボイスのみという制約の中で深まる、ラッミスとの固い絆',
+          '意外な商品が魔物討伐の決定打になる知的なカタルシス'
+        ]
       },
       {
         keyword: '名湯「異世界の湯」開拓記',
         customTitle: '名湯『異世界の湯』開拓記 〜アラフォー温泉マニアの転生先は、のんびり温泉天国でした〜',
         synopsis: '温泉が大好きな男が転生した先は、なんと「効能豊かな源泉そのもの」！湯の中に現れる美少女エルフやケモ耳少女たちに極上の湯浴みを提供しながら、源泉魔力で温泉街を発展させていくユニークな人外（無機物）転生譚。',
-        recommendReason: '温泉としての効能で傷ついた旅人を癒やし、美味しい温泉卵や料理を振る舞うほのぼのとした空気感が魅力です。お色気と癒やしが程よくブレンドされた、肩の力を抜いて楽しめる快作です。'
+        recommendReason: '温泉としての効能で傷ついた旅人を癒やし、美味しい温泉卵や料理を振る舞うほのぼのとした空気感が魅力です。お色気と癒やしが程よくブレンドされた、肩の力を抜いて楽しめる快作です。',
+        points: [
+          '源泉そのものに転生するという奇抜な設定と温泉マニアの深いこだわり',
+          '美少女たちを湯で癒やし、温泉街をじわじわ発展させていく開拓の楽しさ',
+          '肩の力を抜いて読める、ほっこり温かい極上のリラクゼーション作品'
+        ]
       }
     ],
     ranking: [
@@ -405,69 +533,129 @@ export const featureDefinitions = featureDefsFromFile.length > 0 ? featureDefsFr
   {
     slug: 'territory-management-10',
     title: '領地経営・内政が面白すぎる領主系異世界ラノベ10選',
-    metaTitle: '領主・内政系おすすめ異世界ラノベ10選！領地開拓・経済改革・軍略がアツい名作まとめ',
-    description: '剣の腕や魔法だけでなく、現代知識・経済学・科学技術・農業改革でボロボロの領地を大繁栄へと導く！知略と組織づくりで民を救い、大国を動かす領地経営・内政系異世界ライトノベル10選を徹底特集します。',
-    eyecatchBadge: '領地経営＆内政',
+    metaTitle: '領主・内政系おすすめ異世界ラノベ10選！領地開拓・経済改革・近代技術導入が熱い傑作まとめ',
+    description: '剣の腕や魔法だけでなく、現代の経済学・科学技術・農業改革・法制度でボロボロの領地を大繁栄へと導く！知略と組織づくりで民を救い、大国を動かす領地経営・内政系異世界ライトノベル10選を徹底特集します。',
+    eyecatchBadge: '領地経営・内政・改革',
+    faq: [
+      {
+        q: '領地経営・内政系ラノベの魅力は何ですか？',
+        a: '主人公の現代知識（農業、経済、衛生、科学技術など）を用いて、貧しい農村や財政破綻した国家を計画的に立て直し、領民たちの生活水準が劇的に向上していく達成感とカタルシスにあります。'
+      },
+      {
+        q: '内政系ラノベで最初に読むべき名作は？',
+        a: '紙と印刷産業の立ち上げから文化大改革を描く『本好きの下剋上』や、行政・人事・経済をロジカルに再建する『現実主義勇者の王国再建記』が最高峰の傑作です。'
+      }
+    ],
     items: [
+      {
+        keyword: '本好きの下剋上',
+        customTitle: '本好きの下剋上 〜司書になるためには手段を選んでいられません〜',
+        synopsis: '本をこよなく愛する女子大生・本須麗乃が、中世風の異世界の病弱な平民少女マインとして転生。しかしその世界では本は貴族しか持てない超高級品でした。「本がないなら自分で作ればいい！」と決意したマインは、植物紙の開発からインク作り、印刷技術の確立まで、ゼロから産業を興して成り上がっていきます。',
+        recommendReason: '圧倒的な解像度で描かれる中世貴族社会と平民の暮らし、そして紙作り・印刷事業が社会経済を塗り替えていく大河ドラマのような重厚感。マインの発明が周囲の大人たちや領主を巻き込み、一大産業へと発展していくカタルシスは他の追随を許しません。',
+        points: [
+          '紙作りから印刷機開発まで、ゼロから産業を立ち上げる驚異的な内政リアリティ',
+          '身分制度や魔力格差が厳然と存在する中世貴族社会の緻密な世界観構築',
+          '病弱な少女が愛する家族や本のために世界を動かしていく感動の成長ドラマ'
+        ]
+      },
       {
         keyword: '現実主義勇者の王国再建記',
         customTitle: '現実主義勇者の王国再建記',
         synopsis: '異世界のエルフリーデン王国に勇者として召喚された相馬一也。しかし彼が求められたのは魔王討伐ではなく、財政難と食糧危機に瀕した王国の再建でした。王位を譲られたソーマは、現代の行政学や経済知識、人材登用法を駆使して、腐敗した貴族の粛清、綿密なインフラ整備、食糧改革を断行していきます。',
-        recommendReason: '「適材適所」をモットーに、武力だけでなく歌姫や経理の達人など様々な特技を持つ人材を集めて国を立て直すプロセスが知的に爽快です。隣国との外交戦や軍事衝突でも、徹底した兵站と謀略で被害を最小限に抑える現実主義な統治が痛快です。'
-      },
-      {
-        keyword: '本好きの下剋上',
-        customTitle: '本好きの下剋上 〜司書になるためには手段を選んでいられません〜',
-        synopsis: '本をこよなく愛する女子大生が、中世風の異世界の病弱な平民少女マインとして転生。しかしその世界では本は貴族しか持てない超高級品でした。「本がないなら自分で作ればいい！」と決意したマインは、植物紙の開発からインク作り、印刷技術の確立まで、ゼロから産業を興して成り上がっていきます。',
-        recommendReason: '圧倒的な解像度で描かれる中世貴族社会と平民の暮らし、そして紙作り・印刷事業が社会経済を塗り替えていく大河ドラマのような重厚感。マインの発明が周囲の大人たちや領主を巻き込み、一大産業へと発展していくカタルシスは他の追随を許しません。'
+        recommendReason: '「適材適所」をモットーに、武力だけでなく歌姫や経理の達人など様々な特技を持つ人材を集めて国を立て直すプロセスが知的に爽快です。隣国との外交戦や軍事衝突でも、徹底した兵站と謀略で被害を最小限に抑える現実主義な統治が痛快です。',
+        points: [
+          '「才能を集めよ」の布告から始まる、適材適所の人材登用と組織マネジメント',
+          '食糧危機、財政破綻、インフラ整備を経済学と行政知識で鮮やかに解決',
+          '無駄な流血を避け、外交と謀略で大国と渡り合う現実主義の軍略ドラマ'
+        ]
       },
       {
         keyword: '八男って、それはないでしょう！',
         customTitle: '八男って、それはないでしょう！',
         synopsis: 'しがないサラリーマンの一宮信吾が、貧乏貴族の八男・ヴェンデリン（5歳）として転生。領地も遺産も継げない絶望的な境遇の中、卓越した魔法の才能を開花させます。やがて自らの実力で未開地を開拓し、辺境伯として広大な領地を経営していくことになります。',
-        recommendReason: '貴族社会の生々しいしがらみや相続争い、領地経営にかかる費用やトンネル掘削・治水工事などのインフラ開拓が細かく描写されているのが特徴です。魔法を使った大規模開墾と、貴族政治のリアルな駆け引きが楽しめます。'
-      },
-      {
-        keyword: '理想のヒモ生活',
-        customTitle: '理想のヒモ生活',
-        synopsis: 'ブラック企業の会社員・山井善治郎が、異世界の女王アウラから「王配（女王の夫）になって子供を作ってほしい」とスカウトされて異世界へ。政治に口を出さない「ヒモ」としてのんびり暮らすはずが、王宮内の派閥抗争や貴族の陰謀を前に、現代社会で培った常識と気配りを武器に巧妙な政治的立ち回りを演じることになります。',
-        recommendReason: '派手なバトルや無双チートを排し、宮廷政治、外交交渉、婚姻政策、税制改革などのリアルな権力闘争を緻密に描いた大人のための内政ファンタジーです。女王アウラとの成熟した夫婦愛も素晴らしく、じっくり読ませる傑作です。'
+        recommendReason: '貴族社会の生々しいしがらみや相続争い、領地経営にかかる費用やトンネル掘削・治水工事などのインフラ開拓が細かく描写されているのが特徴です。魔法を使った大規模開墾と、貴族政治のリアルな駆け引きが楽しめます。',
+        points: [
+          '遺産も継げない貧乏貴族の八男から辺境伯へと上り詰める王道サクセスストーリー',
+          '魔法を土木工事や農地開拓にフル活用する実践的かつスケールの大きい内政描写',
+          '貴族社会特有のドロドロした権力闘争と生々しい派閥政治の駆け引き'
+        ]
       },
       {
         keyword: '天才王子の赤字国家再生術',
         customTitle: '天才王子の赤字国家再生術〜そうだ、売国しよう〜',
         synopsis: '資源も兵力もない弱小国家ナトラ王国の若き王子ウェイン。「早く国を他国に高く売り払って悠々自適の隠居生活を送りたい！」と画策するものの、持ち前の卓越した頭脳と軍略が裏目に出て、大国を返り討ちにして領土を拡大させてしまい、どんどん名君として祭り上げられていきます。',
-        recommendReason: '「売国したいのに大勝利してしまう」という極上のコメディ構造と、一歩間違えれば国が滅ぶギリギリの知略戦・舌戦の切れ味が抜群です。補佐官ニニムとの軽妙な掛け合いと、予想の上を行く逆転劇にスカッとさせられます。'
+        recommendReason: '「売国したいのに大勝利してしまう」という極上のコメディ構造と、一歩間違えれば国が滅ぶギリギリの知略戦・舌戦の切れ味が抜群です。補佐官ニニムとの軽妙な掛け合いと、予想の上を行く逆転劇にスカッとさせられます。',
+        points: [
+          '「早く国を売り払って隠居したい」という本音と裏腹に大勝利を重ねる痛快コメディ',
+          '一瞬の隙も許されない緊迫した外交舌戦と、少数の兵で大軍を破る鮮やかな軍略',
+          '幼馴染で首席補佐官ニニムとの絶対的な信頼関係と軽妙な掛け合い'
+        ]
+      },
+      {
+        keyword: '理想のヒモ生活',
+        customTitle: '理想のヒモ生活',
+        synopsis: 'ブラック企業の会社員・山井善治郎が、異世界の女王アウラから「王配（女王の夫）になって子供を作ってほしい」とスカウトされて異世界へ。政治に口を出さない「ヒモ」としてのんびり暮らすはずが、王宮内の派閥抗争や貴族の陰謀を前に、現代社会で培った常識と気配りを武器に巧妙な政治的立ち回りを演じることになります。',
+        recommendReason: '派手なバトルや無双チートを排し、宮廷政治、外交交渉、婚姻政策、税制改革などのリアルな権力闘争を緻密に描いた大人のための内政ファンタジーです。女王アウラとの成熟した夫婦愛も素晴らしく、じっくり読ませる傑作です。',
+        points: [
+          '派手なチート無双を排した、大人のための本格的な宮廷政治＆外交サスペンス',
+          '女王アウラと善治郎の互いを尊重し合う成熟した夫婦の絆と愛情',
+          'ガラス製品や家電の知識など、現代技術の導入に伴う政治的影響の緻密な計算'
+        ]
       },
       {
         keyword: '領民0人スタートの辺境領主様',
         customTitle: '領民0人スタートの辺境領主様〜青のディアスと蒼角の乙女〜',
         synopsis: '長年の戦争で英雄となったものの、権力争いに巻き込まれ領民が一人もいない不毛の荒野「オレルド領」を与えられたディアス。しかしそこで角を持つ美しき鬼族の娘セーラと出会い、彼女の部族と共にゼロから領地開拓をスタート。実直な人柄と圧倒的な武力で、過酷な荒野を豊かで平和な地へと育てていきます。',
-        recommendReason: '主人公ディアスの嘘偽りのない誠実さと、鬼族たちとの心温まる信頼関係が素晴らしいです。荒野の水源確保や住居建設、凶悪な魔獣からの防衛など、開拓の泥臭さと確かな手応えが胸に響きます。'
+        recommendReason: '主人公ディアスの嘘偽りのない誠実さと、鬼族たちとの心温まる信頼関係が素晴らしいです。荒野の水源確保や住居建設、凶悪な魔獣からの防衛など、開拓の泥臭さと確かな手応えが胸に響きます。',
+        points: [
+          '領民ゼロの荒野から始まる、泥臭くも確かな手応えのある本格開拓ドラマ',
+          '英雄でありながら驕らないディアスの誠実な人柄と、鬼族セーラとの温かい純愛',
+          '凶悪な魔獣の襲撃を卓越した弓と槍の技で防衛する迫力のバトルシーン'
+        ]
       },
       {
         keyword: '宝くじで40億当たったんだけど異世界に移住する',
         customTitle: '宝くじで40億当たったんだけど異世界に移住する',
         synopsis: '宝くじで40億円を当てた志野一良は、実家の屋敷が飢饉に苦しむ異世界の貧村と繋がっているのを発見します。日本で買い込んだ肥料、農業機械、医薬品、資材を異世界へ持ち込み、領主の娘イステリアと共に大規模な農業改革とインフラ復興に乗り出します。',
-        recommendReason: '「現代日本の豊富な物資と資金力を異世界に注ぎ込む」という豪快な支援型内政が爽快です。村人たちが技術を学び、荒野が見事な水田や作付け地に変わっていく復興のドラマに胸が熱くなります。'
+        recommendReason: '「現代日本の豊富な物資と資金力を異世界に注ぎ込む」という豪快な支援型内政が爽快です。村人たちが技術を学び、荒野が見事な水田や作付け地に変わっていく復興のドラマに胸が熱くなります。',
+        points: [
+          '40億円の財力をフル活用し、日本から肥料や重機を持ち込む豪快な物資チート',
+          '飢饉に苦しむ村が最新の農業技術と治水工事で劇的に豊かになっていく復興劇',
+          '異世界人と技術を共有し、自立を促していく真摯な人道支援の温かさ'
+        ]
       },
       {
         keyword: '魔王様の街づくり！',
         customTitle: '魔王様の街づくり！ 〜最強のダンジョンは近代都市〜',
         synopsis: '新たに生まれた「創造」の魔王プロケルが、古い慣習にとらわれた迷宮づくりを拒否し、銃火器を装備した魔物たちと共に人間と魔物が共存する近代都市ダンジョン「アヴァロン」を建設。観光、商業、カジノ、安全な居住区を提供し、世界中の人々を魅了していきます。',
-        recommendReason: 'ダンジョンマスター×近代都市経営というハイブリッドな発想が秀逸です。魔物たちの特性を活かした街づくりと、攻め込んできた敵対魔王の軍勢を近代兵器で迎撃するタワーディフェンス的な防衛戦の面白さが両立しています。'
+        recommendReason: 'ダンジョンマスター×近代都市経営というハイブリッドな発想が秀逸です。魔物たちの特性を活かした街づくりと、攻め込んできた敵対魔王の軍勢を近代兵器で迎撃するタワーディフェンス的な防衛戦の面白さが両立しています。',
+        points: [
+          'ダンジョンを近代都市として開発し、観光や商業で莫大な富を生み出す斬新な内政',
+          '銃火器や現代兵器で武装した魔物たちが敵軍を迎え撃つ爽快なタワーディフェンス',
+          '人間と魔物が心から笑顔で暮らせる理想郷を追求するプロケルの信念'
+        ]
       },
       {
         keyword: '異世界建国記',
         customTitle: '異世界建国記',
         synopsis: '転生した主人公アルムスが、捨て子たちが暮らす貧しい集落の長となり、輪作農業（ノーフォーク農法）や製鉄技術を導入して村を開拓。周辺部族との同盟や戦争を勝ち抜き、一歩ずつ領地を拡大して一大帝国を建国していく本格歴史ファンタジー。',
-        recommendReason: '古代・中世の農業史や軍事史に忠実な、極めて骨太で地に足のついた建国記です。泥臭い開墾から始まり、徐々に勢力を伸ばして法制度や軍制を整えていく大河ロマンの醍醐味を存分に堪能できます。'
+        recommendReason: '古代・中世の農業史や軍事史に忠実な、極めて骨太で地に足のついた建国記です。泥臭い開墾から始まり、徐々に勢力を伸ばして法制度や軍制を整えていく大河ロマンの醍醐味を存分に堪能できます。',
+        points: [
+          '輪作農法や製鉄、紙作りなど歴史的事実に基づいた地に足のついた技術革新',
+          '小部族の首長から周辺国家を統合し、大帝国へと発展していく大河的スケール感',
+          '古代ローマやギリシャを彷彿とさせる緻密な法制度・軍制改革のリアリズム'
+        ]
       },
       {
         keyword: 'お前のご奉仕はその程度か？',
         customTitle: 'お前のご奉仕はその程度か？',
         synopsis: '名門貴族の跡取り息子として領地を任された主人公が、悪友やメイドたちと共に領内の産業振興と治安維持に奮闘。ユーモラスなラブコメディの裏で、着実に領民の生活水準を向上させていく領主系快作。',
-        recommendReason: 'ライトなノリでサクサク読めつつも、領地経営の勘所をしっかり押さえた構成が魅力です。魅力的なヒロインたちとの賑やかなやり取りを楽しみながら、領地が発展していく満足感を味わえます。'
+        recommendReason: 'ライトなノリでサクサク読めつつも、領地経営の勘所をしっかり押さえた構成が魅力です。魅力的なヒロインたちとの賑やかなやり取りを楽しみながら、領地が発展していく満足感を味わえます。',
+        points: [
+          'コメディタッチでテンポよく進む、明るく楽しい領地経営ストーリー',
+          '個性豊かなヒロインたちとの軽妙な掛け合いと賑やかな領主館の日常',
+          '産業振興や治安改善など、領主としての仕事をスマートにこなす爽快感'
+        ]
       }
     ],
     ranking: [
@@ -493,67 +681,127 @@ export const featureDefinitions = featureDefsFromFile.length > 0 ? featureDefsFr
     title: '圧倒的爽快感！チート＆最強主人公ラノベ10選',
     metaTitle: 'チート＆最強主人公おすすめ異世界ラノベ10選！規格外の強さで無双する爽快傑作まとめ',
     description: '理不尽な敵も強大な魔王も一撃粉砕！ストレスフリーで読める圧倒的なチート能力、隠された規格外の実力、爽快なバトルアクションが炸裂する最強主人公系ライトノベル10選を徹底レビューします。',
-    eyecatchBadge: '無双＆チート',
+    eyecatchBadge: '無双・チート・最強',
+    faq: [
+      {
+        q: '最強主人公・チート系ラノベの魅力は何ですか？',
+        a: '理不尽な悪党や傲慢な敵を、主人公の圧倒的な力で一瞬にして叩き伏せる「カタルシス」と「ストレスフリーな爽快感」にあります。'
+      },
+      {
+        q: 'チート系ラノベで特におすすめの作品は？',
+        a: '圧倒的なスタイリッシュさと爆笑の勘違い劇が融合した『陰の実力者になりたくて！』や、名言の数々と常識外れの強さが光る『魔王学院の不適合者』がイチオシです。'
+      }
+    ],
     items: [
       {
         keyword: '陰の実力者になりたくて！',
         customTitle: '陰の実力者になりたくて！',
-        synopsis: '「主人公でもラスボスでもなく、普段は目立たないが裏で圧倒的な実力を振るう陰の実力者」に憧れるシド・カゲノー。異世界転生後、自作の「闇の教団」設定をもとにノリで配下（シャドウガーデン）を従えて陰の活躍をエンジョイしていたところ、なぜか彼の中二病妄想がすべて本物の世界の真実だったことが判明し……！？',
-        recommendReason: '勘違いコメディとシリアスな圧倒的無双バトルの融合が神がかり的な面白さ！本人は単なるごっこ遊びのつもりなのに、放つ一撃「アイ・アム・アトミック」で都市規模の敵を消滅させる規格外の強さとスタイリッシュさに痺れます。'
-      },
-      {
-        keyword: '無職転生 〜異世界行ったら本気だす〜',
-        customTitle: '無職転生 〜異世界行ったら本気だす〜',
-        synopsis: '前世の後悔を胸に、赤ん坊からやり直すルーデウス。膨大な魔力量と無詠唱魔術の習得により若くして圧倒的な実力を身につけます。最強の剣士や神クラスの猛者たちが跋扈する過酷な世界で、大切な家族や仲間を守るために全力を尽くして戦い抜く人生やり直し大河ファンタジー。',
-        recommendReason: '単なるイージーな俺TUEEEにとどまらず、主人公が己の弱さと向き合いながら世界の頂点クラスの戦いに挑んでいくドラマが圧倒的。魔法の理論体系やバトルの緊張感、家族の絆など、すべての要素が一級品の完成度を誇ります。'
-      },
-      {
-        keyword: '月が導く異世界道中',
-        customTitle: '月が導く異世界道中',
-        synopsis: '異世界へ召喚された深澄真（まこと）。しかし美醜至上主義の女神から「顔が不細工」という理不尽な理由で世界の果ての荒野へ放り出されてしまいます。しかし、人界の常識を遥かに超越した莫大な魔力と神話級の従魔（上位竜の巴、大蜘蛛の澪）を従え、亜人たちの街を拓きながら理不尽な世界を圧倒していきます。',
-        recommendReason: '女神から見捨てられた主人公が、規格外の魔力と弓の技で神に匹敵する力を振るうカタルシスが最高です。商人としての経済活動と、敵対する傲慢な勇者や軍勢を一瞬でねじ伏せる圧倒的武力のギャップにスカッとします。'
+        synopsis: '「主人公でもラスボスでもなく、普段は目立たないが裏で圧倒的な実力を振るう陰の実力者」に異常な憧れを抱く少年シド・カゲノー。異世界転生後、自作の「闇の教団」設定をもとにノリで配下（シャドウガーデン）を従えて陰の活躍をエンジョイしていたところ、なぜか彼の中二病妄想がすべて本物の世界の真実だったことが判明し……！？',
+        recommendReason: '勘違いコメディとシリアスな圧倒的無双バトルの融合が神がかり的な面白さ！本人は単なるごっこ遊びのつもりなのに、放つ一撃「アイ・アム・アトミック」で都市規模の敵を消滅させる規格外の強さとスタイリッシュさに痺れます。',
+        points: [
+          '中二病妄想がすべて世界の真実だったという奇跡のすれ違いコメディ',
+          '「アイ・アム・アトミック」をはじめとする超絶スタイリッシュな無双アクション',
+          '配下の美少女集団シャドウガーデンの盲信的な崇拝と圧倒的な実力'
+        ]
       },
       {
         keyword: '魔王学院の不適合者',
         customTitle: '魔王学院の不適合者 〜史上最強の魔王の始祖、転生して子孫たちの学校へ通う〜',
         synopsis: '平和を願い自ら命を絶った暴虐の魔王アノス・ヴォルディゴードが、2000年後に転生。しかし平和ボケした子孫たちの魔王学院では、彼の桁外れの力が測定不能で「不適合者」の烙印を押されてしまいます。理不尽な差別や陰謀を「殺したくらいで、俺が死ぬとでも思ったか？」と常識外れの絶対的強さで叩き潰していきます。',
-        recommendReason: '主人公アノスの圧倒的すぎる強さとブレない器の大きさがとにかく気持ちいい！どんな絶望的な状況や世界の理（ことわり）すらも自らの力でねじ曲げて解決してしまう問答無用の爽快感は、ストレス解消にこれ以上ない傑作です。'
+        recommendReason: '主人公アノスの圧倒的すぎる強さとブレない器の大きさがとにかく気持ちいい！どんな絶望的な状況や世界の理（ことわり）すらも自らの力でねじ曲げて解決してしまう問答無用の爽快感は、ストレス解消にこれ以上ない傑作です。',
+        points: [
+          '「殺したくらいで、俺が死ぬとでも思ったか？」など語り継がれる名言の数々',
+          '世界の理（ことわり）や神すらも一撃でねじ伏せる規格外の絶対的強さ',
+          '理不尽な差別をものともせず仲間や家族を包容する圧倒的な器の大きさ'
+        ]
+      },
+      {
+        keyword: '無職転生 〜異世界行ったら本気だす〜',
+        customTitle: '無職転生 〜異世界行ったら本気だす〜',
+        synopsis: '前世の後悔を胸に、赤ん坊からやり直すルーデウス。膨大な魔力量と無詠唱魔術の習得により若くして圧倒的な実力を身につけます。最強の剣士や神クラスの猛者たちが跋扈する過酷な世界で、大切な家族や仲間を守るために全力を尽くして戦い抜く人生やり直し大河ファンタジー。',
+        recommendReason: '単なるイージーな俺TUEEEにとどまらず、主人公が己の弱さと向き合いながら世界の頂点クラスの戦いに挑んでいくドラマが圧倒的。魔法の理論体系やバトルの緊張感、家族の絆など、すべての要素が一級品の完成度を誇ります。',
+        points: [
+          '幼少期の猛特訓と無詠唱魔術で培った圧倒的な魔力と戦闘技術',
+          '世界の頂点に君臨する列強たちとの息を呑む死闘とハイレベルな魔術戦',
+          '人生の失敗を糧に「今度こそ本気で生きる」ルーデウスの魂の成長大河ロマン'
+        ]
+      },
+      {
+        keyword: '月が導く異世界道中',
+        customTitle: '月が導く異世界道中',
+        synopsis: '異世界へ召喚された深澄真（まこと）。しかし美醜至上主義の女神から「顔が不細工」という理不尽な理由で世界の果ての荒野へ放り出されてしまいます。しかし、人界の常識を遥かに超越した莫大な魔力と神話級の従魔（上位竜の巴、大蜘蛛の澪）を従え、亜人たちの街を拓きながら理不尽な世界を圧倒していきます。',
+        recommendReason: '女神から見捨てられた主人公が、規格外の魔力と弓の技で神に匹敵する力を振るうカタルシスが最高です。商人としての経済活動と、敵対する傲慢な勇者や軍勢を一瞬でねじ伏せる圧倒的武力のギャップにスカッとします。',
+        points: [
+          '女神の加護なしで神をも凌駕する膨大な魔力と神話級の弓術チート',
+          '上位竜や災厄の蜘蛛など最強の従魔たちと築く亜人の理想郷「亜空」',
+          '傲慢な勇者や差別的な人間たちを規格外の実力で圧倒する痛快劇'
+        ]
       },
       {
         keyword: 'ありふれた職業で世界最強',
         customTitle: 'ありふれた職業で世界最強',
         synopsis: 'クラスメイトと共に異世界召喚された南雲ハジメ。最弱の非戦闘系職業「錬成師」だった彼は、同級生の悪意によって大迷宮の奈落の底へ突き落とされてしまいます。絶望と死の淵で生き残る覚悟を決めたハジメは、魔物の肉を喰らい、錬成で近代火器を創り出して深淵から世界最強へと駆け上がります。',
-        recommendReason: '裏切りから始まるダークな復讐と、奈落の底から這い上がってきた圧倒的強者の佇まいが男心をくすぐります。リボルバーやレールガン、パイルバンカーなど近代兵器を駆使したド派手なバトルアクションは爽快感抜群です。'
+        recommendReason: '裏切りから始まるダークな復讐と、奈落の底から這い上がってきた圧倒的強者の佇まいが男心をくすぐります。リボルバーやレールガン、パイルバンカーなど近代兵器を駆使したド派手なバトルアクションは爽快感抜群です。',
+        points: [
+          '最弱の錬成師が魔物を喰らい、奈落の底から世界最強へ成り上がる覚醒劇',
+          'レールガンやロケットランチャーなど近代火器を創り出すド派手な殲滅戦',
+          '吸血鬼ユエをはじめとする仲間たちへの深い愛情と、敵に対する冷徹な容赦のなさ'
+        ]
       },
       {
         keyword: '即死チートが最強すぎて',
         customTitle: '即死チートが最強すぎて、異世界のやつらがまるで相手にならないんですが。',
         synopsis: '修学旅行のバスごと異世界へ召喚され、無能と判断されてドラゴンが迫るバスに置き去りにされた高遠夜霧。しかし彼の能力は「意図した対象を無条件で即死させる」という世界の法則を超越した絶対即死能力でした。どんな不死身も神もアンデッドも、害意を向けた瞬間に死に至らしめる理不尽無双コメディ。',
-        recommendReason: '「どんなチート能力や防御結界も、死ぬんだから関係ない」という究極のシンプルさが爆笑と爽快感を生んでいます。主人公を舐めてかかってきた悪党や慢心した勇者たちが次々と一瞬で自滅していく様は痛快そのものです。'
+        recommendReason: '「どんなチート能力や防御結界も、死ぬんだから関係ない」という究極のシンプルさが爆笑と爽快感を生んでいます。主人公を舐めてかかってきた悪党や慢心した勇者たちが次々と一瞬で自滅していく様は痛快そのものです。',
+        points: [
+          '敵意を向けた瞬間に相手が絶命する、世界の理を超越した絶対即死能力',
+          'どんな不死身も神もバリアも一撃で無力化する究極のストレスフリー無双',
+          '自業自得で自滅していく傲慢な悪党たちの爽快な退場劇'
+        ]
       },
       {
         keyword: 'デスマーチからはじまる異世界狂想曲',
         customTitle: 'デスマーチからはじまる異世界狂想曲',
         synopsis: 'デスマーチ真っ最中のプログラマー・サトゥー（29歳）が、仮眠から目覚めると見知らぬ荒野に。マップチェック用に実装した初心者救済魔法「流星雨」を3発ぶっ放したところ、マップ全域の神話級モンスターと竜神が全滅し、一気にレベル310のカンスト大富豪になってしまいます。',
-        recommendReason: '規格外すぎる神級の強さを持ちながら、本人はあくまで「異世界観光とグルメと仲間たちとののんびり旅」を満喫しようとするスタンスが心地よいです。いざトラブルが起きれば裏で一瞬で解決する頼もしさも魅力です。'
+        recommendReason: '規格外すぎる神級の強さを持ちながら、本人はあくまで「異世界観光とグルメと仲間たちとののんびり旅」を満喫しようとするスタンスが心地よいです。いざトラブルが起きれば裏で一瞬で解決する頼もしさも魅力です。',
+        points: [
+          '序盤の「流星雨」で神話級竜神を消滅させ、一気にレベル310カンストする豪快さ',
+          '世界最強の力を隠しながら、仲間たちとグルメと観光を満喫する贅沢な旅路',
+          'いざ強敵が現れれば裏で勇者や仮面の魔法使いとして一瞬で粉砕する頼もしさ'
+        ]
       },
       {
         keyword: 'リアデイルの大地にて',
         customTitle: 'リアデイルの大地にて',
         synopsis: '生命維持装置の停止で命を落とした少女・各務桂菜。彼女が目覚めたのは、自身がやり込んでいたVRMMO「リアデイル」の200年後の世界でした。アバターであるハイエルフ「ケーナ」として、限界突破したスキルと限界値超えの魔力を携え、かつて自分が作成したNPCの子供たちと再会しながら自由な旅を楽しみます。',
-        recommendReason: 'のんびりしたお散歩気分と、いざ戦えば伝説の「スキルマスター第3号」として周囲を絶句させる圧倒的無双のバランスが絶妙です。ハイエルフの母として子供たちに接する温かい家族模様も癒やされます。'
+        recommendReason: 'のんびりしたお散歩気分と、いざ戦えば伝説の「スキルマスター第3号」として周囲を絶句させる圧倒的無双のバランスが絶妙です。ハイエルフの母として子供たちに接する温かい家族模様も癒やされます。',
+        points: [
+          '限界突破スキルを多数保有する伝説の「スキルマスター」としての規格外の魔力',
+          '自分が生み出したNPCの子供たち（エルフやドワーフ）との心温まる再会と家族愛',
+          'マイペースな旅先で起きるトラブルを圧倒的な魔法でスカッと解決する爽快感'
+        ]
       },
       {
         keyword: '精霊幻想記',
         customTitle: '精霊幻想記',
         synopsis: 'スラム街で生きる孤児の少年リオ。ある日突然、前世の日本人大学生「天川春人」の記憶と莫大な魔力が覚醒します。王族救出の功績で名門学園に入学するも、身分差別や理不尽な冤罪に巻き込まれ国を出奔。精霊術と卓越した体術を極め、大切な人々を守るため世界を股にかけた戦いに挑みます。',
-        recommendReason: '理不尽な迫害や陰謀に屈せず、圧倒的な精霊術で敵を圧倒していくリオの気高き強さが胸を打ちます。ヒロインたちとの再会や絆、そして復讐と救済が交錯するドラマチックなストーリー展開が熱いです。'
+        recommendReason: '理不尽な迫害や陰謀に屈せず、圧倒的な精霊術で敵を圧倒していくリオの気高き強さが胸を打ちます。ヒロインたちとの再会や絆、そして復讐と救済が交錯するドラマチックなストーリー展開が熱いです。',
+        points: [
+          'スラムの孤児から前世の記憶と精霊術の覚醒によって最強の戦士へと至る軌跡',
+          '貴族の理不尽な差別や陰謀を圧倒的な実力と気品でねじ伏せるカタルシス',
+          '運命に引き裂かれたヒロインたちとの再会と、世界を揺るがす壮大な神話バトル'
+        ]
       },
       {
         keyword: '異世界魔王と召喚少女の奴隷魔術',
         customTitle: '異世界魔王と召喚少女の奴隷魔術',
         synopsis: 'MMORPGで「魔王」として恐れられていた坂本拓真。ある日ゲーム内の姿のまま異世界へ召喚され、2人の美少女から奴隷化の儀式を受けます。しかし彼の固有装備「魔術反射」が発動し、逆に少女たちが奴隷に！コミュニケーション下手な拓真は、ゲームの魔王RP（ロールプレイ）を演じながら、圧倒的な火力で敵を蹂躙していきます。',
-        recommendReason: '内心はビビリでコミュ障なのに、口を開けば傲慢不敵な魔王ボイスになってしまう主人公の愛嬌と、本物の魔王顔負けの超火力魔法で敵を消し去る爽快感が抜群のエンタメ作品です。'
+        recommendReason: '内心はビビリでコミュ障なのに、口を開けば傲慢不敵な魔王ボイスになってしまう主人公の愛嬌と、本物の魔王顔負けの超火力魔法で敵を消し去る爽快感が抜群のエンタメ作品です。',
+        points: [
+          '「魔術反射」で相手の術を跳ね返し、極大魔法で敵軍を消滅させる超火力無双',
+          '内心テンパりまくりなのに傲慢な魔王を演じきってしまう主人公のコミカルな魅力',
+          '召喚主の美少女たちとの賑やかでちょっぴり刺激的な冒険の日々'
+        ]
       }
     ],
     ranking: [
@@ -573,41 +821,328 @@ export const featureDefinitions = featureDefsFromFile.length > 0 ? featureDefsFr
         reason: 'ただ強いだけでなく、人間としての成長や苦難を乗り越えて強大な敵と戦う大河ロマン。重厚な世界観と熱いバトルの迫力において並ぶもののない傑作です。'
       }
     ]
+  },
+  {
+    slug: 'banished-underdog-10',
+    title: '追放・不遇職からの大逆転！ざまぁ＆成り上がりラノベ10選',
+    metaTitle: '追放・不遇職おすすめ異世界ラノベ10選！外れスキルから最強へ大逆転する痛快傑作まとめ',
+    description: '「無能」「役立たず」と見下されパーティを追放された主人公が、隠された真の能力や独自スキルの覚醒で世界の頂点へ！見捨てた者たちを後悔させる圧倒的カタルシスが詰まった追放・成り上がりラノベ10選を徹底特集します。',
+    eyecatchBadge: '追放・不遇職・大逆転',
+    faq: [
+      {
+        q: '追放・不遇職モノの最大の魅力は何ですか？',
+        a: '序盤の理不尽な迫害や見下しを一気に覆す「大逆転のカタルシス」と、主人公の真の価値に気づかなかった元仲間たちが凋落していく痛快な因果応報（ざまぁ）にあります。'
+      },
+      {
+        q: '追放系ラノベでスカッとしたい人へのおすすめは？',
+        a: '絶望の底から己の力で這い上がる『盾の勇者の成り上がり』や『ありふれた職業で世界最強』、そして独自の回復魔法で無双する『治癒魔法の間違った使い方』がイチオシです。'
+      }
+    ],
+    items: [
+      {
+        keyword: '盾の勇者の成り上がり',
+        customTitle: '盾の勇者の成り上がり',
+        synopsis: '図書館の本を通じて異世界へ四聖勇者の一人「盾の勇者」として召喚された岩谷尚文。しかし攻撃ができない不遇な盾職として周囲から蔑まれ、召喚早々に仲間の王女から冤罪を着せられ全財産と名誉を奪われてしまいます。世界中を敵に回した尚文は、人間不信のどん底で奴隷の少女ラフタリアを買い、二人三脚で理不尽な世界へ復讐と成り上がりの戦いを挑みます。',
+        recommendReason: '追放・冤罪成り上がりファンタジーの原点にして最高峰。序盤の胸糞の悪さを耐えた先にある、ラフタリアとの深い信頼関係の構築と、傲慢な他の勇者たちや王族を圧倒していく怒涛の復讐劇のカタルシスは並ぶものがありません。',
+        points: [
+          '冤罪と裏切りのどん底から、盾のスキルを開拓して世界を救う英雄へと上り詰める軌跡',
+          '奴隷少女ラフタリアや魔鳥フィーロとの間に芽生える本物の家族のような絆',
+          '主人公を陥れた悪徳王女と愚かな勇者たちへの容赦のない痛快なざまぁ展開'
+        ]
+      },
+      {
+        keyword: '治癒魔法の間違った使い方',
+        customTitle: '治癒魔法の間違った使い方〜戦場を駆ける回復要員〜',
+        synopsis: '生徒会長と美少女に巻き込まれて異世界召喚された平凡な高校生ウサト。適性検査で発現したのは極めて珍しい「治癒魔法」でした。しかし喜んだのも束の間、救命団団長ローズに拉致され、「治癒魔法で筋肉痛と怪我を治しながら限界を超えて走り込む」という地獄の筋トレで、どんな攻撃も回避し怪力で敵を粉砕する異色の回復要員に鍛え上げられてしまいます。',
+        recommendReason: '「回復魔法で自分の筋肉を瞬時に治して超スピードと怪力を手に入れる」という発想の転換が爆笑と熱いカタルシスを生んでいます。後衛のはずのヒーラーが最前線で敵のボスをぶん殴りながら味方を救出していく疾走感が最高です。',
+        points: [
+          '「治癒魔法で筋繊維を治しながら鍛え抜く」という前代未聞の肉体派ヒーラー無双',
+          '救命団長ローズによる地獄のしごきと、戦場で誰一人死なせない熱い救命の誓い',
+          'ギャグと王道熱血バトルのテンポが抜群で、爽快感満点のアクション展開'
+        ]
+      },
+      {
+        keyword: '俺、勇者じゃないですから',
+        customTitle: '俺、勇者じゃないですから。〜VRMMOトッププレイヤーが転生したら、最弱職で成り上がる〜',
+        synopsis: 'VRMMOの頂点に君臨していた凄腕ゲーマーが、ゲームそっくりの異世界へ転生。しかし授かったのは戦闘力皆無の「最弱職」でした。無能と嘲笑される中、彼はゲーム知識と隠されたスキルのシナジーを完璧に構築し、常識を覆す変幻自在の戦術で強敵やエリート勇者たちを圧倒していきます。',
+        recommendReason: '純粋なステータスの暴力ではなく、「ゲームシステムの深い理解とコンボ」で格上をハメ倒す頭脳派成り上がりの爽快感が抜群です。見下してきた周囲の鼻を明かす鮮やかな勝利にスカッとします。',
+        points: [
+          '最弱職のスキルを極限まで組み合わせるロジカルなコンボ戦術の面白さ',
+          'トップゲーマーならではの先読みと立ち回りでエリートたちを翻弄する頭脳戦',
+          '誰も気づかなかった隠し要素を解放して最速で強者へ駆け上がる爽快感'
+        ]
+      },
+      {
+        keyword: '勇者パーティーを追放されたビーストテイマー',
+        customTitle: '勇者パーティーを追放されたビーストテイマー、最強種の猫耳少女と出会う',
+        synopsis: '勇者パーティーで動物を使役して雑用をこなしていたビーストテイマーのレイン。「役立たず」と罵られ追放された彼は、ソロ冒険者として生きる道を選びます。その直後、絶滅寸前の最強種「猫霊族」の美少女カナデと出会い契約！実はレインはすべての生物を使役できる規格外の才能の持ち主であり、最強種の仲間たちと共に無双の冒険者へと成り上がります。',
+        recommendReason: '追放した勇者たちがレインのサポートを失って急速に崩壊していく痛快な因果応報と、猫霊族や竜族など可愛い最強美少女たちから全幅の信頼を寄せられるレインの幸福感が対比になっており、王道のざまぁと癒やしが同時に味わえます。',
+        points: [
+          '「ただの雑用係」だった主人公が、最強種の美少女たちを従えて世界最強へ覚醒',
+          '主人公の真の貢献度を理解できず自滅していく元勇者パーティーへのざまぁ展開',
+          '猫霊族カナデや竜族タニアなど、素直で可愛いヒロインたちとの心温まる絆'
+        ]
+      },
+      {
+        keyword: '追放された転生貴族、外れスキルで内政無双',
+        customTitle: '追放された転生貴族、外れスキルで内政無双〜気ままに領地運営するはずが、スキル『ガチャ』のお陰で最強領地を作り上げてしまった〜',
+        synopsis: '貴族の家に生まれるも、外れスキルと見なされた【ガチャ】を理由に辺境の不毛の地へ追放された主人公。しかしその【ガチャ】は、現代のチートアイテムや伝説の従者を無尽蔵に召喚できる超神スキルでした！ガチャで引き当てた人材と資材を駆使し、寒村を一瞬で難攻不落の巨大都市へと変貌させていきます。',
+        recommendReason: '追放された荒野でガチャを回し、SSRのチート仲間や近代兵器を次々と引き当てて領地を発展させるソシャゲライクな爽快感がたまりません。見捨てた実家の貴族たちが後に大慌てする展開も痛快です。',
+        points: [
+          '外れスキルと思われた【ガチャ】からSSRアイテムや伝説の従者を引き当てるワクワク感',
+          '荒れ果てた辺境領地が最新鋭の超巨大都市へと爆速発展する爽快な内政無双',
+          '主人公を追放した愚かな本家貴族たちが立場逆転で後悔する痛快ざまぁ'
+        ]
+      },
+      {
+        keyword: '嘆きの亡霊は引退したい',
+        customTitle: '嘆きの亡霊は引退したい 〜最弱ハンターによる最も強大なパーティ育成術〜',
+        synopsis: '幼馴染たちと最強のトレジャーハンターを目指したクライ・アンドリヒ。しかし才能が絶望的になく、周囲が英雄クラスへ成長する中で自分だけ最弱のままでした。「早く引退したい！」と願うものの、なぜか適当な発言や愚痴がすべて神がかった予言や深謀遠慮として周囲に誤解され、帝都最強のクランマスターとして祭り上げられていきます。',
+        recommendReason: '「本人は最弱で逃げ出したいのに、周囲の勘違いで超絶強者として神格化される」という極上のアンジャッシュ的コメディが炸裂しています。最強の幼馴染たちがクライの一言で敵を殲滅していく爽快感と笑いが止まりません。',
+        points: [
+          '才能ゼロの最弱主人公が、なぜか世界最高峰の神軍師として崇められる勘違いコメディ',
+          'クライを狂信的に慕う最強の幼馴染パーティ「嘆きの亡霊」の圧倒的武力無双',
+          '適当に放った一言がことごとく事件を解決に導く奇跡のピタゴラスイッチ展開'
+        ]
+      },
+      {
+        keyword: '真の仲間じゃないと勇者のパーティーを追い出されたので',
+        customTitle: '真の仲間じゃないと勇者のパーティーを追い出されたので、辺境でスローライフすることにしました',
+        synopsis: '勇者パーティーの初期メンバーとして妹の勇者ルーティを支えていたレッド（ギデオン）。しかしレベルの上限が低く「足手まとい」として賢者から理不尽に追放されてしまいます。辺境の街ゾルタンで薬草屋を開き穏やかなスローライフを始めたところ、かつて共に戦ったツンデレお姫様リットが転がり込んできて、甘々なお店経営と幸せな同棲生活が幕を開けます。',
+        recommendReason: '追放された主人公が辺境で最愛のヒロイン（リット）と出会い、真の幸せを掴む大人の純愛スローライフがとにかく尊いです。一方でレッドを追放した勇者パーティーが精神的に崩壊していく描写のリアリティも読み応え抜群です。',
+        points: [
+          '追放された辺境で薬草屋を開き、お姫様リットと送る甘々で温かい同居生活',
+          '主人公という精神的支柱を失った元勇者パーティーが自滅していく因果応報',
+          '加護（天職）に縛られた世界の理に抗い、自分の生き方を自分で選ぶ感動のドラマ'
+        ]
+      },
+      {
+        keyword: '不遇職『鍛冶師』だけど最強です',
+        customTitle: '不遇職『鍛冶師』だけど最強です 〜気づけば何でも作れるようになっていた男ののんびりスローライフ〜',
+        synopsis: '戦闘職がもてはやされる世界で不遇職「鍛冶師」を授かり、パーティから追放された青年レリウス。しかし彼の鍛冶スキルは、神話級の神器すらも一瞬で分解・創造できる神スキルでした！作ったチート武器で魔物を瞬殺しながら、気ままなものづくりライフを満喫していきます。',
+        recommendReason: 'ゴミ扱いされたスキルが実は世界を揺るがすチートだったという王道爽快感が楽しめます。触れたものを何でも素材化し、最高ランクの武具を量産して無双するクラフトバトルが痛快です。',
+        points: [
+          'あらゆる物質を分解・創造し神器すら作れる究極の鍛冶チート無双',
+          '自分を捨てた元仲間たちを遥かに置き去りにして世界トップ職人へ成り上がる爽快感',
+          '可愛い仲間たちに最高級の装備をプレゼントして感謝されるほのぼの日常'
+        ]
+      },
+      {
+        keyword: 'パーティーから追放されたその治癒師、実は最強につき',
+        customTitle: 'パーティーから追放されたその治癒師、実は最強につき',
+        synopsis: '一流パーティから「まともな回復魔法も使えない無能」として追放された治癒師ラウスト。しかし彼が使っていたのは、超絶技巧の回避技術と相手の急所を突く格闘術、そして最速の自己回復を組み合わせた前衛最強の戦闘術でした！孤独な武闘派美少女ナルセーナと出会い、最強バディとして迷宮の深淵へ挑みます。',
+        recommendReason: '追放した側が無能で、主人公の超人的なサポート技術に気づいていなかったという典型的なざまぁ構図が極めて気持ちよく描かれています。ラウストを一途に信じるナルセーナの可愛さと、二人の圧倒的なコンビネーションが熱いです。',
+        points: [
+          '「無能」と見下されていた治癒師が、実は超人的な武術と神速回復の達人だった覚醒劇',
+          '主人公の不在によってダンジョンで大惨敗を喫する元パーティの痛快な没落',
+          '健気で一途な武闘派ヒロイン・ナルセーナとの熱いバディ関係と信頼の絆'
+        ]
+      },
+      {
+        keyword: '追放魔術師のその後 新天地で始める',
+        customTitle: '追放魔術師のその後 新天地で始める気ままな工房ライフ',
+        synopsis: '宮廷魔術師団から「非効率な魔法しか使えない」と理不尽に解雇された魔術師レイン。しかし彼が研究していたのは、生活を劇的に豊かにする古代魔法と魔導具開発でした。国境の街で工房を開き、高品質な生活魔導具を次々と生み出して街の英雄へと成り上がっていきます。',
+        recommendReason: '権威主義で凝り固まった元上司たちを見返し、自分の技術で多くの市井の人々を幸せにしていくサクセスストーリーが爽快です。工房での温かい仲間たちとの交流に心が洗われます。',
+        points: [
+          '時代遅れとされた古代魔術が、実は現代の常識を覆す万能技術だった大逆転',
+          '工房を開き、人々の暮らしを便利にする魔導具で街全体を豊かにするサクセス劇',
+          '主人公を手放した宮廷魔術師団が深刻な技術不足に陥る痛快なざまぁ展開'
+        ]
+      }
+    ],
+    ranking: [
+      {
+        rank: 1,
+        title: '盾の勇者の成り上がり',
+        reason: '冤罪と裏切りのどん底から、不屈の闘志と仲間との信頼で世界の英雄へと成り上がる大河ドラマ。序盤の過酷さがあるからこそ、その後の復讐と救済のカタルシスは全追放ラノベ中ナンバーワンです。'
+      },
+      {
+        rank: 2,
+        title: '治癒魔法の間違った使い方〜戦場を駆ける回復要員〜',
+        reason: '「治癒魔法で肉体を極限まで鍛え上げる」という唯一無二のアイデアと、疾走感あふれる熱血バトルの爽快感が群を抜いています。ギャグとシリアスのバランスが完璧な大傑作です。'
+      },
+      {
+        rank: 3,
+        title: '嘆きの亡霊は引退したい 〜最弱ハンターによる最も強大なパーティ育成術〜',
+        reason: '才能ゼロの主人公が、周囲の圧倒的勘違いによって世界最強クランマスターとして君臨するコメディの切れ味が最高峰。最強の幼馴染たちが暴れ回るバトル無双も爽快です。'
+      }
+    ]
+  },
+  {
+    slug: 'villainess-reincarnation-10',
+    title: '悪役令嬢転生・破滅フラグ回避系おすすめラノベ10選',
+    metaTitle: '悪役令嬢おすすめラノベ10選！破滅フラグ回避・ざまぁ・溺愛・爽快コメディ傑作まとめ',
+    description: '乙女ゲームの悪役令嬢に転生してしまったヒロインが、処刑や国外追放の破滅フラグを全力でへし折る！持ち前の知略、現代知識、あるいは規格外の天然ボケで周囲のイケメンや国中を虜にしていく大人気悪役令嬢ラノベ10選を徹底レビューします。',
+    eyecatchBadge: '悪役令嬢・破滅回避・溺愛',
+    faq: [
+      {
+        q: '悪役令嬢モノの魅力は何ですか？',
+        a: '理不尽な断罪や処刑エンドを回避するため、主人公が農業や学問、商売、魔法特訓に励み、その魅力的な人柄で本来の敵や攻略対象たちを無自覚に虜にしていく爽快な逆転劇にあります。'
+      },
+      {
+        q: '悪役令嬢モノの決定版といえばどの作品？',
+        a: 'ジャンルの火付け役となった『乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…（はめふら）』や、中華後宮の謎解きで大ヒット中の『薬屋のひとりごと』が絶対のおすすめです。'
+      }
+    ],
+    items: [
+      {
+        keyword: '乙女ゲームの破滅フラグしかない悪役令嬢',
+        customTitle: '乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…',
+        synopsis: '頭を石にぶつけた拍子に前世の記憶を思い出した公爵令嬢カタリナ・クラエス。自分が前世で夢中になっていた乙女ゲームの悪役令嬢であり、どんなルートでも「国外追放」か「死亡」の破滅フラグしか待っていないことに気づきます！破滅を回避するため、土いじり（農業）で魔力を鍛え、木登りを極めるなど斜め上の努力を重ねた結果、攻略対象の王子たちだけでなくヒロインまでをも無自覚に骨抜きにする「人たらし魔性令嬢」へと成長してしまいます。',
+        recommendReason: '悪役令嬢ブームを巻き起こした伝説の金字塔！カタリナの底抜けの明るさと愛すべきアホの子っぷり（カタリナ脳内会議）がとにかく最高に可愛いです。誰も傷つけない優しい世界観と、男女問わず全キャラクターから熱烈に愛される「人たらし無双」に思わず笑顔がこぼれます。',
+        points: [
+          '破滅フラグを回避しようと農業や木登りに励む、愛すべきカタリナの天然アホの子っぷり',
+          '攻略対象のイケメン王子たちだけでなくゲーム本来のヒロインまで全方位で惚れさせる人たらし力',
+          '脳内カタリナファイブによるコミカルな脳内会議と、ストレスゼロの多幸感あふれるコメディ'
+        ]
+      },
+      {
+        keyword: '薬屋のひとりごと',
+        customTitle: '薬屋のひとりごと',
+        synopsis: '花街で薬師をしていた少女・猫猫（マオマオ）は、人さらいに遭って後宮の下級女官として売り飛ばされてしまいます。目立たず年季明けを待つつもりだったが、帝の御子の連続不審死の謎を毒の知識で解き明かしたことから、美貌の宦官・壬氏（ジンシ）に目をつけられ、後宮内で起こる様々な怪事件や毒殺未遂の謎解きに巻き込まれていきます。',
+        recommendReason: '中華風宮廷を舞台にしたミステリー＆サスペンスの最高峰。毒と薬に異常な執着を持つ猫猫のドライで知的なキャラクター造形と、後宮の複雑な人間模様を論理的に解き明かすカタルシスが圧倒的です。壬氏とのもどかしくコミカルな駆け引きも必見です。',
+        points: [
+          '薬草と毒物の深い知識を駆使して後宮の怪事件を暴く本格ミステリーの快感',
+          '好奇心旺盛で毒が大好きな猫猫のクールで魅力的なヒロイン像',
+          '美貌の宦官・壬氏とのじれったい主従関係と宮廷の権力闘争の深み'
+        ]
+      },
+      {
+        keyword: 'ツンデレ悪役令嬢リーゼロッテ',
+        customTitle: 'ツンデレ悪役令嬢リーゼロッテと実況の遠藤くんと解説の小林さん',
+        synopsis: '乙女ゲームをプレイする高校生の遠藤くんと小林さんの「生実況と解説」が、なぜかゲーム内の婚約者ジークヴァルト王子の脳内に「神の神託」として直接届くようになってしまいます！神託を通じて、普段は高飛車で毒舌な悪役令嬢リーゼロッテが、実は照れ隠しでジークを想い詰めている「究極のツンデレ」であることが判明。破滅の運命から彼女を救うため、現実とゲーム世界が連動した神託ラブコメディが展開します。',
+        recommendReason: '「現実の実況解説がゲーム内の攻略対象に届く」という天才的なメタ構造が爆笑と胸キュンを生み出しています。本音はジークが大好きでたまらないのにツンツンしてしまうリーゼロッテの悶絶級の可愛さに、読者も実況の遠藤くんたちと一緒に全力で悶えること間違いなしです。',
+        points: [
+          '現実世界の高校生によるゲーム実況が、異世界の王子の耳に神託として届く斬新な設定',
+          '高飛車なセリフの裏にある本音がすべて暴露され、悶絶するツンデレ令嬢リーゼロッテの圧倒的可愛さ',
+          'バッドエンド（破滅）を回避し、全員をハッピーエンドへ導く心温まる救済ドラマ'
+        ]
+      },
+      {
+        keyword: 'ループ7回目の悪役令嬢は',
+        customTitle: 'ループ7回目の悪役令嬢は、元敵国で自由気ままな花嫁生活を満喫する',
+        synopsis: '公爵令嬢リーシェは20歳で命を落としては婚約破棄の瞬間に戻るタイムループを繰り返し、今回でなんと7回目の人生。過去6回の人生で商人、薬師、侍女、騎士などを極めてきた彼女は、「7回目こそは長生きして絶対にゴロゴロ怠惰ライフを送る！」と決意します。しかし、過去の人生で自分を殺した張本人である好戦的な皇太子アルノルトから突然求婚されてしまい……！？',
+        recommendReason: '過去6回の人生で培った万能の知識と戦闘スキルをフル活用し、国の危機をスマートに解決していくリーシェの有能ぶりが最高にカッコいいです！冷酷な皇太子アルノルトとの命がけの心理戦と、互いに惹かれ合っていくロマンスの緊張感に引き込まれます。',
+        points: [
+          '過去6回の人生（商人・薬師・騎士など）で得た多彩な超一流スキルによる鮮やかな問題解決',
+          '自分を殺した冷酷な皇太子アルノルトとのスリリングな心理戦と極上のロマンス',
+          '破滅の未来を変えるため、知識と行動力で運命を切り拓く強くて美しいヒロインの魅力'
+        ]
+      },
+      {
+        keyword: '悪役令嬢なのでラスボスを飼ってみました',
+        customTitle: '悪役令嬢なのでラスボスを飼ってみました',
+        synopsis: '婚約破棄を言い渡されたショックで前世の記憶を思い出した悪役令嬢アイリーン。バッドエンドを回避する唯一の道は、破滅の元凶である魔王クロード（ラスボス）を攻略して恋人にしてしまうことでした！魔王の城へ単身乗り込み、「私と結婚してください！」と逆プロポーズを仕掛け、持ち前の度胸と商才で魔王を懐柔していきます。',
+        recommendReason: 'ピンチに動じず、魔王すらも手玉に取って商売や領地改革を推し進めるアイリーンの不屈のメンタルが痛快そのものです。孤独だった魔王クロードがアイリーンの真っ直ぐな愛情に絆され、過保護な溺愛モードになっていく甘い展開も最高です。',
+        points: [
+          '破滅を避けるためラスボスの魔王に逆プロポーズするアイリーンの圧倒的な行動力と度胸',
+          '冷徹な魔王が次第にヒロインに骨抜きにされ、過保護に溺愛していく胸キュン展開',
+          '悪徳貴族や愚かな元婚約者を頭脳と商才でギャフンと言わせる痛快なざまぁ劇'
+        ]
+      },
+      {
+        keyword: '悲劇の元凶となる最強外道ラスボス女王は',
+        customTitle: '悲劇の元凶となる最強外道ラスボス女王は民の為に尽くします。',
+        synopsis: '8歳で前世の記憶を取り戻した王女プライド。自分が乙女ゲームに登場する「極悪非道の外道ラスボス女王」であり、国中を地獄に突き落とした末に処刑される運命だと気づきます。悲劇を阻止するため、授かった規格外のチート権能と予知知識を駆使し、自らの身を挺して民や騎士たちを救い、理想の女王を目指して奮闘します。',
+        recommendReason: '自己犠牲を厭わず、すべての人々を悲劇から救おうと命をかけるプライドの気高さに涙が止まりません。本来なら敵対するはずだった攻略対象たちがプライドに絶対の忠誠を誓い、命を捧げて守ろうとする熱い主従関係に胸が震えます。',
+        points: [
+          '極悪非道なラスボス女王の運命を覆し、民と仲間のために命をかける聖君への成長',
+          '主人公の圧倒的な献身と優しさに触れ、絶対の忠誠を誓う仲間たちの熱い絆',
+          '緻密なゲーム知識と予知を駆使して悲劇のフラグを粉砕していく感動の救済劇'
+        ]
+      },
+      {
+        keyword: '悪役令嬢レベル99',
+        customTitle: '悪役令嬢レベル99 〜私は裏ボスですが魔王ではありません〜',
+        synopsis: '乙女ゲームの裏ボス悪役令嬢ユミエラに転生した主人公。前世が筋金入りのゲーマーだった彼女は、平穏に生きるための安全マージンとして幼少期からダンジョンに潜り狂った結果、学園入学時点でカンストの「レベル99」に到達してしまいます。目立たず暮らしたいのに、放つ闇魔法が規格外すぎて魔王と誤解され、騒動に巻き込まれていきます。',
+        recommendReason: 'クーデレで無表情なユミエラが、常識外れの戦闘力でドラゴンを手懐けたり魔物を消滅させたりするシュールなギャグが爆笑必至です。周囲の恐怖をよそに、筋トレやレベリングの効率ばかり考えているゲーマー気質が最高に愛おしい作品です。',
+        points: [
+          '平穏を求めて裏でレベリングしすぎた結果、学園入学時にレベル99カンストしてしまうシュールさ',
+          '無表情で感情表現が不器用なユミエラの愛すべきクーデレ＆ゲーマー気質',
+          '暗黒魔法で敵を一掃し、周囲の常識をことごとく破壊していく痛快な無双ギャグ'
+        ]
+      },
+      {
+        keyword: '歴史に残る悪女になるぞ',
+        customTitle: '歴史に残る悪女になるぞ 悪役令嬢になるほど王子の溺愛は加速するようです！',
+        synopsis: 'ヒロイン特有の「綺麗事」が大嫌いで、物語の悪役に憧れていた少女が、大好きな乙女ゲームの悪役令嬢ウィリアムズ・アリシアに転生！「歴史に残る世界一の悪女になってみせる！」と決意したアリシアは、悪女にふさわしい知性と圧倒的な武力を身につけるため猛特訓に励みます。しかし、彼女の筋の通ったストイックな悪女道は周囲から「高潔で素晴らしい令嬢」と大絶賛され、国の皇太子デュークからも熱烈に溺愛されてしまいます。',
+        recommendReason: '「世界一の悪女を目指しているのに、努力すればするほど周囲から聖女のように尊敬され王子に溺愛される」という痛快な勘違い＆すれ違いコメディが最高に爽快です！アリシアのブレない芯の強さと、圧倒的な剣技・魔法で問題を解決していくカッコよさに痺れます。',
+        points: [
+          '「世界一の悪女」を目指して筋トレと勉学に励む、ストイックでカッコいいアリシアの美学',
+          '悪事を働こうとするたびに周囲が感銘を受け、皇太子デュークの溺愛が加速するギャップ',
+          '綺麗事ばかりの愚かなヒロインを論理と実力で完全に論破・圧倒するスカッとするカタルシス'
+        ]
+      },
+      {
+        keyword: '外科医エリーゼ',
+        customTitle: '外科医エリーゼ',
+        synopsis: '1回目の人生で悪女皇后として処刑され、2回目の地球での人生で天才外科医として罪を償おうと生きたエリーゼ。飛行機事故で再び1回目の世界へと逆行転生した彼女は、過去の過ちを繰り返さないため婚約を破棄し、現代医学の知識で多くの人々を救う医師として生きることを決意します。',
+        recommendReason: '現代の高度な外科手術や医療知識をファンタジー世界に持ち込み、疫病や戦傷で苦しむ人々を救っていく医療ドラマとしての完成度が非常に高いです。皇太子リンデンとの絆の再生も感動的です。',
+        points: [
+          '天才外科医の前世知識を駆使して中世世界の感染症や難病を治療する本格医療ドラマ',
+          '悪女と呼ばれた過去を真摯に反省し、人命救助のために全霊を捧げるエリーゼの気高さ',
+          '冷え切っていた皇太子との関係が、尊敬と信頼を通じて真実の愛へと変わっていくロマンス'
+        ]
+      },
+      {
+        keyword: '転生王女と天才令嬢の魔法革命',
+        customTitle: '転生王女と天才令嬢の魔法革命',
+        synopsis: '前世の記憶を持ちながら魔法が使えない異端の王女アニスフィア。自作の飛行魔導具で夜空を飛んでいたところ、貴族学院の夜会で婚約破棄を突きつけられ絶望していた天才令嬢ユフィリアの現場に乱入！ユフィリアを颯爽とさらったアニスは、彼女を助手の研究員として迎え、二人で魔法界の常識を覆す大革命を起こしていきます。',
+        recommendReason: '破滅寸前だった天才令嬢を救い出し、二人の絆と科学的魔導具の発明で国を揺るがす陰謀に立ち向かっていくシスターフッド＆ガールミーツガールの傑作です。アニスの自由奔放な行動力とユフィリアのひたむきな想いが胸を打ちます。',
+        points: [
+          '婚約破棄の現場からヒロインを空飛ぶ魔導具で強奪する最高にカッコいいオープニング',
+          '魔法が使えない王女と完璧な天才令嬢が手を取り合い、世界の常識を塗り替える革命劇',
+          '互いを唯一無二の存在として想い合う、美しく熱いシスターフッドの絆'
+        ]
+      }
+    ],
+    ranking: [
+      {
+        rank: 1,
+        title: '乙女ゲームの破滅フラグしかない悪役令嬢に転生してしまった…',
+        reason: '悪役令嬢ブームの頂点に君臨する不朽の金字塔。破滅回避のために斜め上の努力を続けるカタリナの愛らしさと、周囲全員を無自覚に骨抜きにしていく多幸感あふれるコメディは唯一無二の楽しさです。'
+      },
+      {
+        rank: 2,
+        title: '薬屋のひとりごと',
+        reason: '緻密な薬学知識と後宮の生々しい権力闘争が融合したミステリーの最高傑作。クールで知的な猫猫のキャラクター性と、事件を解き明かすカタルシスの深さは圧倒的です。'
+      },
+      {
+        rank: 3,
+        title: 'ループ7回目の悪役令嬢は、元敵国で自由気ままな花嫁生活を満喫する',
+        reason: '過去6回の人生で培った万能のスキルで運命を切り拓くヒロインのカッコよさが抜群。スリリングな心理戦と極上のロマンスが両立した完成度の極めて高い傑作です。'
+      }
+    ]
   }
 ]
 
 export async function buildFeaturePages() {
-  console.log('--- 特集記事（10選シリーズ）の直接楽天API取得＆HTML生成を開始 ---')
+  console.log('--- 最高品質・SEO/GEO特化 特集記事（10選シリーズ）の生成を開始 ---')
 
-  const jsonPath = path.join(root, 'public/data/curated-features.json')
-  const targetFeatures = JSON.parse(await fs.readFile(jsonPath, 'utf8'))
   const resolvedFeatures = []
 
-  for (const feature of targetFeatures) {
+  for (const feature of featureDefinitions) {
     console.log(`\n【特集処理中】: ${feature.title}`)
     const resolvedItems = []
 
     for (const item of feature.items) {
       console.log(`  -> 楽天API直接取得: ${item.keyword}`)
-      let rakutenData = null
-      try {
-        rakutenData = await fetchRakutenBookDirect(item.keyword)
-      } catch (e) {
-        console.warn(`  [API Warning] ${e.message}`)
+      const rakutenData = await fetchRakutenBookDirect(item.keyword)
+      if (!rakutenData) {
+        console.warn(`  [Warning] Rakuten APIで作品が見つかりませんでした: ${item.keyword}`)
+        continue
       }
 
-      const existingResolved = (feature.resolvedItems || []).find(r => r.keyword === item.keyword)
-
-      const cover = rakutenData?.largeImageUrl || rakutenData?.mediumImageUrl || existingResolved?.cover || ''
-      const itemUrl = rakutenData?.itemUrl || existingResolved?.itemUrl || ''
-      const affiliateUrl = itemUrl ? buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || '54d2a438.4bc4abc2.54d2a439.aa1be583') : (existingResolved?.affiliateUrl || '')
-      const author = rakutenData?.author || rakutenData?.authorKana || existingResolved?.author || '著者情報あり'
-      const price = rakutenData?.itemPrice || rakutenData?.price || existingResolved?.price || 0
-      const salesDate = rakutenData?.salesDate || existingResolved?.salesDate || ''
+      const cover = rakutenData.largeImageUrl || rakutenData.mediumImageUrl || ''
+      const itemUrl = rakutenData.itemUrl || ''
+      const affiliateUrl = buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || '54d2a438.4bc4abc2.54d2a439.aa1be583')
+      const author = rakutenData.author || rakutenData.authorKana || '著者情報あり'
+      const price = rakutenData.itemPrice || rakutenData.price || 0
+      const salesDate = rakutenData.salesDate || ''
 
       resolvedItems.push({
         ...item,
-        rakutenTitle: rakutenData?.title || rakutenData?.itemName || existingResolved?.rakutenTitle || item.customTitle,
+        rakutenTitle: rakutenData.title || rakutenData.itemName || item.customTitle,
         cover,
         itemUrl,
         affiliateUrl,
@@ -626,10 +1161,10 @@ export async function buildFeaturePages() {
   // 1. 特集ハブページ (/features/index.html) の生成
   const hubCardsHtml = resolvedFeatures.map(f => `
     <div class="feature-hub-card">
-      <span class="feature-hub-badge">${escapeXml(f.eyecatchBadge || 'おすすめ10選')}</span>
+      <span class="feature-hub-badge">${escapeXml(f.eyecatchBadge || '厳選10選特集')}</span>
       <h2 class="feature-hub-title"><a href="/features/${f.slug}/">${escapeXml(f.title)}</a></h2>
       <p class="feature-hub-desc">${escapeXml(f.description)}</p>
-      <a class="feature-hub-btn" href="/features/${f.slug}/">特集記事を読む（10作品解説） →</a>
+      <a class="feature-hub-btn" href="/features/${f.slug}/">特集記事を読む（10作品徹底解説） →</a>
     </div>
   `).join('')
 
@@ -639,7 +1174,7 @@ export async function buildFeaturePages() {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>異世界ラノベおすすめ特集一覧｜異世界コンパス</title>
-<meta name="description" content="スローライフ、人外転生、領地経営・内政、チート・無双など、人気テーマ別に厳選した異世界ライトノベル10選特集記事一覧です。">
+<meta name="description" content="スローライフ、人外転生、領地経営・内政、チート最強、追放・成り上がり、悪役令嬢など、人気テーマ別に厳選した異世界ライトノベル10選特集記事一覧です。">
 <link rel="canonical" href="${siteUrl}/features/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>${commonStyle}</style>
@@ -651,7 +1186,7 @@ ${renderHeader('/features/')}
   <div class="crumb"><a href="/">トップ</a>　/　特集一覧</div>
   <div class="eyebrow">CURATED SPECIAL FEATURES</div>
   <h1>異世界ラノベ おすすめ特化テーマ特集</h1>
-  <p class="lead">スローライフ、人外転生、内政・領地経営、チート無双など、読者の「今読みたい気分」に合わせて厳選した異世界ラノベ10選特集です。全作品のあらすじ、読者目線レビュー、管理人の私的ランキングをお届けします。</p>
+  <p class="lead">スローライフ、人外転生、内政・領地経営、チート無双、追放成り上がり、悪役令嬢など、読者の「今読みたい気分」に合わせて厳選した異世界ラノベ10選特集です。全作品のあらすじ、読者目線レビュー、管理人の私的ランキングをお届けします。</p>
 
   <div class="features-grid">
     ${hubCardsHtml}
@@ -673,7 +1208,18 @@ ${renderFooter()}
       <li><a href="#work-${idx + 1}">${idx + 1}. ${escapeXml(item.customTitle)}</a></li>
     `).join('')
 
-    const itemsHtml = f.resolvedItems.map((item, idx) => `
+    // ユーザー指定構成: 作品名をh2、h3簡単なあらすじ、h3オススメな理由
+    const itemsHtml = f.resolvedItems.map((item, idx) => {
+      const pointsHtml = item.points && item.points.length > 0 ? `
+        <div class="points-box">
+          <div class="points-title">✦ この作品の注目ポイント・見どころ</div>
+          <ul class="points-list">
+            ${item.points.map(pt => `<li>${escapeXml(pt)}</li>`).join('')}
+          </ul>
+        </div>
+      ` : ''
+
+      return `
       <section class="feature-item-section" id="work-${idx + 1}">
         <h2 class="feature-work-title">
           <span class="work-rank-num">${idx + 1}.</span>
@@ -682,14 +1228,14 @@ ${renderFooter()}
         
         <div class="work-hero">
           <div class="work-cover-wrap">
-            <img src="${escapeXml(item.cover)}" alt="${escapeXml(item.customTitle)} 表紙画像" loading="lazy" width="150" height="210" />
+            <img src="${escapeXml(item.cover)}" alt="${escapeXml(item.customTitle)} 表紙画像" loading="lazy" width="160" height="230" />
           </div>
           <div class="work-meta">
             <ul class="work-meta-list">
               <li><strong>著者 / イラスト：</strong> ${escapeXml(item.author)}</li>
               ${item.salesDate ? `<li><strong>発売日：</strong> ${escapeXml(item.salesDate)}</li>` : ''}
               ${item.price ? `<li><strong>参考価格：</strong> ¥${item.price.toLocaleString()}</li>` : ''}
-              <li><strong>配信ストア：</strong> 楽天Kobo 電子書籍</li>
+              <li><strong>配信ストア：</strong> 楽天Kobo 電子書籍ストア</li>
             </ul>
             <div>
               <a class="rakuten-btn" href="${escapeXml(item.affiliateUrl)}" rel="sponsored nofollow noopener" target="_blank">
@@ -705,20 +1251,35 @@ ${renderFooter()}
 
           <h3>オススメな理由（読者目線レビュー）</h3>
           <p>${escapeXml(item.recommendReason)}</p>
+
+          ${pointsHtml}
         </div>
       </section>
-    `).join('')
+      `
+    }).join('')
 
+    // ユーザー指定構成: h2「管理人の私的ランキング」、h3「〇〇が1位」理由を書く、h3「△△が2位」理由を書く、h3「xxが3位」理由を書く
     const getRankClass = (rank) => rank === 1 ? 'gold' : rank === 2 ? 'silver' : 'bronze'
     const rankingCardsHtml = f.ranking.map(r => `
       <div class="ranking-item-card ${getRankClass(r.rank)}">
-        <h3>
-          <span class="ranking-badge ${getRankClass(r.rank)}">第${r.rank}位</span>
-          <span>${escapeXml(r.title)}</span>
-        </h3>
+        <h3>${escapeXml(r.title)}が${r.rank}位</h3>
         <p>${escapeXml(r.reason)}</p>
       </div>
     `).join('')
+
+    const faqItemsHtml = (f.faq || []).map(faqItem => `
+      <div class="faq-item">
+        <div class="faq-q">Q. ${escapeXml(faqItem.q)}</div>
+        <p class="faq-a">A. ${escapeXml(faqItem.a)}</p>
+      </div>
+    `).join('')
+
+    const faqSectionHtml = f.faq && f.faq.length > 0 ? `
+      <section class="faq-section">
+        <h2>よくある質問（FAQ）</h2>
+        ${faqItemsHtml}
+      </section>
+    ` : ''
 
     const articleJsonLd = JSON.stringify({
       '@context': 'https://schema.org',
@@ -731,6 +1292,19 @@ ${renderFooter()}
         name: '異世界コンパス'
       }
     })
+
+    const faqJsonLd = f.faq && f.faq.length > 0 ? JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: f.faq.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a
+        }
+      }))
+    }) : null
 
     const pageHtml = `<!doctype html>
 <html lang="ja">
@@ -745,6 +1319,7 @@ ${renderFooter()}
 <meta property="og:description" content="${escapeXml(f.description)}">
 <meta property="og:type" content="article">
 <script type="application/ld+json">${articleJsonLd}</script>
+${faqJsonLd ? `<script type="application/ld+json">${faqJsonLd}</script>` : ''}
 <style>${commonStyle}</style>
 ${commonGaHead}
 </head>
@@ -776,6 +1351,8 @@ ${renderHeader('/features/')}
       ${rankingCardsHtml}
     </div>
   </section>
+
+  ${faqSectionHtml}
 
   <div style="margin-top:40px; text-align:center;">
     <a href="/features/" class="card-btn" style="display:inline-block;padding:12px 24px;font-size:15px;background:#17221f;color:#fff;border-radius:6px;">← おすすめ特集一覧へ戻る</a>
