@@ -5519,5 +5519,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/6a5c6b25819a344bb75f7ed9a1f01628/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-22T20:37:15.192Z"
+  },
+  {
+    "id": "8923000912112",
+    "slug": "8923000912112",
+    "title": "異世界牛娘【電子単行本版】（１）",
+    "author": "塚沢",
+    "seriesName": "異世界牛娘【電子単行本版】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "牛娘",
+      "牧場",
+      "スローライフ",
+      "コメディ",
+      "ファンタジー",
+      "日常系",
+      "おすすめ"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/0569/2000021550569.jpg?_ex=200x200",
+    "description": "叔父の代理で牧場を営む牧場搾は、ある日、牧場で牛の姿をした少女を発見する。ほぼ裸で倒れていた彼女が目を覚まし、搾は困惑。異世界から来たのか、それとも…？牧場を舞台に始まる、人間と牛娘の奇妙で心温まる共同生活の幕開けを描く、新感覚の異世界スローライフコメディ。単行本限定の書き下ろしも必見。",
+    "aiIntro": "牧場主・牧場搾が遭遇したのは、まさかの「牛娘」！異世界から迷い込んだかのような彼女との出会いは、搾の平穏な日常を一変させます。ドギマギしながらも、彼女との共同生活を通して育まれる絆と、牧場ならではの温かいスローライフが魅力。癒やしと笑いを求めるあなたに贈る、珠玉の異世界牧場ファンタジーです。",
+    "readerTypes": [
+      "「異世界×ケモミミ」のようなユニークなヒロインに惹かれる読者",
+      "牧場でのんびりとしたスローライフや日常系コメディで癒やされたい読者",
+      "ドギマギする主人公と異種族ヒロインの交流にキュンとしたい読者"
+    ],
+    "price": 660,
+    "salesDate": "2026年08月28日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fabcc00bde95c3b17814d736aac44ab54%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fabcc00bde95c3b17814d736aac44ab54%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/abcc00bde95c3b17814d736aac44ab54/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-22T22:36:48.994Z"
   }
 ]
