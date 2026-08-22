@@ -109,6 +109,10 @@ const commonStyle = `
   .ranking-item-card.silver { border-left: 6px solid #bdc3c7; }
   .ranking-item-card.bronze { border-left: 6px solid #e59866; }
   .ranking-item-card h3 { font-size: 20px; color: #fff; margin: 0 0 14px; display: flex; align-items: center; gap: 12px; }
+  .ranking-badge { display: inline-block; font-size: 12.5px; padding: 3px 12px; border-radius: 4px; font-weight: bold; color: #17221f; }
+  .ranking-badge.gold { background: #f5b041; }
+  .ranking-badge.silver { background: #bdc3c7; }
+  .ranking-badge.bronze { background: #e59866; }
   .ranking-item-card p { font-size: 15px; color: #e2ece6; line-height: 1.85; margin: 0; }
 
   /* FAQ Section (GEO / AI-SEO) */
@@ -236,7 +240,7 @@ async function fetchRakutenBookDirect(keyword) {
   return null
 }
 
-// 6ジャンルの最高品質10選特集データ
+// 全6ジャンルの最高品質10選特集データ
 export const featureDefinitions = [
   {
     slug: 'slowlife-10',
