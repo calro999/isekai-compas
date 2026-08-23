@@ -11,8 +11,10 @@ const keyLocation = `${siteUrl}/42279cb58d5140839e552ac53b0b69ee.txt`
 const books = JSON.parse(await fs.readFile(path.join(root, 'public/data/books.json'), 'utf8'))
 const features = JSON.parse(await fs.readFile(path.join(root, 'public/data/curated-features.json'), 'utf8'))
 
-// 1. 重要URLリスト（トップ、特集、新着、主要作品、新規作品）
-const priorityUrls = [
+// 1. 全公開URLリストの収集（トップ、特集、作品、タグ、著者、シリーズ、比較）
+const compareDirs = (await fs.readdir(path.join(root, 'public/compare'))).filter(f => !f.includes('.'))
+
+const allUrls = [
   `${siteUrl}/`,
   `${siteUrl}/features/`,
   `${siteUrl}/works/`,
@@ -25,17 +27,11 @@ const priorityUrls = [
   `${siteUrl}/llms.txt`,
   `${siteUrl}/llms-full.txt`,
   ...features.map(f => `${siteUrl}/features/${f.slug}/`),
-  ...books.map(b => `${siteUrl}/works/${b.slug}/`)
+  ...books.map(b => `${siteUrl}/works/${b.slug}/`),
+  ...compareDirs.map(d => `${siteUrl}/compare/${d}/`)
 ]
 
-console.log(`[IndexNow] Submitting ${priorityUrls.length} priority URLs to global search engines...`)
-
-const indexNowPayload = {
-  host,
-  key,
-  keyLocation,
-  urlList: priorityUrls.slice(0, 10000)
-}
+console.log(`[IndexNow] Total URLs to submit: ${allUrls.length}`)
 
 const endpoints = [
   'https://api.indexnow.org/indexnow',
@@ -44,20 +40,33 @@ const endpoints = [
   'https://search.seznam.cz/indexnow'
 ]
 
-for (const ep of endpoints) {
-  try {
-    const res = await fetch(ep, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8'
-      },
-      body: JSON.stringify(indexNowPayload)
-    })
-    console.log(`[IndexNow] ${ep} -> Status: ${res.status} (${res.statusText})`)
-  } catch (err) {
-    console.warn(`[IndexNow Warning] ${ep} -> ${err.message}`)
+// 10,000件ごとのバッチ送信
+const batchSize = 10000
+for (let i = 0; i < allUrls.length; i += batchSize) {
+  const batch = allUrls.slice(i, i + batchSize)
+  const payload = {
+    host,
+    key,
+    keyLocation,
+    urlList: batch
+  }
+
+  for (const ep of endpoints) {
+    try {
+      const res = await fetch(ep, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8'
+        },
+        body: JSON.stringify(payload)
+      })
+      console.log(`[IndexNow Batch ${Math.floor(i / batchSize) + 1}] ${ep} -> Status: ${res.status} (${res.statusText})`)
+    } catch (err) {
+      console.warn(`[IndexNow Warning] ${ep} -> ${err.message}`)
+    }
   }
 }
+
 
 // 2. Sitemap Pings
 const sitemapUrl = `${siteUrl}/sitemap.xml`
