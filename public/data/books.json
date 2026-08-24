@@ -5974,5 +5974,35 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/f99d93b7325737ef96eb04e662863e23/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-24T18:58:07.740Z"
+  },
+  {
+    "id": "4336198200320",
+    "slug": "4336198200320",
+    "title": "野人転生（１２）",
+    "author": "野人/小林　嵩人",
+    "seriesName": "野人転生",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ファンタジー",
+      "おすすめ"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/9741/2000021479741.jpg?_ex=200x200",
+    "description": "大都市トゥロンの工房で、新装備の試作品を受け取った野人。完成度の高さに感嘆する暇もなく、鍛冶職人ベンが剣を抜く。「実戦テストをしよう」ーー剣に込められた、職人の域を超えた圧倒的な気迫。尋常ならざる構えに、野人も本気で応じる。装備も腕も、すべてを試す激闘の幕が上がる！",
+    "aiIntro": "野人転生（１２）（野人/小林　嵩人）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。",
+    "readerTypes": [
+      "異世界ファンタジーが好きな人",
+      "独自の世界観や爽快な展開を楽しみたい人",
+      "注目の漫画・ラノベをチェックしたい人"
+    ],
+    "price": 924,
+    "salesDate": "2026年08月27日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Ff2751f39ecc13cf3b83fd98abe7437bd%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Ff2751f39ecc13cf3b83fd98abe7437bd%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/f2751f39ecc13cf3b83fd98abe7437bd/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-24T20:46:32.980Z"
   }
 ]
