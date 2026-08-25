@@ -6319,5 +6319,35 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/50688dc965d93b90b04988b50ad7c80b/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-25T16:53:18.587Z"
+  },
+  {
+    "id": "4920090005331",
+    "slug": "4920090005331",
+    "title": "習近平 世界を読み切れなかった男",
+    "author": "大山雅史",
+    "seriesName": "",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ファンタジー",
+      "おすすめ"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4277/2000021584277.jpg?_ex=200x200",
+    "description": "中国が一大覇権戦略として掲げる「一帯一路」は本当に中国の未来を明るくするのだろうか？ レアアースや自動車開発、台湾への軍事行動、米中の思惑等に言及し、著者独自の分析による習近平論が展開される。習近平の舵取りの行く末は中国国内に限らず世界にも少なからず影響を与える。私達は今何に注視すべきなのか、そして今後の対策として何が必要なのか。",
+    "aiIntro": "習近平 世界を読み切れなかった男（大山雅史）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。",
+    "readerTypes": [
+      "異世界ファンタジーが好きな人",
+      "独自の世界観や爽快な展開を楽しみたい人",
+      "注目の漫画・ラノベをチェックしたい人"
+    ],
+    "price": 1089,
+    "salesDate": "2026年08月28日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fe9553862a2fe385f8ab1a716f84b92f0%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fe9553862a2fe385f8ab1a716f84b92f0%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/e9553862a2fe385f8ab1a716f84b92f0/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-25T18:56:06.597Z"
   }
 ]
