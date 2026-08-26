@@ -6604,5 +6604,35 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/33185f8c5a3130a68becfd2b60956484/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-08-26T10:50:18.015Z"
+  },
+  {
+    "id": "4100000914763",
+    "slug": "4100000914763",
+    "title": "花魁と油売り 明代人情小説集",
+    "author": "馮夢龍",
+    "seriesName": "花魁と油売り 明代人情小説集",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ファンタジー",
+      "おすすめ"
+    ],
+    "badge": "まもなく発売",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6088/2000021566088.jpg?_ex=200x200",
+    "description": "蘇州の文人，馮夢龍（１５７４ー１６４６）が編集刊行した「三言」と総称される短篇作品集は『水滸伝』『西遊記』と並ぶ中国白話文学の代表作．古今の帝王から庶民に至るまで，種々様々な物語を見ることができる．計１２０篇から，講談・落語の「紺屋高尾」の原案「花魁と油売り」等，心動かす人情噺７篇を挿絵と共に収録．。",
+    "aiIntro": "花魁と油売り 明代人情小説集（馮夢龍）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。",
+    "readerTypes": [
+      "異世界ファンタジーが好きな人",
+      "独自の世界観や爽快な展開を楽しみたい人",
+      "注目の漫画・ラノベをチェックしたい人"
+    ],
+    "price": 1364,
+    "salesDate": "2026年08月27日",
+    "salesType": 1,
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fe0e9cf19b26630798ca9ac85b7af1094%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fe0e9cf19b26630798ca9ac85b7af1094%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/e0e9cf19b26630798ca9ac85b7af1094/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-08-26T13:14:23.908Z"
   }
 ]
