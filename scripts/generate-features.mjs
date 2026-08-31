@@ -14562,6 +14562,13 @@ ${renderHeader('/features/')}
       <span>楽天Kobo初心者向け購入・試し読みガイドを見る ➔</span>
     </a>
   </div>
+  ${['guild-master-merchant-syndicate-10', 'territory-management-10', 'completed-masterpiece-isekai-10', 'nobility-territory-politics-10', 'slowlife-10'].includes(f.slug) ? `
+  <div style="background:#f8f9f7; border:1px dashed #c9d8c6; border-radius:8px; padding:16px 20px; margin:30px 0; font-size:13px; color:#3e5245; line-height:1.7; text-align:center;">
+    <p style="margin:0 0 8px;">💳 <strong>【読書メモ・お得情報】</strong> 気になるシリーズのまとめ買いや電子書籍の購入は、楽天カード決済を利用すると普段のお買い物に加えてポイントが効率よく貯まります。新規入会＆3回以上利用で<strong>5,000ポイント</strong>がもらえるキャンペーンも実施されています。</p>
+    <div style="display:inline-block; margin-top:2px;">
+      <a href="https://hb.afl.rakuten.co.jp/hsc/570202c9.ad3cd4ba.5446e4f3.10821450/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDAxLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/570202c9.ad3cd4ba.5446e4f3.10821450/?me_id=2101008&me_adv_id=167401&t=pict" border="0" style="margin:2px; max-width:100%; height:auto;" alt="楽天カード新規入会キャンペーン" title="楽天カード新規入会キャンペーン"></a>
+    </div>
+  </div>` : ''}
 
   ${faqSectionHtml}
 
