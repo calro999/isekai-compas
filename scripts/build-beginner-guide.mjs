@@ -20,11 +20,15 @@ const queryDefinitions = [
   { kw: '陰の実力者になりたくて！ 1 逢沢大介', test: t => t.includes('陰の実力者になりたくて！') && (t.includes('1') || t.includes('１') || t.includes('（１）')) && !t.includes('18') && !t.includes('マスターオブガーデン') && !t.includes('分冊'), customTitle: '陰の実力者になりたくて！ 第1巻', lead: '「陰の実力者」という厨二設定ごっこがなぜか全部現実に！？ 圧倒的な勘違いと神がかりな実力で悪を滅ぼす爆笑バトル！' }
 ]
 
+const RAKUTEN_APPLICATION_ID = process.env.RAKUTEN_APPLICATION_ID || '1a3cdfd9-2aec-4b42-8290-1c53603b0012'
+const RAKUTEN_ACCESS_KEY = process.env.RAKUTEN_ACCESS_KEY || 'pk_XkZ5h9MDKSsuVr6T5CnLnlVNvFg3hiR5vMDGrQ75cU5'
+const RAKUTEN_AFFILIATE_ID = process.env.RAKUTEN_AFFILIATE_ID || '54d2a438.4bc4abc2.54d2a439.aa1be583'
+
 async function fetchKobo(def) {
   const params = new URLSearchParams({
-    applicationId: process.env.RAKUTEN_APPLICATION_ID,
-    accessKey: process.env.RAKUTEN_ACCESS_KEY,
-    affiliateId: process.env.RAKUTEN_AFFILIATE_ID,
+    applicationId: RAKUTEN_APPLICATION_ID,
+    accessKey: RAKUTEN_ACCESS_KEY,
+    affiliateId: RAKUTEN_AFFILIATE_ID,
     format: 'json',
     formatVersion: '2',
     keyword: def.kw,
