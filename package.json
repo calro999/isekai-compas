@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/build-beginner-guide.mjs && node scripts/build-heavy-knight.mjs && vite build",
     "preview": "vite preview",
     "seed:books": "node scripts/fetch-books.mjs --seed",
     "sync:books": "node scripts/fetch-books.mjs",
