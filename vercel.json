@@ -2,14 +2,15 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
+  "cleanUrls": true,
+  "trailingSlash": true,
   "rewrites": [
-    { "source": "/works/:path*", "destination": "/works/:path*/index.html" },
-    { "source": "/compare/:path*", "destination": "/compare/:path*/index.html" },
-    { "source": "/features/:path*", "destination": "/features/:path*/index.html" },
-    { "source": "/tags/:path*", "destination": "/tags/:path*/index.html" },
-    { "source": "/authors/:path*", "destination": "/authors/:path*/index.html" },
-    { "source": "/series/:path*", "destination": "/series/:path*/index.html" },
-    { "source": "/new", "destination": "/new/index.html" },
+    { "source": "/works/:path*/", "destination": "/works/:path*/index.html" },
+    { "source": "/compare/:path*/", "destination": "/compare/:path*/index.html" },
+    { "source": "/features/:path*/", "destination": "/features/:path*/index.html" },
+    { "source": "/tags/:path*/", "destination": "/tags/:path*/index.html" },
+    { "source": "/authors/:path*/", "destination": "/authors/:path*/index.html" },
+    { "source": "/series/:path*/", "destination": "/series/:path*/index.html" },
     { "source": "/new/", "destination": "/new/index.html" }
   ]
 }
