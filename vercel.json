@@ -2,8 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "cleanUrls": true,
-  "trailingSlash": true,
   "rewrites": [
     { "source": "/works/:path*/", "destination": "/works/:path*/index.html" },
     { "source": "/compare/:path*/", "destination": "/compare/:path*/index.html" },
