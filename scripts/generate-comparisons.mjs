@@ -438,6 +438,19 @@ export function buildComparePageHtml(a, b, targetSlug = null) {
       ${generateVisualComparison(a, b, rel, seed)}
 
       ${generateDiagnosis(a, b)}
+
+      <div style="background:#fcf9f2; border:1px solid #ebd9b5; border-left:5px solid #bf0000; border-radius:8px; padding:20px; margin:32px 0; box-shadow:0 2px 10px rgba(0,0,0,0.03);">
+        <div style="display:flex; align-items:center; gap:8px; font-weight:bold; font-size:15px; color:#17221f; margin-bottom:6px;">
+          <span style="background:#bf0000; color:#fff; font-size:11px; padding:2px 8px; border-radius:4px;">電子書籍が初めての方へ</span>
+          <span>気になった作品を今すぐスマホやPCで読むには？</span>
+        </div>
+        <p style="font-size:13.5px; color:#4a574e; line-height:1.75; margin:0 0 12px;">
+          「スマホやPCでも読める？」「試し読みに会員登録は必要？」「楽天ポイントでお得に購入するコツは？」など、電子書籍を安心して始めるための購入手順やメリットを徹底解説しています。
+        </p>
+        <a href="/features/rakuten-kobo-beginner-guide/" style="display:inline-flex; align-items:center; gap:6px; background:#17221f; color:#fff; padding:8px 16px; border-radius:5px; font-size:13px; font-weight:bold; text-decoration:none;">
+          <span>楽天Kobo初心者向け購入・試し読みガイドを見る ➔</span>
+        </a>
+      </div>
     </article>
 
     <h2 style="font-size:20px;margin:32px 0 12px;">🏷️ 共通タグ・キーワード</h2>

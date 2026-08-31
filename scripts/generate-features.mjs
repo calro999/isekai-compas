@@ -14300,43 +14300,53 @@ export const featureDefinitions = [
 export async function buildFeaturePages() {
   console.log('--- 最高品質・SEO/GEO特化 特集記事（10選シリーズ）の生成を開始 ---')
 
-  const resolvedFeatures = []
+  let resolvedFeatures = []
+  const curatedJsonPath = path.join(root, 'public/data/curated-features.json')
+  try {
+    const cached = JSON.parse(await fs.readFile(curatedJsonPath, 'utf8'))
+    if (cached && cached.length > 0) {
+      console.log(`[Cache Hit] 既存のキュレーションデータ（${cached.length}件）を読み込んで高速生成します。`)
+      resolvedFeatures = cached
+    }
+  } catch (e) {}
 
-  for (const feature of featureDefinitions) {
-    console.log(`\n【特集処理中】: ${feature.title}`)
-    const resolvedItems = []
+  if (resolvedFeatures.length === 0) {
+    for (const feature of featureDefinitions) {
+      console.log(`\n【特集処理中】: ${feature.title}`)
+      const resolvedItems = []
 
-    for (const item of feature.items) {
-      console.log(`  -> 楽天API直接取得: ${item.keyword}`)
-      const rakutenData = await fetchRakutenBookDirect(item.keyword)
-      if (!rakutenData) {
-        console.warn(`  [Warning] Rakuten APIで作品が見つかりませんでした: ${item.keyword}`)
-        continue
+      for (const item of feature.items) {
+        console.log(`  -> 楽天API直接取得: ${item.keyword}`)
+        const rakutenData = await fetchRakutenBookDirect(item.keyword)
+        if (!rakutenData) {
+          console.warn(`  [Warning] Rakuten APIで作品が見つかりませんでした: ${item.keyword}`)
+          continue
+        }
+
+        const cover = rakutenData.largeImageUrl || rakutenData.mediumImageUrl || ''
+        const itemUrl = rakutenData.itemUrl || ''
+        const affiliateUrl = buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || '54d2a438.4bc4abc2.54d2a439.aa1be583')
+        const author = rakutenData.author || rakutenData.authorKana || '著者情報あり'
+        const price = rakutenData.itemPrice || rakutenData.price || 0
+        const salesDate = rakutenData.salesDate || ''
+
+        resolvedItems.push({
+          ...item,
+          rakutenTitle: rakutenData.title || rakutenData.itemName || item.customTitle,
+          cover,
+          itemUrl,
+          affiliateUrl,
+          author,
+          price,
+          salesDate
+        })
       }
 
-      const cover = rakutenData.largeImageUrl || rakutenData.mediumImageUrl || ''
-      const itemUrl = rakutenData.itemUrl || ''
-      const affiliateUrl = buildAffiliateUrl(itemUrl, process.env.RAKUTEN_AFFILIATE_ID || '54d2a438.4bc4abc2.54d2a439.aa1be583')
-      const author = rakutenData.author || rakutenData.authorKana || '著者情報あり'
-      const price = rakutenData.itemPrice || rakutenData.price || 0
-      const salesDate = rakutenData.salesDate || ''
-
-      resolvedItems.push({
-        ...item,
-        rakutenTitle: rakutenData.title || rakutenData.itemName || item.customTitle,
-        cover,
-        itemUrl,
-        affiliateUrl,
-        author,
-        price,
-        salesDate
+      resolvedFeatures.push({
+        ...feature,
+        resolvedItems
       })
     }
-
-    resolvedFeatures.push({
-      ...feature,
-      resolvedItems
-    })
   }
 
   // 1. 特集ハブページ (/features/index.html) の生成
@@ -14382,16 +14392,19 @@ ${renderFooter()}
 
   // 2. 個別特集記事ページ (/features/{slug}/index.html) の生成
   for (const f of resolvedFeatures) {
+    if (f.slug === 'tsuihou-jyuukishi-complete-guide') continue
     const dir = path.join(root, 'public/features', f.slug)
     await fs.mkdir(dir, { recursive: true })
 
-    const tocHtml = f.resolvedItems.map((item, idx) => {
+    const items = f.resolvedItems && f.resolvedItems.length > 0 ? f.resolvedItems : f.items || []
+
+    const tocHtml = items.map((item, idx) => {
       const displayTitle = item.customTitle || item.title || item.rakutenTitle || item.keyword
       return `<li><a href="#work-${idx + 1}">${idx + 1}. ${escapeXml(displayTitle)}</a></li>`
     }).join('')
 
     // ユーザー指定構成: 作品名をh2、h3簡単なあらすじ、h3オススメな理由
-    const itemsHtml = f.resolvedItems.map((item, idx) => {
+    const itemsHtml = items.map((item, idx) => {
       const displayTitle = item.customTitle || item.title || item.rakutenTitle || item.keyword
       const displayReview = item.recommendReason || item.recommendation || item.review || ''
       const pointsList = item.points || item.highlights || []
@@ -14536,6 +14549,19 @@ ${renderHeader('/features/')}
       ${rankingCardsHtml}
     </div>
   </section>
+
+  <div style="background:#fcf9f2; border:1px solid #ebd9b5; border-left:5px solid #bf0000; border-radius:8px; padding:22px; margin:40px 0; box-shadow:0 2px 10px rgba(0,0,0,0.03);">
+    <div style="display:flex; align-items:center; gap:8px; font-weight:bold; font-size:16px; color:#17221f; margin-bottom:8px;">
+      <span style="background:#bf0000; color:#fff; font-size:11px; padding:2px 8px; border-radius:4px;">電子書籍が初めての方へ</span>
+      <span>気になる作品を今すぐスマホやPCで読むには？</span>
+    </div>
+    <p style="font-size:14px; color:#4a574e; line-height:1.8; margin:0 0 14px;">
+      「専用端末は必要？」「無料試し読みは会員登録なしでできる？」「楽天ポイントでお得に買う方法は？」など、電子書籍を安心して始めるための購入手順やメリットを徹底解説しています。
+    </p>
+    <a href="/features/rakuten-kobo-beginner-guide/" style="display:inline-flex; align-items:center; gap:6px; background:#17221f; color:#fff; padding:10px 20px; border-radius:5px; font-size:13.5px; font-weight:bold; text-decoration:none;">
+      <span>楽天Kobo初心者向け購入・試し読みガイドを見る ➔</span>
+    </a>
+  </div>
 
   ${faqSectionHtml}
 
