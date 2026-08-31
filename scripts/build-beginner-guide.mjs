@@ -52,13 +52,23 @@ async function fetchKobo(def) {
 }
 
 export async function buildBeginnerGuidePage() {
-  console.log('--- 楽天Kobo 電子書籍初心者ガイド（10選直接取得）生成開始 ---')
-  const resolved10 = []
-  for (const def of queryDefinitions) {
-    console.log(`  -> 楽天Kobo API直接取得: ${def.customTitle}`)
-    const data = await fetchKobo(def)
-    resolved10.push(data)
-    await new Promise(r => setTimeout(r, 1050))
+  console.log('--- 楽天Kobo 電子書籍初心者ガイド 生成開始 ---')
+  let resolved10 = []
+  try {
+    const cached = JSON.parse(await fs.readFile(path.join(root, 'beginner_guide_data.json'), 'utf8'))
+    if (cached && cached.length === 10) {
+      resolved10 = cached
+      console.log('  -> beginner_guide_data.json から高速展開')
+    }
+  } catch (e) {}
+
+  if (resolved10.length === 0) {
+    for (const def of queryDefinitions) {
+      console.log(`  -> 楽天Kobo API直接取得: ${def.customTitle}`)
+      const data = await fetchKobo(def)
+      resolved10.push(data)
+      await new Promise(r => setTimeout(r, 1050))
+    }
   }
 
   const escapeXml = (v) => String(v || '').replace(/[<>&'"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[c]))
