@@ -8981,5 +8981,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/07ab84f50c243869bb0c4a1dd05bf2ff/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-01T11:36:10.627Z"
+  },
+  {
+    "id": "7328131580024",
+    "slug": "7328131580024",
+    "title": "隠の王 1巻【無料お試し版】",
+    "author": "鎌谷悠希",
+    "seriesName": "隠の王",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "忍者",
+      "バトル",
+      "異能力",
+      "少年漫画",
+      "隠の世",
+      "禁術",
+      "王",
+      "アクション"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/5768/2000021615768.jpg?_ex=200x200",
+    "description": "現代に生きる忍たちの間で、禁忌の術“森羅万象”を秘めた少年・六条壬晴を巡る壮絶な戦いが勃発！伊賀、風魔といった名門忍者が壬晴を狙い、隠の世の王となるべく暗躍する。少年漫画ならではの熱いバトルと、奥深い忍術の世界が織りなす、手に汗握る物語。",
+    "aiIntro": "主人公・六条壬晴が持つ禁断の力“森羅万象”を巡り、現代に生きる忍たちが激突する物語！「隠の王」の世界では、伊賀、風魔といった名門忍者の間で、手に汗握る忍術バトルとスリリングなアクションが繰り広げられる。隠された忍の世界の王座を掴むのは誰なのか？予測不能な物語の展開から目が離せない！",
+    "readerTypes": [
+      "迫力ある忍術バトルと忍者アクションを求める読者",
+      "主人公が強大な力を巡って繰り広げる激しい戦いに魅了される読者",
+      "現代を舞台にした、隠された世界を描くファンタジー作品に惹かれる読者"
+    ],
+    "price": 0,
+    "salesDate": "2026年09月01日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F4f54703809493478bf1ec1ea9cde8e14%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F4f54703809493478bf1ec1ea9cde8e14%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/4f54703809493478bf1ec1ea9cde8e14/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-01T16:36:29.932Z"
   }
 ]
