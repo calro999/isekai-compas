@@ -8946,5 +8946,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/9eab13ac68c1369789da91ed7ff142b6/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-01T05:03:13.667Z"
+  },
+  {
+    "id": "8910131586438",
+    "slug": "8910131586438",
+    "title": "【単話版】娯楽革命〜歌と踊りが禁止の異世界で、彼女は舞台の上に立つ〜@COMIC 第9話",
+    "author": "藤田麓",
+    "seriesName": "【単話版】娯楽革命〜歌と踊りが禁止の異世界で、彼女は舞台の上に立つ〜@COMIC",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "演劇プロデュース",
+      "エルフ主人公",
+      "魔法学園",
+      "エンタメ革命",
+      "夢を追う",
+      "歌と踊り禁止",
+      "逆境克服"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/1328/2000021621328.jpg?_ex=200x200",
+    "description": "歌と踊りが禁じられ、人々から娯楽が奪われた異世界。そこに、前世で舞台を夢見た女子大生がエルフのディアナとして転生した。彼女は諦めない。魔法学院で演劇クラブを立ち上げ、禁断のエンターテイメントで世界に革命を起こすことを決意する。国王公認の『王立劇団』設立を目指し、歌と踊りの輝きを再び世界に取り戻す、壮大な演劇プロデュース・ファンタジー！",
+    "aiIntro": "歌と踊りが禁じられた異世界で、エルフのディアナが立ち上がる。前世の夢を胸に、魔法学院で演劇クラブを設立。禁断のエンタメで世界に革命を起こす、壮大な挑戦が今、幕を開ける！",
+    "readerTypes": [
+      "失われたエンタメを取り戻し、新たな文化を創造する物語に胸を熱くする読者",
+      "困難な状況でも決して諦めず、夢に向かって突き進む主人公の姿に勇気をもらいたい読者",
+      "魔法と青春が織りなす学園生活の中で、仲間と共に成長する群像劇を求める読者"
+    ],
+    "price": 165,
+    "salesDate": "2026年09月01日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F07ab84f50c243869bb0c4a1dd05bf2ff%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F07ab84f50c243869bb0c4a1dd05bf2ff%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/07ab84f50c243869bb0c4a1dd05bf2ff/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-01T11:36:10.627Z"
   }
 ]
