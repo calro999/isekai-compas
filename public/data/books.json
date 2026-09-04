@@ -9051,5 +9051,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/7c997d8573233b87b0cf8e0bd6a82ce5/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-02T00:11:37.007Z"
+  },
+  {
+    "id": "1230010319888",
+    "slug": "1230010319888",
+    "title": "社畜魔法國度",
+    "author": "Kuni",
+    "seriesName": "",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "社畜",
+      "魔法システム",
+      "現代社会風刺",
+      "企業あるある",
+      "システム",
+      "台湾発",
+      "アンチヒーロー"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4392/2000021674392.jpg?_ex=200x200",
+    "description": "32歳の会社員、周至遠（しゅうしえん）は、97日連続残業の果てに、旧式パンチングマシンの暴走で魔法国度エドランドへ転移。伝説の神剣を期待するも、彼を待っていたのは「至尊魔法システム」と、路灯修理から都市救済まで、元の職場を彷彿とさせる「基層同仁共体時艱」（少数者が規則を作り、多数者が代償を負う困難な状況）を強いられる日々だった。灰燼裂隙が国を飲み込…",
+    "aiIntro": "「社畜魔法國度」は、異世界転生ジャンルに現代社会の疲弊感と理不尽さを鮮烈に描き出した意欲作。主人公・周至遠が転移した魔法世界もまた、「少數人制定規則，多數人承擔代價」（少数の者が規則を作り、多数者が代償を負う）という、現代企業と変わらぬ構造を持つ。彼の奮闘は、単なる冒険譚を超え、理不尽なシステムに抗い、より良い世界を模索する現代人の姿を映し出す。疲…",
+    "readerTypes": [
+      "異世界転生ものに既視感や物足りなさを感じている読者",
+      "現代社会の理不尽さや社畜経験に強く共感できる読者",
+      "社会構造やシステムに切り込む、一歩踏み込んだ物語を求める読者"
+    ],
+    "price": 523,
+    "salesDate": "2026年08月31日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F6037b56cb81b3fdbae43aa0ef65c5770%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F6037b56cb81b3fdbae43aa0ef65c5770%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/6037b56cb81b3fdbae43aa0ef65c5770/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-04T04:27:16.927Z"
   }
 ]
