@@ -9086,5 +9086,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/6037b56cb81b3fdbae43aa0ef65c5770/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-04T04:27:16.927Z"
+  },
+  {
+    "id": "1230010318737",
+    "slug": "1230010318737",
+    "title": "黒き遊戯 - 次に死ぬのは、誰だ？",
+    "author": "Kim Tam Long",
+    "seriesName": "",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "デスゲーム",
+      "サバイバル",
+      "心理戦",
+      "ベトナム",
+      "ダークスリラー",
+      "人間の闇",
+      "欲望",
+      "狂気"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/9177/2000021669177.jpg?_ex=200x200",
+    "description": "ベトナムの密林奥深く、外界から隔絶された館。社会の底辺に喘ぐ者たちが、現地の伝統遊戯を血塗られたデスゲームへと変貌させる命懸けの戦いに挑む。敗北は即ち死、勝利の果てには500億ドン（約3億円）という巨万の富。極限の飢餓と恐怖が渦巻く中、剥き出しになる人間の本性、強欲、エゴ、そして底知れぬ悪意が交錯する、究極の心理サバイバルが幕を開ける。",
+    "aiIntro": "ベトナムの伝統遊戯が、血と金にまみれたデスゲームへと変貌する。巨額の賞金を懸け、社会の底辺に喘ぐ者たちが命を削り合う極限のサバイバル。人間の本性が剥き出しになる心理戦、予測不能な裏切りと狂気が読者の心を鷲掴みにする。",
+    "readerTypes": [
+      "『イカゲーム』や『カイジ』に熱狂したあなたへ。命を懸けたデスゲームと、息詰まる極限の心理戦を求める読者。",
+      "人間の本性が剥き出しになるダークな物語に魅了される読者。強欲、エゴ、そして底知れぬ悪意が織りなす深淵な心理描写を堪能したい方。",
+      "ベトナムの異文化が残酷なデスゲームへと昇華される、唯一無二の世界観を体験したい読者。予測不能な展開と衝撃的な結末を求める方。"
+    ],
+    "price": 697,
+    "salesDate": "2026年08月31日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fecfce058b8a83317909b309601a92796%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fecfce058b8a83317909b309601a92796%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/ecfce058b8a83317909b309601a92796/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-04T11:21:14.844Z"
   }
 ]
