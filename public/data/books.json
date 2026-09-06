@@ -9506,5 +9506,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/40e905313be63738a043e1482f311fb2/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-06T15:26:02.342Z"
+  },
+  {
+    "id": "4310000913001",
+    "slug": "4310000913001",
+    "title": "【期間限定　試し読み増量版】奪ったのではありません、お姉様が捨てたのです（１）",
+    "author": "佐崎咲/紫彗冷泉/祀花よう子",
+    "seriesName": "奪ったのではありません、お姉様が捨てたのです",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界",
+      "ラブコメ",
+      "政略結婚",
+      "溺愛",
+      "聖女",
+      "王太子",
+      "元平民",
+      "有能なヒロイン"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/5354/2000021555354.jpg?_ex=200x200",
+    "description": "平民出身の養女ローラは、聖女の義姉クリスティーナが「妹に奪われた」と書き残し失踪したことで、王都は混乱に陥る。後始末に奔走するローラだったが、なぜかクリスティーナの元婚約者である王太子レガートと婚約することに。元平民の有能少女と武骨な殿下の政略ラブコメディ。",
+    "aiIntro": "「奪ったのではありません、お姉様が捨てたのです」は、平民出身の養女ローラが、聖女の義姉クリスティーナの失踪をきっかけに、王太子レガートとの政略結婚に巻き込まれる異世界ラブコメディ。問題を解決していくローラと、彼女に惹かれていくレガートの関係性に注目。",
+    "readerTypes": [
+      "政略結婚から始まる関係性を楽しみたい方",
+      "有能なヒロインが活躍する物語が好きな方",
+      "異世界ファンタジーで笑って泣ける作品を探している方"
+    ],
+    "price": 0,
+    "salesDate": "2026年08月28日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F758e3716d7ea3d618c672f0481034d41%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F758e3716d7ea3d618c672f0481034d41%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/758e3716d7ea3d618c672f0481034d41/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-06T18:15:52.952Z"
   }
 ]
