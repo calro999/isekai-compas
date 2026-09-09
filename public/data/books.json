@@ -9856,5 +9856,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/1828e4cdc9603ffb9137d7d14fd64bd6/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-08T16:36:05.232Z"
+  },
+  {
+    "id": "4320000914905",
+    "slug": "4320000914905",
+    "title": "水上勉電子全集　第5巻　小説4 『枯野の人』『沙羅の門』の時代",
+    "author": "水上勉",
+    "seriesName": "水上勉電子全集　第5巻　小説4 『枯野の人』『沙羅の門』の時代",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "水上勉",
+      "電子全集",
+      "枯野の人",
+      "沙羅の門",
+      "作家転換期",
+      "昭和文学",
+      "長編小説",
+      "短編小説"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/2221/2000021582221.jpg?_ex=200x200",
+    "description": "水上勉の作家としての転換期を記録する電子全集第5巻。長編7作、短編12作、計19作品を収録。『枯野の人』『沙羅の門』を含むこの時期の作品群は、その変遷を示している。",
+    "aiIntro": "「社会派推理小説作家」から「小説家」へ。水上勉の作家人生における変貌期に触れる作品集。本書は、その過程を記録した作品群です。『枯野の人』『沙羅の門』をはじめとする19の作品を通して、作家の人間ドラマと表現の広がりを感じてください。",
+    "readerTypes": [
+      "水上勉の作家としての変遷に興味がある読者",
+      "昭和中期文学の深みを味わいたい読者",
+      "人間ドラマと心理描写に優れた小説を求める読者"
+    ],
+    "price": 4400,
+    "salesDate": "2026年08月31日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5643a29fb4f13c02a8be889b7ca4ee5d%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5643a29fb4f13c02a8be889b7ca4ee5d%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/5643a29fb4f13c02a8be889b7ca4ee5d/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-09T00:11:27.246Z"
   }
 ]
