@@ -10241,5 +10241,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/a4956d5615bd37c88430480abd1dc5c8/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-11T04:35:16.754Z"
+  },
+  {
+    "id": "6302700002347",
+    "slug": "6302700002347",
+    "title": "転生少女の底辺から始める幸せスローライフ 第12話【単話版】",
+    "author": "梅原うめ/鳥助/しんいし智歩",
+    "seriesName": "転生少女の底辺から始める幸せスローライフ【単話版】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "スローライフ",
+      "村づくり",
+      "パン作り",
+      "料理",
+      "少女たちの成長",
+      "開拓ファンタジー",
+      "癒やし"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6859/2000021566859.jpg?_ex=200x200",
+    "description": "【最新話公開！】不幸な過去を背負いながらも、辺境の地で新たな幸せを紡ぐ少女たちの物語『転生少女の底辺から始める幸せスローライフ』。待望の第12話では、主人公ノアが村の仲間たちと共に、天然酵母を使った本格的なパン作りに挑戦します。手作りの温もり、仲間との絆、そして小さな成功が織りなす、心温まる開拓スローライフの真髄がここに。逆境を乗り越え、自らの手で…",
+    "aiIntro": "心温まる開拓スローライフの最新話！『転生少女の底辺から始める幸せスローライフ』第12話では、主人公ノアが天然酵母でパン作りに挑みます。不幸な過去を乗り越え、手作りの温もりと仲間との絆の中で、小さな幸せを噛みしめる少女たちの成長と癒やしの物語をお届けします。",
+    "readerTypes": [
+      "日常の喧騒を忘れ、心温まるスローライフで深い癒やしを求める方",
+      "ゼロから何かを創り上げる喜び、辺境での開拓や手作りの魅力に惹かれる方",
+      "逆境を乗り越え、小さな幸せを積み重ねていく少女たちの健気な成長物語に感動したい方"
+    ],
+    "price": 176,
+    "salesDate": "2026年08月31日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fbe6288c69ec93ed8a947d72724ea90b5%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fbe6288c69ec93ed8a947d72724ea90b5%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/be6288c69ec93ed8a947d72724ea90b5/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-11T11:16:41.467Z"
   }
 ]
