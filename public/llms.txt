@@ -230,6 +230,11 @@
 - [墓守・霊廟守護者ラノベおすすめ10選【冥府の安寧・英霊鎮魂ファンタジー】](https://isekai-compas.vercel.app/features/legendary-gravekeeper-underworld-tomb-10/): 歴代の英霊が眠る巨大霊廟やアンデッドが彷徨う冥府の大地を守護する墓守ラノベの名作10選！安らかな眠りを乱す者を断罪し、英霊の意志を継ぐ深淵の物語。
 - [鉱夫・採掘師ダンジョン開拓ラノベおすすめ10選【ツルハシ一本で魔鉱石・超神素材無双】](https://isekai-compas.vercel.app/features/legendary-miner-excavation-dungeon-10/): ツルハシ一本で岩盤を粉砕し、ミスリル・オリハルコン・超古代魔宝石を掘り当てる鉱夫・採掘師ラノベの傑作10選！地底迷宮を掘り進む爽快トレジャーハントを徹底解説。
 - [船長・大航海・海洋覇権ラノベおすすめ10選【魔導帆船・大海原の冒険ファンタジー】](https://isekai-compas.vercel.app/features/legendary-ship-captain-naval-conquest-10/): 未知の海図を広げ、魔導戦艦や快速帆船を駆って大海原の覇権を争う船長・海賊・大航海ラノベの至高10選！巨大海獣退治、艦隊砲撃戦、未知の孤島探索の浪漫を徹底紹介。
+- [行商人・馬車キャラバン物流ラノベおすすめ10選【街道交易・相場利ざやファンタジー】](https://isekai-compas.vercel.app/features/legendary-cart-merchant-caravan-logistics-10/): 幌馬車を駆り、街道沿いの関所や市場で地域の価格差（利ざや）を稼ぎ出す行商人・キャラバン隊ラノベの傑作10選！塩・香辛料・毛皮・小麦を運ぶ経済サバイバルを徹底解説。
+- [剣闘士・闘技場チャンピオンラノベおすすめ10選【コロシアム決闘・地下格闘無双】](https://isekai-compas.vercel.app/features/legendary-gladiator-arena-champion-10/): 万雷の歓声が轟く闘技場（コロシアム）で最強の座を掴み取る剣闘士・格闘者ラノベの至高10選！奴隷剣闘士の下克上から地下闘技場での一騎打ちまで、命を削る血闘を徹底解説。
+- [調薬師・薬草調合・ポーション開発ラノベおすすめ10選【奇跡の秘薬・臨床医学無双】](https://isekai-compas.vercel.app/features/legendary-apothecary-botanical-brewing-10/): 薬草の採取から成分抽出、劇的効果をもたらす万能エリクサーの開発まで！調薬師・ポーションブレンダーラノベの傑作10選。病魔を討ち特効薬で世界を救う癒やしと知略のファンタジー。
+- [吟遊詩人・伝説の語り部ラノベおすすめ10選【英雄叙事詩・音霊旋律ファンタジー】](https://isekai-compas.vercel.app/features/legendary-bard-minstrel-epic-tale-10/): リュートを爪弾き、英雄たちの武勇伝を後世に語り継ぐ吟遊詩人・バードラノベの至高10選！歌声で戦況を覆す音霊魔法や、酒場を熱狂させる英雄叙事詩の浪漫を徹底解説。
+- [宿屋経営・温泉旅館・極上おもてなしラノベおすすめ10選【秘湯開拓・湯治スローライフ】](https://isekai-compas.vercel.app/features/legendary-inn-hotspring-hospitality-10/): 魔力泉を掘り当てて温泉旅館を開業！疲弊した冒険者や王侯貴族を極上のおもてなしと温泉料理で癒やす宿屋ラノベの至高10選。心も身体も温まる至福の湯治ファンタジーを徹底解説。
 
 ## 登録作品データベース (全252作品)
 
