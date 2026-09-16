@@ -260,6 +260,11 @@
 - [甲冑鍛冶・魔導装甲・外骨格アーマーラノベおすすめ10選【重装歩兵・複合装甲・パワードスーツ】](https://isekai-compas.vercel.app/features/legendary-armor-smith-magitech-exoskeleton-10/): 魔力を帯びた重金属プレートを叩き上げ、装着者の筋力を何倍にも増幅する魔導装甲・外骨格アーマーを鍛造する甲冑鍛冶ラノベの至高10選！絶対防御と超重力突撃のメカニカルファンタジー。
 - [醸造師・幻の蒸留酒・酒蔵開拓ラノベおすすめ10選【酵母培養・オーク樽熟成・酒宴ファンタジー】](https://isekai-compas.vercel.app/features/legendary-brewmaster-distillery-tavern-10/): 異世界の清らかな名水と幻の穀物で酵母を培養し、黄金色のエールや極上のウイスキー・日本酒を醸造する酒造・蒸留師ラノベの至高10選！種族を超えて人々を酔わせる至福の酒宴物語。
 - [操舵手・海図作成航海士ラノベおすすめ10選【六分儀・潮流計算・未知海域突破】](https://isekai-compas.vercel.app/features/legendary-helmsman-nautical-chart-10/): 荒れ狂う大渦や暗礁地帯で舵を握り、六分儀と星辰観測で未踏の海図を描き出す操舵手・航海士ラノベの至高10選！嵐の海を突破し新航路を拓く男たちの命懸けの海洋冒険譚。
+- [飛脚・早馬・韋駄天配達人ラノベおすすめ10選【速達便・限界疾走・緊急極秘任務】](https://isekai-compas.vercel.app/features/legendary-cart-driver-express-courier-10/): 風を切り裂く駿足スキルや魔導二輪を駆り、戦況を左右する極秘親書や特効薬を時間内に届ける韋駄天配達人・高速メッセンジャーラノベの至高10選！タイムリミット寸前の限界疾走ファンタジー。
+- [馬車工・車輌技師・足回りサスペンションラノベおすすめ10選【板バネ・魔導車輪・悪路走破ファンタジー】](https://isekai-compas.vercel.app/features/legendary-cartwright-carriage-mechanic-10/): 板バネサスペンションや魔導ベアリングを開発し、激しく揺れる異世界の馬車を極上の快適空間へと進化させる車輌技師ラノベの至高10選！悪路を滑るように走破する足回りクラフト浪漫。
+- [船大工・魔導造船技師ラノベおすすめ10選【竜骨削り出し・防腐装甲・進水式ファンタジー】](https://isekai-compas.vercel.app/features/legendary-shipwright-naval-architect-10/): 神聖樹の巨木から頑強な竜骨（キール）を削り出し、魔導推進機関と耐波装甲を融合させた無敵の魔導帆船を建造する船大工ラノベの至高10選！ドックに響く槌音と進水式の感動を徹底解説。
+- [陶芸家・魔導磁器・登り窯職人ラノベおすすめ10選【白磁秘伝・高熱焼成・耐熱保存ファンタジー】](https://isekai-compas.vercel.app/features/legendary-ceramic-artist-magitech-porcelain-10/): 魔力を秘めた陶土を練り上げ、登り窯の高熱で焼き締めてポーションの劣化を半永久的に防ぐ魔導磁器・陶芸家ラノベの至高10選！美しい白磁と釉薬の奇跡が巻き起こすクラフトサクセス。
+- [治癒神官・戦場衛生兵・救護トリアージラノベおすすめ10選【奇跡の治癒光・野戦外科・絶対救命】](https://isekai-compas.vercel.app/features/legendary-healer-combat-medic-triage-10/): 銃火や矢雨が飛び交う前線で泥に塗れて駆け巡り、迅速なトリアージと神聖治癒魔法で瀕死の戦士を救い出す治癒神官・衛生兵ラノベの至高10選！命の尊厳と救命の限界に挑む感動の医療ファンタジー。
 
 ## 登録作品データベース (全252作品)
 
