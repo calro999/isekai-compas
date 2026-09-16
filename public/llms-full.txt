@@ -235,6 +235,11 @@
 - [調薬師・薬草調合・ポーション開発ラノベおすすめ10選【奇跡の秘薬・臨床医学無双】](https://isekai-compas.vercel.app/features/legendary-apothecary-botanical-brewing-10/): 薬草の採取から成分抽出、劇的効果をもたらす万能エリクサーの開発まで！調薬師・ポーションブレンダーラノベの傑作10選。病魔を討ち特効薬で世界を救う癒やしと知略のファンタジー。
 - [吟遊詩人・伝説の語り部ラノベおすすめ10選【英雄叙事詩・音霊旋律ファンタジー】](https://isekai-compas.vercel.app/features/legendary-bard-minstrel-epic-tale-10/): リュートを爪弾き、英雄たちの武勇伝を後世に語り継ぐ吟遊詩人・バードラノベの至高10選！歌声で戦況を覆す音霊魔法や、酒場を熱狂させる英雄叙事詩の浪漫を徹底解説。
 - [宿屋経営・温泉旅館・極上おもてなしラノベおすすめ10選【秘湯開拓・湯治スローライフ】](https://isekai-compas.vercel.app/features/legendary-inn-hotspring-hospitality-10/): 魔力泉を掘り当てて温泉旅館を開業！疲弊した冒険者や王侯貴族を極上のおもてなしと温泉料理で癒やす宿屋ラノベの至高10選。心も身体も温まる至福の湯治ファンタジーを徹底解説。
+- [天文学者・星読み占星術師ラノベおすすめ10選【天体観測・星辰魔術・運命予言ファンタジー】](https://isekai-compas.vercel.app/features/legendary-cartographer-surveyor-unexplored-10/): 望遠鏡で夜空を観測し、流星群の軌道や星辰の運行から大魔法を起動・未来予言する天文学者・星読みラノベの名作10選！天体力学と神話が交錯する至高の知略ファンタジー。
+- [飛空艇乗り・操縦士・スカイパイロットラノベおすすめ10選【蒼穹の空戦・航空冒険ファンタジー】](https://isekai-compas.vercel.app/features/legendary-magitech-flying-vehicle-pilot-10/): 魔導エンジンを唸らせ、操縦桿を握って雲海を突き抜けるスカイパイロット・飛空艇乗りラノベの至高10選！空中ドッグファイト、未知の浮遊島探索、空賊との艦隊戦を徹底解説。
+- [代官・執政官・内政改革ラノベおすすめ10選【汚職撲滅・税制改革・法治ファンタジー】](https://isekai-compas.vercel.app/features/legendary-magistrate-civil-governance-10/): 荒廃した属領に赴任し、腐敗貴族の汚職を摘発して公正な税制とインフラを敷く代官・執政官ラノベの至高10選！帳簿監査と法治主義で領民を豊かにする痛快行政サクセス。
+- [庭師・迷宮ガーデナー・植物使役ラノベおすすめ10選【神聖樹・緑の聖域・薬草園ファンタジー】](https://isekai-compas.vercel.app/features/legendary-gardener-botanical-sanctuary-10/): 魔力を込めた剪定鋏で世界樹を育て、迷宮のフロアを一面の緑のオアシスに変貌させる庭師・プラントマスターラノベの至高10選！植物兵器や神聖樹の加護で戦う癒やしと防衛の物語。
+- [考古学者・古代文字解読・失われた超文明ラノベおすすめ10選【石板解読・遺跡発掘ファンタジー】](https://isekai-compas.vercel.app/features/legendary-archaeologist-ruins-decipher-10/): 壁画のヒエログリフや失われた古代石板を読み解き、先史超文明のオーバーテクノロジーを復活させる考古学者ラノベの至高10選！知的好奇心と謎解きが交錯する本格遺跡探検譚。
 
 ## 登録作品データベース (全252作品)
 
