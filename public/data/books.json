@@ -10831,5 +10831,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/4ba794c4b42c3b70b9492a629ebe7d3e/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-09-16T11:27:33.629Z"
+  },
+  {
+    "id": "7631000004582",
+    "slug": "7631000004582",
+    "title": "百位世界杰出的经济学家（上）",
+    "author": "毕尚，风华",
+    "seriesName": "世界名人成功启示录",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界転生",
+      "経済チート",
+      "内政ファンタジー",
+      "群像劇",
+      "経済学",
+      "歴史人物",
+      "経済改革",
+      "成り上がり"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4538/2000021744538.jpg?_ex=200x200",
+    "description": "百人の経済学者が異世界へ転生！ウィリアム・ペティによる土地制度改革、アダム・スミスの「見えざる手」による市場活性化、マルサスが警鐘を鳴らす人口問題、リカードが拓く国際貿易の新時代――。時代と理論を超えた偉人たちが、混迷する異世界の経済を立て直し、豊かさをもたらす知的好奇心を刺激する内政ファンタジー。",
+    "aiIntro": "もし偉大な経済学者が異世界に転生したら？貧困と格差に喘ぐ異世界で、彼らがそれぞれの理論と知恵を武器に、経済システムを根底から変革していく。歴史上の思想がぶつかり合い、新たな経済秩序が生まれる様は、あなたの知的好奇心を最大限に刺激するでしょう。",
+    "readerTypes": [
+      "異世界で知識チートを駆使し、国家を豊かにする物語を求める読者",
+      "経済システムがどのように構築・変革されるかに深い関心を持つ読者",
+      "歴史上の偉人がIF世界で活躍する、知的好奇心を刺激するストーリーを愛する読者"
+    ],
+    "price": 152,
+    "salesDate": "2026年09月09日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fc77ade703139301cb58f7fc26d4fb770%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fc77ade703139301cb58f7fc26d4fb770%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/c77ade703139301cb58f7fc26d4fb770/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-09-16T16:50:40.847Z"
   }
 ]
