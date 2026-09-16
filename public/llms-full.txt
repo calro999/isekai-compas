@@ -255,6 +255,11 @@
 - [宝石彫刻師・魔導ジュエリー・宝飾細工ラノベおすすめ10選【魔宝石カッティング・指輪付与ファンタジー】](https://isekai-compas.vercel.app/features/legendary-gem-carver-magitech-jewelry-10/): 原石を精緻にカッティングし、指輪や首飾りに神話級の付与魔法（エンチャント）を刻み込む宝石彫刻師・宝飾職人ラノベの至高10選！美しい輝きと絶大な魔力を宿す極上ジュエリーファンタジー。
 - [燈台守・光彩航路・魔導灯台ラノベおすすめ10選【魔導レンズ・暗夜防衛・海路誘導ファンタジー】](https://isekai-compas.vercel.app/features/legendary-lighthouse-keeper-beacon-10/): 絶海の孤島や断崖絶壁にそびえる魔導灯台を守護し、巨大レンズの光で暗黒の海を切り裂いて船団を導く燈台守ラノベの至高10選！嵐の夜に迫る深海魔獣を撃退し航路の光を灯し続ける孤高の物語。
 - [調馬師・幻獣騎乗・騎獣絆創ラノベおすすめ10選【グリフォン・天馬・飛竜人獣一体ファンタジー】](https://isekai-compas.vercel.app/features/legendary-beast-rider-mythical-steed-10/): 気性の荒い名馬や天馬ペガサス、獰猛なグリフォンを心を通わせて調教し、人獣一体となって戦場を疾翔する調馬師・騎獣使役ラノベの至高10選！手綱を握り荒野を駆ける熱き絆を徹底紹介。
+- [開拓測量士・辺境領地踏査ラノベおすすめ10選【未踏峰踏破・境界確定・入植フロンティア】](https://isekai-compas.vercel.app/features/legendary-cartographer-borderland-pioneer-10/): 魔物が徘徊する未踏の辺境に杭を打ち、測量機と魔術で国境線を確定して新たな入植地を拓く開拓測量士ラノベの傑作10選！白紙の荒野を測量し、豊かな文明の礎を築く感動のフロンティア巨編。
+- [城代・要塞防衛・籠城戦指揮官ラノベおすすめ10選【防壁死守・兵粮管理・十倍敵撃退】](https://isekai-compas.vercel.app/features/legendary-fortress-castellan-siege-defense-10/): 十倍の敵軍に完全包囲された絶体絶命の城塞で、冷徹な兵粮管理と防衛トラップを駆使して城を守り抜く城代・要塞指揮官ラノベの至高10選！知略と鉄壁の防塞が奇跡を起こす至高の攻防戦。
+- [甲冑鍛冶・魔導装甲・外骨格アーマーラノベおすすめ10選【重装歩兵・複合装甲・パワードスーツ】](https://isekai-compas.vercel.app/features/legendary-armor-smith-magitech-exoskeleton-10/): 魔力を帯びた重金属プレートを叩き上げ、装着者の筋力を何倍にも増幅する魔導装甲・外骨格アーマーを鍛造する甲冑鍛冶ラノベの至高10選！絶対防御と超重力突撃のメカニカルファンタジー。
+- [醸造師・幻の蒸留酒・酒蔵開拓ラノベおすすめ10選【酵母培養・オーク樽熟成・酒宴ファンタジー】](https://isekai-compas.vercel.app/features/legendary-brewmaster-distillery-tavern-10/): 異世界の清らかな名水と幻の穀物で酵母を培養し、黄金色のエールや極上のウイスキー・日本酒を醸造する酒造・蒸留師ラノベの至高10選！種族を超えて人々を酔わせる至福の酒宴物語。
+- [操舵手・海図作成航海士ラノベおすすめ10選【六分儀・潮流計算・未知海域突破】](https://isekai-compas.vercel.app/features/legendary-helmsman-nautical-chart-10/): 荒れ狂う大渦や暗礁地帯で舵を握り、六分儀と星辰観測で未踏の海図を描き出す操舵手・航海士ラノベの至高10選！嵐の海を突破し新航路を拓く男たちの命懸けの海洋冒険譚。
 
 ## 登録作品データベース (全252作品)
 
