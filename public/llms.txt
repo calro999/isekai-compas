@@ -240,6 +240,11 @@
 - [代官・執政官・内政改革ラノベおすすめ10選【汚職撲滅・税制改革・法治ファンタジー】](https://isekai-compas.vercel.app/features/legendary-magistrate-civil-governance-10/): 荒廃した属領に赴任し、腐敗貴族の汚職を摘発して公正な税制とインフラを敷く代官・執政官ラノベの至高10選！帳簿監査と法治主義で領民を豊かにする痛快行政サクセス。
 - [庭師・迷宮ガーデナー・植物使役ラノベおすすめ10選【神聖樹・緑の聖域・薬草園ファンタジー】](https://isekai-compas.vercel.app/features/legendary-gardener-botanical-sanctuary-10/): 魔力を込めた剪定鋏で世界樹を育て、迷宮のフロアを一面の緑のオアシスに変貌させる庭師・プラントマスターラノベの至高10選！植物兵器や神聖樹の加護で戦う癒やしと防衛の物語。
 - [考古学者・古代文字解読・失われた超文明ラノベおすすめ10選【石板解読・遺跡発掘ファンタジー】](https://isekai-compas.vercel.app/features/legendary-archaeologist-ruins-decipher-10/): 壁画のヒエログリフや失われた古代石板を読み解き、先史超文明のオーバーテクノロジーを復活させる考古学者ラノベの至高10選！知的好奇心と謎解きが交錯する本格遺跡探検譚。
+- [魔獣寄生・生体共生・異形融合ラノベおすすめ10選【生体兵装・共生進化ファンタジー】](https://isekai-compas.vercel.app/features/legendary-demon-beast-parasite-symbiont-10/): 体内に潜む未知の魔獣や異形生体と共生し、己の肉体を異形の兵器へと変貌させて戦う生体共生・寄生進化ラノベの傑作10選！異形の力に蝕まれながらも絆を育むダークサバイバル。
+- [傀儡使い・極細鋼線暗殺者ラノベおすすめ10選【不可視の糸・空間切断・操り人形ファンタジー】](https://isekai-compas.vercel.app/features/legendary-shadow-puppeteer-string-assassin-10/): 目に見えぬ鋼線や魔導糸を指先で操り、敵の四肢を操り人形に変えて首を刈り取る傀儡師・糸使いラノベの至高10選！空間を切り裂くワイヤーアクションと冷徹な知略バトルを徹底解説。
+- [刀鍛冶・銘刀研磨・妖刀創成ラノベおすすめ10選【玉鋼・刃文・神剣鍛造ファンタジー】](https://isekai-compas.vercel.app/features/legendary-swordsmith-blade-refinement-10/): 炉に炎を熾し、玉鋼を幾重にも折り返し鍛錬して魔を断つ一刀を打ち出す刀鍛冶・研師ラノベの至高10選！妖刀の呪いを鎮め、神剣へと昇華させる職人の魂と鉄の詩を徹底解説。
+- [儀式魔術師・天変地異結界ラノベおすすめ10選【幾何学陣・大召喚・天変地異封印】](https://isekai-compas.vercel.app/features/legendary-ritual-sorcerer-sacred-sealing-10/): 地面に巨大な幾何学魔方陣を描き、天変地異級の超広域儀式魔術で神仏や古代邪神を召喚・封印する儀式魔術師ラノベの至高10選！詠唱と陣形が織りなす極大スペクタクルを徹底解説。
+- [装甲列車・魔導重輸送・鉄路開拓ラノベおすすめ10選【大陸横断・線路防衛ファンタジー】](https://isekai-compas.vercel.app/features/legendary-armored-train-heavy-convoy-10/): 魔導機関車に重装甲と大砲を積み、魔獣跋扈する荒野に鉄路を敷いて大陸を横断する装甲列車・重輸送ラノベの至高10選！轟音を響かせて走る鉄の要塞と線路防衛のロマンを徹底紹介。
 
 ## 登録作品データベース (全252作品)
 
