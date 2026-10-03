@@ -14,6 +14,7 @@
 - [サイトマップ](https://isekai-compas.vercel.app/sitemap/): 全ページリンク
 
 ## おすすめ特集記事（10選シリーズ）
+- [【2026年秋の最前線】最新おすすめ異世界ファンタジーラノベ3選徹底レビュー【前向き追放・学園総力戦・後宮飯テロ】](https://isekai-compas.vercel.app/features/isekai-autumn-2026-latest-light-novels-3/): 2026年秋の最新ライトノベルから、今読むべき傑作異世界ファンタジー3作を厳選！仲間からの愛が重すぎる前向き追放劇、学園の三大勢力を束ねる熱血レイドバトル、そして偏屈な神様たちを石窯ピザでとろかす後宮飯テロまで、それぞれの独自の見どころと魅力を徹底深掘りレビュー。
 - [異世界でスローライフを満喫できるおすすめラノベ10選](https://isekai-compas.vercel.app/features/slowlife-10/): 激しいバトルやギスギスした人間関係から解放されたい読者へ！絶品異世界グルメの飯テロ、もふもふ従魔との心温まる絆、まったり開拓やカフェ・工房経営など、読むだけでストレスが溶けていく極上のスローライフ系異世界ラノベ10作品を徹底解説します。
 - [異世界転生したら人外・魔物だったおすすめラノベ10選](https://isekai-compas.vercel.app/features/monster-reincarnation-10/): 人間をやめた主人公たちの規格外な大冒険！最弱モンスターからの進化サバイバル、圧倒的魔王としての君臨、意思を持つ武器への転生など、人外転生ならではの独自スキルと進化ツリーが熱い傑作10選を読者目線で徹底解説します。
 - [帳簿を開き財政破綻を食い止めろ！税制改革・予算配分・法整備の内政統治ラノベ10選](https://isekai-compas.vercel.app/features/territory-management-10/): 魔物との戦いではなく、膨らみ続ける負債と汚職代官との戦い！複式簿記、公正な税制、流通の独占排除など、徹底的な会計監査と行政改革で赤字領地を富裕都市へと再生させる本格ガバナンス小説10選です。
@@ -314,8 +315,64 @@
 - [もふもふ従魔・聖獣テイマーおすすめ異世界ラノベ10選【神獣契約・極上の癒やし・まったり冒険】](https://isekai-compas.vercel.app/features/isekai-slowlife-mofumofu-tamer-10/): 巨大フェンリル、無邪気なスライム、伝説の霊鳥、可愛い仔竜！もふもふの毛並みに顔を埋め、美味しいご飯を一緒に食べて世界中をのんびり旅する。読むだけでストレスが完全に消え去る「もふもふ従魔・テイマースローライフ系」おすすめ異世界ラノベ10選を徹底解説します。
 - [錬金術師・ポーション調合おすすめ異世界ラノベ10選【万能薬・アイテムクリエイト・工房経営】](https://isekai-compas.vercel.app/features/isekai-alchemist-potion-craft-10/): 万能ポーションの作成から伝説のエリクサー調合、工房経営まで！錬金術スキルで無双・大活躍するおすすめ異世界錬金術師ラノベ10作品を徹底解説。読者が求めるクラフト・調合要素が満載の決定版。
 - [赤ちゃん・幼少期から始まる異世界転生おすすめラノベ10選【神童・修行・英才教育・天才児無双】](https://isekai-compas.vercel.app/features/isekai-baby-childhood-growth-10/): 赤ん坊や幼少期から転生スタート！赤子の頃からの魔力修行や前世知識を活かした神童無双、家族との温かい絆を描いたおすすめ異世界幼少期ラノベ10選を徹底紹介。成長の醍醐味が味わえる傑作集。
+- [クラス転移・集団召喚おすすめ異世界ラノベ10選【能力格差・追放下剋上・学級サバイバル】](https://isekai-compas.vercel.app/features/isekai-reincarnation-class-group-10/): 教室ごと丸ごと異世界召喚！ステータス鑑定による能力格差、無能烙印からの超絶覚醒、クラスメイト同士の確執や裏切り、群像劇サバイバルを描くおすすめ異世界クラス転移ラノベ10選を徹底解説。
+- [ブラック企業・社畜脱出おすすめ異世界ラノベ10選【過労死からの解放・自由な第二の人生】](https://isekai-compas.vercel.app/features/isekai-black-company-escape-slowlife-10/): 理不尽な労働・デスマーチ・残業地獄からの完全脱出！現代日本のブラック企業で擦り切れた主人公が、異世界で圧倒的な自由とマイペースな幸せを掴み取るおすすめ社畜解放ラノベ10選を徹底紹介。
+- [魔物・人外転生おすすめ異世界ラノベ10選【スライム・蜘蛛・ドラゴン・進化と捕食の快感】](https://isekai-compas.vercel.app/features/isekai-reincarnated-as-monster-nonhuman-10/): 人間を辞めて魔物に転生！スライム、蜘蛛、ドラゴン、剣、スケルトンなど、人外スタートから捕食・スキル獲得・存在進化を繰り返して生態系の頂点へ登りつめるおすすめ人外魔物転生ラノベ10選を徹底紹介。
+- [領地経営・国づくりおすすめ異世界ラノベ10選【内政チート・産業革命・インフラ整備・富国強兵】](https://isekai-compas.vercel.app/features/isekai-territory-management-kingdom-building-10/): 荒れ果てた寒村や貧乏領地を近代技術と経済改革で大都市へ！インフラ整備・衛生改革・農業革命・法整備で国を豊かにするおすすめ内政・領地経営・建国ファンタジーラノベ10選を徹底解説。
+- [モブ転生・脇役からの下剋上おすすめ異世界ラノベ10選【主役喰い・原作改変・平穏志望の勘違い無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-as-mob-character-10/): 主人公でも悪役でもない『名もなきモブキャラ』に転生！ゲーム知識や前世の記憶を駆使して死亡フラグをへし折り、平穏を望みながらも気付けば世界を救ってしまうおすすめモブ転生ラノベ10選を徹底解説。
+- [現代知識・科学技術チートおすすめ異世界ラノベ10選【化学・物理・工業・文明開化無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-with-modern-knowledge-science-10/): 現代の科学・化学・物理・工学・医学の知恵を中世ファンタジー世界へ持ち込む！蒸気機関、鉄鋼、火薬、製紙、近代医療で文明を飛躍的に発展させるおすすめ科学技術チート異世界ラノベ10選を徹底紹介。
+- [勘違い・過大評価主人公おすすめ異世界ラノベ10選【本人は無自覚・周囲が勝手に崇拝・神算鬼謀】](https://isekai-compas.vercel.app/features/isekai-misunderstood-overestimated-protagonist-10/): 本人は普通にしているつもりなのに、周囲が勝手に『神の知恵』『世界の覇者』と深読みして崇め奉る！爆笑必至の勘違い・過大評価おすすめ異世界ラノベ10選を徹底解説。圧倒的なコメディとカタルシス。
+- [異世界料理・グルメ無双おすすめラノベ10選【現代の美味で胃袋掌握・居酒屋・屋台・神獣懐柔】](https://isekai-compas.vercel.app/features/isekai-summoned-kitchen-food-cooking-10/): マヨネーズ、醤油、ラーメン、揚げたて唐揚げで異世界人の胃袋を完全掌握！伝説の神獣から国王・貴族まで料理の美味さで虜にするおすすめ異世界料理・グルメファンタジーラノベ10選を徹底紹介。
+- [悪役令嬢・乙女ゲーム転生おすすめラノベ10選【破滅フラグ回避・断罪逆転・溺愛ざまぁ】](https://isekai-compas.vercel.app/features/isekai-reincarnated-into-otome-game-villainess-10/): 処刑・国外追放のバッドエンドをへし折る！乙女ゲームの悪役令嬢に転生した主人公が、知恵と愛嬌と内政手腕で断罪を回避し、周囲から溺愛されて大逆転するおすすめ悪役令嬢ラノベ10選を徹底紹介。
+- [剣豪・武術家・日本刀無双おすすめ異世界ラノベ10選【侍魂・極限の剣技・魔導を斬る達人】](https://isekai-compas.vercel.app/features/isekai-reincarnated-samurai-sword-martial-arts-10/): 魔導やモンスターが支配する異世界に、一振りの日本刀と極限まで鍛え抜かれた剣技で挑む！魔法をも切り裂く達人の境地と侍の美学を描くおすすめ異世界剣豪・武術ラノベ10選を徹底解説。
+- [暗殺者・影の始末屋おすすめ異世界ラノベ10選【プロの技術・暗躍無双・冷徹な処刑劇】](https://isekai-compas.vercel.app/features/isekai-reincarnated-assassin-shadow-operative-10/): 現代の暗殺術、隠密工作、毒殺、狙撃技術でファンタジーの理不尽な権力者や魔族を人知れず始末する！おすすめ異世界暗殺者・スナイパーラノベ10選を徹底解説。
+- [勇者裏切り・追放復讐おすすめ異世界ラノベ10選【絶望からの覚醒・冷酷な制裁・完全ざまぁ】](https://isekai-compas.vercel.app/features/isekai-reincarnated-hero-betrayed-banished-revenge-10/): 信じていた仲間や国王に裏切られ、命の危機に瀕した勇者・魔導士が真の力に目覚める！理不尽な追放者たちを絶望の淵へ叩き落とすおすすめ勇者裏切り・追放復讐ラノベ10選を徹底紹介。
+- [ループ・死に戻り・時間逆行おすすめ異世界ラノベ10選【絶望の運命改変・試行錯誤・未来予知無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-time-loop-rewind-10/): 命を落とすたびに過去のセーブポイントへ巻き戻る！絶望的なバッドエンドや仲間の死を回避するため、死の記憶と試行錯誤で運命の糸を手繰り寄せるおすすめ死に戻り・タイムループラノベ10選を徹底解説。
+- [呪術・黒魔術・デバフ特化おすすめ異世界ラノベ10選【状態異常・弱体化・死霊使役・深淵の魔導】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-dark-magic-necromancer-10/): ド派手な攻撃魔法をあざ笑う、凶悪な状態異常・弱体化デバフ・呪詛・黒魔術の神髄！相手の自由を奪いじわじわと追い詰めるおすすめ呪術・デバフ特化異世界ラノベ10選を徹底解説。
+- [魔術研究・魔法理論チートおすすめ異世界ラノベ10選【数理魔導・術式解析・新魔法創造】](https://isekai-compas.vercel.app/features/isekai-magic-scholar-theory-research-10/): 詠唱を数式やプログラムとして再構築！魔力の流動構造を徹底解明し、誰も見たことのない新術式や古代魔導を創造するおすすめ魔術研究者・魔法理論チート異世界ラノベ10選を徹底解説。
+- [盾役・タンク・鉄壁防御おすすめ異世界ラノベ10選【防御極振り・無傷の要塞・パリィ無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-shield-tank-defense-10/): 攻撃力ゼロでも絶対に倒れない！防御力特化、ヘイト管理、神速パリィ、状態異常完全無効で敵の絶望を誘うおすすめ盾役・タンク無双異世界ラノベ10選を徹底紹介。
+- [竜騎士・ドラゴン育成・竜殺しおすすめ異世界ラノベ10選【最強竜種契約・竜騎士団・ドラゴンスレイヤー】](https://isekai-compas.vercel.app/features/isekai-reincarnated-dragon-slayer-dragon-rider-10/): 最強の竜と絆を結び空を駆ける！ドラゴンの卵の孵化から始まる相棒育成、竜騎士としての無双、そして神話の邪竜を討伐するおすすめ異世界竜・ドラゴンラノベ10選を徹底解説。
+- [弓使い・ガンナー・狙撃手おすすめ異世界ラノベ10選【超長距離狙撃・不可視の魔弓・弾幕無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-archer-gunner-sniper-10/): 数キロ先の敵を不可視の魔矢や電磁加速銃で撃ち抜く！前衛の死角から戦局を完全に支配するおすすめ弓使い・スナイパー・ガンナー異世界ラノベ10選を徹底紹介。
+- [魔王軍・配下育成・幹部無双おすすめ異世界ラノベ10選【絶対忠誠・組織拡大・軍団指揮】](https://isekai-compas.vercel.app/features/isekai-demon-king-subordinates-territory-10/): 魔王として君臨、あるいは魔王軍の幹部・参謀として個性豊かな配下たちを育成・指揮！絶対の忠誠を誓う部下たちとともに勢力を拡大するおすすめ魔王軍・配下育成異世界ラノベ10選を徹底解説。
+- [鍛冶職人・魔導具クラフトおすすめ異世界ラノベ10選【神兵器鍛造・魔導具開発・職人魂】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-blacksmith-apprentice-10/): 鉄を打ち、魂を込め、伝説の魔剣や革新的魔導具を創り出す！中世ファンタジーの技術体系を覆すおすすめ異世界鍛冶師・魔導具師ラノベ10選を徹底紹介。
+- [隠遁賢者・師匠育成・弟子太郎おすすめ異世界ラノベ10選【伝説の導き手・規格外の愛弟子・隠密最強】](https://isekai-compas.vercel.app/features/isekai-reincarnated-sage-master-disciple-10/): 世界を救った伝説の大賢者や最強の師匠が、弟子を育てて無自覚に世界を揺るがす！おすすめ隠遁賢者・師匠育成・規格外弟子ラノベ10選を徹底解説。
+- [聖女・回復術士・治癒魔法チートおすすめ異世界ラノベ10選【神聖奇跡・即時全快・解毒蘇生無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-holy-healer-priest-10/): 欠損部位の完全再生、不治の病の浄化、果ては死者蘇生まで！神聖魔法と治癒チートで国中の傷病者を救い、救世主として崇められるおすすめ聖女・治癒術士ラノベ10選を徹底紹介。
+- [精霊契約・精霊王の加護おすすめ異世界ラノベ10選【四大精霊使役・無詠唱自然魔導・愛され体質】](https://isekai-compas.vercel.app/features/isekai-reincarnated-spirit-contract-elemental-10/): 四大精霊や最高峰の精霊王と契約し、自然界の魔力を自在に操る！精霊たちに無条件で愛され、神話級の奇跡を巻き起こすおすすめ精霊使い・精霊契約異世界ラノベ10選を徹底解説。
+- [傭兵・盗賊討伐・冒険者ギルド成り上がりおすすめ異世界ラノベ10選【実力至上主義・泥臭い戦術・Sランク昇格】](https://isekai-compas.vercel.app/features/isekai-reincarnated-bandit-subjugation-mercenary-10/): 冒険者ギルドの最底辺FランクからSランクへ！盗賊団の殲滅、魔物の群れの掃討、傭兵としての冷徹な実力主義を描くおすすめ冒険者成り上がり・傭兵ラノベ10選を徹底紹介。
+- [格闘家・素手・体術無双おすすめ異世界ラノベ10選【正拳突き・徒手空拳・物理で魔法を粉砕】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-unarmed-brawler-10/): 武器も魔法も不要！極限まで鍛え抜かれた肉体、神速の打撃、合気、徒手空拳で神話級モンスターや傲慢な魔術師を叩き伏せるおすすめ格闘家・肉体無双異世界ラノベ10選を徹底解説。
+- [拠点防衛・籠城戦・要塞都市おすすめ異世界ラノベ10選【絶対防衛ライン・罠連鎖・物量撃退】](https://isekai-compas.vercel.app/features/isekai-reincarnated-territory-defense-fortress-10/): 押し寄せる数十万の魔物や敵国大軍勢を、難攻不落の要塞・緻密な罠・防衛兵器で完封！おすすめ拠点防衛・籠城戦・要塞都市ラノベ10選を徹底紹介。
+- [万能鑑定・アイテム売買・道具屋経営おすすめ異世界ラノベ10選【目利き無双・掘り出し物・富豪サクセス】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-item-shop-appraisal-10/): ゴミ同然のガラクタから伝説の神代遺物を見抜く！万能鑑定スキルで掘り出し物を買い叩き、適正価格と付加価値で大富豪へ成り上がるおすすめ鑑定・道具屋経営異世界ラノベ10選を徹底解説。
+- [召喚士・ファミリア・使役術おすすめ異世界ラノベ10選【古代神獣・式神召喚・使魔無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-spirit-beast-summoner-familiar-10/): 異次元の古代神獣、精霊、式神、幻獣を召喚して使役！召喚士としての才能を開花させ、多彩な眷属たちとともに戦局を完全に掌握するおすすめ召喚術・ファミリア使役ラノベ10選を徹底紹介。
+- [深層迷宮・ダンジョン孤立サバイバルおすすめ異世界ラノベ10選【奈落への落下・単独踏破・人外への変貌】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-labyrinth-deep-level-10/): 大迷宮の最深層・奈落へ置き去りにされた絶望から始まる！凶悪な深層モンスターの肉を喰らい、死線を越えて単独踏破を目指すおすすめ深層迷宮サバイバル異世界ラノベ10選を徹底解説。
+- [ツンデレヒロイン・素直になれない美少女おすすめ異世界ラノベ10選【クーデレ・ギャップ萌え・悶絶溺愛】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-tsundere-heroine-10/): 最初は冷たくてツンツンしていた美少女が、主人公の優しさや規格外の実力に触れてデレデレに！おすすめツンデレ・クーデレヒロイン異世界ラノベ10選を徹底紹介。
+- [黒幕・邪神転生・世界の支配者おすすめ異世界ラノベ10選【神話級の威厳・人類の畏怖・世界改変】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-mastermind-evil-god-10/): 勇者でも魔王でもなく、世界の理を司る『邪神』や『絶対の黒幕』として君臨！神話級の力と圧倒的スケールで世界を意のままに導くおすすめ邪神・黒幕異世界ラノベ10選を徹底解説。
+- [商会設立・商業ギルド・経済支配おすすめ異世界ラノベ10選【特産品開発・流通革命・マネー無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-craft-merchant-guild-10/): 現代のマーケティング、複式簿記、物流革命、独占特許で異世界の経済を完全支配！貧乏領地や零細商会を世界的コングロマリットへ育てるおすすめ商会経営・経済ファンタジーラノベ10選を徹底紹介。
+- [迷宮創造・ダンジョン建築・トラップ設計おすすめ異世界ラノベ10選【DP経営・迷宮マスター・箱庭クラフト】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-labyrinth-creation-builder-10/): 何もない洞窟から超巨大な難攻不落迷宮をクリエイト！ダンジョンポイント（DP）での罠設置、モンスター配置、冒険者誘導、居住空間づくりを描くおすすめダンジョン建築・迷宮マスターラノベ10選を徹底解説。
+- [ゲーマー転生・ゲームシステム操作おすすめ異世界ラノベ10選【スキルツリー・レベル上限突破・隠しコマンド】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-gaming-skills-mmo-status-10/): 異世界なのにUIが見える！スキルツリーの最適化、バグ技・裏技の活用、ステータス画面操作で世界の理をハックするおすすめゲーマー・MMOシステム転生ラノベ10選を徹底紹介。
+- [空間魔法・転移・ストレージチートおすすめ異世界ラノベ10選【無限収納・瞬間移動・次元切断】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-space-time-teleport-10/): 無限のアイテムボックス、大陸間テレポート、次元断裂攻撃！空間を完全に掌握して物流も戦闘も無双するおすすめ空間魔法・転移チート異世界ラノベ10選を徹底解説。
+- [黒髪黒目・異世界人の珍重おすすめ異世界ラノベ10選【古代予言・神の御子・魔力純度と文化の衝撃】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-black-hair-summoned-10/): 金髪碧眼が当たり前の世界で、黒髪黒目の姿が『伝説の勇者』や『神の御子』として珍重・畏敬される！おすすめ黒髪黒目主人公異世界ラノベ10選を徹底紹介。
+- [魔法無効化・アンチマジック・異能喰らいおすすめ異世界ラノベ10選【術式破壊・魔力吸収・物理完全制圧】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-anti-magic-nullify-10/): どんな天変地異級の上級魔法も一瞬でかき消す！魔法障壁を突き破り、魔力吸収や術式消滅で傲慢な魔術師を絶望させるおすすめ魔法無効化・アンチマジック異世界ラノベ10選を徹底解説。
+- [貴族社会・社交界暗闘・権謀術数おすすめ異世界ラノベ10選【爵位争い・夜会スキャンダル・冷徹な政略結婚】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-tsundere-noble-villain-10/): 優雅な微笑みの裏で毒杯と密書が飛び交う！貴族院の派閥抗争、夜会の心理戦、婚約破棄を逆手に取った政略で名門貴族を失脚させるおすすめ貴族社会・社交界暗闘ラノベ10選を徹底紹介。
+- [異世界農業・開拓・農園スローライフおすすめラノベ10選【万能農具・品種改良・自給自足の至福】](https://isekai-compas.vercel.app/features/isekai-reincarnated-agriculture-farming-slowlife-10/): 荒れ果てた死の森や未開拓地を、チート農具と現代農業技術で一大穀倉地帯へ！野菜づくり、果樹園、醸造、仲間たちとの温かな収穫祭を描くおすすめ異世界農業・開拓ラノベ10選を徹底解説。
+- [魔法学園・特待生・落ちこぼれの逆転劇おすすめ異世界ラノベ10選【実力隠蔽・学園首席・下剋上無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-black-magical-academy-10/): 名門貴族の魔法学園に入学した平民・特待生・落ちこぼれが、実技試験と魔力測定で学園の常識を完全破壊！おすすめ魔法学園・下剋上逆転ラノベ10選を徹底紹介。
+- [死霊術士・ネクロマンサー軍団おすすめ異世界ラノベ10選【不死の軍勢・魂の使役・深淵の支配者】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-black-necromancer-undead-army-10/): 倒した魔物や敵兵をアンデッドとして蘇らせ、無尽蔵の不死軍団を編成！国家規模の大軍勢を一人で指揮するおすすめ死霊術士・ネクロマンサーラノベ10選を徹底解説。
+- [薬師・創薬チート・病魔撃破おすすめ異世界ラノベ10選【近代薬理学・疫病根絶・ドラッグストア開業】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-black-craft-potion-brewing-10/): ペスト、結核、謎の風土病を近代医学と創薬チートで完全治療！中世の迷信を科学的エビデンスで打ち破るおすすめ薬師・創薬・医療異世界ラノベ10選を徹底紹介。
+- [魔剣・聖剣・付与術士（エンチャンター）おすすめ異世界ラノベ10選【神話級武器鍛造・属性付与・最強バフ無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-craft-magic-sword-enchant-10/): 錆びた鉄剣を神をも屠る魔剣へ強化！属性付与、切れ味倍加、自動修復、ステータス超絶バフで味方を覚醒させるおすすめ魔剣・付与術士異世界ラノベ10選を徹底解説。
+- [近代兵器・自衛隊・ミリタリー戦術おすすめ異世界ラノベ10選【火砲・戦車・制空権・近代的兵站】](https://isekai-compas.vercel.app/features/isekai-reincarnated-curse-black-modern-weapons-tactics-10/): ライフル、戦車、戦闘機、近代兵站でファンタジーの軍勢を圧倒！魔法やドラゴンを近代軍事理論と科学的火力投射で完全制圧するおすすめミリタリー異世界ラノベ10選を徹底紹介。
+- [ゴーレム使役・自動化ファクトリーおすすめ異世界ラノベ10選【魔導オートメーション・機械軍団・生産無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-craft-magic-golem-automation-10/): 土や金属から無人のゴーレム軍団を創造し、開拓・採掘・防衛を完全自動化！魔導ファクトリーと自律兵器で世界を変革するおすすめゴーレム使役・自動化異世界ラノベ10選を徹底解説。
+- [獣人・ケモ耳美少女・亜人共生おすすめ異世界ラノベ10選【猫耳・犬耳・狐耳・差別なき多種族理想郷】](https://isekai-compas.vercel.app/features/isekai-reincarnated-craft-magic-beast-furry-ear-10/): 猫耳、犬耳、狐耳、兎耳の愛らしい獣人美少女たちと絆を結び、差別のない理想国家を建設！おすすめ獣人・ケモ耳・多種族共生異世界ラノベ10選を徹底紹介。
+- [スキル強奪・能力コピーおすすめ異世界ラノベ10選【暴食・吸収進化・敵のチート技を奪う下剋上無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-skill-steal-copy-absorb-10/): 倒した魔物や強敵のチートスキルを吸収・強奪・コピーして加速度的に成り上がる痛快ファンタジー！最弱からの大逆転や底知れぬ成長曲線が熱い傑作ライトノベルを厳選徹底紹介。
+- [ダンジョン配信・VTuber探索者おすすめ現代異世界ラノベ10選【世界中へ生配信・コメント欄熱狂・バズり無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-dungeon-streamer-vtuber-explorer-10/): 現代に出現した迷宮を探索しながら生配信（ストリーミング）！リスナーのコメントの嵐とともに圧倒的な実力でバズりまくる痛快現代ファンタジー＆ダンジョン探索者ライトノベルを厳選徹底紹介。
+- [スキル進化・樹形図ツリーおすすめ異世界ラノベ10選【レベルアップ・派生強化・最上位スキルへの覚醒無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-skill-evolution-tree-growth-10/): 地道な熟練度稼ぎや条件達成で下位スキルが最上位スキルへ劇的進化！スキルツリーの解放と独自ビルドで格上を凌駕していく育成の面白さが詰まった傑作ライトノベルを徹底解説。
+- [錬金術・アイテムクリエイトおすすめ異世界ラノベ10選【素材採取・調合・神級マジックアイテム創造無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-alchemy-item-creation-craft-10/): 未知の薬草や魔石を採取し、独自の錬金術や魔導工学で奇跡のアイテムを創り出す！ものづくりへの情熱と革新的プロダクトで世界を豊かにする最高峰クラフトライトノベルを徹底解説。
+- [ループ・死に戻り・タイムリープおすすめ異世界ラノベ10選【絶望の運命を知識と執念で覆す頭脳戦＆死線突破】](https://isekai-compas.vercel.app/features/isekai-reincarnated-death-loop-time-rewind-10/): 理不尽な死や破滅の運命から時間を巻き戻し、繰り返す時間の中で得た情報と執念で未来を切り拓く！緊迫感あふれる心理戦と圧倒的カタルシスが味わえる傑作ループ系ライトノベルを厳選紹介。
+- [ダンジョンマスター・迷宮創造おすすめ異世界ラノベ10選【侵入者を罠と魔物で迎え撃つ防衛ストラテジー＆領地経営】](https://isekai-compas.vercel.app/features/isekai-reincarnated-dungeon-master-labyrinth-craft-10/): 迷宮の主（ダンジョンマスター）となり、罠の配置、魔物の召喚、施設拡張で侵入者を迎え撃つ！拠点防衛と内政・領地経営の面白さが凝縮された傑作ストラテジー系ライトノベルを徹底解説。
+- [追放・覚醒・ざまぁおすすめ異世界ラノベ10選【無能と虐げられた真のチート能力が開花！痛快大逆転劇】](https://isekai-compas.vercel.app/features/isekai-reincarnated-banished-awakening-revenge-10/): 理不尽にパーティーや家から追放された主人公が、隠された真の才能や規格外チートを開花させて大逆転！見捨てた者たちの後悔と主人公の圧倒的サクセスが痛快な傑作ライトノベルを徹底解説。
+- [魔導科学・スチームパンク・兵器開発おすすめ異世界ラノベ10選【現代の科学理論と魔法を融合！超文明無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-magic-science-steampunk-weapon-10/): 前世の工学・物理学・兵器工学の知識と異世界の魔力や魔鉱石が奇跡の融合！ロボット、蒸気機関、近代銃火器から魔導航空母艦まで、未知の超技術で世界を変革する傑作SFファンタジーを徹底解説。
+- [異世界暗殺者・影の執行者おすすめ異世界ラノベ10選【表は名門貴族、裏は冷徹な処刑人！暗躍ステルス無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-assassin-shadow-executioner-10/): 現代の最高峰暗殺術と異世界の魔法が融合！表舞台の身分を完璧に演じ分けながら、夜の闇で悪を裁きターゲットを確実に抹殺する痛快ステルス＆暗殺アクション傑作ライトノベルを徹底解説。
+- [現代知識・内政チートおすすめ異世界ラノベ10選【中世異世界のインフラ・経済・法制度を大改革！国家再建無双】](https://isekai-compas.vercel.app/features/isekai-reincarnated-modern-knowledge-kingdom-rebuilding-10/): 現代の法学・経済学・農学・土木技術の知識を駆使して、破滅寸前の王国や貧しい寒村を大繁栄へと導く！武力だけでなく頭脳と制度改革で世界を豊かにする最高峰の内政・国家再建ライトノベルを徹底解説。
 
-## 登録作品データベース (全253作品)
+## 登録作品データベース (全256作品)
 
 | 作品名 | 作者 | ジャンル | 特徴・属性タグ | 作品ページリンク |
 |:---|:---|:---|:---|:---|
@@ -572,3 +629,6 @@
 | **【期間限定　試し読み増量版】猫かぶり姫と天上の音楽（１）** | もり/佐藤里/由貴海里 | 異世界・ファンタジー | 異世界転移, 音楽ファンタジー, ギャップ萌えヒロイン, 冷酷皇帝 | [詳細・全巻リスト](https://isekai-compas.vercel.app/works/4310000919704/) |
 | **異世界で孤児院を開いたけど、なぜか誰一人巣立とうとしない件 (12)** | 初枝れんげ/有池智実 | 異世界・ファンタジー | 異世界孤児院, ファンタジー小説, バトルファンタジー, 異世界転生 | [詳細・全巻リスト](https://isekai-compas.vercel.app/works/7275000922392/) |
 | **百位世界杰出的经济学家（上）** | 毕尚，风华 | 異世界・ファンタジー | 異世界転生, 経済チート, 内政ファンタジー, 群像劇 | [詳細・全巻リスト](https://isekai-compas.vercel.app/works/7631000004582/) |
+| **勇者からは逃げられない２【電子特別版】** | 富士田　けやき/ｔｏｉ８ | 異世界ファンタジー・前向き追放・冒険譚 | 勇者からは逃げられない, 前向き追放, 魔剣トロ, 天使アラム | [詳細・全巻リスト](https://isekai-compas.vercel.app/works/4335448300320/) |
+| **マジカル★エクスプローラー　エロゲの友人キャラに転生したけど、ゲーム知識使って自由に生きる14【電子特別版】** | 入栖/神奈月　昇 | ゲーム転生・学園バトルファンタジー・総力戦 | マジカルエクスプローラー, マジエク, 瀧音幸佑, 神奈月昇 | [詳細・全巻リスト](https://isekai-compas.vercel.app/works/4336345000320/) |
+| **白瑞宮のお料理番 ３　〜異世界の神様と飯テロスローライフを満喫する〜** | 巻村　螢/藤小豆 | 異世界転移・中華風後宮・飯テロ・神様交流スローライフ | 白瑞宮のお料理番, 巻村螢, 藤小豆, カドカワBOOKS | [詳細・全巻リスト](https://isekai-compas.vercel.app/works/4335238700320/) |
