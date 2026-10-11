@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "./remote-build.sh",
     "preview": "vite preview",
     "seed:books": "node scripts/fetch-books.mjs --seed",
     "sync:books": "node scripts/fetch-books.mjs",
-    "generate:compare": "node scripts/generate-comparisons.mjs"
+    "generate:compare": "node scripts/generate-comparisons.mjs",
+    "build-local": "vite build"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
