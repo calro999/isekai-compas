@@ -41398,7 +41398,7 @@ ${renderFooter()}
 
     // ユーザー指定構成: h2「管理人の私的ランキング」、h3「〇〇が1位」理由を書く、h3「△△が2位」理由を書く、h3「xxが3位」理由を書く
     const getRankClass = (rank) => rank === 1 ? 'gold' : rank === 2 ? 'silver' : 'bronze'
-    const rankingCardsHtml = f.ranking.map(r => `
+    const rankingCardsHtml = (f.ranking || []).map(r => `
       <div class="ranking-item-card ${getRankClass(r.rank)}">
         <h3>${escapeXml(r.title)}が${r.rank}位</h3>
         <p>${escapeXml(r.reason)}</p>

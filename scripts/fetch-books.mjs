@@ -105,11 +105,17 @@ async function callFreeLLM(prompt) {
   if (!process.env.GEMINI_API_KEY) return null
   const models = [
     'gemini-2.5-flash',
-    'gemini-2.0-flash',
     'gemini-2.5-flash-lite',
+    'gemini-2.5-pro',
+    'gemini-2.0-flash',
     'gemini-2.0-flash-lite',
     'gemini-3-flash',
-    'gemini-3.5-flash'
+    'gemini-3.1-pro',
+    'gemini-3.1-flash-lite',
+    'gemini-3.5-flash',
+    'gemini-3.5-flash-lite',
+    'gemini-3.6-flash',
+    'gemini-3.7-flash'
   ]
   
   for (const model of models) {
@@ -282,10 +288,10 @@ async function writeIndex(books) {
     ...authorEntries.map(author => `  <url><loc>${siteUrl}/authors/${encodeURIComponent(slugify(author))}/</loc><changefreq>weekly</changefreq></url>`),
     ...seriesEntries.map(series => `  <url><loc>${siteUrl}/series/${encodeURIComponent(slugify(series))}/</loc><changefreq>weekly</changefreq></url>`),
     ...pairEntries.map(([a, b]) => `  <url><loc>${siteUrl}/compare/${pairSlug(a, b)}/</loc><changefreq>weekly</changefreq></url>`),
-    ...books.map(book => `  <url><loc>${siteUrl}/works/${book.slug}/</loc><lastmod>${book.publishedAt.slice(0, 10)}</lastmod><changefreq>weekly</changefreq></url>`)
+    ...books.map(book => `  <url><loc>${siteUrl}/works/${book.slug}/</loc><lastmod>${(book.publishedAt || new Date().toISOString()).slice(0, 10)}</lastmod><changefreq>weekly</changefreq></url>`)
   ].join('\n')
   await fs.writeFile(path.join(root, 'public/sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${siteUrl}/</loc><priority>1.0</priority><changefreq>daily</changefreq></url>\n  <url><loc>${siteUrl}/new</loc><priority>0.9</priority><changefreq>daily</changefreq></url>\n${urls}\n</urlset>\n`)
-  const latest = books.slice(-20).reverse().map(book => `    <item><title>${escapeXml(book.title)}</title><link>${siteUrl}/works/${book.slug}/</link><description>${escapeXml(book.description)}</description><pubDate>${new Date(book.publishedAt).toUTCString()}</pubDate></item>`).join('\n')
+  const latest = books.slice(-20).reverse().map(book => `    <item><title>${escapeXml(book.title)}</title><link>${siteUrl}/works/${book.slug}/</link><description>${escapeXml(book.description)}</description><pubDate>${new Date(book.publishedAt || Date.now()).toUTCString()}</pubDate></item>`).join('\n')
   await fs.writeFile(path.join(root, 'public/rss.xml'), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>異世界コンパス｜新刊情報</title><link>${siteUrl}/new</link><description>異世界漫画・小説の新刊情報</description>\n${latest}\n</channel></rss>\n`)
   for (const book of books) {
     await writeWorkPage(book, books)
@@ -967,27 +973,129 @@ async function writeCategoryPages(books, tagEntries, authorEntries, seriesEntrie
   const seriesHtml = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>シリーズ一覧｜異世界コンパス</title><meta name="description" content="異世界作品をシリーズ単位で探せる一覧ページ。"><link rel="canonical" href="${siteUrl}/series/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/series/')}<main><div class="crumb"><a href="/">トップ</a>　/　シリーズ一覧</div><div class="eyebrow">SERIES DIRECTORY</div><h1>シリーズから作品を探す</h1><p class="lead">人気シリーズの最新刊や関連巻数をシリーズごとに確認できます。</p><div class="category-grid">${seriesCards}</div></main>${renderFooter()}</body></html>`
   await write('series', seriesHtml)
 
-  // 6. 各タグ別個別ページ (/tags/[slug]/)
+  // 6. 各タグ別個別ページ (/tags/[slug]/) - リッチ魔改造
   for (const tag of tagEntries) {
     const filteredBooks = books.filter(book => (book.tags || []).includes(tag))
     const cards = filteredBooks.map(renderBookCard).join('')
-    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>#${escapeXml(tag)}の異世界作品（${filteredBooks.length}件）｜異世界コンパス</title><meta name="description" content="${escapeXml(tag)}タグが付いた異世界作品一覧。"><link rel="canonical" href="${siteUrl}/tags/${slugify(tag)}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/tags/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/tags/">タグ一覧</a>　/　#${escapeXml(tag)}</div><div class="eyebrow">TAG CATEGORY</div><h1>#${escapeXml(tag)} の作品一覧</h1><p class="lead">${escapeXml(tag)} テーマに関する異世界漫画・小説の検索結果です。</p><div class="book-cards-grid">${cards}</div></main>${renderFooter()}</body></html>`
+    
+    // タグごとの動的リッチ解説文
+    const bookTitles = filteredBooks.map(b => `『${b.title}』`).slice(0, 3).join('や')
+    const tagOverview = `異世界作品における「#${escapeXml(tag)}」は、多くのファンを魅了し続ける大人気テーマの一つです。本作群（${bookTitles}など）では、定番のファンタジー設定に独自のツイストや心地よいカタルシス、魅力的なキャラクター造形が融合しており、読者を一瞬で非日常の世界へと引き込みます。`
+    
+    const tagFaqLd = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": `「#${escapeXml(tag)}」テーマの異世界作品の魅力とは？`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `「#${escapeXml(tag)}」作品は、日常のストレスを解消する爽快な展開や、奥深い世界観構築、共感を呼ぶ主人公の成長ドラマが特徴です。特に${bookTitles}などの代表作では、読者を飽きさせないスピーディーな展開が絶大な支持を集めています。`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `「#${escapeXml(tag)}」の作品は電子書籍で読める？`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `はい、当メディアで紹介している作品は全作品が楽天Koboなどの主要電子書籍ストアで配信されており、無料試し読みやお得なキャンペーンを利用して今すぐ読み始めることができます。`
+          }
+        }
+      ]
+    })
+
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>#${escapeXml(tag)}の異世界おすすめ漫画・ラノベ（${filteredBooks.length}選）徹底解説｜異世界コンパス</title><meta name="description" content="#${escapeXml(tag)}に関する異世界漫画・ライトノベル特集。${bookTitles}など見逃せないおすすめ名作の見どころ・あらすじ・試し読み情報を徹底ナビゲート！"><link rel="canonical" href="${siteUrl}/tags/${slugify(tag)}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script type="application/ld+json">${tagFaqLd}</script><style>${commonStyle}
+      .tag-guide-box { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 24px; margin-bottom: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+      .tag-guide-box h2 { font-size: 18px; color: #17221f; margin: 0 0 12px; border-left: 4px solid #d6a24a; padding-left: 10px; }
+      .tag-guide-box p { font-size: 15px; color: #36443c; line-height: 1.85; margin: 0 0 16px; }
+      .tag-faq-section { background: #fdfefd; border: 1px solid #e1e7de; border-radius: 8px; padding: 24px; margin-top: 40px; }
+      .tag-faq-item { margin-bottom: 18px; }
+      .tag-faq-item h3 { font-size: 15px; font-weight: bold; color: #17221f; margin: 0 0 6px; display: flex; align-items: center; gap: 6px; }
+      .tag-faq-item p { font-size: 14px; color: #44544a; margin: 0; line-height: 1.7; }
+    </style>${commonGaHead}</head><body>${renderHeader('/tags/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/tags/">タグ一覧</a>　/　#${escapeXml(tag)}</div><div class="eyebrow">TAG EXPLORER & GUIDE</div><h1>#${escapeXml(tag)} の異世界おすすめ作品・徹底解説</h1><div class="tag-guide-box"><h2>💡 「#${escapeXml(tag)}」の魅力と読書ガイド</h2><p>${tagOverview}</p><p>本ページでは、このテーマを語る上で絶対に外せない注目作品を厳選してご紹介します。各作品の詳細レビューや無料試し読みリンクも完備していますので、あなたの今の気分にぴったりな異世界を見つけてください。</p></div><h2>📚 該当する厳選作品一覧（${filteredBooks.length}件）</h2><div class="book-cards-grid">${cards}</div><section class="tag-faq-section"><h2>❓ #${escapeXml(tag)} に関するよくある質問（FAQ）</h2><div class="tag-faq-item"><h3>Q. 「#${escapeXml(tag)}」作品の最大の魅力は？</h3><p>読者の期待を裏切らない爽快感と、緻密に練られたシチュエーション設定です。${bookTitles}など、どの作品も独自の強烈な個性を放っています。</p></div><div class="tag-faq-item"><h3>Q. 初心者はどの作品から読むべき？</h3><p>まずは一覧上位の注目作や、詳細レビューで「こんな読者におすすめ」に自分が当てはまる作品から読み始めるのがおすすめです。</p></div></section></main>${renderFooter()}</body></html>`
     await write(`tags/${slugify(tag)}`, html)
   }
 
-  // 7. 各作者別個別ページ (/authors/[slug]/)
+  // 7. 各作者別個別ページ (/authors/[slug]/) - リッチ魔改造
   for (const author of authorEntries) {
     const filteredBooks = books.filter(book => book.author === author)
     const cards = filteredBooks.map(renderBookCard).join('')
-    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(author)}の作品一覧｜異世界コンパス</title><meta name="description" content="${escapeXml(author)}が手掛ける異世界作品一覧。"><link rel="canonical" href="${siteUrl}/authors/${slugify(author)}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/authors/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/authors/">作者一覧</a>　/　${escapeXml(author)}</div><div class="eyebrow">AUTHOR WORKS</div><h1>${escapeXml(author)} の手掛ける作品</h1><p class="lead">${escapeXml(author)} による異世界作品一覧です。</p><div class="book-cards-grid">${cards}</div></main>${renderFooter()}</body></html>`
+    const bookTitles = filteredBooks.map(b => `『${b.title}』`).join('や')
+
+    const authorFaqLd = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": `${escapeXml(author)}先生の作品の特徴・作風は？`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `${escapeXml(author)}先生は、魅力的なキャラクター描写とテンポの良いストーリー展開で読者を惹きつける実力派作家です。代表作${bookTitles}では、独自の世界観と心理描写が絶賛されています。`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `${escapeXml(author)}先生の作品はどこで試し読みできる？`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `全作品が楽天Koboなどの電子書籍ストアで配信されており、各巻の冒頭を無料試し読みできます。`
+          }
+        }
+      ]
+    })
+
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>${escapeXml(author)}の作品一覧・おすすめ名作レビュー｜異世界コンパス</title><meta name="description" content="人気作家・${escapeXml(author)}先生の手掛ける異世界作品一覧。${bookTitles}の見どころ、最新刊の発売情報、あらすじ、無料試し読み情報を網羅！"><link rel="canonical" href="${siteUrl}/authors/${slugify(author)}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script type="application/ld+json">${authorFaqLd}</script><style>${commonStyle}
+      .author-profile-card { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 24px; margin-bottom: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+      .author-profile-card h2 { font-size: 18px; color: #17221f; margin: 0 0 12px; border-left: 4px solid #d6a24a; padding-left: 10px; }
+      .author-profile-card p { font-size: 15px; color: #36443c; line-height: 1.85; margin: 0 0 16px; }
+      .author-faq-section { background: #fdfefd; border: 1px solid #e1e7de; border-radius: 8px; padding: 24px; margin-top: 40px; }
+      .author-faq-item { margin-bottom: 18px; }
+      .author-faq-item h3 { font-size: 15px; font-weight: bold; color: #17221f; margin: 0 0 6px; }
+      .author-faq-item p { font-size: 14px; color: #44544a; margin: 0; line-height: 1.7; }
+    </style>${commonGaHead}</head><body>${renderHeader('/authors/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/authors/">作者一覧</a>　/　${escapeXml(author)}</div><div class="eyebrow">AUTHOR PROFILE & WORKS</div><h1>${escapeXml(author)} 先生の手掛ける作品一覧</h1><div class="author-profile-card"><h2>✍️ 作家プロフィールと作品の魅力</h2><p>${escapeXml(author)}先生が手掛ける異世界作品（${bookTitles}など）は、卓越した構成力と個性豊かな登場人物たちの掛け合いが読者から高く評価されています。</p><p>緻密な世界観設定と痛快なカタルシスが両立しており、一度読み始めるとページをめくる手が止まらなくなる没入感が大きな魅力です。各作品の単行本情報や無料試し読みは以下の一覧からご確認いただけます。</p></div><h2>📖 掲載作品一覧（${filteredBooks.length}作品）</h2><div class="book-cards-grid">${cards}</div><section class="author-faq-section"><h2>❓ ${escapeXml(author)}先生に関するよくある質問（FAQ）</h2><div class="author-faq-item"><h3>Q. どの作品から読み始めるのがおすすめ？</h3><p>まずは代表作である${bookTitles}の第1巻から手に取るのがおすすめです。世界観に一気に引き込まれます。</p></div><div class="author-faq-item"><h3>Q. 電子書籍の配信状況は？</h3><p>全作品が楽天Kobo電子書籍ストアにて配信中です。最新巻や期間限定の試し読み増量キャンペーンなども頻繁に開催されています。</p></div></section></main>${renderFooter()}</body></html>`
     await write(`authors/${slugify(author)}`, html)
   }
 
-  // 8. 各シリーズ別個別ページ (/series/[slug]/)
+  // 8. 各シリーズ別個別ページ (/series/[slug]/) - リッチ魔改造
   for (const series of seriesEntries) {
     const filteredBooks = books.filter(book => book.seriesName === series)
     const cards = filteredBooks.map(renderBookCard).join('')
-    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeXml(series)}の作品一覧｜異世界コンパス</title><meta name="description" content="${escapeXml(series)}シリーズ作品一覧。"><link rel="canonical" href="${siteUrl}/series/${slugify(series)}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><style>${commonStyle}</style>${commonGaHead}</head><body>${renderHeader('/series/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/series/">シリーズ一覧</a>　/　${escapeXml(series)}</div><div class="eyebrow">SERIES WORKS</div><h1>${escapeXml(series)} シリーズ作品</h1><p class="lead">${escapeXml(series)} に含まれる作品一覧です。</p><div class="book-cards-grid">${cards}</div></main>${renderFooter()}</body></html>`
+    const latestBook = filteredBooks[0] || {}
+
+    const seriesFaqLd = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": `「${escapeXml(series)}」シリーズの見どころ・あらすじは？`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `「${escapeXml(series)}」は、独自の設定とスリリングな展開が読者を熱狂させている大人気シリーズです。電子書籍ストアにて各巻好評配信中。`
+          }
+        },
+        {
+          "@type": "Question",
+          "name": `「${escapeXml(series)}」の単行本や最新刊の発売日は？`,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": `最新巻の発売・配信情報や既刊一覧は、本ページの作品リストおよび各詳細レビューからご確認いただけます。`
+          }
+        }
+      ]
+    })
+
+    const html = `<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>${escapeXml(series)}シリーズ作品一覧・刊行順まとめ｜異世界コンパス</title><meta name="description" content="大人気シリーズ「${escapeXml(series)}」の全巻刊行順・最新刊まとめ。各巻のあらすじ、独自見どころ、電子書籍の試し読み情報を完全網羅！"><link rel="canonical" href="${siteUrl}/series/${slugify(series)}/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script type="application/ld+json">${seriesFaqLd}</script><style>${commonStyle}
+      .series-guide-box { background: #fff; border: 1px solid var(--border-color); border-radius: 8px; padding: 24px; margin-bottom: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+      .series-guide-box h2 { font-size: 18px; color: #17221f; margin: 0 0 12px; border-left: 4px solid #d6a24a; padding-left: 10px; }
+      .series-guide-box p { font-size: 15px; color: #36443c; line-height: 1.85; margin: 0 0 16px; }
+      .series-faq-section { background: #fdfefd; border: 1px solid #e1e7de; border-radius: 8px; padding: 24px; margin-top: 40px; }
+      .series-faq-item { margin-bottom: 18px; }
+      .series-faq-item h3 { font-size: 15px; font-weight: bold; color: #17221f; margin: 0 0 6px; }
+      .series-faq-item p { font-size: 14px; color: #44544a; margin: 0; line-height: 1.7; }
+    </style>${commonGaHead}</head><body>${renderHeader('/series/')}<main><div class="crumb"><a href="/">トップ</a>　/　<a href="/series/">シリーズ一覧</a>　/　${escapeXml(series)}</div><div class="eyebrow">SERIES COMPLETE GUIDE</div><h1>${escapeXml(series)} シリーズ作品まとめ</h1><div class="series-guide-box"><h2>📖 シリーズの全体概要と魅力</h2><p>「${escapeXml(series)}」は、綿密に構築された世界観と引き込まれるストーリー展開で高い評価を獲得しているシリーズ作品です。</p><p>最新刊の発売情報や、第1巻からの単行本ラインナップを以下にまとめています。各作品の「詳細を見る」から、見どころレビューや電子書籍（楽天Kobo等）の無料試し読みへ直接アクセスできます。</p></div><h2>📚 シリーズ既刊・関連作品（${filteredBooks.length}件）</h2><div class="book-cards-grid">${cards}</div><section class="series-faq-section"><h2>❓ 「${escapeXml(series)}」に関するよくある質問（FAQ）</h2><div class="series-faq-item"><h3>Q. 初めて読む場合はどの巻から？</h3><p>本シリーズを存分に楽しむためには、まず第1巻から順を追って読み進めるのが最適です。</p></div><div class="series-faq-item"><h3>Q. 電子書籍（楽天Kobo）でお得に読める？</h3><p>楽天Koboではクーポンやポイント還元キャンペーンが随時開催されており、まとめ買いにも最適です。</p></div></section></main>${renderFooter()}</body></html>`
     await write(`series/${slugify(series)}`, html)
   }
 

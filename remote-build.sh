@@ -3,7 +3,7 @@ set -euo pipefail
 
 # ==========================================
 # 汎用リモートビルドスクリプト (Windows ゲーミングPC WSL2)
-# Windowsが未起動の場合は自動的にMacローカルビルドへフォールバック
+# フリーズ防止: タイムアウト設定 & 非圧縮LAN高速同期
 # ==========================================
 REMOTE_HOST="${REMOTE_HOST:-192.168.11.16}"
 REMOTE_USER="${REMOTE_USER:-matta}"
@@ -29,9 +29,7 @@ if [ -z "$BUILD_OUTPUT_DIR" ]; then
   fi
 fi
 
-# -------------------------------------------------------------
-# ゲーミングPC (Windows WSL2) の死活・接続チェック (タイムアウト: 2秒)
-# -------------------------------------------------------------
+# ゲーミングPC の接続チェック (タイムアウト: 2秒)
 echo "==> [接続確認] Windows (ゲーミングPC) の接続状態をチェック中..."
 set +e
 nc -zv -G 2 "${REMOTE_HOST}" "${REMOTE_PORT}" > /dev/null 2>&1
@@ -47,13 +45,13 @@ if [ ${CONNECT_STATUS} -ne 0 ]; then
 fi
 
 echo "🟢 Windows ゲーミングPC を検知しました (12コア CPUを活用します)"
-SSH_CMD="ssh -i ${SSH_KEY} -p ${REMOTE_PORT} -o StrictHostKeyChecking=accept-new"
+SSH_CMD="ssh -i ${SSH_KEY} -p ${REMOTE_PORT} -o StrictHostKeyChecking=accept-new -o ConnectTimeout=5 -o ServerAliveInterval=15 -o ServerAliveCountMax=3"
 
 echo "==> [1/4] Windows側作業ディレクトリを準備中 ($PROJECT_NAME)..."
 ${SSH_CMD} "${REMOTE_USER}@${REMOTE_HOST}" "mkdir -p ${REMOTE_DIR}"
 
 echo "==> [2/4] ソースコードを差分転送中 (rsync)..."
-rsync -avz --delete \
+rsync -av --delete --timeout=60 \
   -e "${SSH_CMD}" \
   --exclude 'node_modules' \
   --exclude '.git' \
@@ -70,17 +68,9 @@ ${SSH_CMD} "${REMOTE_USER}@${REMOTE_HOST}" "bash -lc 'cd ${REMOTE_DIR} && if [ -
 
 echo "==> [4/4] 成果物 (${BUILD_OUTPUT_DIR}) をMacへ同期・回収中..."
 mkdir -p "./${BUILD_OUTPUT_DIR}"
-rsync -avz --delete \
+rsync -av --delete --timeout=60 \
   -e "${SSH_CMD}" \
   "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/${BUILD_OUTPUT_DIR}/" \
   "./${BUILD_OUTPUT_DIR}/"
-
-# out と .next の両方があるNext.js構成の場合、outも存在すれば回収
-if [ "$BUILD_OUTPUT_DIR" = "out" ]; then
-  ${SSH_CMD} "${REMOTE_USER}@${REMOTE_HOST}" "[ -d ${REMOTE_DIR}/.next ]" && {
-    mkdir -p ./.next
-    rsync -avz --delete -e "${SSH_CMD}" "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_DIR}/.next/" "./.next/" || true
-  }
-fi
 
 echo "==> [完了] リモートビルドが正常に完了し、Macへ成果物を回収しました！"

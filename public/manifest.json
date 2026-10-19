@@ -1,0 +1,17 @@
+{
+  "name": "異世界コンパス - 異世界漫画・なろう系おすすめ発見メディア",
+  "short_name": "異世界コンパス",
+  "description": "異世界転生・追放ざまぁ・悪役令嬢・スローライフ漫画を世界観や読者タイプから探せる専門ナビゲーション",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121b19",
+  "theme_color": "#121b19",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
