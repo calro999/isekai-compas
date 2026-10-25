@@ -10909,7 +10909,7 @@
     "price": 968,
     "salesDate": "2026年10月01日",
     "salesType": "0",
-    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00reb4n.j9rugb74.g00reb4n.j9ruhe6f/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F206fd8f75aa531a9ad5f63fddc706678%2F",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F206fd8f75aa531a9ad5f63fddc706678%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F206fd8f75aa531a9ad5f63fddc706678%2F",
     "sourceUrl": "https://books.rakuten.co.jp/rk/206fd8f75aa531a9ad5f63fddc706678/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-10-03T06:12:04.416Z",
@@ -13438,5 +13438,40 @@
     "badge": "10月20日発売・堂々完結の最終第26巻",
     "color": "darkslategray",
     "isEnriched": true
+  },
+  {
+    "id": "7275000946745",
+    "slug": "7275000946745",
+    "title": "【期間限定　無料お試し版】要らない悪役令嬢、我が国で引き取りますわ〜優秀なご令嬢方を追放だなんて愚かな真似、国を滅ぼしましてよ？〜 【連載版】１",
+    "author": "蛇足せんたろう/綾雅",
+    "seriesName": "要らない悪役令嬢、我が国で引き取りますわ〜優秀なご令嬢方を追放だなんて愚かな真似、国を滅ぼしましてよ？〜 【連載版】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "悪役令嬢",
+      "追放ざまぁ",
+      "内政チート",
+      "転生王女",
+      "異世界ファンタジー",
+      "逆転劇",
+      "成り上がり",
+      "国づくり"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/2404/2000022052404.jpg?_ex=200x200",
+    "description": "モブ同然の小国シュトルンツの王女ブリュンヒルトに転生した主人公。大国に囲まれ、存亡の危機に瀕する中、彼女は常識を覆す決断を下す。それは、隣国から追放された「チート級の悪役令嬢」たちを、自国へ積極的に迎え入れること！ 彼女たちの規格外の才能と、転生王女の慧眼が交錯する時、弱小国は驚異的な速度で繁栄を遂げていく。才能ある人材を囲い込み、逆転の発想で国を…",
+    "aiIntro": "隣国から追放された「悪役令嬢」を、あえて迎え入れる！ モブ王女ブリュンヒルトは、その慧眼でチート級の才能を見抜き、弱小国シュトルンツを繁栄へと導く。才能を手放す大国を尻目に、小国が成り上がる逆転劇。異世界内政ファンタジーの決定版！",
+    "readerTypes": [
+      "「悪役令嬢」が単なる敵役で終わらず、主人公と共に活躍する物語を求めている方。",
+      "追放されたキャラクターが新天地で才能を開花させ、見返す展開に胸が熱くなる方。",
+      "転生者が独自の視点と戦略で、弱小国を大国へと導く内政系ファンタジーを心ゆくまで楽しみたい方。"
+    ],
+    "price": 0,
+    "salesDate": "2026年10月16日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fb025800cd18231949d86ce78ff0d8c03%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fb025800cd18231949d86ce78ff0d8c03%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/b025800cd18231949d86ce78ff0d8c03/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-10-25T07:33:42.005Z"
   }
 ]
