@@ -52508,4 +52508,22 @@
   <url><loc>https://isekai-compas.vercel.app/series/ref-b0704d388b/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-a39d03d9d4/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-7ab4ded100/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4524815637330/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/6474824018878/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/features/october-2026-climax-trio/</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
