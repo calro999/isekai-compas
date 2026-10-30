@@ -14690,5 +14690,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/183c68b0e4af34b5b5832c5c5f4ef9b2/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-10-30T12:47:45.879Z"
+  },
+  {
+    "id": "9786264449649",
+    "slug": "9786264449649",
+    "title": "超越民族國家：當代世界秩序的源起、頹圮與重建",
+    "author": "拉納．達斯古塔(Rana Dasgupta)",
+    "seriesName": "",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "民族国家論",
+      "地政学",
+      "国際政治",
+      "歴史",
+      "未来予測",
+      "テクノロジー",
+      "グローバル経済",
+      "政治哲学"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/4275/2000022214275.jpg?_ex=200x200",
+    "description": "「国家」の限界を突破せよ。近代民族国家を支えてきた四つの柱――神学、財産、法律、自然――が崩壊しつつある今、私たちはどこへ向かうのか。本書は、アメリカの覇権衰退、中国の台頭、そして巨大テック企業の地政学的台頭という現代の地殻変動を、歴史的視点から鋭く分析。帝国の興亡の教訓を紐解き、民族国家に代わる新たな社会秩序、公民像、そして経済のあり方を提示する…",
+    "aiIntro": "世界秩序が根底から覆る今、私たちが信じてきた「民族国家」という枠組みはもはや機能不全に陥っています。本書は、歴史の深層と現代の最前線を結びつけ、なぜ今、国家の再定義が必要なのかを解き明かす知的冒険の書です。AIの進化やグローバル化の波の中で、私たちはどのような法と経済のシステムを構築すべきか。未来の社会システムを構想するすべての人へ、歴史の教訓と新…",
+    "readerTypes": [
+      "複雑化する国際情勢の裏側を深く理解したいビジネスパーソン・投資家",
+      "歴史的背景から現代社会の構造的課題を読み解きたい知的好奇心の強い読者",
+      "ポスト民族国家の社会システムや新たな政治体制に関心のある学生・研究者"
+    ],
+    "price": 2743,
+    "salesDate": "2026年10月20日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F1eb635c3613039b18be0be445f12e935%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F1eb635c3613039b18be0be445f12e935%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/1eb635c3613039b18be0be445f12e935/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-10-30T19:19:04.311Z"
   }
 ]
