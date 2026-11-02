@@ -62110,4 +62110,28 @@
   <url><loc>https://isekai-compas.vercel.app/series/ref-24939c21a7/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-c0d46480dd/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/20261105/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4336406300320/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/6302300000785/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/6302300000784/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/features/2026-nov-breakthrough-fantasy-trio/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
