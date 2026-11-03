@@ -66113,4 +66113,28 @@
   <url><loc>https://isekai-compas.vercel.app/series/ref-5039594a71/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-249f612b00/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-1979929662/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/6302300000782/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/6302300000783/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4336735300320/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/features/2026-nov-craft-sage-and-sweet-battle/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
