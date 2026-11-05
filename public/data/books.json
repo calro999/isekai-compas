@@ -16199,5 +16199,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/cc814ea3fcac33bd92313da87bcab25e/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-11-05T06:38:21.051Z"
+  },
+  {
+    "id": "1990000070594",
+    "slug": "1990000070594",
+    "title": "悪い奴ら　合本1　悪党たちの疾走",
+    "author": "牧丘冬美",
+    "seriesName": "悪い奴ら　合本",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "時代小説",
+      "ダークフィクション",
+      "悪党",
+      "長谷川平蔵",
+      "復讐劇",
+      "江戸時代",
+      "飢饉",
+      "蘭学"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/6784/2000022306784.jpg?_ex=200x200",
+    "description": "江戸時代、火付け盗賊改方長官・長谷川平蔵が、凄腕の射撃手・金丸鉄次郎をはじめとする狡猾な悪党たちを追う、緊迫感あふれる時代小説の合本版。人を斬ることに悦びを見出す柳生真弓、復讐に燃える夜鷹のお鈴など、平蔵を絶望の淵に追い込むほどの強敵たちが織りなす物語。重傷から生還した平蔵の執念の追跡、天保大飢饉の凄惨な現実、そして蘭学医・蘭童雪麿の秘められた過去…",
+    "aiIntro": "人間の心の闇と悲哀を鮮烈に描き出す傑作時代小説『悪党たちの鎮魂歌』。金丸鉄次郎、柳生真弓、夜鷹のお鈴といった、それぞれの思惑を抱えた悪党たちの生き様と、彼らを追う長谷川平蔵の不屈の闘志が胸を打つ。天保大飢饉という過酷な時代背景、そして謎多き蘭童雪麿の過去が、物語に深みと重厚感を与えている。",
+    "readerTypes": [
+      "人間の多面性や、社会の暗部を描いた骨太な時代小説を求める読書家。",
+      "名捕吏・長谷川平蔵と、個性豊かな悪党たちの知略と度胸のぶつかり合いに魅了されるファン。",
+      "史実の飢饉や社会情勢を背景に、登場人物たちの葛藤、悲哀、そして人間ドラマを深く味わいたい読者。"
+    ],
+    "price": 250,
+    "salesDate": "2026年10月27日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fc11b3dbe76ce33d5bedc223b2a596f48%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fc11b3dbe76ce33d5bedc223b2a596f48%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/c11b3dbe76ce33d5bedc223b2a596f48/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-11-05T16:26:19.186Z"
   }
 ]
