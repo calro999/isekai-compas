@@ -16444,5 +16444,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/e272aec2088b35dfaf46a8cbf62d7346/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-11-07T08:43:59.418Z"
+  },
+  {
+    "id": "7275000955807",
+    "slug": "7275000955807",
+    "title": "エルフ、重騎士を拾う 【連載版】５",
+    "author": "渡辺こよ/fu-ta",
+    "seriesName": "エルフ、重騎士を拾う 【連載版】",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "異世界ファンタジー",
+      "エルフ",
+      "重騎士",
+      "凸凹コンビ",
+      "記憶喪失",
+      "日常",
+      "世話焼きヒロイン",
+      "スローライフ"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/5909/2000022235909.jpg?_ex=200x200",
+    "description": "記憶喪失の重騎士ディコと、彼を拾った脳筋エルフのヴァニシア。二人の異世界での共同生活が、今、始まる。世話焼きで無邪気なヴァニシアに振り回されながらも、ディコは失われた記憶の断片を追っていく。エルフと重騎士が織りなす、心温まる日常ファンタジー。",
+    "aiIntro": "心温まる日常と、凸凹コンビの絆に癒やされる物語。記憶喪失の重騎士ディコを拾ったのは、パワフルな脳筋エルフ、ヴァニシア。冒険者として共に歩み始めた二人の生活は、世話焼きで猪突猛進なヴァニシアに、心配性のディコが振り回されることもしばしば。ゆっくりと紡がれる二人の距離感と、失われた記憶の謎に触れる物語です。",
+    "readerTypes": [
+      "個性的なコンビが織りなす、笑いと感動の日常ファンタジーを求める読者",
+      "世話焼きでパワフルなヒロインと、それに振り回される健気なキャラクターの関係性に魅力を感じる読者",
+      "記憶喪失という謎を抱えながらも、穏やかな異世界での生活と二人の絆の成長を見守りたい読者"
+    ],
+    "price": 110,
+    "salesDate": "2026年10月27日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fcb6a6bd004e93e14b3fe33490394fa38%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2Fcb6a6bd004e93e14b3fe33490394fa38%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/cb6a6bd004e93e14b3fe33490394fa38/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-11-07T16:24:09.320Z"
   }
 ]
