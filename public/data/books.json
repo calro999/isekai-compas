@@ -16689,5 +16689,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/7968aa8d50413935bd1760d44dd2748d/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-11-09T01:43:25.694Z"
+  },
+  {
+    "id": "4920090006348",
+    "slug": "4920090006348",
+    "title": "小説三編",
+    "author": "桑原豊",
+    "seriesName": "",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "桑原豊",
+      "クワハラ・ワールド",
+      "オムニバス",
+      "SF",
+      "ホラー",
+      "哲学",
+      "異種族譚",
+      "生命の根源"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/5539/2000022215539.jpg?_ex=200x200",
+    "description": "桑原豊が贈る、常識を覆す三つの物語が今、解き放たれる！『美しい精子』では、生命の根源に迫る奇妙で哲学的な異種族譚が、あなたの知的好奇心を刺激する。『ノージア』では、人間の深層心理をえぐるような異界の恐怖が、戦慄の読書体験へと誘う。そして『銀河』では、広大な宇宙を舞台に繰り広げられる、息をのむような壮大なSFアクションが展開。一冊でSF、ホラー、哲学…",
+    "aiIntro": "小説三編（桑原豊）の魅力を深掘り。見どころやおすすめ読者層を詳しく解説します。",
+    "readerTypes": [
+      "既存のジャンルに飽き足らず、新たな刺激を求める読者",
+      "予測不能な展開と、多様な世界観に没頭したい読者",
+      "生命の神秘、宇宙の広がり、人間の深層心理といった根源的なテーマを探求したい読者"
+    ],
+    "price": 1485,
+    "salesDate": "2026年10月28日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5df7a4600897314880b8ea07a9bbe5e7%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F5df7a4600897314880b8ea07a9bbe5e7%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/5df7a4600897314880b8ea07a9bbe5e7/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-11-09T09:44:36.902Z"
   }
 ]
