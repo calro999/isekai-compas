@@ -17144,5 +17144,40 @@
     "sourceUrl": "https://books.rakuten.co.jp/rk/a2e17f733e00375696ea32456ce3a806/",
     "source": "rakuten-kobo",
     "publishedAt": "2026-11-13T06:35:40.270Z"
+  },
+  {
+    "id": "4972000161061",
+    "slug": "4972000161061",
+    "title": "奈落の蝶〜私を奪った愛しい大正軍人 5",
+    "author": "やしろ梟/ボルテージ",
+    "seriesName": "奈落の蝶〜私を奪った愛しい大正軍人",
+    "genre": "異世界・ファンタジー",
+    "tags": [
+      "大正ロマン",
+      "銀座",
+      "カフェー",
+      "女給",
+      "軍人",
+      "画家",
+      "三角関係",
+      "禁断の愛"
+    ],
+    "badge": "新着",
+    "color": "gold",
+    "cover": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakutenkobo-ebooks/cabinet/8132/2000021268132.jpg?_ex=200x200",
+    "description": "絢爛たる大正帝都、銀座の裏路地に佇むカフェー『ジュエル』。その花形女給・瑠璃は、新進気鋭の画家・加茂をパトロンに持ち、夜ごと男たちに夢を売る日々を送っていた。そんな彼女の前に現れたのは、身体ではなく心に触れようとする実直な軍人・楠。彼の純粋さに惹かれ、新たな愛に目覚め始める瑠璃だが、ミューズの変化を敏感に察知した加茂は、その支配的な眼差しを離さない…",
+    "aiIntro": "大正ロマン華やぐ帝都、銀座のカフェーを舞台に、人気女給・瑠璃と二人の男たちが織りなす愛憎劇。純粋な愛と支配欲が交錯し、運命に翻弄される三角関係を描く、シリーズ最新刊です。",
+    "readerTypes": [
+      "大正ロマンの絢爛たる世界観と、その裏に隠された人間模様に心惹かれる方。",
+      "純粋な愛と、抗いがたい運命が織りなす、切なくも激しい恋愛ドラマを求める方。",
+      "登場人物たちの繊細な心の機微や、予測不能な愛憎劇に深く没入したい方。"
+    ],
+    "price": 244,
+    "salesDate": "2026年11月01日",
+    "salesType": "0",
+    "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/54d2a438.4bc4abc2.54d2a439.aa1be583/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F0dd8533f93723357ae5cb67a451f7937%2F&m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F0dd8533f93723357ae5cb67a451f7937%2F",
+    "sourceUrl": "https://books.rakuten.co.jp/rk/0dd8533f93723357ae5cb67a451f7937/",
+    "source": "rakuten-kobo",
+    "publishedAt": "2026-11-13T16:16:49.403Z"
   }
 ]
