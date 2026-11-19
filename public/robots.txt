@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# DuckDuckGo Crawler
+User-agent: DuckDuckBot
+Allow: /
+
 # AI Crawlers & LLM Agents Explicit Authorization
 User-agent: GPTBot
 Allow: /

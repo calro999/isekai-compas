@@ -87598,4 +87598,28 @@
   <url><loc>https://isekai-compas.vercel.app/series/ref-550a59ff9f/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/20261119/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-dd05f69c98/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4336208700320/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4524815637440/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/8890090038789/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/features/2026-nov-autumn-breakthrough-novels/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
