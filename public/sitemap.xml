@@ -95186,4 +95186,28 @@
   <url><loc>https://isekai-compas.vercel.app/series/ref-a3c60e63e5/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/v-v-vengeance/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
   <url><loc>https://isekai-compas.vercel.app/series/ref-8938231f1b/</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/8890090038865/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4320000960042/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/works/4524815627960/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://isekai-compas.vercel.app/features/2026-nov-22-three-new-voices/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
